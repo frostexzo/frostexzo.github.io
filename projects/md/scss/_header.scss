@@ -1,0 +1,181 @@
+.header {
+	max-width: 238px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-top: 168px;
+	min-height: 100%;
+	position: relative;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	color: $gray;
+	font-size: 15px;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #cdcdcd;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #fafafa;
+	}
+
+	&__logo {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 5;
+	}
+
+	&__slogan {
+		padding: 0 16px;
+		line-height: 1.4;
+		margin-bottom: 75px;
+	}
+
+	&__btn {
+		font-family: inherit;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 15px;
+	}
+
+	&__locate {
+		padding: 23px 16px;
+		display: flex;
+		justify-content: center;
+		background-color: $red;
+		border-bottom: 6px solid #D64B41;
+		color: #fff;
+		transition: opacity .2s ease;
+		margin-bottom: 47px;
+
+		&:hover {
+			cursor: pointer;
+			opacity: .95;
+		}
+
+		&_btn {
+			&:hover {
+				cursor: pointer;
+			}
+
+			& img {
+				margin-right: 14px;
+			}
+		}
+	}
+
+
+	&__calc {
+		margin-bottom: 65px;
+		padding: 0 16px;
+		display: flex;
+		justify-content: center;
+		color: $red;
+		transition: opacity .2s ease;
+
+		&:hover {
+			cursor: pointer;
+			opacity: .9;
+		}
+
+		&_btn {
+			padding-bottom: 20px;
+			border-bottom: 2px solid $red;
+
+			&:hover {
+				cursor: pointer;
+			}
+
+			& img {
+				margin-right: 7px;
+			}
+		}
+	}
+
+	&__lang {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 16px;
+		margin-bottom: 40px;
+		&_flags {
+			margin-left: 14px;
+			display: flex;
+			align-items: center;
+			& a:last-child {
+				margin-left: 9px;
+			}
+		}
+	}
+
+
+	&__contact {
+		display: flex;
+		flex-direction: column;
+		padding: 0 16px;
+		padding-bottom: 48px;
+
+		& a {
+			display: flex;
+
+			& img {
+				margin-right: 7px;
+			}
+
+			&:last-child {
+				margin-top: 25px;
+			}
+		}
+	}
+
+}
+
+.nav {
+	margin-bottom: 90px;
+	display: flex;
+	flex-direction: column;
+	padding: 0 16px;
+
+	&__link {
+		margin-bottom: 36px;
+		text-transform: uppercase;
+		padding-left: 30px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		color: $gray;
+		font-weight: 500;
+		transition: color .2s ease;
+
+		&:hover {
+			color: #333;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			background-image: url('../imgs/menu-default.svg');
+			left: 0;
+			width: 18px;
+			height: 11px;
+			background-size: cover;
+		}
+
+		&.active {
+			&:after {
+				background-image: url('../imgs/menu-active.svg');
+			}
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
