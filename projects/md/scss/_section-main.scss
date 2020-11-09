@@ -1,4 +1,7 @@
 .section {
+	background-repeat: no-repeat;
+	background-size: cover;
+
 	&__title {
 		font-weight: 700;
 		font-size: 56px;
@@ -8,10 +11,29 @@
 		padding-bottom: 8px;
 	}
 
+	&__subtitle {
+		color: $red;
+		font-weight: 700;
+		font-size: 26px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		display: block;
+	}
+
+	&__list {
+		color: $gray;
+		margin-top: 25px;
+		list-style: url("../imgs/ul-marker.svg") inside;
+		& li {
+			margin-bottom: 16px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	&__main {
-		background-size: cover;
 		background-image: url("../imgs/main-bg.png");
-		background-repeat: no-repeat;
 
 		&_features {
 			display: flex;
@@ -35,7 +57,7 @@
 		color: $gray;
 		display: flex;
 		align-items: center;
-		transition: color .2s ease;
+		transition: color 0.2s ease;
 
 		&:hover {
 			cursor: pointer;
@@ -55,14 +77,26 @@
 			font-weight: 400;
 			letter-spacing: 0.075em;
 			text-transform: uppercase;
+			display: flex;
+			align-items: center;
+
+			& img {
+				margin-right: 13px;
+			}
+		}
+
+		&--md {
+			color: #333;
+			font-size: 18px;
+			font-weight: 700;
+			text-transform: uppercase;
 		}
 
 		&--sm {
 			font-size: 18px;
 			color: #333;
-			line-height: 1.4;
-			display: flex;
-			align-items: center;
+			line-height: 1.5;
+			max-width: 680px;
 			& img {
 				margin-right: 11px;
 			}
@@ -99,7 +133,6 @@
 
 		&--white {
 			color: #333;
-
 
 			&:after {
 				background-color: #fff;
@@ -166,7 +199,7 @@
 
 	&__arrow {
 		margin-left: auto;
-		transition: filter .2s ease;
+		transition: filter 0.2s ease;
 
 		&:hover {
 			cursor: pointer;
@@ -185,6 +218,8 @@
 		}
 		&-sm {
 			color: $gray;
+			display: flex;
+			align-items: center;
 		}
 	}
 }
