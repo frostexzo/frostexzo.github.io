@@ -1,0 +1,16 @@
+.section {
+	&-9 {
+
+		&__text {
+			max-width: 337px;
+			display: block;
+		}
+
+		&__contacts {
+			margin-top: 80px;
+			&_block {
+
+			}
+		}
+	}
+}

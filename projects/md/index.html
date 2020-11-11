@@ -12,11 +12,15 @@
 			as="font"
 			id="font"
 		/>
+
+		<script src="js/lazyload.js" defer></script>
+		<script src="js/swiper.js" defer></script>
+		<script src="js/main.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
 			<a href=""
-				><img class="header__logo" src="imgs/logo-desk.svg" alt=""
+				><img decoding="async" class="header__logo" src="imgs/logo-desk.svg" alt=""
 			/></a>
 
 			<p class="header__slogan">
@@ -33,32 +37,32 @@
 
 			<div class="header__locate">
 				<button class="header__locate_btn header__btn">
-					<img src="imgs/search.svg" alt="" />Отследить груз
+					<img decoding="async" src="imgs/search.svg" alt="" />Отследить груз
 				</button>
 			</div>
 
 			<div class="header__calc">
 				<button class="header__calc_btn header__btn">
-					<img src="imgs/calc.svg" alt="" />Рассчитать отправку
+					<img decoding="async" src="imgs/calc.svg" alt="" />Рассчитать отправку
 				</button>
 			</div>
 
 			<div class="header__lang">
 				<span>Выберите<br />язык:</span>
 				<div class="header__lang_flags">
-					<a href=""><img src="imgs/ru-flag.svg" alt="" /></a>
-					<a href=""><img src="imgs/uk-flag.svg" alt="" /></a>
+					<a href=""><img decoding="async" src="imgs/ru-flag.svg" alt="" /></a>
+					<a href=""><img decoding="async" src="imgs/uk-flag.svg" alt="" /></a>
 				</div>
 			</div>
 
 			<div class="header__contact">
 				<a href="tel:+77273467254"
-					><img width="18" height="18" src="imgs/phone.svg" alt="" /><span
+					><img decoding="async" width="18" height="18" src="imgs/phone.svg" alt="" /><span
 						><strong>+7 727 346 72 54</strong></span
 					></a
 				>
 				<a href=""
-					><img width="21" height="21" src="imgs/geo.svg" alt="" /><span
+					><img decoding="async" width="21" height="21" src="imgs/geo.svg" alt="" /><span
 						>Алматы, мкр. Сайран, д.14, БЦ Азия-С</span
 					></a
 				>
@@ -74,7 +78,7 @@
 							Перевозки любой сложности
 						</h2>
 						<p class="section__text--sm main-text-sm">
-							<img src="imgs/line.svg" alt="" />Решение по доставке грузов для
+							<img decoding="async" src="imgs/line.svg" alt="" />Решение по доставке грузов для
 							всех отраслей промышленности
 						</p>
 
@@ -83,53 +87,55 @@
 								>Листай, чтобы <br />
 								узнать больше</span
 							>
-							<img width="70" height="23" src="imgs/arrow-right.svg" alt="" />
+							<img decoding="async" width="70" height="23" src="imgs/arrow-right.svg" alt="" />
 						</div>
 					</div>
 
-					<div class="section__main_features">
-						<div class="features__block features__block--red">
-							<div class="features__text">
-								<span>500 тг. за 1 кг.</span>
-								<p>500 тг. за каждый килограм груза на отправки</p>
-								<p>по направлениям: Казахстан <-> Россия;</p>
-								<p>Казахстан <-> Белоруссия.</p>
+					<div class="swiper-container section__main_features">
+						<div class="swiper-wrapper features__wrapper">
+							<div class="swiper-slide features__block features__block--red">
+								<div class="features__text">
+									<span>500 тг. за 1 кг.</span>
+									<p>500 тг. за каждый килограм груза на отправки</p>
+									<p>по направлениям: Казахстан <-> Россия;</p>
+									<p>Казахстан <-> Белоруссия.</p>
 
-								<div class="features__tip">
-									<p>*минимальный объем груза к отправке - 300 кг.</p>
-									<img
-										class="features__arrow"
-										width="58"
-										height="33"
-										src="imgs/main-arrow-w.svg"
-										alt=""
-									/>
+									<div class="features__tip">
+										<p>*минимальный объем груза к отправке - 300 кг.</p>
+										<img decoding="async"
+											class="features__arrow"
+											width="58"
+											height="33"
+											src="imgs/main-arrow-w.svg"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="features__block features__block--white">
-							<div class="features__text">
-								<span>Новым клиентам</span>
-								<p>Получите <strong>скидку в 10%</strong></p>
-								<p>на первую отправку груза с MD Logistic</p>
+							<div class="swiper-slide features__block features__block--white">
+								<div class="features__text">
+									<span>Новым клиентам</span>
+									<p>Получите <strong>скидку в 10%</strong></p>
+									<p>на первую отправку груза с MD Logistic</p>
 
-								<div class="features__tip">
-									<img
-										class="features__arrow"
-										width="58"
-										height="33"
-										src="imgs/main-arrow-r.svg"
-										alt=""
-									/>
+									<div class="features__tip">
+										<img decoding="async"
+											class="features__arrow"
+											width="58"
+											height="33"
+											src="imgs/main-arrow-r.svg"
+											alt=""
+										/>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</section>
 
-				<section class="swiper-slide section section-1">
+				<section class="swiper-slide section section-1 lazyload" data-bg="imgs/section1-bg.png">
 					<span class="section__text--lg">
-						<img src="imgs/line.svg" alt="" />01
+						<img decoding="async" src="imgs/line.svg" alt="" />01
 					</span>
 					<h2 class="section__title">Мы заставляем вас улыбаться</h2>
 
@@ -165,10 +171,397 @@
 						</p>
 					</div>
 				</section>
-			</div>
-		</main>
 
-		<script src="js/swiper.js"></script>
-		<script src="js/main.js"></script>
+				<section class="swiper-slide section section-2 lazyload" data-bg="imgs/section2-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />02
+					</span>
+					<h2 class="section__title">На суше, в воздухе и на воде</h2>
+
+					<div class="section-2__tabs">
+						<div data-tab="avto" class="section-2__tab active">
+							<img decoding="async" src="imgs/tab-avto.svg" alt="" />
+							<span>Авто</span>
+						</div>
+						<div data-tab="zhd" class="section-2__tab">
+							<img decoding="async" src="imgs/tab-zhd.svg" alt="" />
+							<span>Ж/Д</span>
+						</div>
+						<div data-tab="avia" class="section-2__tab">
+							<img decoding="async" src="imgs/tab-avia.svg" alt="" />
+							<span>Авиа</span>
+						</div>
+					</div>
+
+					<div id="avto" class="section-2__content active">
+						<span class="section__subtitle">Авто Грузоперевозки</span>
+						<p class="section__text--sm">
+							Мы организуем автомобильную перевозку грузов любой сложности по
+							территории страны и за ее пределами. Наличие налаженных
+							партнерских контактов и огромной базы агентов позволяет снизить
+							себестоимость услуги, а значить – сэкономить ваши деньги.
+							Транспортировка производится по всем стандартам, что обеспечивает
+							сохранность груза при перевозке на любые расстояния.
+						</p>
+					</div>
+
+					<div id="zhd" class="section-2__content">
+						<span class="section__subtitle">Ж/Д Перевозки</span>
+						<p class="section__text--sm">
+							Если возможности доставить груз автомобильным транспортом нет, а
+							объем для авиагрузоперевозки слишком велик, самым верным решением
+							будет доставка контейнером. Контейнерная перевозка – идеальный
+							вариант для транспортировки больших объемов груза на длинное
+							расстояние. Наш опыт, позволяет нам доставить ваш груз
+							контейнерами по ж/д.
+						</p>
+					</div>
+
+					<div id="avia" class="section-2__content">
+						<span class="section__subtitle">Авиа Грузоперевозки</span>
+						<p class="section__text--sm">
+							Организация авиа перевозок проходит на высшем уровне, все детали
+							оговариваются заранее. Наша компания имеет огромную сеть
+							партнерских контактов по всему миру, что позволяет значительно
+							ускорить забор и отправку товаров и грузов. Для торгового бизнеса
+							авиа перевозки товара означают ускоренную процедуру оборота
+							средств, и получение повышенной прибыли.
+						</p>
+					</div>
+
+					<div class="section__button">
+						<button class="section__btn">
+							<img decoding="async" src="imgs/zayavka.svg" alt="" />
+							Оставить заявку
+						</button>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-3 lazyload" data-bg="imgs/section3-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />03
+					</span>
+					<h2 class="section__title">
+						Обширная география перевозок в режиме импорт/экспорт
+					</h2>
+
+					<div class="section-3__info">
+						<span class="section-3__subtitle">
+							Предоставляем услуги грузоперевозок по территории Казахстана и по
+							всему миру различными видами транспорта
+						</span>
+
+						<ul class="section__list section-3__list">
+							Специалисты нашей компании помогут вам:
+							<li>в подборе кодов ТНВЭД;</li>
+							<li>в выборе оптимальной таможенной процедуры;</li>
+							<li>в подсчете таможенных пошлин и платежей.</li>
+						</ul>
+
+						<p class="section__text--sm section-3__text">
+							Мы готовы проконсультировать вас по всем вопросам регистрации в
+							качестве участника внешне-экономической деятельности, а так же
+							оплаты пошлин и налогов. Имея широкую партнерскую сеть мы способны
+							оказать помощь в таможенном оформлении не только по территории
+							Казахстана, но и за ее пределами.
+						</p>
+					</div>
+
+					<div class="section__button">
+						<button class="section__btn">
+							<img decoding="async" src="imgs/phone-w.svg" alt="" />
+							Заказать консультацию
+						</button>
+					</div>
+
+					<div class="section-3__slider">
+						<div class="section-3__slider_wrapper">
+							<img decoding="async"
+								class="section-3__slider_left"
+								src="imgs/arr-left.svg"
+								alt=""
+							/>
+
+							<div class="swiper-container section-3__slider_container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">Казахстан - Европа</div>
+									<div class="swiper-slide">Европа - Европа</div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+
+							<img decoding="async"
+								class="section-3__slider_right"
+								src="imgs/arr-right.svg"
+								alt=""
+							/>
+						</div>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-4 lazyload" data-bg="imgs/section4-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />04
+					</span>
+					<h2 class="section__title">Три шага к вашему успеху</h2>
+
+					<div class="section-4__blocks">
+						<div class="section-4__block">
+							<span class="section__subtitle">Авто Грузоперевозки</span>
+							<p class="section-4__text">
+								Оставьте заявку на расчет стоимости доставки любым удобным для
+								вас способом. мы вышлем ценовое предложение для ознакомления в
+								кратчайшие сроки. и перейдем к этапу согласования перевозки.
+							</p>
+							<span class="section-4__text--md">Это просто и удобно</span>
+						</div>
+
+						<div class="section-4__block">
+							<span class="section__subtitle">Согласовываем детали</span>
+							<p class="section-4__text">
+								Мы с вами оговорим все детали предстоящей перевозки. подготовим
+								всю необходимую документацию вместе с вами. при необходимости
+								поможем с процедурой таможенного оформления и преступим к
+								перевозке.
+							</p>
+							<span class="section-4__text--md">Это очень быстро</span>
+						</div>
+
+						<div class="section-4__block">
+							<span class="section__subtitle">Мы доставляем детали</span>
+							<p class="section-4__text">
+								Дело остается за малым, доставить вверенный нам груз - это то,
+								что мы делаем лучше всего. вы можете расслабиться и не
+								переживать ваш груз в надежных руках. на протяжении всей
+								перевозки с вами на связи будет персональный менеджер.
+							</p>
+							<span class="section-4__text--md">Это качественно</span>
+						</div>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-5 lazyload" data-bg="imgs/section5-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />05
+					</span>
+					<h2 class="section__title">Достижения и преимущества</h2>
+
+					<div class="section-5__info">
+						<p class="section__text--sm section-5__text">
+							Компания прошла нелегкий путь развития, чтобы сегодня предложить
+							вам услуги высокого уровня с гарантиями. Мы учились на своих
+							ошибках, и хотим поделиться с вами нашими достижениями.
+						</p>
+
+						<div class="section-5__features">
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img1.svg" alt="" />
+								</div>
+								<span
+									><strong>100% ответственность</strong> за груз в пути
+									следования</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img2.svg" alt="" />
+								</div>
+								<span>Информация о грузе в режиме <strong>24/7</strong></span>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img3.svg" alt="" />
+								</div>
+								<span
+									>Возможность <strong>отсрочки платежа</strong> до 20-ти
+									дней</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img4.svg" alt="" />
+								</div>
+								<span
+									><strong>Помощь со сбором и составлением</strong>
+									документации</span
+								>
+							</div>
+
+							<div class="section-5__features_item">
+								<div class="section-5__features_img">
+									<img decoding="async" src="imgs/features-img5.svg" alt="" />
+								</div>
+								<span>Быстрый <strong>просчет стоимости</strong> отправки</span>
+							</div>
+						</div>
+
+						<span class="section-5__subtitle"> Немного фактов о компании </span>
+
+						<ul class="section__list section-5__list">
+							<li>Год основания - <strong>2018.</strong></li>
+							<li>Ежегодно перевозим - <strong>30 000 тонн груза.</strong></li>
+							<li>
+								В собственности компании -
+								<strong
+									>складские помещения, подвижной состави, а также офис
+									представительство в России.</strong
+								>
+							</li>
+							<li>
+								Ведущие направления перевозок -
+								<strong>страны Европы, Россия и Турция.</strong>
+							</li>
+							<li>
+								Обширная база -
+								<strong
+									>собственных водителей и партнеров на территории Европы,
+									Турции и России</strong
+								>
+							</li>
+						</ul>
+
+						<span class="section__text--md section-5__text--md">
+							С заботой о вас и вашем грузе!
+						</span>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-6 lazyload" data-bg="imgs/section6-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />06
+					</span>
+					<h2 class="section__title">Узнайте стоимость доставки</h2>
+
+					<div class="section-6__info">
+						<span class="section-6__subtitle">Удобней просто не бывает</span>
+
+						<div class="section-6__block">
+							<p class="section__text--sm">
+								Теперь запросить ценовое предложение стало еще проще и удобнее
+								заполните простую форму, и нажмите кнопку отправить.
+							</p>
+
+							<p class="section__text--sm">
+								Все готово, теперь вам придет электронное письмо о принятии
+								вашего запроса в обработку.
+							</p>
+
+							<p class="section__text--sm">
+								В зависимости от сложности заказа, просчет может занять время от
+								одного часа до нескольких дней, надеемся на понимание!
+							</p>
+						</div>
+
+						<span class="section__text--md section-6__text--md">
+							Никаких звонков и долгих объяснений, мы стремимся к простоте
+						</span>
+
+						<div class="section__button">
+							<button class="section__btn">
+								<img decoding="async" src="imgs/zayavka.svg" alt="" />
+								Заполнить форму
+							</button>
+						</div>
+
+						<span class="section__text--sm"
+							>* Нажимая на кнопку «Отправить», вы даете согласие на обработку
+							своих персональных данных</span
+						>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-7 lazyload" data-bg="imgs/section7-bg.png">
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />07
+					</span>
+					<h2 class="section__title">Что говорят о нас</h2>
+
+					<div class="section-7__info">
+						<div class="section-7__text">
+							<p class="section__text--sm">
+								Мы гордимся тем, что имеем возможность работать с каждым из вас.
+								Ваши логотипы и фото украшают наш сайт и являются лучшей
+								похвалой для нас. Присоединяйтесь к числу компаний, которые
+								больше не бояться слова «доставка»! ​
+							</p>
+							<p class="section__text--sm">
+								А лучшим показателем уровня работы компании MD LOGISTIC являются
+								отзывы и обратная связь наших клиентов. Если вам есть что
+								сказать нам, обязательно оставьте свой отклик или предложение –
+								это поможет нам идти вперед и развиваться для вас!
+							</p>
+						</div>
+
+						<div class="section-7__slider">
+							<div class="swiper-container section-7__slider_container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide section-7__slide">
+										<img decoding="async"
+											class="section-7__review"
+											src="imgs/review.jpg"
+											alt=""
+										/>
+										<img decoding="async"
+											class="section-7__review-logo"
+											src="imgs/review-logo.png"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide section-7__slide">
+										<img decoding="async"
+											class="section-7__review"
+											src="imgs/review.jpg"
+											alt=""
+										/>
+										<img decoding="async"
+											class="section-7__review-logo"
+											src="imgs/review-logo.png"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="section-7__arrow">
+									<img decoding="async" src="imgs/arr-right.svg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="swiper-slide section section-9">
+					<div class="section__footer">
+						<div class="section__footer_inner">
+							<a href=""
+								><img decoding="async" width="96" height="58" src="imgs/logo-alt.svg" alt=""
+							/></a>
+							<a href="" class="section__footer_privacy">
+								Политика конфиденциальности
+							</a>
+							<a href="" class="section__footer_dev">
+								<span>Разработано командой</span>
+								<img decoding="async" width="100" height="24" src="imgs/devs.svg" alt="" />
+							</a>
+						</div>
+					</div>
+
+					<span class="section__text--lg">
+						<img decoding="async" src="imgs/line.svg" alt="" />09
+					</span>
+					<h2 class="section__title">Контакты</h2>
+
+					<div class="section-9__contacts">
+						<span class="section__text--sm section-9__text"
+							>Всегда рады проконсультировать вас лично в нашем офисе!</span
+						>
+						<div class="section-9__contacts-block"></div>
+					</div>
+				</section>
+			</div>
+			<div class="swiper-scrollbar"></div>
+		</main>
 	</body>
 </html>

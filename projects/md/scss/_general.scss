@@ -1,5 +1,5 @@
 $gray: rgba(51, 51, 51, 0.75);
-$red: #CF2D21;
+$red: #cf2d21;
 
 *,
 *:after,
@@ -21,7 +21,8 @@ body {
 	display: flex;
 }
 
-a, button {
+a,
+button {
 	user-select: none;
 	background-color: transparent;
 	color: inherit;
@@ -38,17 +39,97 @@ img {
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
-
-	&__wrapper {
-		min-height: 100%;
-	}
 }
 
 .section {
-	min-height: 100%;
+	min-height: 100vh;
 	padding-top: 85px;
 	padding-left: 85px;
 	display: flex;
 	flex-direction: column;
+	overflow-y: auto;
+	overflow-x: hidden;
 	position: relative;
+	scrollbar-width: thin;
+	scrollbar-color: #33333366 #00000010;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #33333366;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: #00000010;
+	}
+
+	&__footer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		max-width: 131px;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+
+		&_inner {
+			padding: 20px 16px;
+			display: flex;
+			position: relative;
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_dev {
+			& span {
+				text-align: center;
+				margin-bottom: 10px;
+				font-size: 12px;
+				color: $gray;
+				display: block;
+				line-height: 1.5;
+			}
+		}
+
+		&_privacy {
+			color: $gray;
+			padding-bottom: 12px;
+			text-transform: uppercase;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: max-content;
+			transform: translate(-50%,-50%) rotate(-90deg);
+			display: block;
+			border-bottom: 1px solid #c4c4c4;
+			transition: color .2s ease, border-color .2s ease;
+
+			&:hover {
+				color: #333;
+				border-color: #333;
+			}
+		}
+	}
+}
+
+.swiper-container-horizontal > .swiper-scrollbar {
+	left: 0.5%;
+	width: 98.5%;
+}
+
+.swiper-scrollbar {
+	&:hover {
+		height: 8px;
+	}
+	&-drag {
+		background-color: #33333366;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background-color: $gray;
+		}
+	}
 }

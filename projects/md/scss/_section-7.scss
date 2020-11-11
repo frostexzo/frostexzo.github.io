@@ -1,0 +1,59 @@
+.section {
+	&-7 {
+		background-position: right;
+		background-size: auto 100%;
+
+		&__info {
+			margin-top: 60px;
+			max-width: 985px;
+		}
+
+		&__text {
+			margin-bottom: 60px;
+			& p {
+				max-width: none;
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		&__slider {
+			max-width: 640px;
+			padding-bottom: 50px;
+		}
+
+		&__review {
+			max-width: 337px;
+			width: 100%;
+			max-height: 485px;
+
+			&-logo {
+				max-width: 122px;
+				width: 100%;
+			}
+		}
+
+		&__slide {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		&__arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 20;
+			left: 67%;
+			transform: translate(-50%,-50%);
+			transition: filter .2s ease;
+
+			&:hover {
+				cursor: pointer;
+				filter: brightness(90%);
+			}
+		}
+
+	}
+}

@@ -10,17 +10,18 @@
 	scrollbar-width: thin;
 	color: $gray;
 	font-size: 15px;
+	scrollbar-color: #33333366 #00000010;
 
 	&::-webkit-scrollbar {
 		width: 4px;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: #cdcdcd;
+		background-color: #33333366;
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: #fafafa;
+		background-color: #00000010;
 	}
 
 	&__logo {
@@ -52,12 +53,12 @@
 		background-color: $red;
 		border-bottom: 6px solid #D64B41;
 		color: #fff;
-		transition: opacity .2s ease;
+		transition: filter .2s ease;
 		margin-bottom: 47px;
 
 		&:hover {
 			cursor: pointer;
-			opacity: .95;
+			filter: brightness(90%);
 		}
 
 		&_btn {
@@ -78,11 +79,11 @@
 		display: flex;
 		justify-content: center;
 		color: $red;
-		transition: opacity .2s ease;
+		transition: filter .2s ease;
 
 		&:hover {
 			cursor: pointer;
-			opacity: .9;
+			filter: brightness(80%);
 		}
 
 		&_btn {
