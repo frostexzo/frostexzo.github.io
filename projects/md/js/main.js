@@ -3,6 +3,15 @@
 const font = document.getElementById("font");
 const tabs = document.querySelectorAll(".section-2__tab");
 const tabsContent = document.querySelectorAll(".section-2__content");
+const nextSection = document.querySelector(".section__hint");
+const modalFind = document.querySelector(".find");
+const modalQuestion = document.querySelector(".question");
+const modalCalc = document.querySelector(".calc");
+const modalPolicy = document.querySelector(".policy");
+const modalLoc = document.querySelector(".location");
+const openModalsBtns = document.querySelectorAll(".modal-btn");
+const closeModalBtn = document.querySelectorAll('.modal-close-btn');
+const modalBackground = document.querySelector('.modal-bg');
 
 window.addEventListener("load", () => {
 	font.rel = "stylesheet";
@@ -14,7 +23,6 @@ try {
 		direction: "horizontal",
 		keyboard: true,
 		mousewheel: {
-			forceToAxis: true,
 			releaseOnEdges: true,
 		},
 		scrollbar: {
@@ -57,6 +65,54 @@ try {
 		navigation: {
 			nextEl: ".section-7__arrow",
 		},
+	});
+
+	nextSection.addEventListener("click", () => {
+		initSlides.slideNext();
+	});
+
+	closeModalBtn.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			const closestModal = btn.closest('.modal') || btn.closest('.popup');
+			closestModal.classList.remove('active');
+			modalBackground.classList.remove('active');
+		})
+	})
+
+	openModalsBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			const btnId = btn.getAttribute("data-open-modal");
+
+			switch (btnId) {
+				case "find": {
+					modalFind.classList.add("active");
+					break;
+				}
+				case "calc": {
+					modalCalc.classList.add("active");
+					modalBackground.classList.add('active');
+					break;
+				}
+				case "question": {
+					modalQuestion.classList.add("active");
+					modalBackground.classList.add('active');
+					break;
+				}
+				case "policy": {
+					modalPolicy.classList.add("active");
+					modalBackground.classList.add('active');
+					break;
+				}
+				case "location": {
+					modalLoc.classList.add("active");
+					modalBackground.classList.add('active');
+					break;
+				}
+			}
+		});
 	});
 
 	tabs.forEach((tab) => {

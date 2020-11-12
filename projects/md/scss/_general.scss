@@ -26,6 +26,8 @@ button {
 	user-select: none;
 	background-color: transparent;
 	color: inherit;
+	box-shadow: none;
+	outline: none;
 	text-decoration: none;
 	border: none;
 }
@@ -42,9 +44,9 @@ img {
 }
 
 .section {
-	min-height: 100vh;
-	padding-top: 85px;
-	padding-left: 85px;
+	height: 100vh;
+	padding-top: 40px;
+	padding-left: 100px;
 	display: flex;
 	flex-direction: column;
 	overflow-y: auto;
@@ -74,6 +76,10 @@ img {
 		height: 100%;
 		background-color: #fff;
 
+		&.fixed {
+			position: fixed;
+		}
+
 		&_inner {
 			padding: 20px 16px;
 			display: flex;
@@ -102,10 +108,10 @@ img {
 			top: 50%;
 			left: 50%;
 			width: max-content;
-			transform: translate(-50%,-50%) rotate(-90deg);
+			transform: translate(-50%, -50%) rotate(-90deg);
 			display: block;
 			border-bottom: 1px solid #c4c4c4;
-			transition: color .2s ease, border-color .2s ease;
+			transition: color 0.2s ease, border-color 0.2s ease;
 
 			&:hover {
 				color: #333;
@@ -115,15 +121,11 @@ img {
 	}
 }
 
-.swiper-container-horizontal > .swiper-scrollbar {
-	left: 0.5%;
-	width: 98.5%;
-}
-
 .swiper-scrollbar {
 	&:hover {
 		height: 8px;
 	}
+
 	&-drag {
 		background-color: #33333366;
 		&:hover,

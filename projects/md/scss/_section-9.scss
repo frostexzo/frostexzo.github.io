@@ -1,5 +1,19 @@
 .section {
 	&-9 {
+		padding-right: 131px;
+
+
+		&__map {
+			display: flex;
+			flex-basis: 65%;
+
+			& iframe, & img {
+				max-width: 100%;
+				max-height: 590px;
+				width: 100%;
+			}
+		}
+
 
 		&__text {
 			max-width: 337px;
@@ -7,9 +21,125 @@
 		}
 
 		&__contacts {
-			margin-top: 80px;
-			&_block {
+			display: flex;
+			flex-basis: 65%;
+			&_wrapper {
+				margin-top: 50px;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+			}
 
+
+			&_block {
+				display: flex;
+				justify-content: space-between;
+				&:first-child {
+					margin-bottom: 90px;
+				}
+				&:last-child {
+					margin-top: auto;
+				}
+			}
+
+			&_item {
+				margin-right: 70px;
+				display: flex;
+				align-items: center;
+
+				& img {
+					width: 87px;
+					height: 46px;
+				}
+
+				&:last-child {
+					margin-right: 0;
+				}
+
+				& span, & a {
+					margin-left: 6px;
+					font-size: 14px;
+					font-weight: 700;
+					color: #333;
+				}
+
+				& a {
+					transition: color .2s ease;
+					&:hover {
+						color: $gray;
+					}
+				}
+			}
+		}
+
+
+		&__personal {
+			display: flex;
+			flex-direction: column;
+
+			&_wrapper {
+				margin-right: 45px;
+			}
+
+			&_item {
+				margin-bottom: 70px;
+				display: flex;
+				align-items: center;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				& img {
+					max-width: 175px;
+					width: 100%;
+				}
+
+				&-info {
+					color: #333;
+					display: flex;
+					flex-direction: column;
+					margin-left: 25px;
+
+					& strong {
+						font-size: 16px;
+						margin-bottom: 12px;
+					}
+
+					& a {
+						font-weight: 500;
+						transition: color .2s ease;
+						margin-bottom: 12px;
+						&:hover {
+							color: $gray;
+						}
+
+						&:last-child {
+							margin-bottom: 0;
+						}
+					}
+
+				}
+			}
+		}
+
+
+		&__instagram {
+			display: flex;
+			align-items: center;
+			margin-top: 45px;
+			& span {
+				color: #333;
+				margin-left: 13px;
+				border-bottom: 1px solid #333;
+				transition: border-color .2s ease;
+				font-weight: 500;
+			}
+
+			&:hover {
+				& span {
+					border-color: transparent;
+				}
 			}
 		}
 	}

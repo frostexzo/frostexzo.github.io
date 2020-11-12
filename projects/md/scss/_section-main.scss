@@ -4,7 +4,7 @@
 
 	&__title {
 		font-weight: 700;
-		font-size: 56px;
+		font-size: 52px;
 		text-transform: uppercase;
 		letter-spacing: 0.075em;
 		color: $red;
@@ -24,7 +24,7 @@
 	&__list {
 		color: $gray;
 		margin-top: 25px;
-		font-size: 18px;
+		font-size: 16px;
 		list-style: none;
 		position: relative;
 		& li {
@@ -86,7 +86,7 @@
 	&__text {
 		&--lg {
 			color: $gray;
-			font-size: 33px;
+			font-size: 28px;
 			font-weight: 400;
 			letter-spacing: 0.075em;
 			text-transform: uppercase;
@@ -106,7 +106,7 @@
 		}
 
 		&--sm {
-			font-size: 18px;
+			font-size: 16px;
 			color: #333;
 			line-height: 1.5;
 			max-width: 680px;
@@ -117,8 +117,8 @@
 	}
 
 	&__button {
-		margin-top: 65px;
-		padding-bottom: 40px;
+		margin-top: 30px;
+		padding-bottom: 30px;
 	}
 
 	&__btn {
@@ -265,6 +265,7 @@
 			color: $gray;
 			display: flex;
 			align-items: center;
+			font-size: 18px;
 		}
 	}
 }
