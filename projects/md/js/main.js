@@ -9,9 +9,10 @@ const modalQuestion = document.querySelector(".question");
 const modalCalc = document.querySelector(".calc");
 const modalPolicy = document.querySelector(".policy");
 const modalLoc = document.querySelector(".location");
+const allModals = document.querySelectorAll(".modal, .popup, .modal-bg");
 const openModalsBtns = document.querySelectorAll(".modal-btn");
-const closeModalBtn = document.querySelectorAll('.modal-close-btn');
-const modalBackground = document.querySelector('.modal-bg');
+const closeModalBtn = document.querySelectorAll(".modal-close-btn");
+const modalBackground = document.querySelector(".modal-bg");
 
 window.addEventListener("load", () => {
 	font.rel = "stylesheet";
@@ -71,15 +72,15 @@ try {
 		initSlides.slideNext();
 	});
 
-	closeModalBtn.forEach(btn => {
-		btn.addEventListener('click', (e) => {
+	closeModalBtn.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
 			e.preventDefault();
 
-			const closestModal = btn.closest('.modal') || btn.closest('.popup');
-			closestModal.classList.remove('active');
-			modalBackground.classList.remove('active');
-		})
-	})
+			const closestModal = btn.closest(".modal") || btn.closest(".popup");
+			closestModal.classList.remove("active");
+			modalBackground.classList.remove("active");
+		});
+	});
 
 	openModalsBtns.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
@@ -93,25 +94,31 @@ try {
 				}
 				case "calc": {
 					modalCalc.classList.add("active");
-					modalBackground.classList.add('active');
+					modalBackground.classList.add("active");
 					break;
 				}
 				case "question": {
 					modalQuestion.classList.add("active");
-					modalBackground.classList.add('active');
+					modalBackground.classList.add("active");
 					break;
 				}
 				case "policy": {
 					modalPolicy.classList.add("active");
-					modalBackground.classList.add('active');
+					modalBackground.classList.add("active");
 					break;
 				}
 				case "location": {
 					modalLoc.classList.add("active");
-					modalBackground.classList.add('active');
+					modalBackground.classList.add("active");
 					break;
 				}
 			}
+		});
+	});
+
+	document.addEventListener("DOMContentLoaded", () => {
+		allModals.forEach((modal) => {
+			modal.style.display = "initial";
 		});
 	});
 
