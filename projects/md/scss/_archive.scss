@@ -64,3 +64,51 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1200px) {
+	.archive {
+		padding-left: 40px;
+		padding-right: 40px;
+		&-text-sm {
+			margin-top: 15px;
+		}
+
+		&__item {
+			align-items: flex-start;
+			& img {
+				min-height: 175px;
+			}
+			&_info {
+				& p {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 800px) {
+	.archive {
+		&__item {
+			flex-direction: column;
+
+			& img {
+				max-width: none;
+				min-height: 200px;
+			}
+
+			&_info {
+				margin-top: 30px;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.archive {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

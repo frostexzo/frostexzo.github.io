@@ -33,3 +33,41 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1700px) {
+	.section {
+		&-6 {
+			&__info {
+				margin-top: 20px;
+			}
+			&__block {
+				& p {
+					margin-bottom: 15px;
+				}
+			}
+			&__subtitle {
+				font-size: 22px;
+				margin-bottom: 15px;
+			}
+			&__text {
+				&--sm {
+					margin-top: 15px;
+					display: block;
+				}
+				&--md {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section {
+		&-6 {
+			&__subtitle {
+				font-size: 16px;
+			}
+		}
+	}
+}

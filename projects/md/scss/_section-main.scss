@@ -33,7 +33,7 @@
 				left: 0;
 				transform: translateY(-2.5px);
 				margin-right: 12px;
-				content: url('../imgs/ul-marker.svg');
+				content: url("../imgs/ul-marker.svg");
 			}
 
 			margin-bottom: 16px;
@@ -267,5 +267,281 @@
 			align-items: center;
 			font-size: 18px;
 		}
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.section {
+		padding-left: 80px;
+		padding-top: 30px;
+
+		&__btn {
+			font-size: 14px;
+			padding: 18px;
+			max-width: 270px;
+		}
+
+		&__button {
+			padding-bottom: 0;
+			margin-top: 25px;
+		}
+
+		&__main {
+			background-position: center;
+			&_features {
+				transform: translateX(-51px) $scale;
+				transform-origin: right bottom;
+			}
+		}
+
+		&__hint {
+			transform: $scale;
+			transform-origin: right;
+			right: 20px;
+		}
+
+		&__title {
+			font-size: 40px;
+		}
+
+		&__text {
+			&--lg {
+				font-size: 24px;
+			}
+			&--sm {
+				font-size: 14px;
+			}
+			&--md {
+				font-size: 16px;
+			}
+		}
+
+		&__list {
+			font-size: 14px;
+			& li {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__subtitle {
+			font-size: 20px;
+		}
+	}
+
+	.main {
+		&-text {
+			&-sm {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1370px) {
+	.section__title {
+		font-size: 36px;
+	}
+	.section {
+		background-position: 130% !important;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.section {
+		&__footer {
+			display: none;
+		}
+
+		background-position: right bottom !important;
+		height: auto;
+		padding-left: 40px;
+		padding-top: 40px;
+
+		&__btn {
+			max-width: 330px;
+		}
+
+		&__image {
+			margin-top: 45px;
+			& img {
+				width: calc(100vw + 40px);
+				transform: translateX(-40px);
+				height: calc(100vw / 4.5);
+				object-fit: cover;
+				object-position: right;
+			}
+		}
+
+		&__button {
+			width: 100%;
+		}
+
+		&__number {
+			display: none;
+		}
+
+		&__hint {
+			display: none;
+		}
+
+		&__main {
+			height: 100vh;
+			min-height: 667px;
+			padding-bottom: 0;
+			background-position: initial !important;
+
+			&_info {
+				margin-top: 55px;
+			}
+		}
+	}
+
+	.section:not(.section__main):not(.section-4) {
+		background-image: none !important;
+	}
+
+	.main {
+		overflow: initial;
+		overflow-x: hidden;
+		&__wrapper {
+			box-sizing: border-box;
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (max-width: 970px) {
+	.section {
+		padding-left: 20px;
+		padding-right: 20px;
+
+		&__main {
+			background-image: url("../imgs/main-mob-bg.png");
+			background-position: bottom !important;
+
+			&_features {
+				transform: translateX(-20px);
+				overflow: hidden;
+				width: 100vw;
+			}
+		}
+	}
+
+	.features {
+		&__tip {
+			margin-top: 15px;
+		}
+
+		&__text {
+			& * {
+				padding-left: 0 !important;
+			}
+			& span {
+				margin-bottom: 10px;
+				font-size: 20px;
+			}
+			& p {
+				font-size: 14px;
+			}
+		}
+
+		&__block {
+			padding: 20px;
+			padding-top: 25px;
+			max-width: none;
+
+			&:after {
+				content: none;
+			}
+
+			&--red {
+				background-color: #d5463c;
+			}
+			&--white {
+				background-color: #fff;
+				&:before {
+					content: none;
+				}
+			}
+		}
+	}
+	.main-text-sm {
+		& img {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.section {
+		&__title {
+			font-size: 28px;
+		}
+		&__text {
+			&--lg {
+				font-size: 18px;
+			}
+		}
+	}
+	.main-text-lg {
+		margin-bottom: 15px;
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section {
+		&__main {
+			background-position: center -100px !important;
+
+			&_info {
+				margin-top: 30px;
+			}
+		}
+
+		&__image {
+			margin-top: 40px;
+
+			& img {
+				width: calc(100vw + 20px);
+				transform: translateX(-20px);
+				height: calc(100vw / 2.5);
+			}
+		}
+
+		&__subtitle {
+			font-size: 16px;
+		}
+	}
+
+	.features {
+		&__text {
+			& span {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.alt-page {
+		background-position: center !important;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.section {
+		&__title {
+			font-size: 20px;
+		}
+		&__btn {
+			max-width: none;
+		}
+	}
+
+	.main-text-lg {
+		font-size: 14px;
+	}
+
+	.main-text-sm {
+		font-size: 14px;
 	}
 }

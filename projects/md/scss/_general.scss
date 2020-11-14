@@ -1,5 +1,7 @@
 $gray: rgba(51, 51, 51, 0.75);
 $red: #cf2d21;
+$scale: scale(.7);
+$scale-alt: scale(.85);
 
 *,
 *:after,
@@ -133,5 +135,31 @@ img {
 			cursor: pointer;
 			background-color: $gray;
 		}
+	}
+}
+
+
+@media screen and (max-width: 1700px) {
+	.section {
+		&__footer {
+			&_privacy {
+				font-size: 13px;
+			}
+			&_dev {
+				& span {
+					font-size: 11px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	html, body {
+		height: auto;
+		overflow-x: hidden;
+	}
+	body {
+		flex-direction: column;
 	}
 }

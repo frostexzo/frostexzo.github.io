@@ -19,6 +19,13 @@
 		transform: scale(1);
 	}
 
+	& .modal-close-btn {
+		& img {
+			width: 14px;
+		height: 14px;
+		}
+	}
+
 	&__inner {
 		position: relative;
 		padding: 50px;
@@ -65,4 +72,18 @@
 	right: 10px;
 	top: 5px;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+	.find {
+		left: 50%;
+		bottom: auto;
+		top: 50%;
+		transform-origin: center;
+		transform: translate(-50%,-50%) scale(.75);
+
+		&.active {
+			transform: translate(-50%,-50%) scale(1);
+		}
+	}
 }

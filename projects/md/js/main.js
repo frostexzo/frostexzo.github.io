@@ -9,6 +9,7 @@ const modalQuestion = document.querySelector(".question");
 const modalCalc = document.querySelector(".calc");
 const modalPolicy = document.querySelector(".policy");
 const modalLoc = document.querySelector(".location");
+const modalMenu = document.querySelector(".menu");
 const allModals = document.querySelectorAll(".modal, .popup, .modal-bg");
 const openModalsBtns = document.querySelectorAll(".modal-btn");
 const closeModalBtn = document.querySelectorAll(".modal-close-btn");
@@ -37,10 +38,20 @@ try {
 	});
 
 	const mainSlider = new Swiper(".section__main_features", {
-		slidesPerView: "auto",
-		resistanceRatio: 0,
-		simulateTouch: false,
-		allowTouchMove: false,
+		breakpoints: {
+			320: {
+				simulateTouch: true,
+				allowTouchMove: true,
+				resistanceRatio: 0.85,
+				slidesPerView: 1,
+			},
+			970: {
+				slidesPerView: "auto",
+				resistanceRatio: 0,
+				simulateTouch: false,
+				allowTouchMove: false,
+			},
+		},
 	});
 
 	const routesSlider = new Swiper(".section-3__slider_container", {
@@ -68,9 +79,11 @@ try {
 		},
 	});
 
-	nextSection.addEventListener("click", () => {
-		initSlides.slideNext();
-	});
+	try {
+		nextSection.addEventListener("click", () => {
+			initSlides.slideNext();
+		});
+	} catch (err) {}
 
 	closeModalBtn.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
@@ -112,11 +125,17 @@ try {
 					modalBackground.classList.add("active");
 					break;
 				}
+				case "menu": {
+					modalMenu.classList.add("active");
+					break;
+				}
 			}
 		});
 	});
 
 	document.addEventListener("DOMContentLoaded", () => {
+		if (window.innerWidth <= 1200) initSlides.destroy(true, true);
+
 		allModals.forEach((modal) => {
 			modal.style.display = "initial";
 		});
