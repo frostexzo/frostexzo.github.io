@@ -1,6 +1,8 @@
 "use strict";
 
 const font = document.getElementById("font");
+const navLinks = document.querySelectorAll(".nav-sections .nav__link");
+const menuNavLinks = document.querySelectorAll(".menu__nav .nav__link");
 const tabs = document.querySelectorAll(".section-2__tab");
 const tabsContent = document.querySelectorAll(".section-2__content");
 const nextSection = document.querySelector(".section__hint");
@@ -14,6 +16,7 @@ const allModals = document.querySelectorAll(".modal, .popup, .modal-bg");
 const openModalsBtns = document.querySelectorAll(".modal-btn");
 const closeModalBtn = document.querySelectorAll(".modal-close-btn");
 const modalBackground = document.querySelector(".modal-bg");
+const contactBtns = document.querySelectorAll(".contacts-btn");
 
 window.addEventListener("load", () => {
 	font.rel = "stylesheet";
@@ -35,6 +38,109 @@ try {
 		resistanceRatio: 0,
 		// allowTouchMove: false,
 		// simulateTouch: false
+	});
+
+	initSlides.on("slideChange", () => {
+		let slideIndex = initSlides.activeIndex;
+		console.log(slideIndex);
+		switch (slideIndex) {
+			case 0: {
+				for (let i = 0; i < navLinks.length; i++) {
+					navLinks[i].classList.remove("active");
+				}
+				document.querySelector("#link-main").classList.add("active");
+
+				break;
+			}
+			case 2: {
+				for (let i = 0; i < navLinks.length; i++) {
+					navLinks[i].classList.remove("active");
+				}
+				document.querySelector("#link-services").classList.add("active");
+
+				break;
+			}
+			case 5: {
+				for (let i = 0; i < navLinks.length; i++) {
+					navLinks[i].classList.remove("active");
+				}
+				document.querySelector("#link-about").classList.add("active");
+
+				break;
+			}
+			case 7: {
+				for (let i = 0; i < navLinks.length; i++) {
+					navLinks[i].classList.remove("active");
+				}
+				document.querySelector("#link-reviews").classList.add("active");
+
+				break;
+			}
+			case 9: {
+				for (let i = 0; i < navLinks.length; i++) {
+					navLinks[i].classList.remove("active");
+				}
+				document.querySelector("#link-contacts").classList.add("active");
+
+				break;
+			}
+		}
+	});
+
+	navLinks.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			if (tabs) {
+				e.preventDefault();
+				let linkIndex = btn.getAttribute("id");
+				switch (linkIndex) {
+					case "link-main": {
+						initSlides.slideTo(0);
+						break;
+					}
+					case "link-services": {
+						initSlides.slideTo(2);
+						break;
+					}
+					case "link-about": {
+						initSlides.slideTo(5);
+						break;
+					}
+					case "link-reviews": {
+						initSlides.slideTo(7);
+						break;
+					}
+					case "link-contacts": {
+						initSlides.slideTo(9);
+						break;
+					}
+				}
+			}
+		});
+	});
+
+	menuNavLinks.forEach(btn => {
+		btn.addEventListener('click', (e) => {
+			e.preventDefault();
+			let linkIndex = btn.getAttribute('id');
+			let element = document.querySelector(`.${linkIndex}`);
+    	let bodyRect = document.body.getBoundingClientRect().top;
+    	let elementRect = element.getBoundingClientRect().top;
+    	let elementPosition = elementRect - bodyRect;
+    	let offsetPosition = elementPosition - 30;
+			
+
+			window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+		})
+	})
+
+	contactBtns.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			initSlides.slideTo(9);
+		});
 	});
 
 	const mainSlider = new Swiper(".section__main_features", {

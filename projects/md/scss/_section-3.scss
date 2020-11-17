@@ -166,6 +166,10 @@
 			&__subtitle {
 				font-size: 16px;
 			}
+			&__slider {
+				max-width: none;
+				width: 100%;
+			}
 		}
 	}
 }
