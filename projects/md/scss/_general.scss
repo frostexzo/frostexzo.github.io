@@ -1,7 +1,7 @@
 $gray: rgba(51, 51, 51, 0.75);
 $red: #cf2d21;
-$scale: scale(.7);
-$scale-alt: scale(.85);
+$scale: scale(0.7);
+$scale-alt: scale(0.85);
 
 *,
 *:after,
@@ -43,6 +43,36 @@ img {
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
+}
+
+.wpcf7-response-output {
+	display: none !important;
+}
+
+.grecaptcha-badge {
+	display: none !important;
+}
+
+.question .wpcf7-not-valid-tip {
+	font-size: 10px;
+	position: absolute;
+	top: -22px;
+}
+
+.calc .wpcf7-not-valid-tip {
+	color: $red !important;
+	font-size: 10px !important;
+	position: absolute;
+	bottom: -44px;
+	text-transform: initial !important;
+}
+
+.ewd-otp-ajax-results h3 {
+	display: none !important;
+}
+
+.ewd-otp-front-end-update-form, .ewd-otp-bold, .ewd-otp-status-label {
+	display: none !important;
 }
 
 .section {
@@ -138,7 +168,6 @@ img {
 	}
 }
 
-
 @media screen and (max-width: 1700px) {
 	.section {
 		&__footer {
@@ -155,7 +184,8 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-	html, body {
+	html,
+	body {
 		height: auto;
 		overflow-x: hidden;
 	}

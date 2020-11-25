@@ -1,7 +1,11 @@
 "use strict";
 
 const font = document.getElementById("font");
+const mapEl = document.querySelector(".section-9__map");
 const navLinks = document.querySelectorAll(".nav-sections .nav__link");
+const findForm = document.querySelector('.find__input');
+const findField = document.querySelector('.find__field');
+const locNumber = document.querySelector('.location__number');
 const menuNavLinks = document.querySelectorAll(".menu__nav .nav__link");
 const tabs = document.querySelectorAll(".section-2__tab");
 const tabsContent = document.querySelectorAll(".section-2__content");
@@ -20,6 +24,13 @@ const contactBtns = document.querySelectorAll(".contacts-btn");
 
 window.addEventListener("load", () => {
 	font.rel = "stylesheet";
+
+	try {
+		setTimeout(() => {
+			mapEl.innerHTML =
+				'<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac610e8cf890aec62515ab045d198528e2fcc65cf677d84b91c1c0a6935f0f0ef&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>';
+		}, 500);
+	} catch (err) {}
 });
 
 try {
@@ -118,23 +129,22 @@ try {
 		});
 	});
 
-	menuNavLinks.forEach(btn => {
-		btn.addEventListener('click', (e) => {
+	menuNavLinks.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
 			e.preventDefault();
-			let linkIndex = btn.getAttribute('id');
+			let linkIndex = btn.getAttribute("id");
 			let element = document.querySelector(`.${linkIndex}`);
-    	let bodyRect = document.body.getBoundingClientRect().top;
-    	let elementRect = element.getBoundingClientRect().top;
-    	let elementPosition = elementRect - bodyRect;
-    	let offsetPosition = elementPosition - 30;
-			
+			let bodyRect = document.body.getBoundingClientRect().top;
+			let elementRect = element.getBoundingClientRect().top;
+			let elementPosition = elementRect - bodyRect;
+			let offsetPosition = elementPosition - 30;
 
 			window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-		})
-	})
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+		});
+	});
 
 	contactBtns.forEach((btn) => {
 		btn.addEventListener("click", (e) => {
@@ -246,6 +256,14 @@ try {
 			modal.style.display = "initial";
 		});
 	});
+
+	findForm.addEventListener('submit', () => {
+		modalFind.classList.remove('active');
+		modalLoc.classList.add('active');
+		modalBackground.classList.add("active");
+		let currentNumber = findField.value;
+		locNumber.textContent = currentNumber;
+	})
 
 	tabs.forEach((tab) => {
 		tab.addEventListener("click", () => {

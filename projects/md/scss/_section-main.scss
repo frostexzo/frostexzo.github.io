@@ -154,7 +154,7 @@
 		padding-bottom: 45px;
 		padding-right: 80px;
 		position: relative;
-		max-width: 530px;
+		max-width: 505px;
 		cursor: pointer;
 
 		&:after {
@@ -367,7 +367,7 @@
 			& img {
 				width: calc(100vw + 40px);
 				transform: translateX(-40px);
-				height: calc(100vw / 4.5);
+				height: calc(100vw / 4);
 				object-fit: cover;
 				object-position: right;
 			}
@@ -506,7 +506,7 @@
 			& img {
 				width: calc(100vw + 20px);
 				transform: translateX(-20px);
-				height: calc(100vw / 2.5);
+				height: calc(100vw / 2);
 			}
 		}
 

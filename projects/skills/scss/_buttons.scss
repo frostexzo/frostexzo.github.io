@@ -1,0 +1,94 @@
+.button {
+	font-family: inherit;
+	padding: 11px;
+	font-size: 16px;
+	text-align: center;
+	transition: border 0.3s ease, background 0.3s ease, color 0.3s ease;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.button-nav {
+	background-color: transparent;
+	border-radius: 4px;
+	font-weight: 700;
+	width: 168px;
+	color: $purple;
+	border: 1px solid $purple;
+
+	&:hover {
+		background-color: $purple;
+		color: #fff;
+	}
+}
+
+.button-nav-reverse {
+	color: #fff;
+	background-color: $purple;
+
+	&:hover {
+		background-color: transparent;
+		color: $purple;
+	}
+}
+
+.button-hero {
+	padding: 28px 0;
+	width: 367px;
+	background-color: $red;
+	font-family: "Montserrat", sans-serif;
+	border-radius: 8px;
+	font-weight: 600;
+	font-size: 16px;
+	color: #fff;
+	border: 2px solid $red;
+
+	&:hover {
+		background-color: transparent;
+	}
+}
+
+.button-recoms {
+	border: 1px solid #ffffff;
+	color: #fff;
+	font-weight: 700;
+	display: block;
+	font-family: "Gothic", "Montserrat", sans-serif;
+	width: 200px;
+	font-size: 18px;
+	border-radius: 4px;
+
+	&:hover {
+		color: $purple;
+		background-color: #fff;
+	}
+}
+
+.button-reviews {
+	border: 1px solid $red;
+	font-size: 14px;
+	font-weight: 700;
+	border-radius: 2px;
+	color: $red;
+	padding: 12px 25px;
+
+	&:hover {
+		background-color: $red;
+		color: #fff;
+	}
+}
+
+
+.button-teachers {
+	display: block;
+	border-color: #fff;
+	color: #333;
+	border-radius: 2px;
+	background-color: #fff;
+
+	&:hover {
+		color: #fff;
+	}
+}

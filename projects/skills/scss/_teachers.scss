@@ -1,0 +1,40 @@
+.teachers {
+	background-image: url("../imgs/teachers-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #333a7c;
+
+	&__inner {
+		padding-top: 50px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__info {
+		margin-left: 80px;
+		align-self: center;
+		display: flex;
+		flex-direction: column;
+		color: #fff;
+
+		&_title {
+			font-weight: 700;
+			font-size: 36px;
+			margin-bottom: 47px;
+		}
+
+		&_text {
+			max-width: 543px;
+			font-size: 18px;
+		}
+
+		&_slogan {
+			margin-bottom: 55px;
+			display: block;
+		}
+	}
+
+	&__button {
+		margin-top: 47px;
+	}
+}

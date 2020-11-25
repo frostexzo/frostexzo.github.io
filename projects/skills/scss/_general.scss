@@ -1,0 +1,51 @@
+$purple: #352E7D;
+$red: #EC5252;
+
+*, *:after, *:before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Gothic', 'Montserrat', sans-serif;
+}
+
+a, button {
+	user-select: none;
+	text-decoration: none;
+	background-color: transparent;
+	border: 0;
+	box-shadow: none;
+}
+
+img {
+	user-select: none;
+}
+
+a {
+	color: #000;
+}
+
+::selection {
+	background-color: $purple;
+	color: #fff;
+}
+
+.container {
+	max-width: 1170px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+.section-title {
+	font-weight: 700;
+	font-size: 24px;
+	color: #333;
+}

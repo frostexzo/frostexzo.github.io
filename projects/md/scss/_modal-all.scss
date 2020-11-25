@@ -243,7 +243,7 @@
 		box-shadow: 0 0 16px 0 rgba(50, 50, 50, 0.3);
 		max-width: none;
 		width: calc(100vw - 15px);
-		height: calc(100vh - 15px);
+		height: calc((var(--vh, 1vh) * 100) - 15px);
 
 		&__top {
 			padding: 25px 15px;
@@ -300,6 +300,12 @@
 		&__title {
 			font-size: 20px;
 		}
+		&__subtitle {
+			font-size: 18px;
+		}
+		&__response {
+			font-size: 16px;
+		}
 
 		&__text {
 			font-size: 16px;
@@ -345,6 +351,9 @@
 	.modal {
 		&__title {
 			font-size: 18px;
+		}
+		&__subtitle {
+			font-size: 16px;
 		}
 	}
 }

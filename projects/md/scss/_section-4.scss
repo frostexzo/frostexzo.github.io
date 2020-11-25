@@ -5,6 +5,7 @@
 
 		&__blocks {
 			margin-top: 40px;
+			counter-reset: features;
 		}
 
 		&__block {
@@ -13,14 +14,31 @@
 			border-top: 2px solid $red;
 			background-color: #fff;
 			padding: 30px;
+			padding-left: 35px;
 			max-width: 750px;
 			margin-bottom: 25px;
+			position: relative;
 
-			&:nth-child(2) {
-				margin-left: 10%;
+			&:after {
+				position: absolute;
+				counter-increment: features;
+				content: counter(features);
+				color: rgba(51, 51, 51, 0.26);
+				font-size: 90px;
+				text-transform: uppercase;
+				font-weight: 700;
+				top: -8px;
+				left: -35px;
 			}
+
+			
+			&:first-child {
+				&:after {
+					left: -20px;
+				}
+			}
+
 			&:last-child {
-				margin-left: 20%;
 				margin-bottom: 0;
 			}
 		}
@@ -49,9 +67,21 @@
 			}
 			&__block {
 				padding: 20px;
+				padding-left: 30px;
 				transform: $scale-alt;
 				transform-origin: top left;
 				margin-bottom: 0;
+
+				&:after {
+					font-size: 70px;
+					left: -23px;
+				}
+
+				&:first-child {
+					&:after {
+						left: -15px;
+					}
+				}
 			}
 			&__text {
 				margin-bottom: 0;
@@ -73,6 +103,10 @@
 			background-size: auto 120%;
 		//	background-position: left bottom !important;
 
+		&__blocks {
+			padding-left: 15px;
+		}
+
 		&__text {
 			&--md {
 				display: block;
@@ -88,12 +122,28 @@
 		&-4 {
 			padding-bottom: 100px;
 			background-size: auto 100%;
+			&__blocks {
+				padding-left: 0;
+			}
 			&__block {
 				transform: translateX(-20px);
 				width: 100vw;
 				max-width: none;
 				margin-left: 0 !important;
 				margin-bottom: 60px;
+				padding-left: 55px;
+
+				&:after {
+					left: 10px;
+					top: 7px;
+					font-size: 55px;
+				}
+
+				&:first-child {
+					&:after {
+						left: 15px;
+					}
+				}
 			}
 		}
 	}
