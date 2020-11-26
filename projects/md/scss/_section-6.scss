@@ -37,6 +37,19 @@
 @media screen and (max-width: 1700px) {
 	.section {
 		&-6 {
+			&__text {
+				&--sm {
+					margin-top: 25px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-6 {
 			&__info {
 				margin-top: 20px;
 			}

@@ -1,5 +1,10 @@
 $purple: #352E7D;
 $red: #EC5252;
+$blue: #081F32;
+
+[x-cloak] {
+	display: none !important;
+}
 
 *, *:after, *:before {
 	padding: 0;
@@ -42,10 +47,27 @@ a {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin: 0 auto;
+
+	&-alt {
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+	&-popular {
+		opacity: 0;
+		visibility: collapse;
+		max-height: 500px;
+	}
 }
 
 .section-title {
 	font-weight: 700;
 	font-size: 24px;
 	color: #333;
+
+	&-center {
+		max-width: 570px;
+		margin: 0 auto;
+		text-align: center;
+	}
 }

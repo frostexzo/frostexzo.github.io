@@ -96,11 +96,6 @@
 				display: none;
 			}
 
-			&__text {
-				margin-top: 15px;
-				margin-bottom: 15px;
-			}
-
 			&__container {
 				padding-left: 80px;
 			}
@@ -115,12 +110,6 @@
 					padding-left: 85px;
 					max-width: 780px;
 				}
-				&_content {
-					font-size: 12px;
-					& p:not(:last-child) {
-						margin-bottom: 15px;
-					}
-				}
 			}
 			&__button {
 				margin-top: 20px;
@@ -130,6 +119,25 @@
 			}
 			&__archive {
 				padding-bottom: 12px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-8 {
+			&__text {
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			&__news {
+				&_content {
+					font-size: 12px;
+					& p:not(:last-child) {
+						margin-bottom: 15px;
+					}
+				}
 			}
 		}
 	}

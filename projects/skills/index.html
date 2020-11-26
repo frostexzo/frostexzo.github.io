@@ -4,8 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<link rel="stylesheet" href="css/fonts.css" />
+		<link rel="preload" id="fonts" as="font" href="css/fonts.css" />
 		<link rel="stylesheet" href="css/styles.css" />
+		<script src="js/alpine.js" defer></script>
 		<title>Skills Factory</title>
 	</head>
 	<body>
@@ -50,7 +51,9 @@
 				<div class="container">
 					<div class="header-nav__inner">
 						<div class="header-nav__block">
-							<a href=""><img src="imgs/logo.svg" alt="" /></a>
+							<a href=""
+								><img src="imgs/logo.svg" width="127" height="51" alt=""
+							/></a>
 
 							<nav class="nav">
 								<a href="" class="nav__link">Категории</a>
@@ -146,6 +149,1365 @@
 										alt=""
 									/>
 									<span>Поступить в лучшие вузы мира</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="popular">
+				<div x-data="{ tab: '1' }" class="popular__inner">
+					<div class="container">
+						<h3 class="section-title">Популярные курсы</h3>
+
+						<div class="popular__tabs_wrapper">
+							<div class="popular__tabs">
+								<div
+									class="popular__tab"
+									:class="{ 'active': tab === '1' }"
+									@click="tab = '1'"
+								>
+									Английский язык
+								</div>
+								<div
+									class="popular__tab"
+									:class="{ 'active': tab === '2' }"
+									@click="tab = '2'"
+								>
+									Казахский язык
+								</div>
+								<div
+									class="popular__tab"
+									:class="{ 'active': tab === '3' }"
+									@click="tab = '3'"
+								>
+									Китайский язык
+								</div>
+								<div
+									class="popular__tab"
+									:class="{ 'active': tab === '4' }"
+									@click="tab = '4'"
+								>
+									Русский язык
+								</div>
+								<div
+									class="popular__tab"
+									:class="{ 'active': tab === '5' }"
+									@click="tab = '5'"
+								>
+									Подготовка к ЕНТ
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="container container-alt container-popular">
+						<div x-show="tab === '1'" class="popular__courses_section">
+							<img
+								class="courses__arrow courses__arrow--left"
+								src="imgs/arrow-left.svg"
+								alt=""
+							/>
+							<img
+								class="courses__arrow courses__arrow--right"
+								src="imgs/arrow-right.svg"
+								alt=""
+							/>
+
+							<div class="swiper-container popular__courses_wrapper">
+								<div class="swiper-wrapper">
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+											<span class="courses__label"> Новинка </span>
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide empty"></div>
+								</div>
+							</div>
+						</div>
+
+						<div x-show="tab === '2'" class="popular__courses_section">
+							<img
+								class="courses__arrow courses__arrow--left"
+								src="imgs/arrow-left.svg"
+								alt=""
+							/>
+							<img
+								class="courses__arrow courses__arrow--right"
+								src="imgs/arrow-right.svg"
+								alt=""
+							/>
+							<div class="swiper-container popular__courses_wrapper">
+								<div class="swiper-wrapper">
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary1</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+											<span class="courses__label"> Новинка </span>
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div
+										x-data="{ more: false }"
+										class="swiper-slide courses__item"
+									>
+										<div class="courses__img">
+											<img src="imgs/course-placeholder.jpg" alt="" />
+										</div>
+										<div class="courses__info">
+											<div class="courses__top">
+												<div class="courses__meta">
+													<span class="courses__title">Курс Elementary</span>
+													<div class="courses__price">
+														<span class="courses__price--default">4 500 ₸</span>
+														<span class="courses__price--prev">4 000 ₸</span>
+													</div>
+												</div>
+
+												<div class="courses__stars">
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-filled.svg" alt="" />
+													<img src="imgs/star-empty.svg" alt="" />
+												</div>
+											</div>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__link">
+												<a href="" @click.prevent="more = !more"
+													>Подробнее о курсе</a
+												>
+											</div>
+
+											<div class="courses__buttons">
+												<button class="button button-course">В корзину</button>
+												<button
+													class="button button-course button-course-reverse"
+												>
+													В избранное
+												</button>
+											</div>
+										</div>
+
+										<div
+											x-show.transition.duration.300ms.origin.bottom.left="more === true"
+											@mouseleave="more = false"
+											class="courses__more"
+										>
+											<span class="courses__title">Курс Elementary</span>
+
+											<p class="courses__desc">
+												Курс предназначен для тех, кто только начинает изучение
+												английского, но уже знаком с основами.
+											</p>
+
+											<div class="courses__content">
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img1.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img2.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img3.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img4.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img5.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+
+												<div class="courses__content_item">
+													<img
+														src="imgs/more-img6.svg"
+														width="22"
+														height="22"
+														alt=""
+													/>
+													12 видео
+												</div>
+											</div>
+
+											<div class="courses__button">
+												<button class="button button-course">В корзину</button>
+											</div>
+										</div>
+									</div>
+
+									<div class="swiper-slide empty"></div>
 								</div>
 							</div>
 						</div>
@@ -305,6 +1667,233 @@
 				</div>
 			</section>
 
+			<section class="promo">
+				<div class="container">
+					<div class="promo__inner">
+						<h3 class="section-title section-title-center">
+							Спецпредложения для тех, кто стремится к лучшим результатам
+						</h3>
+
+						<div class="promo__block">
+							<div class="promo__item">
+								<div class="promo__title">
+									<span>Курсы со скидкой в 20%</span>
+								</div>
+								<div class="promo__info">
+									<span class="promo__available">Доступные курсы:</span>
+
+									<ul class="promo__list">
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+									</ul>
+
+									<div class="promo__button">
+										<button
+											class="button button-course button-course-reverse button-promo"
+										>
+											Выбрать
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="promo__item">
+								<div class="promo__title">
+									<span>Курсы со скидкой в 20%</span>
+								</div>
+								<div class="promo__info">
+									<span class="promo__available">Доступные курсы:</span>
+
+									<ul class="promo__list">
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+									</ul>
+
+									<div class="promo__button">
+										<button
+											class="button button-course button-course-reverse button-promo"
+										>
+											Выбрать
+										</button>
+									</div>
+								</div>
+							</div>
+
+							<div class="promo__item">
+								<div class="promo__title">
+									<span>Курсы со скидкой в 20%</span>
+								</div>
+								<div class="promo__info">
+									<span class="promo__available">Доступные курсы:</span>
+
+									<ul class="promo__list">
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+
+										<li>
+											<span class="promo__course_name">Курс Elementary</span>
+											<div class="courses__price">
+												<span class="courses__price--default">4 500 ₸</span>
+												<span class="courses__price--prev">4 000 ₸</span>
+											</div>
+										</li>
+									</ul>
+
+									<div class="promo__button">
+										<button
+											class="button button-course button-course-reverse button-promo"
+										>
+											Выбрать
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="videos">
+				<div class="container">
+					<div class="videos__inner">
+						<h3 class="section-title">
+							Что о нас говорят ученики и их родители
+						</h3>
+
+						<div class="videos__block">
+							<div class="videos__item">
+								<div class="videos__img">
+									<img src="imgs/bannerVideo.jpg" alt="" />
+								</div>
+
+								<div class="videos__info">
+									<div class="videos__title">Название видео</div>
+									<time datetime="27.03.2020" class="videos__date"
+										>27 Мар, 2020</time
+									>
+								</div>
+							</div>
+
+							<div class="videos__item">
+								<div class="videos__img">
+									<img src="imgs/bannerVideo.jpg" alt="" />
+								</div>
+
+								<div class="videos__info">
+									<div class="videos__title">Название видео</div>
+									<time datetime="27.03.2020" class="videos__date"
+										>27 Мар, 2020</time
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section class="reviews">
 				<div class="container">
 					<div class="reviews__inner">
@@ -361,26 +1950,207 @@
 				</div>
 			</section>
 
+			<section class="coop">
+				<img src="imgs/confetti.svg" alt="" class="coop__confetti">
+				<img src="imgs/coop.png" alt="" class="coop__img">
+				<div class="container">
+					<div class="coop__inner">
+						<h3 class="section-title">О Skills Academy</h3>
+
+						<p class="coop__desc">
+							Skills Academy - первая база образовательных курсов в Казахстане,
+							предоставляющая качественные образовательные онлайн курсы не
+							только на русском, но и на казахском языке.
+							<br /><br>
+							Наши курсы позволят тебе заговорить на англиском языке, сдать
+							IELTS, набрать высокий балл на ЕНТ/КТА, поступить в интересующий
+							вуз, получить навыки для развития в выбранной профессии.
+						</p>
+
+						<div class="coop__numbers">
+
+							<div class="coop__numbers_item">
+								<span class="coop__numbers_title">4</span>
+								<p class="coop__numbers_desc">года на рынке образовательных услуг</p>
+							</div>
+
+							<div class="coop__numbers_item">
+								<span class="coop__numbers_title">30</span>
+								<p class="coop__numbers_desc">образовательных проектов запущено</p>
+							</div>
+
+							<div class="coop__numbers_item">
+								<span class="coop__numbers_title">150 000</span>
+								<p class="coop__numbers_desc">человек зарегистрировано в наших проектах</p>
+							</div>
+
+							<div class="coop__numbers_item">
+								<span class="coop__numbers_title">9</span>
+								<p class="coop__numbers_desc">крупных партнеров из сферы образования</p>
+							</div>
+						</div>
+
+						<div class="coop__button">
+							<a href="" class="button button-hero button-coop">Подробнее о проекте</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="best">
+				<div class="container">
+					<div class="best__inner">
+						<h3 class="section-title">
+							Лучшие преподаватели и авторы курсов
+						</h3>
+						<div class="swiper-container best__block">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide best__item">
+										<div class="best__img">
+											<img src="imgs/best-placeholder.png" alt="">
+										</div>
+
+										<div class="best__title">Skills Academy</div>
+
+										<div class="best__mark">
+											<div class="courses__stars">
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-empty.svg" alt="" />
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<span class="best__from">Академия английского</span>
+									</div>
+
+									<div class="swiper-slide best__item">
+										<div class="best__img">
+											<img src="imgs/best-placeholder.png" alt="">
+										</div>
+
+										<div class="best__title">Skills Academy</div>
+
+										<div class="best__mark">
+											<div class="courses__stars">
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-empty.svg" alt="" />
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<span class="best__from">Академия английского</span>
+									</div>
+
+									<div class="swiper-slide best__item">
+										<div class="best__img">
+											<img src="imgs/best-placeholder.png" alt="">
+										</div>
+
+										<div class="best__title">Skills Academy</div>
+
+										<div class="best__mark">
+											<div class="courses__stars">
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-empty.svg" alt="" />
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<span class="best__from">Академия английского</span>
+									</div>
+
+									<div class="swiper-slide best__item">
+										<div class="best__img">
+											<img src="imgs/best-placeholder.png" alt="">
+										</div>
+
+										<div class="best__title">Skills Academy</div>
+
+										<div class="best__mark">
+											<div class="courses__stars">
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-empty.svg" alt="" />
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<span class="best__from">Академия английского</span>
+									</div>
+
+									<div class="swiper-slide best__item">
+										<div class="best__img">
+											<img src="imgs/best-placeholder.png" alt="">
+										</div>
+
+										<div class="best__title">Skills Academy</div>
+
+										<div class="best__mark">
+											<div class="courses__stars">
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-filled.svg" alt="" />
+												<img src="imgs/star-empty.svg" alt="" />
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<span class="best__from">Академия английского</span>
+									</div>
+								</div>
+								<div class="swiper-pagination"></div>
+						</div>
+
+						<div class="best__button">
+							<a href="" class="button button-reviews">Все преподаватели</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<section class="teachers">
 				<div class="container">
 					<div class="teachers__inner">
-							<img src="imgs/tearcher.png" alt="">
-							<div class="teachers__info">
-								<h4 class="teachers__info_title">
-									Для преподавателей
-								</h4>
-								<span class="teachers__info_text teachers__info_slogan">Начните зарабатывать вместе со Skills Academy</span>
-								<span class="teachers__info_text">Платформа позволяет создавать и размещать курсы, задания к ним и продавать ваши курсы заинтересованным ученикам.</span>
+						<img src="imgs/tearcher.png" alt="" />
+						<div class="teachers__info">
+							<h4 class="teachers__info_title">Для преподавателей</h4>
+							<span class="teachers__info_text teachers__info_slogan"
+								>Начните зарабатывать вместе со Skills Academy</span
+							>
+							<span class="teachers__info_text"
+								>Платформа позволяет создавать и размещать курсы, задания к ним
+								и продавать ваши курсы заинтересованным ученикам.</span
+							>
 
-								<div class="teachers__button">
-									<a href="" class="button button-hero button-teachers">Присоединиться бесплатно</a>
-								</div>
+							<div class="teachers__button">
+								<a href="" class="button button-hero button-teachers"
+									>Присоединиться бесплатно</a
+								>
 							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
 
+		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

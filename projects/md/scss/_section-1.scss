@@ -4,7 +4,11 @@
 		background-size: auto 100%;
 
 		&__info {
-			margin-top: 90px;
+			margin-top: 60px;
+		}
+
+		&__list {
+			margin-bottom: 25px;
 		}
 
 		&__text {
@@ -18,7 +22,7 @@
 }
 
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1400px) {
 	.section {
 		&-1 {
 			&__info {

@@ -80,7 +80,6 @@
 	}
 }
 
-
 .button-teachers {
 	display: block;
 	border-color: #fff;
@@ -90,5 +89,45 @@
 
 	&:hover {
 		color: #fff;
+	}
+}
+
+.button-course {
+	background-color: $red;
+	padding: 14px;
+	width: 100%;
+	font-weight: 700;
+	font-size: 14px;
+	color: #fff;
+	border-radius: 4px;
+	border: 1px solid $red;
+
+	&:hover {
+		background-color: transparent;
+		color: $red;
+	}
+
+	&-reverse {
+		background-color: transparent;
+		color: $red;
+
+		&:hover {
+			background-color: $red;
+			color: #fff;
+		}
+	}
+}
+
+.button-promo {
+	max-width: 90%;
+}
+
+.button-coop {
+	display: block;
+	max-width: 270px;
+	padding: 20px 0;
+
+	&:hover {
+		color: $red;
 	}
 }

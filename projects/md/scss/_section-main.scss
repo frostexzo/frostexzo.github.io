@@ -345,6 +345,9 @@
 	.section {
 		background-position: 130% !important;
 	}
+	.section__main {
+		background-position: right bottom !important;
+	}
 }
 
 @media screen and (max-width: 1200px) {

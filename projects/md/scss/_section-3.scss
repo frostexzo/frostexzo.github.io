@@ -94,17 +94,9 @@
 	}
 }
 
-
 @media screen and (max-width: 1700px) {
 	.section {
 		&-3 {
-			&__subtitle {
-				font-size: 18px;
-				margin-top: 25px;
-			}
-			&__list {
-				font-size: 14px;
-			}
 			&__buttons {
 				flex-direction: row;
 				align-items: center;
@@ -129,6 +121,20 @@
 					padding: 9px;
 					padding-top: 10px;
 				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-3 {
+			&__subtitle {
+				font-size: 18px;
+				margin-top: 25px;
+			}
+			&__list {
+				font-size: 14px;
 			}
 		}
 	}

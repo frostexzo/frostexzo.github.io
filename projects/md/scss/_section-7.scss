@@ -37,6 +37,7 @@
 				max-width: 317px;
 				width: 100%;
 				max-height: 465px;
+				display: block !important;
 			}
 
 			& figure:last-child {
@@ -71,6 +72,20 @@
 }
 
 @media screen and (max-width: 1700px) {
+	.section {
+		&-7 {
+			&__slider {
+				padding-bottom: 0;
+				&_container {
+					transform: scale(.83);
+					transform-origin: left top;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
 	.section {
 		&-7 {
 			&__info {

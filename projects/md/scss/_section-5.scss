@@ -62,6 +62,28 @@
 @media screen and (max-width: 1700px) {
 	.section {
 		&-5 {
+			&__subtitle {
+				font-size: 20px;
+				margin-top: 25px;
+				margin-bottom: 15px;
+			}
+			&__text {
+				&--md {
+					margin-top: 25px;
+					display: block;
+				}
+			}
+			&__list {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.section {
+		&-5 {
 			&__info {
 				margin-top: 15px;
 				max-width: 900px;
@@ -75,24 +97,6 @@
 					& span {
 						font-size: 12px;
 					}
-				}
-			}
-
-			&__subtitle {
-				font-size: 20px;
-				margin-top: 25px;
-				margin-bottom: 15px;
-			}
-
-			&__list {
-				margin-bottom: 0;
-				margin-top: 0;
-			}
-
-			&__text {
-				&--md {
-					margin-top: 25px;
-					display: block;
 				}
 			}
 		}

@@ -168,7 +168,7 @@ img {
 	}
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1400px) {
 	.section {
 		&__footer {
 			&_privacy {
@@ -191,5 +191,10 @@ img {
 	}
 	body {
 		flex-direction: column;
+	}
+
+	.fancybox-content img {
+		max-width: 100%;
+		height: auto;
 	}
 }
