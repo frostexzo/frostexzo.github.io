@@ -4,12 +4,9 @@ const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
 
 window.addEventListener("load", () => {
-	fonts.rel = "stylesheet";
-	try {
-		document
-			.querySelector(".container-popular")
-			.classList.remove("container-popular");
-	} catch (err) {}
+	setTimeout(() => {
+		fonts.rel = "stylesheet";
+	}, 100);
 });
 
 try {
