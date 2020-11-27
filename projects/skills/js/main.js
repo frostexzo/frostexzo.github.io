@@ -6,7 +6,7 @@ const fonts = document.getElementById("fonts");
 window.addEventListener("load", () => {
 	setTimeout(() => {
 		fonts.rel = "stylesheet";
-	}, 100);
+	}, 50);
 });
 
 try {
