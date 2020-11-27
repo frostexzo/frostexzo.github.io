@@ -36,6 +36,20 @@ try {
 			prevEl: ".courses__arrow--left",
 			nextEl: ".courses__arrow--right",
 		},
+		breakpoints: {
+			1500: {
+				slidesPerView: 4,
+			},
+			900: {
+				slidesPerView: 3,
+				slidesOffsetAfter: 0,
+			},
+			320: {
+				slidesPerView: 'auto',
+				slidesOffsetAfter: 15,
+				slidesOffsetBefore: 15,
+			}
+		}
 	});
 
 	const bestSlider = new Swiper(".best__block", {
@@ -45,5 +59,21 @@ try {
 			clickable: true,
 		},
 		spaceBetween: 20,
+		breakpoints: {
+			950: {
+				slidesPerView: 4,
+				spaceBetween: 20,
+			},
+			650: {
+				spaceBetween: 12,
+				slidesPerView: 3,
+			},
+			420: {
+				slidesPerView: 2,
+			},
+			320: {
+				slidesPerView: 1,
+			},
+		}
 	});
 } catch (err) {}

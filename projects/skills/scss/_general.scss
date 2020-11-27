@@ -1,12 +1,14 @@
-$purple: #352E7D;
-$red: #EC5252;
-$blue: #081F32;
+$purple: #352e7d;
+$red: #ec5252;
+$blue: #081f32;
 
 [x-cloak] {
 	display: none !important;
 }
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -18,19 +20,22 @@ html {
 
 body {
 	font-size: 16px;
-	font-family: 'Gothic', 'Montserrat', sans-serif;
+	font-family: "Gothic", sans-serif;
 }
 
-a, button {
+a,
+button {
 	user-select: none;
 	text-decoration: none;
 	background-color: transparent;
 	border: 0;
 	box-shadow: none;
+	outline: none;
 }
 
 img {
 	user-select: none;
+	outline: none;
 }
 
 a {
@@ -69,5 +74,11 @@ a {
 		max-width: 570px;
 		margin: 0 auto;
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.section-title {
+		font-size: 16px;
 	}
 }

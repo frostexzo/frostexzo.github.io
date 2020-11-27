@@ -17,14 +17,14 @@
 		display: flex;
 		color: #000;
 		flex-basis: 48%;
-		font-family: 'Montserrat', sans-serif;
+		font-family: "Montserrat", sans-serif;
 
 		&_info {
 			display: flex;
 			flex-direction: column;
 			margin-left: 27px;
 		}
-		
+
 		&_img {
 			max-width: 120px;
 			width: 100%;
@@ -49,7 +49,7 @@
 			& a {
 				color: #828282;
 				border-bottom: 1px solid #828282;
-				transition: border-color .3s ease;
+				transition: border-color 0.3s ease;
 
 				&:hover {
 					border-color: transparent;
@@ -62,10 +62,65 @@
 		}
 	}
 
-
-
 	&__button {
 		display: flex;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.reviews {
+		&__inner {
+			padding-top: 35px;
+			padding-bottom: 40px;
+		}
+
+		&__item {
+			&_desc {
+				font-size: 14px;
+			}
+			&_name {
+				font-size: 18px;
+			}
+
+			&_info {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+
+
+@media screen and (max-width: 600px) {
+	.reviews {
+		&__items {
+			flex-direction: column;
+			margin-bottom: 35px;
+		}
+
+		&__item {
+			margin-bottom: 35px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&_img {
+				max-width: 60px;
+			}
+
+			&_desc {
+				font-size: 12px;
+			}
+
+			&_link {
+				font-size: 12px;
+				margin-bottom: 10px;
+			}
+
+			&_name {
+				font-size: 14px;
+			}
+		}
 	}
 }

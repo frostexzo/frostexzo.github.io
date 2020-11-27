@@ -69,6 +69,7 @@
 
 	&__course {
 		&_name {
+			max-width: 55%;
 			color: #6e798c;
 			font-family: "Open Sans", sans-serif;
 		}
@@ -78,5 +79,86 @@
 		margin-top: 55px;
 		display: flex;
 		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.promo {
+		&__inner {
+			padding-top: 40px;
+			padding-bottom: 10px;
+		}
+
+		&__block {
+			margin-top: 40px;
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
+
+		&__item {
+			flex-basis: 42%;
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.promo {
+		&__item {
+			flex-basis: 47%;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.promo {
+		&__title {
+			padding: 20px;
+			font-size: 16px;
+		}
+		&__available {
+			font-size: 14px;
+		}
+		&__course {
+			&_name {
+				font-size: 14px;
+			}
+		}
+		&__button {
+			margin-top: 30px;
+		}
+		&__info {
+			padding: 0 20px;
+			padding-top: 15px;
+			padding-bottom: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.promo {
+		&__item {
+			flex-basis: 60%;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.promo {
+		&__item {
+			flex-basis: 75%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.promo {
+		&__item {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+		}
+		&__inner {
+			padding-bottom: 20px;
+		}
 	}
 }

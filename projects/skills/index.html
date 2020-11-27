@@ -4,9 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<link rel="preload" id="fonts" as="font" href="css/fonts.css" crossorigin="anonymous"/>
+		<link rel="preload" id="fonts" as="font" href="css/fonts.css" />
+		<!-- crossorigin="anonymous" -->
 		<link rel="stylesheet" href="css/styles.css" />
-		<script src="js/alpine.js" defer></script>
+
 		<title>Skills Factory</title>
 	</head>
 	<body>
@@ -34,8 +35,14 @@
 
 							<div class="header-top__tel">
 								<a href="tel:87087005020" class="header-top__tel_link"
-									><img decoding="async" src="imgs/phone.svg" width="14" height="14" alt="" /> 8
-									708 700 50 20</a
+									><img
+										decoding="async"
+										src="imgs/phone.svg"
+										width="14"
+										height="14"
+										alt=""
+									/>
+									8 708 700 50 20</a
 								>
 							</div>
 						</div>
@@ -47,15 +54,20 @@
 				</div>
 			</div>
 
-			<div class="header-nav">
+			<div x-data="{ menu: false }" class="header-nav">
 				<div class="container">
 					<div class="header-nav__inner">
 						<div class="header-nav__block">
-							<a href=""
-								><img decoding="async" src="imgs/logo.svg" width="127" height="51" alt=""
+							<a href="" class="header-nav__logo"
+								><img
+									decoding="async"
+									src="imgs/logo.svg"
+									width="127"
+									height="51"
+									alt=""
 							/></a>
 
-							<nav class="nav">
+							<nav class="nav nav__desktop">
 								<a href="" class="nav__link">Категории</a>
 								<a href="" class="nav__link">Тесты</a>
 								<a href="" class="nav__link">О компании</a>
@@ -68,6 +80,62 @@
 								Регистрация
 							</button>
 						</div>
+
+						<div @click="menu = !menu" class="header-nav__burger">
+							<img src="imgs/burger.svg" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					x-cloak
+					x-show.transition.opacity.duration.300ms="menu === true"
+					class="header__menu"
+				>
+					<div class="header__menu_inner">
+						<div class="header__menu_top">
+							<button @click="menu = !menu" class="close-btn">
+								<img src="imgs/close-sm.svg" width="20" height="20" alt="" />
+							</button>
+							<div class="header__menu_buttons">
+								<button class="button button-nav">Вход</button>
+								<button class="button button-nav button-nav-reverse">
+									Регистрация
+								</button>
+							</div>
+						</div>
+
+						<nav class="nav nav__mobile tablet-hidden">
+							<a href="" class="nav__link">Категории</a>
+							<a href="" class="nav__link">Тесты</a>
+							<a href="" class="nav__link">О компании</a>
+						</nav>
+
+						<div class="header-top__langs tablet-hidden">
+							<a href="" class="header-top__langs_link active">Ru</a>
+							<span>/</span>
+							<a href="" class="header-top__langs_link">Kz</a>
+						</div>
+
+						<div class="header-top__tel tablet-hidden">
+							<a href="tel:87087005020" class="header-top__tel_link"
+								><img
+									decoding="async"
+									src="imgs/phone.svg"
+									width="14"
+									height="14"
+									alt=""
+								/>
+								8 708 700 50 20</a
+							>
+						</div>
+
+						<a href="" class="header-top__slogan tablet-hidden">
+							Преподавайте в <strong>Skills Academy</strong>
+						</a>
+					</div>
+
+	
 					</div>
 				</div>
 			</div>
@@ -102,7 +170,8 @@
 							>
 							<div class="hero__courses_wrapper">
 								<div class="hero__courses_item">
-									<img decoding="async"
+									<img
+										decoding="async"
 										src="imgs/courses-img1.svg"
 										width="75"
 										height="75"
@@ -112,7 +181,8 @@
 								</div>
 
 								<div class="hero__courses_item">
-									<img decoding="async"
+									<img
+										decoding="async"
 										src="imgs/courses-img2.svg"
 										width="75"
 										height="75"
@@ -122,7 +192,8 @@
 								</div>
 
 								<div class="hero__courses_item">
-									<img decoding="async"
+									<img
+										decoding="async"
 										src="imgs/courses-img3.svg"
 										width="75"
 										height="75"
@@ -132,7 +203,8 @@
 								</div>
 
 								<div class="hero__courses_item">
-									<img decoding="async"
+									<img
+										decoding="async"
 										src="imgs/courses-img4.svg"
 										width="75"
 										height="75"
@@ -142,7 +214,8 @@
 								</div>
 
 								<div class="hero__courses_item">
-									<img decoding="async"
+									<img
+										decoding="async"
 										src="imgs/courses-img5.svg"
 										width="75"
 										height="75"
@@ -204,12 +277,14 @@
 
 					<div class="container container-alt container-popular">
 						<div x-show="tab === '1'" class="popular__courses_section">
-							<img decoding="async"
+							<img
+								decoding="async"
 								class="courses__arrow courses__arrow--left"
 								src="imgs/arrow-left.svg"
 								alt=""
 							/>
-							<img decoding="async"
+							<img
+								decoding="async"
 								class="courses__arrow courses__arrow--right"
 								src="imgs/arrow-right.svg"
 								alt=""
@@ -222,7 +297,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -235,11 +314,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -278,7 +377,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -288,7 +388,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -298,7 +399,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -308,7 +410,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -318,7 +421,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -328,7 +432,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -349,7 +454,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 											<span class="courses__label"> Новинка </span>
 										</div>
 										<div class="courses__info">
@@ -363,11 +472,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -406,7 +535,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -416,7 +546,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -426,7 +557,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -436,7 +568,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -446,7 +579,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -456,7 +590,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -477,7 +612,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -490,11 +629,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -533,7 +692,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -543,7 +703,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -553,7 +714,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -563,7 +725,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -573,7 +736,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -583,7 +747,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -604,7 +769,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -617,11 +786,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -660,7 +849,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -670,7 +860,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -680,7 +871,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -690,7 +882,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -700,7 +893,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -710,7 +904,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -731,7 +926,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -744,11 +943,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -787,7 +1006,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -797,7 +1017,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -807,7 +1028,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -817,7 +1039,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -827,7 +1050,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -837,7 +1061,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -858,13 +1083,15 @@
 							</div>
 						</div>
 
-						<div x-show="tab === '2'" class="popular__courses_section">
-							<img decoding="async"
+						<div x-cloak x-show="tab === '2'" class="popular__courses_section">
+							<img
+								decoding="async"
 								class="courses__arrow courses__arrow--left"
 								src="imgs/arrow-left.svg"
 								alt=""
 							/>
-							<img decoding="async"
+							<img
+								decoding="async"
 								class="courses__arrow courses__arrow--right"
 								src="imgs/arrow-right.svg"
 								alt=""
@@ -876,7 +1103,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -889,11 +1120,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -932,7 +1183,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -942,7 +1194,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -952,7 +1205,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -962,7 +1216,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -972,7 +1227,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -982,7 +1238,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -1003,7 +1260,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 											<span class="courses__label"> Новинка </span>
 										</div>
 										<div class="courses__info">
@@ -1017,11 +1278,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -1060,7 +1341,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -1070,7 +1352,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -1080,7 +1363,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -1090,7 +1374,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -1100,7 +1385,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -1110,7 +1396,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -1131,7 +1418,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -1144,11 +1435,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -1187,7 +1498,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -1197,7 +1509,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -1207,7 +1520,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -1217,7 +1531,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -1227,7 +1542,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -1237,7 +1553,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -1258,7 +1575,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -1271,11 +1592,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -1314,7 +1655,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -1324,7 +1666,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -1334,7 +1677,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -1344,7 +1688,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -1354,7 +1699,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -1364,7 +1710,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -1385,7 +1732,11 @@
 										class="swiper-slide courses__item"
 									>
 										<div class="courses__img">
-											<img decoding="async" src="imgs/course-placeholder.jpg" alt="" />
+											<img
+												decoding="async"
+												src="imgs/course-placeholder.jpg"
+												alt=""
+											/>
 										</div>
 										<div class="courses__info">
 											<div class="courses__top">
@@ -1398,11 +1749,31 @@
 												</div>
 
 												<div class="courses__stars">
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-filled.svg" alt="" />
-													<img decoding="async" src="imgs/star-empty.svg" alt="" />
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-filled.svg"
+														alt=""
+													/>
+													<img
+														decoding="async"
+														src="imgs/star-empty.svg"
+														alt=""
+													/>
 												</div>
 											</div>
 
@@ -1441,7 +1812,8 @@
 
 											<div class="courses__content">
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img1.svg"
 														width="22"
 														height="22"
@@ -1451,7 +1823,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img2.svg"
 														width="22"
 														height="22"
@@ -1461,7 +1834,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img3.svg"
 														width="22"
 														height="22"
@@ -1471,7 +1845,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img4.svg"
 														width="22"
 														height="22"
@@ -1481,7 +1856,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img5.svg"
 														width="22"
 														height="22"
@@ -1491,7 +1867,8 @@
 												</div>
 
 												<div class="courses__content_item">
-													<img decoding="async"
+													<img
+														decoding="async"
 														src="imgs/more-img6.svg"
 														width="22"
 														height="22"
@@ -1951,8 +2328,13 @@
 			</section>
 
 			<section class="coop">
-				<img decoding="async" src="imgs/confetti.svg" alt="" class="coop__confetti">
-				<img decoding="async" src="imgs/coop.png" alt="" class="coop__img">
+				<img
+					decoding="async"
+					src="imgs/confetti.svg"
+					alt=""
+					class="coop__confetti"
+				/>
+				<img decoding="async" src="imgs/coop.png" alt="" class="coop__img" />
 				<div class="container">
 					<div class="coop__inner">
 						<h3 class="section-title">О Skills Academy</h3>
@@ -1961,37 +2343,46 @@
 							Skills Academy - первая база образовательных курсов в Казахстане,
 							предоставляющая качественные образовательные онлайн курсы не
 							только на русском, но и на казахском языке.
-							<br /><br>
+							<br /><br />
 							Наши курсы позволят тебе заговорить на англиском языке, сдать
 							IELTS, набрать высокий балл на ЕНТ/КТА, поступить в интересующий
 							вуз, получить навыки для развития в выбранной профессии.
 						</p>
 
 						<div class="coop__numbers">
-
 							<div class="coop__numbers_item">
 								<span class="coop__numbers_title">4</span>
-								<p class="coop__numbers_desc">года на рынке образовательных услуг</p>
+								<p class="coop__numbers_desc">
+									года на рынке образовательных услуг
+								</p>
 							</div>
 
 							<div class="coop__numbers_item">
 								<span class="coop__numbers_title">30</span>
-								<p class="coop__numbers_desc">образовательных проектов запущено</p>
+								<p class="coop__numbers_desc">
+									образовательных проектов запущено
+								</p>
 							</div>
 
 							<div class="coop__numbers_item">
 								<span class="coop__numbers_title">150 000</span>
-								<p class="coop__numbers_desc">человек зарегистрировано в наших проектах</p>
+								<p class="coop__numbers_desc">
+									человек зарегистрировано в наших проектах
+								</p>
 							</div>
 
 							<div class="coop__numbers_item">
 								<span class="coop__numbers_title">9</span>
-								<p class="coop__numbers_desc">крупных партнеров из сферы образования</p>
+								<p class="coop__numbers_desc">
+									крупных партнеров из сферы образования
+								</p>
 							</div>
 						</div>
 
 						<div class="coop__button">
-							<a href="" class="button button-hero button-coop">Подробнее о проекте</a>
+							<a href="" class="button button-hero button-coop"
+								>Подробнее о проекте</a
+							>
 						</div>
 					</div>
 				</div>
@@ -2000,122 +2391,140 @@
 			<section class="best">
 				<div class="container">
 					<div class="best__inner">
-						<h3 class="section-title">
-							Лучшие преподаватели и авторы курсов
-						</h3>
+						<h3 class="section-title">Лучшие преподаватели и авторы курсов</h3>
 						<div class="swiper-container best__block">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide best__item">
-										<div class="best__img">
-											<img decoding="async" src="imgs/best-placeholder.png" alt="">
-										</div>
-
-										<div class="best__title">Skills Academy</div>
-
-										<div class="best__mark">
-											<div class="courses__stars">
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-empty.svg" alt="" />
-											</div>
-
-											<span>4.7</span>
-										</div>
-
-										<span class="best__from">Академия английского</span>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide best__item">
+									<div class="best__img">
+										<img
+											decoding="async"
+											src="imgs/best-placeholder.png"
+											alt=""
+										/>
 									</div>
 
-									<div class="swiper-slide best__item">
-										<div class="best__img">
-											<img decoding="async" src="imgs/best-placeholder.png" alt="">
+									<div class="best__title">Skills Academy</div>
+
+									<div class="best__mark">
+										<div class="courses__stars">
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-empty.svg" alt="" />
 										</div>
 
-										<div class="best__title">Skills Academy</div>
-
-										<div class="best__mark">
-											<div class="courses__stars">
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-empty.svg" alt="" />
-											</div>
-
-											<span>4.7</span>
-										</div>
-
-										<span class="best__from">Академия английского</span>
+										<span>4.7</span>
 									</div>
 
-									<div class="swiper-slide best__item">
-										<div class="best__img">
-											<img decoding="async" src="imgs/best-placeholder.png" alt="">
-										</div>
-
-										<div class="best__title">Skills Academy</div>
-
-										<div class="best__mark">
-											<div class="courses__stars">
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-empty.svg" alt="" />
-											</div>
-
-											<span>4.7</span>
-										</div>
-
-										<span class="best__from">Академия английского</span>
-									</div>
-
-									<div class="swiper-slide best__item">
-										<div class="best__img">
-											<img decoding="async" src="imgs/best-placeholder.png" alt="">
-										</div>
-
-										<div class="best__title">Skills Academy</div>
-
-										<div class="best__mark">
-											<div class="courses__stars">
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-empty.svg" alt="" />
-											</div>
-
-											<span>4.7</span>
-										</div>
-
-										<span class="best__from">Академия английского</span>
-									</div>
-
-									<div class="swiper-slide best__item">
-										<div class="best__img">
-											<img decoding="async" src="imgs/best-placeholder.png" alt="">
-										</div>
-
-										<div class="best__title">Skills Academy</div>
-
-										<div class="best__mark">
-											<div class="courses__stars">
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-filled.svg" alt="" />
-												<img decoding="async" src="imgs/star-empty.svg" alt="" />
-											</div>
-
-											<span>4.7</span>
-										</div>
-
-										<span class="best__from">Академия английского</span>
-									</div>
+									<span class="best__from">Академия английского</span>
 								</div>
-								<div class="swiper-pagination"></div>
+
+								<div class="swiper-slide best__item">
+									<div class="best__img">
+										<img
+											decoding="async"
+											src="imgs/best-placeholder.png"
+											alt=""
+										/>
+									</div>
+
+									<div class="best__title">Skills Academy</div>
+
+									<div class="best__mark">
+										<div class="courses__stars">
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-empty.svg" alt="" />
+										</div>
+
+										<span>4.7</span>
+									</div>
+
+									<span class="best__from">Академия английского</span>
+								</div>
+
+								<div class="swiper-slide best__item">
+									<div class="best__img">
+										<img
+											decoding="async"
+											src="imgs/best-placeholder.png"
+											alt=""
+										/>
+									</div>
+
+									<div class="best__title">Skills Academy</div>
+
+									<div class="best__mark">
+										<div class="courses__stars">
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-empty.svg" alt="" />
+										</div>
+
+										<span>4.7</span>
+									</div>
+
+									<span class="best__from">Академия английского</span>
+								</div>
+
+								<div class="swiper-slide best__item">
+									<div class="best__img">
+										<img
+											decoding="async"
+											src="imgs/best-placeholder.png"
+											alt=""
+										/>
+									</div>
+
+									<div class="best__title">Skills Academy</div>
+
+									<div class="best__mark">
+										<div class="courses__stars">
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-empty.svg" alt="" />
+										</div>
+
+										<span>4.7</span>
+									</div>
+
+									<span class="best__from">Академия английского</span>
+								</div>
+
+								<div class="swiper-slide best__item">
+									<div class="best__img">
+										<img
+											decoding="async"
+											src="imgs/best-placeholder.png"
+											alt=""
+										/>
+									</div>
+
+									<div class="best__title">Skills Academy</div>
+
+									<div class="best__mark">
+										<div class="courses__stars">
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-filled.svg" alt="" />
+											<img decoding="async" src="imgs/star-empty.svg" alt="" />
+										</div>
+
+										<span>4.7</span>
+									</div>
+
+									<span class="best__from">Академия английского</span>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
 						</div>
 
 						<div class="best__button">
@@ -2150,6 +2559,42 @@
 			</section>
 		</main>
 
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__block">
+						<a href="" class="footer__logo"
+							><img src="imgs/logo.svg" alt=""
+						/></a>
+					</div>
+
+					<div class="footer__block">
+						<a href="" class="footer__link">Главная</a>
+						<a href="" class="footer__link">Все курсы</a>
+						<a href="" class="footer__link">Тесты</a>
+						<a href="" class="footer__link">О компании</a>
+					</div>
+
+					<div class="footer__block">
+						<a href="tel:87087005020" class="footer__tel"
+							><img src="imgs/phone.svg" alt="" /> 8 708 700 50 20</a
+						>
+						<p class="footer__copyright">
+							ТОО SKILLS ACADEMY<br />
+							Все права защищены 2020
+						</p>
+						<a href="" class="footer__policy">Политика конфиденциальности</a>
+					</div>
+
+					<a href="" class="footer__block footer__developed">
+						<span class="footer__dev">Разработано командой</span>
+						<img src="imgs/devs.svg" alt="" />
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/alpine.js"></script>
 		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>

@@ -38,3 +38,63 @@
 		margin-top: 47px;
 	}
 }
+
+
+@media screen and (max-width: 1000px) {
+	.teachers {
+		&__info {
+			margin-left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.teachers {
+		&__inner {
+			& img {
+				max-width: 45%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.teachers {
+		&__inner {
+			padding-top: 35px;
+			padding-bottom: 40px;
+			justify-content: center;
+
+			& img {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.teachers {
+		&__info {
+			align-items: center;
+			text-align: center;
+
+			&_title {
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
+			
+			&_text {
+				max-width: 450px;
+				font-size: 14px;
+			}
+
+			&_slogan {
+				margin-bottom: 25px;
+			}
+		}
+
+		&__button {
+			margin-top: 35px;
+		}
+	}
+}

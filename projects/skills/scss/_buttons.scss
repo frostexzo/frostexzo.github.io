@@ -55,7 +55,7 @@
 	color: #fff;
 	font-weight: 700;
 	display: block;
-	font-family: "Gothic", "Montserrat", sans-serif;
+	font-family: "Gothic", sans-serif;
 	width: 200px;
 	font-size: 18px;
 	border-radius: 4px;
@@ -129,5 +129,39 @@
 
 	&:hover {
 		color: $red;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.button {
+		font-size: 10px;
+		padding: 7px;
+		padding-bottom: 9px;
+	}
+
+	.button-nav {
+		max-width: 97px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.button-hero {
+		font-size: 10px;
+		max-width: 195px;
+		padding: 16px 0;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.button-course {
+		padding: 11px;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.button-course {
+		font-size: 10px;
+		padding: 9px;
 	}
 }
