@@ -1,9 +1,23 @@
 .reviews {
 	background-color: #f3f3f3;
+	
+	&-alt {
+		background-color: #fff;
+		background-image: url('../imgs/reviews-bg.jpg');
+	}
 
 	&__inner {
 		padding-top: 65px;
 		padding-bottom: 80px;
+	}
+
+	&-alt {
+		background-color: #fff;
+
+		& .reviews__inner {
+			padding-top: 50px;
+			padding-bottom: 10px;
+		}
 	}
 
 	&__items {
@@ -71,8 +85,14 @@
 @media screen and (max-width: 950px) {
 	.reviews {
 		&__inner {
-			padding-top: 35px;
+			padding-top: 45px;
 			padding-bottom: 40px;
+		}
+
+		&-alt {
+			& .reviews__inner {
+				padding-top: 45px;
+			}
 		}
 
 		&__item {
@@ -101,6 +121,7 @@
 
 		&__item {
 			margin-bottom: 35px;
+
 			&:last-child {
 				margin-bottom: 0;
 			}

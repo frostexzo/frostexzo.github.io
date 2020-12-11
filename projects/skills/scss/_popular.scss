@@ -155,6 +155,11 @@
 		margin-bottom: 8px;
 		font-weight: 700;
 		display: inline-block;
+		transition: color .3s ease;
+
+		&:hover {
+			color: $purple;
+		}
 	}
 
 	&__price {
@@ -228,6 +233,7 @@
 		&_item {
 			margin-bottom: 14px;
 			display: flex;
+			color: #4f4f4f;
 			align-items: center;
 
 			&:last-child {
@@ -348,7 +354,7 @@
 			padding: 5px 10px;
 		}
 		&__title {
-			font-size: 12px;
+			font-size: 14px;
 		}
 		&__desc {
 			font-size: 10px;
@@ -364,6 +370,12 @@
 		}
 		&__info {
 			padding: 12px;
+		}
+		&__link a {
+			font-size: 12px;
+		}
+		&__link {
+			margin-bottom: 12px;
 		}
 	}
 }

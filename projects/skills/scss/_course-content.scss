@@ -1,0 +1,148 @@
+.course-content {
+	background-color: #f3f3f3;
+	padding-top: 26px;
+	padding-bottom: 45px;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__materials {
+		background: #fbfbf8;
+		border: 1px solid #e8e8e8;
+		border-radius: 4px;
+		padding: 36px;
+		padding-top: 27px;
+		width: 100%;
+		max-width: 753px;
+
+		&-list {
+			padding-left: 15px;
+			margin-top: 24px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+
+			& .courses__content_item {
+				margin-bottom: 0;
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	&__button {
+		margin-top: 10px;
+	}
+
+	&__text {
+		font-weight: 600;
+		font-size: 18px;
+		color: #333;
+	}
+
+	&__price {
+		margin-bottom: 22px;
+
+		& .courses__price--default {
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 1;
+			color: #333;
+		}
+	}
+
+	&__card {
+		position: initial;
+		margin-bottom: -100%;
+		height: 100%;
+		max-width: 367px;
+		min-width: 367px;
+		width: 100%;
+		margin-left: 20px;
+
+		& .courses__content_item {
+			& img {
+				filter: brightness(0) saturate(100%) invert(63%) sepia(76%)
+					saturate(6317%) hue-rotate(334deg) brightness(105%) contrast(85%);
+			}
+		}
+	}
+
+	&__skills {
+		padding-top: 30px;
+		font-family: "Montserrat", sans-serif;
+		padding-left: 36px;
+
+		&_title {
+			font-weight: 600;
+			color: #333;
+			margin-bottom: 23px;
+			display: block;
+		}
+
+		& ul {
+			list-style: url("../imgs/red-li.svg");
+			list-style-position: inside;
+		}
+
+		& li {
+			padding-left: 15px;
+			margin-bottom: 20px;
+			color: #4f4f4f;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.course-content {
+		&__materials {
+			max-width: calc(100% - 370px);
+		}
+		&__card {
+			max-width: 350px;
+			min-width: 350px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.course-content {
+		&__card {
+			display: none;
+		}
+		&__materials {
+			max-width: none;
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.course-content {
+		&__materials {
+			padding: 15px;
+			padding-bottom: 20px;
+
+			&-list {
+				grid-template-columns: 1fr;
+			}
+		}
+		&__skills {
+			padding-left: 15px;
+			font-size: 14px;
+		}
+
+		& .courses__content_item {
+			font-size: 14px;
+
+			& img {
+				margin-right: 10px;
+			}
+		}
+	}
+}

@@ -29,7 +29,6 @@
 				max-width: 100%;
 				max-height: 290px;
 				width: 100%;
-				object-fit: cover;
 			}
 
 			&_meta {
@@ -193,7 +192,6 @@
 				}
 				&_img {
 					max-height: 340px;
-					min-height: 175px;
 				}
 				&_meta {
 					& time {

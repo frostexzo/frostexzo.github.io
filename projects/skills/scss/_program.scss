@@ -1,0 +1,110 @@
+.program {
+	&__inner {
+		padding-bottom: 45px;
+	}
+
+	&__table {
+		margin-top: 20px;
+		border: 1px solid #e0e0e0;
+		max-width: 753px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		font-family: "Montserrat", sans-serif;
+
+		&_label {
+			background-color: $red;
+			color: #fff;
+			padding: 5px 20px;
+			font-family: "Gothic", sans-serif;
+			font-size: 14px;
+			margin-left: auto;
+
+			font-weight: 700;
+		}
+
+		& dl {
+			width: 100%;
+			display: flex;
+			border-bottom: 1px solid #e0e0e0;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			& a {
+				border-bottom: 1px solid #0094ff;
+				color: #0094ff;
+				transition: border-color 0.3s ease;
+
+				&:hover,
+				&:focus {
+					border-color: transparent;
+				}
+			}
+		}
+
+		& dt {
+			padding: 20px 0;
+			min-width: 115px;
+			max-width: 115px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #828282;
+			border-right: 1px solid #e0e0e0;
+		}
+
+		& dd {
+			width: 100%;
+			font-weight: 600;
+			color: #333;
+			display: flex;
+			align-items: center;
+			padding: 20px 27px;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.program {
+		&__inner {
+			padding-bottom: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+	.program {
+		&__table {
+			&_label {
+				font-size: 10px;
+				padding: 5px 12px;
+				line-height: 1;
+				padding-bottom: 7px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.program {
+		&__table {
+			&_label {
+				display: none;
+			}
+
+			& dt {
+				font-size: 12px;
+				min-width: 70px;
+				max-width: 70px;
+				padding: 12px 0;
+			}
+
+			& dd {
+				font-size: 12px;
+				padding: 12px 20px;
+			}
+		}
+	}
+}

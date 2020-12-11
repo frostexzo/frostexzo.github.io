@@ -3,6 +3,10 @@
 	position: relative;
 	overflow: hidden;
 
+	&-gray {
+		background-color: #F3F3F3;
+	}
+
 	&__confetti {
 		left: 0;
 		position: absolute;

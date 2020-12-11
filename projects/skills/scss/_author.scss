@@ -1,0 +1,39 @@
+.author {
+	&__inner {
+		padding-top: 35px;
+		padding-bottom: 50px;
+	}
+
+	&__item {
+		flex-basis: 100%;
+		max-width: 753px;
+	}
+
+	&__wrapper {
+		margin-bottom: 0;
+	}
+
+	&__rating {
+		margin: 0;
+		margin-bottom: 15px;
+	}
+
+	&__socials {
+		margin-top: 10px;
+		& a {
+			margin-right: 12px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.author {
+			&__item {
+				flex-basis: 100%;
+			}
+	}
+}

@@ -1,6 +1,10 @@
 .best {
 	background-color: #f3f3f3;
 
+	&-white {
+		background-color: #fff;
+	}
+
 	& .swiper-pagination {
 		position: initial;
 		margin-top: 30px;
@@ -23,6 +27,14 @@
 
 	&__block {
 		margin-top: 40px;
+	}
+
+	&-alt {
+		&__block {
+			margin-top: 40px;
+			display: flex;
+			justify-content: space-around;
+		}
 	}
 
 	&__item {
@@ -84,6 +96,24 @@
 			min-height: 240px;
 		}
 
+		&-alt {
+			&__block {
+				flex-wrap: wrap;
+
+				& .best__item {
+					flex-basis: 40%;
+
+					&:last-child {
+						margin-top: 60px;
+					}
+				}
+
+				& .best__img {
+					max-width: 270px;
+				}
+			}
+		}
+
 		&__inner {
 			padding-top: 45px;
 			padding-bottom: 40px;
@@ -117,6 +147,25 @@
 			font-size: 10px;
 			margin-top: 8px;
 		}
+
+		&-alt {
+			&__block {
+				flex-direction: column;
+
+				& .best__item {
+					&:last-child {
+						margin-top: 32px;
+					}
+					&:first-child {
+						margin-bottom: 32px;
+					}
+				}
+
+				& .best__img {
+					max-width: 320px;
+				}
+			}
+		}
 	}
 }
 
@@ -124,6 +173,15 @@
 	.best {
 		&__img {
 			width: 100%;
+			min-height: 320px;
+		}
+
+		&-alt {
+			&__block {
+				& .best__img {
+					max-width: none;
+				}
+			}
 		}
 	}
 }

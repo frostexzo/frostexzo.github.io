@@ -20,6 +20,7 @@
 	&__item {
 		display: flex;
 		align-items: initial;
+		flex-direction: column;
 		margin-bottom: 55px;
 
 		&:hover {
@@ -33,16 +34,14 @@
 		}
 
 		& img {
-			max-width: 410px;
 			width: 100%;
-			min-height: 250px;
-			object-fit: cover;
+			min-height: 200px;
 		}
 
 		&_info {
 			display: flex;
 			flex-direction: column;
-			margin-left: 48px;
+			margin-top: 25px;
 			color: #333;
 			& h2 {
 				font-weight: 700;
@@ -91,11 +90,9 @@
 @media screen and (max-width: 800px) {
 	.archive {
 		&__item {
-			flex-direction: column;
 
 			& img {
-				max-width: none;
-				min-height: 200px;
+				min-height: auto;
 			}
 
 			&_info {

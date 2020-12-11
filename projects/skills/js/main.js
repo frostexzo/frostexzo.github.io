@@ -2,27 +2,35 @@
 
 const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
+const locationMap = document.querySelector("#location-map");
 
 window.addEventListener("load", () => {
 	setTimeout(() => {
 		fonts.rel = "stylesheet";
+
+		if (locationMap) {
+			locationMap.innerHTML =
+				'<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A65a6e59fc771d549325b6d6c8dcc502da7ff12edaa9c86bea1d828bf1c0d714e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>';
+		}
 	}, 50);
 });
 
 try {
-	const resizeCalcMargin = () => {
-		window.addEventListener("resize", () => {
+	if (altContainer) {
+		const resizeCalcMargin = () => {
+			window.addEventListener("resize", () => {
+				let distanceToLeft = document
+					.querySelector(".container")
+					.getBoundingClientRect();
+				altContainer.style.marginLeft = `${distanceToLeft.left}px`;
+			});
 			let distanceToLeft = document
 				.querySelector(".container")
 				.getBoundingClientRect();
 			altContainer.style.marginLeft = `${distanceToLeft.left}px`;
-		});
-		let distanceToLeft = document
-			.querySelector(".container")
-			.getBoundingClientRect();
-		altContainer.style.marginLeft = `${distanceToLeft.left}px`;
-	};
-	resizeCalcMargin();
+		};
+		resizeCalcMargin();
+	}
 
 	const popularCourses = new Swiper(".popular__courses_wrapper", {
 		slidesPerView: 4,
@@ -42,11 +50,11 @@ try {
 				slidesOffsetAfter: 0,
 			},
 			320: {
-				slidesPerView: 'auto',
+				slidesPerView: "auto",
 				slidesOffsetAfter: 15,
 				slidesOffsetBefore: 15,
-			}
-		}
+			},
+		},
 	});
 
 	const bestSlider = new Swiper(".best__block", {
@@ -71,6 +79,6 @@ try {
 			320: {
 				slidesPerView: 1,
 			},
-		}
+		},
 	});
 } catch (err) {}

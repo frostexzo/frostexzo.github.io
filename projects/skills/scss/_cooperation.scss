@@ -1,0 +1,100 @@
+.cooperation {
+	background-image: url("../imgs/recoms-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #2e2877;
+
+	&__inner {
+		padding: 70px 0;
+		color: #fff;
+	}
+
+	&__title {
+		color: #fff;
+		margin-bottom: 2px;
+	}
+
+	&__subtitle {
+		font-family: "Montserrat", sans-serif;
+	}
+
+	&__form {
+		margin-top: 30px;
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+.input-white {
+	padding: 12px 22px;
+	border: 1px solid #fff;
+	font-family: inherit;
+	font-weight: 700;
+	font-size: 14px;
+	color: #fff;
+	background-color: transparent;
+	border-radius: 2px;
+	transition: border-color .3s ease, color .3s ease;
+
+	&:focus {
+		border-color: #aaa;
+		color: #aaa;
+	}
+}
+
+.button-white {
+	text-align: center;
+	padding: 12px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	transition: background-color .3s ease, color .3s ease, border-color .3s ease;
+	background-color: #fff;
+	color: #333;
+	font-weight: 700;
+	font-family: inherit;
+	font-size: 14px;
+
+	&:hover {
+		cursor: pointer;
+		color: #fff;
+		border-color: #fff;
+		background-color: transparent;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.cooperation {
+		&__form {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.cooperation {
+			&__inner {
+				padding: 55px 0;
+			}
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.cooperation {
+		&__form {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.cooperation {
+		&__form {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		&__subtitle {
+			font-size: 12px;
+		}
+	}
+}
