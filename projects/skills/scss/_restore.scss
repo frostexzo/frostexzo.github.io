@@ -1,0 +1,164 @@
+.restore {
+	background-color: #f3f3f3;
+	display: flex;
+	align-items: center;
+	padding: 60px 0;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__img {
+		& img {
+			width: auto;
+			height: auto;
+		}
+	}
+
+	&__info {
+		margin-left: 50px;
+	}
+
+	&__text {
+		font-family: "Montserrat", sans-serif;
+		margin-top: 22px;
+		color: #4f4f4f;
+
+		&--sm {
+			font-size: 12px;
+		}
+	}
+}
+
+.restore__form {
+	margin-top: 40px !important;
+
+	&_code {
+		max-width: 350px;
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&_inputs {
+		margin-top: 12px;
+		margin-bottom: 20px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 13px;
+	}
+}
+
+.restore__input {
+	border: 1px solid #333;
+	font-weight: 700;
+	font-size: 14px;
+	font-family: inherit;
+	border-radius: 4px;
+	color: #333;
+	padding: 12px 25px;
+	background-color: transparent;
+	width: 100%;
+	transition: border-color .3s ease, color .3s ease;
+
+	&_code {
+		appearance: textfield;
+		text-align: center;
+		padding: 12px 6px;
+	}
+
+	&_label {
+		margin-bottom: 20px;
+
+		& span {
+			color: #333;
+			background-color: #f3f3f3;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.restore {
+		&__info {
+			margin-left: 30px;
+		}
+
+		&__img {
+			& img {
+				max-width: 300px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.restore {
+		&__info {
+			margin-left: 30px;
+		}
+
+		&__img {
+			& img {
+				max-width: 200px;
+			}
+		}
+
+		&__text {
+			font-size: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.restore {
+		padding: 50px 0;
+
+		&__text {
+			margin-top: 16px;
+			font-size: 12px;
+		}
+	}
+
+	.restore__input {
+		padding: 9px 20px;
+
+		&_code {
+			padding: 9px 5px;
+		}
+	}
+
+	.restore__form {
+		&_code {
+			max-width: 300px;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.restore {
+		&__inner {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__info {
+			margin-left: 0;
+			margin-top: 35px;
+		}
+	}
+
+	.restore__form {
+		&_code {
+			max-width: none;
+		}
+	}
+}

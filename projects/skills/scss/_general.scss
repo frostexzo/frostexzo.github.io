@@ -24,6 +24,10 @@ input:focus:invalid {
 	border-color: $red;
 }
 
+input:focus:invalid + span {
+	color: $red;
+}
+
 *,
 *:after,
 *:before {
@@ -100,6 +104,22 @@ a {
 .wh-100 {
 	height: inherit;
 	width: 100%;
+}
+
+.fullscreen {
+	min-height: calc(100vh - 417px);
+}
+
+@media screen and (max-width: 720px) {
+	.fullscreen {
+		min-height: calc(100vh - 221px - 286px);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.fullscreen {
+		min-height: calc(100vh - 221px - 280px);
+	}
 }
 
 @media screen and (max-width: 600px) {

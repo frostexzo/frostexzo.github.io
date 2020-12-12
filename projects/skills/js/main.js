@@ -3,6 +3,7 @@
 const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
 const locationMap = document.querySelector("#location-map");
+const numInputs = document.querySelectorAll(".restore__input_code");
 
 window.addEventListener("load", () => {
 	setTimeout(() => {
@@ -82,3 +83,25 @@ try {
 		},
 	});
 } catch (err) {}
+
+const validateRestoreNumbers = (e) => {
+	const elData = +e.dataset.inputNumber;
+	let elValue = e.value;
+	const regPattern = /^\d+$/;
+	const isNumber = regPattern.test(elValue);
+
+	let checked = false;
+
+	if (!isNumber || elValue.length > 1) {
+		checked = true;
+
+		elValue = [...elValue];
+		let removedValue = elValue.pop();
+		elValue = elValue.join("");
+		e.value = elValue;
+	}
+
+	if (!checked && elData !== 4) {
+		e.nextElementSibling.focus();
+	}
+};
