@@ -239,7 +239,8 @@
 		margin-right: 10px;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: $red;
 		border-color: $red;
 	}
@@ -247,6 +248,14 @@
 
 .button-test {
 	max-width: 240px;
+}
+
+.button-test-hero {
+	max-width: none;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -274,6 +283,9 @@
 		padding: 11px;
 		font-size: 12px;
 	}
+	.button-test-hero {
+		font-size: 14px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -283,7 +295,8 @@
 	}
 	.button-favorite,
 	.button-restore,
-	.button-test {
+	.button-test,
+	.button-test-hero {
 		font-size: 12px;
 		padding: 12px;
 	}
@@ -298,7 +311,6 @@
 		}
 	}
 }
-
 
 @media screen and (max-width: 415px) {
 	.button-test {

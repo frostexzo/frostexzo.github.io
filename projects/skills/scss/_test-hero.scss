@@ -1,0 +1,167 @@
+.test-hero {
+	&__main {
+		padding: 100px 0;
+	}
+
+	&__inner {
+		display: grid;
+		grid-gap: 0 70px;
+		padding: 0;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__desc {
+		font-size: 20px;
+		margin-top: 10px;
+		display: block;
+		margin-bottom: 100px;
+		line-height: normal;
+	}
+
+	&__text {
+		font-size: 20px;
+	}
+
+	&__buttons {
+		margin-top: 25px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 25px;
+	}
+
+	&__level {
+		margin-top: 10px;
+
+		&_text {
+			font-size: 24px;
+			font-weight: 700;
+		}
+	}
+
+	&__chart {
+		max-width: 50px;
+		width: 100%;
+		border-radius: 3px;
+		background-color: #4a90e2;
+
+		&.active {
+			background: linear-gradient(180deg, #f093fb -87.39%, #f5576c 84.91%);
+		}
+	}
+
+	&__result {
+		margin-top: 35px;
+		background-image: url("../imgs/result-lines.svg");
+		background-repeat: no-repeat;
+		background-position: bottom;
+		display: grid;
+		grid-template-columns: repeat(7, 1fr);
+		grid-gap: 30px;
+
+		&_item {
+			position: relative;
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		&_text {
+			position: absolute;
+			font-size: 10px;
+			bottom: -35px;
+			font-family: "Montserrat", sans-serif;
+		}
+
+		&--begin {
+			height: 35px;
+		}
+
+		&--elem {
+			height: 52px;
+		}
+
+		&--pre {
+			height: 86px;
+		}
+
+		&--inter {
+			height: 103px;
+		}
+
+		&--upper {
+			height: 125px;
+		}
+
+		&--adv {
+			height: 158px;
+			background: linear-gradient(180deg, #a1c4fd 12.89%, #c2e9fb 417.77%);
+		}
+
+		&--profi {
+			height: 181px;
+			background: linear-gradient(183.59deg, #a1c4fd 19.88%, #c2e9fb 338.28%);
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.test-hero {
+		&__main {
+			padding: 50px 0;
+		}
+
+		&__inner {
+			grid-gap: 70px 0;
+			grid-template-columns: 1fr;
+			max-width: 550px;
+			margin: 0 auto;
+			justify-content: center;
+		}
+
+		&__desc {
+			display: none;
+		}
+
+		&__level {
+			grid-row: 1;
+		}
+
+		& .courses-hero__title {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.test-hero {
+		&__text {
+			font-size: 16px;
+		}
+
+		&__inner {
+			grid-gap: 100px 0;
+		}
+
+		&__buttons {
+			grid-gap: 15px;
+		}
+
+		&__result {
+			grid-gap: 0 10px;
+
+			&_text {
+				font-size: 8px;
+				bottom: -45px;
+				transform: rotate(-90deg)
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 415px) {
+	.test-hero {
+		&__buttons {
+			grid-template-columns: 1fr;
+		}
+	}
+}

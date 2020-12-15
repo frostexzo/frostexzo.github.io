@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
+		<!-- crossorigin="anonymous" -->
+		<link rel="stylesheet" href="css/styles.css" />
+
+		<title>Skills Academy</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-alert">
+				<div class="container">
+					<span class="header-alert__text"
+						>МЕЖДУНАРОДНЫЙ ДЕНЬ УЧИТЕЛЯ | Выразите свое признание и купите курсы
+						всего от 11,99 $ — заканчивается завтра.
+						<br />
+						<strong>Остался 1 день!</strong></span
+					>
+				</div>
+			</div>
+
+			<div class="header-top">
+				<div class="container">
+					<div class="header-top__inner">
+						<div class="header-top__block">
+							<div class="header-top__langs">
+								<a href="" class="header-top__langs_link active">Ru</a>
+								<span>/</span>
+								<a href="" class="header-top__langs_link">Kz</a>
+							</div>
+
+							<div class="header-top__tel">
+								<a href="tel:87087005020" class="header-top__tel_link"
+									><img
+										decoding="async"
+										src="imgs/phone.svg"
+										width="14"
+										height="14"
+										alt=""
+									/>
+									8 708 700 50 20</a
+								>
+							</div>
+						</div>
+
+						<a href="" class="header-top__slogan">
+							Преподавайте в <strong>Skills Academy</strong>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div x-data="{ menu: false }" class="header-nav">
+				<div class="container">
+					<div class="header-nav__inner">
+						<div class="header-nav__block">
+							<a href="" class="header-nav__logo"
+								><img
+									decoding="async"
+									src="imgs/logo.svg"
+									width="127"
+									height="51"
+									alt=""
+							/></a>
+
+							<nav class="nav nav__desktop">
+								<a href="" class="nav__link">Категории</a>
+								<a href="" class="nav__link">Тесты</a>
+								<a href="" class="nav__link">О компании</a>
+							</nav>
+						</div>
+
+						<div class="header-nav__block">
+							<button class="button button-nav">Вход</button>
+							<button class="button button-nav button-nav-reverse">
+								Регистрация
+							</button>
+						</div>
+
+						<div @click="menu = !menu" class="header-nav__burger">
+							<img src="imgs/burger.svg" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div
+					x-cloak
+					x-show.transition.opacity.duration.300ms="menu === true"
+					class="header__menu"
+				>
+					<div class="header__menu_inner">
+						<div class="header__menu_top">
+							<button @click="menu = !menu" class="close-btn">
+								<img src="imgs/close-sm.svg" width="20" height="20" alt="" />
+							</button>
+							<div class="header__menu_buttons">
+								<button class="button button-nav">Вход</button>
+								<button class="button button-nav button-nav-reverse">
+									Регистрация
+								</button>
+							</div>
+						</div>
+
+						<nav class="nav nav__mobile tablet-hidden">
+							<a href="" class="nav__link">Категории</a>
+							<a href="" class="nav__link">Тесты</a>
+							<a href="" class="nav__link">О компании</a>
+						</nav>
+
+						<div class="header-top__langs tablet-hidden">
+							<a href="" class="header-top__langs_link active">Ru</a>
+							<span>/</span>
+							<a href="" class="header-top__langs_link">Kz</a>
+						</div>
+
+						<div class="header-top__tel tablet-hidden">
+							<a href="tel:87087005020" class="header-top__tel_link"
+								><img
+									decoding="async"
+									src="imgs/phone.svg"
+									width="14"
+									height="14"
+									alt=""
+								/>
+								8 708 700 50 20</a
+							>
+						</div>
+
+						<a href="" class="header-top__slogan tablet-hidden">
+							Преподавайте в <strong>Skills Academy</strong>
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<section class="courses-hero test-hero">
+				<div class="courses-hero__main test-hero__main">
+					<div class="container wh-100">
+						<div class="courses-hero__top_inner test-hero__inner">
+							<div class="test-hero__block">
+								<h1 class="courses-hero__title">Результат теста</h1>
+								<span class="course-page__desc test-hero__desc">На определение уровня английского языка</span>
+								<div class="test-hero__text">
+									<strong>Ваш уровень английского:</strong>
+									<span>Elementary</span>
+								</div>
+
+								<div class="test-hero__buttons">
+									<a href="" class="button button-course button-test-hero">Пройти тест еще раз</a>
+									<button class="button button-favorite button-test-hero">Заказать консультацию</button>
+								</div>
+							</div>
+
+							<div class="test-hero__block test-hero__level">
+								<span class="test-hero__level_text">Ваш результат</span>
+
+								<div class="test-hero__result">
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--begin"></div>
+										<span class="test-hero__result_text">Beginner</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--elem active"></div>
+										<span class="test-hero__result_text">Elementary</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--pre"></div>
+										<span class="test-hero__result_text">Pre-<br>
+											Intermediate</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--inter"></div>
+										<span class="test-hero__result_text">Intermediate</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--upper"></div>
+										<span class="test-hero__result_text">Upper<br>
+											Intermediate</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--adv"></div>
+										<span class="test-hero__result_text">Advanced</span>
+									</div>
+
+									<div class="test-hero__result_item">
+										<div class="test-hero__chart test-hero__result--profi"></div>
+										<span class="test-hero__result_text">Proficiency</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+			<section class="courses-list course-page__list">
+				<div class="container">
+					<h2 class="section-title">Рекомендуем к изучению</h2>
+				</div>
+
+				<div class="container container-sm">
+					<div class="courses-list__content course-page__content">
+						<div class="courses__item courses-list__item">
+							<a href="" class="courses__img">
+								<img
+									decoding="async"
+									src="imgs/course-placeholder.jpg"
+									alt=""
+								/>
+								<span class="courses__label">Новинка</span>
+							</a>
+							<div class="courses__info">
+								<div class="courses__top">
+									<div class="courses__meta">
+										<a href="" class="courses__title">Курс Elementary</a>
+										<div class="courses__price">
+											<span class="courses__price--default">4 500 ₸</span>
+											<span class="courses__price--prev">4 000 ₸</span>
+										</div>
+									</div>
+
+									<div class="courses__stars">
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-empty.svg" alt="" />
+									</div>
+								</div>
+
+								<p class="courses__desc">
+									Курс предназначен для тех, кто только начинает изучение
+									английского, но уже знаком с основами.
+								</p>
+
+								<div class="courses__link">
+									<a href="">Подробнее о курсе</a>
+								</div>
+
+								<div class="courses__buttons">
+									<button class="button button-course">В корзину</button>
+									<button class="button button-course button-course-reverse">
+										В избранное
+									</button>
+								</div>
+							</div>
+						</div>
+
+						<div class="courses__item courses-list__item">
+							<a href="" class="courses__img">
+								<img
+									decoding="async"
+									src="imgs/course-placeholder.jpg"
+									alt=""
+								/>
+								<span class="courses__label">Новинка</span>
+							</a>
+							<div class="courses__info">
+								<div class="courses__top">
+									<div class="courses__meta">
+										<a href="" class="courses__title">Курс Elementary</a>
+										<div class="courses__price">
+											<span class="courses__price--default">4 500 ₸</span>
+											<span class="courses__price--prev">4 000 ₸</span>
+										</div>
+									</div>
+
+									<div class="courses__stars">
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-empty.svg" alt="" />
+									</div>
+								</div>
+
+								<p class="courses__desc">
+									Курс предназначен для тех, кто только начинает изучение
+									английского, но уже знаком с основами.
+								</p>
+
+								<div class="courses__link">
+									<a href="">Подробнее о курсе</a>
+								</div>
+
+								<div class="courses__buttons">
+									<button class="button button-course">В корзину</button>
+									<button class="button button-course button-course-reverse">
+										В избранное
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__block">
+						<a href="" class="footer__logo"
+							><img src="imgs/logo.svg" alt=""
+						/></a>
+					</div>
+
+					<div class="footer__block">
+						<a href="" class="footer__link">Главная</a>
+						<a href="" class="footer__link">Все курсы</a>
+						<a href="" class="footer__link">Тесты</a>
+						<a href="" class="footer__link">О компании</a>
+					</div>
+
+					<div class="footer__block">
+						<a href="tel:87087005020" class="footer__tel"
+							><img src="imgs/phone.svg" alt="" /> 8 708 700 50 20</a
+						>
+						<p class="footer__copyright">
+							ТОО SKILLS ACADEMY<br />
+							Все права защищены 2020
+						</p>
+						<a href="" class="footer__policy">Политика конфиденциальности</a>
+					</div>
+
+					<a href="" class="footer__block footer__developed">
+						<span class="footer__dev">Разработано командой</span>
+						<img src="imgs/devs.svg" alt="" />
+					</a>
+				</div>
+			</div>
+		</footer>
+
+		<script src="js/alpine.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

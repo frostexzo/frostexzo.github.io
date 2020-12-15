@@ -1,0 +1,43 @@
+.questions {
+	background-color: #f3f3f3;
+
+	&__inner {
+		padding-top: 70px;
+		padding-bottom: 100px;
+		font-family: "Montserrat", sans-serif;
+	}
+
+	&__item {
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		color: #000;
+	}
+
+	&__question {
+		display: block;
+		margin-top: 30px;
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.questions {
+		&__inner {
+			padding: 45px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.questions {
+		&__question {
+			margin-top: 20px;
+			font-size: 12px;
+		}
+	}
+}
