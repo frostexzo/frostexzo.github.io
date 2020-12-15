@@ -4,12 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<link
-			rel="preload"
-			id="fonts"
-			as="style"
-			href="css/fonts.css"
-		/>
+		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
 		<!-- crossorigin="anonymous" -->
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -144,59 +139,14 @@
 		</header>
 
 		<main>
-			<section class="fullscreen restore">
-				<div class="container">
-					<div class="restore__wrapper">
-						<h1 class="section-title">Восстановление доступа к аккаунту</h1>
-
-						<form action="#" method="POST" class="restore__form_code">
-							<span class="restore__text--sm"
-								>Введите четырехзначный код, полученный по СМС</span
-							>
-
-							<div x-data="{}" class="restore__form_inputs">
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="firstNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="1"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="secondNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="2"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="thirdNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="3"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="fourthNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="4"
-									required
-									autocomplete="off"
-								/>
-							</div>
-
-							<button type="submit" class="button button-course button-restore">
-								Сбросить пароль
-							</button>
-						</form>
+			<section class="courses-hero">
+				<div class="courses-hero__main">
+					<div class="container wh-100">
+						<div class="courses-hero__top_inner">
+							<h1 class="courses-hero__title">
+								Определите свой уровень английского
+							</h1>
+						</div>
 					</div>
 				</div>
 			</section>

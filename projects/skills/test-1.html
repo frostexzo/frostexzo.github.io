@@ -143,99 +143,69 @@
 			</div>
 		</header>
 
-		<main>
-			<section class="fullscreen restore">
-				<div class="container">
-					<div class="restore__wrapper">
-						<h1 class="section-title">Восстановление доступа к аккаунту</h1>
+		<main class="fullscreen-no-footer">
+			<section class="test">
+				<form action="#" method="POST" class="test__form">
+					<div class="container">
+						<div class="test__inner">
+							<h1 class="test__title">
+								Для начала расскажите, какие темы интересны вам больше всего?
+							</h1>
 
-						<form action="#" method="POST" class="restore__form_code">
-							<span class="restore__text--sm"
-								>Введите четырехзначный код, полученный по СМС</span
-							>
+							<span class="test__text"> ВЫБРАТЬ ДО 5 </span>
 
-							<div x-data="{}" class="restore__form_inputs">
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="firstNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="1"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="secondNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="2"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="thirdNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="3"
-									required
-									autocomplete="off"
-								/>
-								<input
-									class="restore__input restore__input_code"
-									type="tel"
-									name="fourthNumber"
-									x-on:input="validateRestoreNumbers($event.target)"
-									data-input-number="4"
-									required
-									autocomplete="off"
-								/>
+							<div x-data="{}" class="test__cards">
+								<label for="card1" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card1" id="card1" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
+
+								<label for="card2" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card2" id="card2" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
+
+								<label for="card3" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card3" id="card3" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
+
+								<label for="card4" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card4" id="card4" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
+
+								<label for="card5" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card5" id="card5" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
+
+								<label for="card6" class="test__card" @click.prevent="selectTestCard($event.target)">
+									<input type="checkbox" name="card6" id="card6" autocomplete="off">
+									<img src="imgs/more-img1.svg" alt="" />
+									<span>Разработка</span>
+								</label>
 							</div>
-
-							<button type="submit" class="button button-course button-restore">
-								Сбросить пароль
-							</button>
-						</form>
+						</div>
 					</div>
-				</div>
+
+					<div class="test__footer">
+						<div class="container">
+							<div class="test__footer_inner">
+								<button type="submit" class="button button-course button-test">
+									Следующий
+								</button>
+							</div>
+						</div>
+					</div>
+				</form>
 			</section>
 		</main>
-
-		<footer class="footer">
-			<div class="container">
-				<div class="footer__inner">
-					<div class="footer__block">
-						<a href="" class="footer__logo"
-							><img src="imgs/logo.svg" alt=""
-						/></a>
-					</div>
-
-					<div class="footer__block">
-						<a href="" class="footer__link">Главная</a>
-						<a href="" class="footer__link">Все курсы</a>
-						<a href="" class="footer__link">Тесты</a>
-						<a href="" class="footer__link">О компании</a>
-					</div>
-
-					<div class="footer__block">
-						<a href="tel:87087005020" class="footer__tel"
-							><img src="imgs/phone.svg" alt="" /> 8 708 700 50 20</a
-						>
-						<p class="footer__copyright">
-							ТОО SKILLS ACADEMY<br />
-							Все права защищены 2020
-						</p>
-						<a href="" class="footer__policy">Политика конфиденциальности</a>
-					</div>
-
-					<a href="" class="footer__block footer__developed">
-						<span class="footer__dev">Разработано командой</span>
-						<img src="imgs/devs.svg" alt="" />
-					</a>
-				</div>
-			</div>
-		</footer>
 
 		<script src="js/alpine.js"></script>
 		<script src="js/swiper.js"></script>

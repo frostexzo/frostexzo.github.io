@@ -6,7 +6,7 @@
 		top: -8px;
 		padding: 0 10px;
 		left: 15px;
-		transition: color .3s ease;
+		transition: color 0.3s ease;
 		font-size: 12px;
 	}
 }
@@ -22,10 +22,11 @@
 	font-weight: 700;
 	width: 100%;
 	border-radius: 2px;
-	transition: box-shadow .3s ease;
+	transition: box-shadow 0.3s ease;
 	height: auto;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		cursor: pointer;
 		box-shadow: 0 0 4px $purple;
 	}
@@ -99,7 +100,8 @@
 	color: $purple;
 	border: 1px solid $purple;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: $purple;
 		color: #fff;
 	}
@@ -109,7 +111,8 @@
 	color: #fff;
 	background-color: $purple;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: transparent;
 		color: $purple;
 	}
@@ -126,7 +129,8 @@
 	color: #fff;
 	border: 2px solid $red;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: transparent;
 	}
 }
@@ -141,7 +145,8 @@
 	font-size: 18px;
 	border-radius: 4px;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $purple;
 		background-color: #fff;
 	}
@@ -155,7 +160,8 @@
 	color: $red;
 	padding: 12px 25px;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: $red;
 		color: #fff;
 	}
@@ -168,7 +174,8 @@
 	border-radius: 2px;
 	background-color: #fff;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: #fff;
 	}
 }
@@ -183,7 +190,8 @@
 	border-radius: 4px;
 	border: 1px solid $red;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		background-color: transparent;
 		color: $red;
 	}
@@ -192,7 +200,8 @@
 		background-color: transparent;
 		color: $red;
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			background-color: $red;
 			color: #fff;
 		}
@@ -208,7 +217,8 @@
 	max-width: 270px;
 	padding: 20px 0;
 
-	&:hover, &:focus {
+	&:hover,
+	&:focus {
 		color: $red;
 	}
 }
@@ -233,6 +243,10 @@
 		background-color: $red;
 		border-color: $red;
 	}
+}
+
+.button-test {
+	max-width: 240px;
 }
 
 @media screen and (max-width: 600px) {
@@ -267,16 +281,14 @@
 		font-size: 10px;
 		padding: 9px;
 	}
-	.button-favorite {
+	.button-favorite,
+	.button-restore,
+	.button-test {
 		font-size: 12px;
 		padding: 12px;
 	}
-	.button-restore {
-		padding: 12px;
-		font-size: 12px;
-	}
+
 	.input-default {
-	
 		& span {
 			position: absolute;
 			top: -7px;
@@ -284,5 +296,12 @@
 			padding: 0 8px;
 			left: 12px;
 		}
+	}
+}
+
+
+@media screen and (max-width: 415px) {
+	.button-test {
+		max-width: none;
 	}
 }

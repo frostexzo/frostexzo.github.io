@@ -6,33 +6,31 @@ const locationMap = document.querySelector("#location-map");
 const numInputs = document.querySelectorAll(".restore__input_code");
 
 window.addEventListener("load", () => {
-	setTimeout(() => {
 		fonts.rel = "stylesheet";
 
 		if (locationMap) {
 			locationMap.innerHTML =
 				'<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A65a6e59fc771d549325b6d6c8dcc502da7ff12edaa9c86bea1d828bf1c0d714e&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>';
 		}
-	}, 50);
 });
 
-try {
-	if (altContainer) {
-		const resizeCalcMargin = () => {
-			window.addEventListener("resize", () => {
-				let distanceToLeft = document
-					.querySelector(".container")
-					.getBoundingClientRect();
-				altContainer.style.marginLeft = `${distanceToLeft.left}px`;
-			});
+if (altContainer) {
+	const resizeCalcMargin = () => {
+		window.addEventListener("resize", () => {
 			let distanceToLeft = document
 				.querySelector(".container")
 				.getBoundingClientRect();
 			altContainer.style.marginLeft = `${distanceToLeft.left}px`;
-		};
-		resizeCalcMargin();
-	}
+		});
+		let distanceToLeft = document
+			.querySelector(".container")
+			.getBoundingClientRect();
+		altContainer.style.marginLeft = `${distanceToLeft.left}px`;
+	};
+	resizeCalcMargin();
+}
 
+try {
 	const popularCourses = new Swiper(".popular__courses_wrapper", {
 		slidesPerView: 4,
 		spaceBetween: 16,
@@ -103,5 +101,19 @@ const validateRestoreNumbers = (e) => {
 
 	if (!checked && elData !== 4) {
 		e.nextElementSibling.focus();
+	}
+};
+
+const selectTestCard = (e) => {
+	const cardInput = e.querySelector("input");
+	const totalCardsSelected = document.querySelectorAll(".test__card.active");
+	const vars = document.querySelectorAll('.test__var');
+
+	if (!e.classList.contains("active") && totalCardsSelected.length <= 4) {
+		e.classList.add("active");
+		cardInput.checked = true;
+	} else {
+		e.classList.remove("active");
+		cardInput.checked = false;
 	}
 };

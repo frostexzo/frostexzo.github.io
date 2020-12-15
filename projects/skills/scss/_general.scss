@@ -108,6 +108,10 @@ a {
 
 .fullscreen {
 	min-height: calc(100vh - 417px);
+
+	&-no-footer {
+		min-height: calc(100vh - 185px - 120px);
+	}
 }
 
 @media screen and (max-width: 720px) {
