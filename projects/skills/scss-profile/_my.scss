@@ -1,0 +1,48 @@
+.my {
+	max-width: 333px;
+	width: 100%;
+	background-color: #fff;
+	border-radius: 4px;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		padding: 31px 37px;
+
+		& label {
+			margin-bottom: 24px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__upload {
+		& input {
+			display: none;
+		}
+
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		& span {
+			font-weight: 700;
+			padding-bottom: 2px;
+			font-size: 14px;
+			margin-left: 10px;
+			color: #333;
+		}
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	.my {
+		max-width: none;
+
+		&__inner {
+			padding: 16px;
+			padding-top: 22px;
+		}
+	}
+}

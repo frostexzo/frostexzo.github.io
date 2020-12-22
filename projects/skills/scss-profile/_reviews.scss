@@ -1,0 +1,98 @@
+.reviews {
+	&__inner {
+		padding-top: 65px;
+		padding-bottom: 80px;
+	}
+
+	&__items {
+		margin-top: 32px;
+		margin-bottom: 55px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__item {
+		display: flex;
+		color: #000;
+		font-family: "Montserrat", sans-serif;
+
+		&_info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 27px;
+		}
+
+		&_img {
+			max-width: 120px;
+			width: 100%;
+
+			& img {
+				width: 100%;
+				border-radius: 100%;
+			}
+		}
+
+		&_name {
+			font-size: 20px;
+			margin-bottom: 12px;
+			font-weight: 600;
+			display: block;
+		}
+
+		&_desc {
+			line-height: 1.5;
+			color: #4f4f4f;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.reviews {
+		&__inner {
+			padding-top: 45px;
+			padding-bottom: 40px;
+		}
+
+		&__item {
+			&_desc {
+				font-size: 14px;
+			}
+			&_name {
+				font-size: 18px;
+			}
+
+			&_info {
+				margin-left: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.reviews {
+		&__items {
+			flex-direction: column;
+			margin-bottom: 35px;
+		}
+
+		&__item {
+			margin-bottom: 35px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&_img {
+				max-width: 60px;
+			}
+
+			&_desc {
+				font-size: 12px;
+			}
+
+			&_name {
+				font-size: 14px;
+			}
+		}
+	}
+}

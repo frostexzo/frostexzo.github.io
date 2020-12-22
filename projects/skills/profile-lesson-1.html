@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/profile.css" />
+
+		<title>Skills Academy Profile</title>
+	</head>
+	<body>
+		<main class="profile">
+			<aside
+				x-data="{isOpen: false}"
+				class="sidebar"
+				:class="{ 'active': isOpen }"
+			>
+				<div class="sidebar__inner">
+					<div class="sidebar__header">
+						<a href=""
+							><img class="sidebar__logo" src="imgs/logo.svg" alt=""
+						/></a>
+
+						<div class="sidebar__langs">
+							<a href="" class="active">Ru</a>
+							<span>/</span>
+							<a href="">Kz</a>
+						</div>
+
+						<div :class="{ 'active': isOpen }" class="sidebar__burger">
+							<img
+								@click="isOpen = true"
+								class="sidebar__burger_icon"
+								src="imgs/burger.svg"
+								alt=""
+							/>
+							<img
+								@click="isOpen = false"
+								class="sidebar__close_icon"
+								src="imgs/close-sm.svg"
+								alt=""
+							/>
+						</div>
+					</div>
+
+					<div
+						x-cloak
+						x-show="isOpen || (window.innerWidth > 1000)"
+						:class="{ 'active': isOpen }"
+						class="sidebar__menu"
+					>
+						<div class="sidebar__avatar">
+							<img src="imgs/course-placeholder.jpg" alt="" />
+							<span>Құмарова Нұрай</span>
+						</div>
+
+						<nav class="sidebar__nav">
+							<a href=""
+								><img src="imgs/nav-icon1.svg" alt="" /><span
+									>Мой профиль</span
+								></a
+							>
+							<a class="active" href=""
+								><img src="imgs/nav-icon2.svg" alt="" /><span
+									>Мои курсы</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon3.svg" alt="" /><span
+									>Уведомления</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon4.svg" alt="" /><span
+									>Заметки к урокам</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon5.svg" alt="" /><span
+									>Задания по урокам</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon6.svg" alt="" /><span
+									>История платежей</span
+								></a
+							>
+						</nav>
+
+						<nav class="sidebar__nav sidebar__nav_bottom">
+							<a href=""
+								><img src="imgs/nav-icon7.svg" alt="" /><span>Корзина</span></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon8.svg" alt="" /><span
+									>Избранное</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon9.svg" alt="" /><span>Выйти</span></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon10.svg" alt="" /><span
+									>Обратно на сайт</span
+								></a
+							>
+						</nav>
+					</div>
+				</div>
+			</aside>
+
+			<div class="profile__content">
+				<section class="profile__content_inner">
+					<h1 class="profile__title">Курс Elementary</h1>
+
+					<div class="lesson__meta">
+						<div class="lesson__meta_card">
+							<span>4 из 6</span>
+							<span>уроков пройдено</span>
+						</div>
+
+						<div class="lesson__meta_card">
+							<span>6</span>
+							<span>часов потрачено на обучение</span>
+						</div>
+
+						<div class="lesson__meta_card" data-border-color="green">
+							<span>46</span>
+							<span>часов осталось до конца</span>
+						</div>
+					</div>
+
+					<div class="lesson__selector_wrapper">
+						<div class="selector__wrapper selector__wrapper--red">
+							<select
+								autocomplete="off"
+								class="selector selector--red"
+								name="lang"
+							>
+								<option value="no" selected disabled>Выбрать урок</option>
+								<option value="ru">Урок 1</option>
+								<option value="ch">Урок 2</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="lesson__materials">
+						<div class="lesson__materials_inner">
+							<h3 class="lesson__title">
+								Урок 2. Как будет происходить обучение
+							</h3>
+
+							<div
+								x-data="{}"
+								class="videos__item"
+								data-video-url="https://www.youtube.com/embed/ztbcLu6rBwk"
+								@click="videoPlay($el)"
+							>
+								<img decoding="async" src="imgs/bannerVideo.jpg" alt="" />
+							</div>
+
+							<div class="lesson__additional">
+								<div class="lesson__attach">
+									<span class="lesson__subtitle">Файлы урока</span>
+									<div class="lesson__attach_files">
+										<a href="" class="lesson__attach_file">
+											<div class="lesson__attach_img">
+												<img src="imgs/attach.svg" alt="" />
+											</div>
+											<div class="lesson__attach_info">
+												<span>2 страницы</span>
+												<span>Список неправильных глаголов</span>
+											</div>
+										</a>
+
+										<a href="" class="lesson__attach_file">
+											<div class="lesson__attach_img">
+												<img src="imgs/attach.svg" alt="" />
+											</div>
+											<div class="lesson__attach_info">
+												<span>2 страницы</span>
+												<span>Список неправильных глаголов</span>
+											</div>
+										</a>
+
+										<a href="" class="lesson__attach_file">
+											<div class="lesson__attach_img">
+												<img src="imgs/attach.svg" alt="" />
+											</div>
+											<div class="lesson__attach_info">
+												<span>2 страницы</span>
+												<span>Список неправильных глаголов</span>
+											</div>
+										</a>
+
+										<a href="" class="lesson__attach_file">
+											<div class="lesson__attach_img">
+												<img src="imgs/attach.svg" alt="" />
+											</div>
+											<div class="lesson__attach_info">
+												<span>2 страницы</span>
+												<span>Список неправильных глаголов</span>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<div class="lesson__rating">
+									<span class="lesson__subtitle">Оцените&nbsp;урок</span>
+									<div class="courses__stars">
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-filled.svg" alt="" />
+										<img decoding="async" src="imgs/star-empty.svg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="author">
+						<div class="author__inner">
+							<h2 class="section-title">Автор курса</h2>
+
+							<div class="reviews__items author__wrapper">
+								<div class="reviews__item author__item">
+									<div class="reviews__item_img">
+										<img decoding="async" src="imgs/avatar.jpg" alt="" />
+									</div>
+									<div class="reviews__item_info">
+										<span class="reviews__item_name">Арапбай Эльмира</span>
+
+										<div class="author__rating">
+											<div class="courses__stars">
+												<img
+													decoding="async"
+													src="imgs/star-filled.svg"
+													alt=""
+												/>
+												<img
+													decoding="async"
+													src="imgs/star-filled.svg"
+													alt=""
+												/>
+												<img
+													decoding="async"
+													src="imgs/star-filled.svg"
+													alt=""
+												/>
+												<img
+													decoding="async"
+													src="imgs/star-filled.svg"
+													alt=""
+												/>
+												<img
+													decoding="async"
+													src="imgs/star-empty.svg"
+													alt=""
+												/>
+											</div>
+
+											<span>4.7</span>
+										</div>
+
+										<p class="reviews__item_desc">
+											Уже прошла 3 курса от скилс академи и очень довольна. Мой
+											уровень английского повысился, теперь я могу немного
+											понимать сериалы без озвучки. Что очень здорово. Ребята
+											большие молодцы. Рекомендую!
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="question">
+						<form action="" method="POST" class="question__inner">
+							<span class="question__number">Задание #1</span>
+							<p class="question__desc">
+								Read the questions carefully and choose the correct option
+							</p>
+							<h4 class="question__title">
+								They _____ a real tiger in the zoo.
+							</h4>
+
+							<div class="question__variants">
+								<label class="question__variant">
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
+								</label>
+
+								<label class="question__variant">
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
+								</label>
+
+								<label class="question__variant">
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
+								</label>
+
+								<label class="question__variant">
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
+								</label>
+							</div>
+						</form>
+					</div>
+				</section>
+
+				<footer class="footer footer-profile">
+					<div class="footer__inner footer-profile__inner">
+						<div class="footer__block">
+							<a href="" class="footer__link">Главная</a>
+							<a href="" class="footer__link">Все курсы</a>
+							<a href="" class="footer__link">Тесты</a>
+							<a href="" class="footer__link">О компании</a>
+						</div>
+
+						<div class="footer__block">
+							<a href="tel:87087005020" class="footer__tel"
+								><img src="imgs/phone.svg" alt="" /> 8 708 700 50 20</a
+							>
+							<p class="footer__copyright">
+								ТОО SKILLS ACADEMY<br />
+								Все права защищены 2020
+							</p>
+							<a href="" class="footer__policy">Политика конфиденциальности</a>
+						</div>
+
+						<a href="" class="footer__block footer__developed">
+							<span class="footer__dev">Разработано командой</span>
+							<img src="imgs/devs.svg" alt="" />
+						</a>
+					</div>
+				</footer>
+			</div>
+		</main>
+
+		<script src="js/alpine.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

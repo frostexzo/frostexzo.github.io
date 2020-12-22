@@ -1,5 +1,6 @@
 .input-default {
 	position: relative;
+	grid-column: 1 / 3;
 
 	& span {
 		position: absolute;
@@ -8,6 +9,13 @@
 		left: 15px;
 		transition: color 0.3s ease;
 		font-size: 12px;
+	}
+}
+
+.input-half-width {
+	grid-column: initial;
+	& input {
+		appearance: textfield;
 	}
 }
 
@@ -46,6 +54,27 @@
 		}
 	}
 
+	
+	&--red {
+		color: $red;
+		border-color: $red;
+
+		&:hover,
+		&:focus {
+			box-shadow: 0 0 4px $red;
+		}
+
+		& option {
+			color: $red;
+	
+			&:checked,
+			&:hover,
+			&:focus {
+				background-color: $red !important;
+			}
+		}
+	}
+
 	&__wrapper {
 		position: relative;
 
@@ -60,6 +89,12 @@
 			background-repeat: no-repeat;
 			width: 10px;
 			height: 6px;
+		}
+
+		&--red {
+			&:before {
+				background-image: url("../imgs/arrow.svg");
+			}
 		}
 	}
 }
@@ -297,7 +332,8 @@
 	.button-favorite,
 	.button-restore,
 	.button-test,
-	.button-test-hero {
+	.button-test-hero,
+	.button-profile {
 		font-size: 12px;
 		padding: 12px;
 	}

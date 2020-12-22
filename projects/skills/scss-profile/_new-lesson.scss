@@ -1,0 +1,40 @@
+.new-lesson {
+	background-color: #fff;
+	border-radius: 4px;
+	max-width: 605px;
+
+	&__inner {
+		padding: 31px 37px;
+		display: grid;
+		grid-gap: 24px 15px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	& .restore__input_label {
+		margin-bottom: 0;
+	}
+
+	&__img {
+		grid-column: 1 / 3;
+
+		& img {
+			width: 100%;
+			border-radius: 4px;
+		}
+	}
+
+	&__upload {
+		grid-column: 1 / 3;
+	}
+}
+ 
+@media screen and (max-width: 600px) {
+	.new-lesson {
+		&__inner {
+			padding: 16px;
+		}
+		&__button {
+			grid-column: 1 / 3;
+		}
+	}
+}

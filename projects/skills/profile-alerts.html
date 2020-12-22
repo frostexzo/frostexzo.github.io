@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
+		<link rel="stylesheet" href="css/profile.css" />
+
+		<title>Skills Academy Profile</title>
+	</head>
+	<body>
+		<div class="profile">
+			<aside x-data="{isOpen: false}" class="sidebar" :class="{ 'active': isOpen }">
+				<div class="sidebar__inner">
+					<div class="sidebar__header">
+						<a href=""><img class="sidebar__logo" src="imgs/logo.svg" alt="" /></a>
+
+						<div class="sidebar__langs">
+							<a href="" class="active">Ru</a>
+							<span>/</span>
+							<a href="">Kz</a>
+						</div>
+
+						<div :class="{ 'active': isOpen }" class="sidebar__burger">
+							<img @click="isOpen = true" class="sidebar__burger_icon" src="imgs/burger.svg" alt="">
+							<img @click="isOpen = false" class="sidebar__close_icon" src="imgs/close-sm.svg" alt="">
+						</div>
+					</div>
+
+					<div x-cloak x-show="isOpen || (window.innerWidth > 1000)" :class="{ 'active': isOpen }" class="sidebar__menu">
+						<div class="sidebar__avatar">
+							<img src="imgs/course-placeholder.jpg" alt="" />
+							<span>Құмарова Нұрай</span>
+						</div>
+
+						<nav class="sidebar__nav">
+							<a href=""
+								><img src="imgs/nav-icon1.svg" alt="" /><span
+									>Мой профиль</span
+								></a
+							>
+							<a class="active" href=""
+								><img src="imgs/nav-icon2.svg" alt="" /><span
+									>Мои курсы</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon3.svg" alt="" /><span
+									>Уведомления</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon4.svg" alt="" /><span
+									>Заметки к урокам</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon5.svg" alt="" /><span
+									>Задания по урокам</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon6.svg" alt="" /><span
+									>История платежей</span
+								></a
+							>
+						</nav>
+
+						<nav class="sidebar__nav sidebar__nav_bottom">
+							<a href=""
+								><img src="imgs/nav-icon7.svg" alt="" /><span>Корзина</span></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon8.svg" alt="" /><span
+									>Избранное</span
+								></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon9.svg" alt="" /><span>Выйти</span></a
+							>
+							<a href=""
+								><img src="imgs/nav-icon10.svg" alt="" /><span
+									>Обратно на сайт</span
+								></a
+							>
+						</nav>
+					</div>
+				</div>
+			</aside>
+
+			<div class="profile__content">
+				<div class="profile__content_inner">
+					<h1 class="profile__title">Уведомления</h1>
+					<div class="alerts">
+						<div class="alerts__inner">
+
+							<div class="alerts__item">
+								<div class="alerts__item_img">
+									<img src="imgs/course-placeholder.jpg" alt="">
+								</div>
+								<div class="alerts__item_info">
+									<div class="alerts__item_meta">
+										<h3 class="alerts__title">Вы купили новый курс</h3>
+										<time datetime="20.01.2020">30 секунд назад</time>
+									</div>
+									<p class="alerts__item_desc">
+										Начните Курс Elementary от Skills Academy <a href="">прямо сейчас!</a>
+									</p>
+								</div>
+							</div>
+
+							<div class="alerts__item">
+								<div class="alerts__item_img">
+									<img src="imgs/course-placeholder.jpg" alt="">
+								</div>
+								<div class="alerts__item_info">
+									<div class="alerts__item_meta">
+										<h3 class="alerts__title">Вы купили новый курс</h3>
+										<time datetime="20.01.2020">30 секунд назад</time>
+									</div>
+									<p class="alerts__item_desc">
+										Начните Курс Elementary от Skills Academy прямо сейчас!
+									</p>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+				<footer class="footer footer-profile">
+					<div class="footer__inner footer-profile__inner">
+						<div class="footer__block">
+							<a href="" class="footer__link">Главная</a>
+							<a href="" class="footer__link">Все курсы</a>
+							<a href="" class="footer__link">Тесты</a>
+							<a href="" class="footer__link">О компании</a>
+						</div>
+
+						<div class="footer__block">
+							<a href="tel:87087005020" class="footer__tel"
+								><img src="imgs/phone.svg" alt="" /> 8 708 700 50 20</a
+							>
+							<p class="footer__copyright">
+								ТОО SKILLS ACADEMY<br />
+								Все права защищены 2020
+							</p>
+							<a href="" class="footer__policy">Политика конфиденциальности</a>
+						</div>
+
+						<a href="" class="footer__block footer__developed">
+							<span class="footer__dev">Разработано командой</span>
+							<img src="imgs/devs.svg" alt="" />
+						</a>
+					</div>
+				</footer>
+			</div>
+		</div>
+
+		<script src="js/alpine.js"></script>
+		<script src="js/swiper.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

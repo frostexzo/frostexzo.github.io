@@ -1,0 +1,139 @@
+.lesson {
+	&__title {
+		color: #081f32;
+		margin-bottom: 20px;
+		font-weight: 700;
+		letter-spacing: 0.01em;
+		font-size: 20px;
+	}
+
+	&__subtitle {
+		color: #081f32;
+		letter-spacing: 0.01em;
+		font-family: "Montserrat", sans-serif;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&__meta {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(4, 1fr);
+		margin-bottom: 18px;
+
+		&_card {
+			background: #fff;
+			border-radius: 4px;
+			padding: 16px;
+			padding-top: 12px;
+			border: 1px solid #ffbef9;
+
+			&:nth-child(2) {
+				border-color: #d3ffbf;
+			}
+			&:nth-child(3) {
+				border-color: #beefff;
+			}
+
+			& span {
+				&:first-child {
+					font-weight: 700;
+					color: $purple;
+					font-size: 30px;
+				}
+
+				&:last-child {
+					display: block;
+					margin-top: 8px;
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	&__selector_wrapper {
+		display: grid;
+		grid-template-columns: 0.4fr;
+		margin-bottom: 32px;
+	}
+
+	&__additional {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__attach {
+		&_files {
+			margin-top: 10px;
+			margin-right: 30px;
+			display: grid;
+			grid-gap: 25px;
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		&_file {
+			display: flex;
+
+			&:hover {
+				& .lesson__attach_info {
+					& span:last-child {
+						color: #000;
+					}
+				}
+			}
+		}
+
+		&_img {
+			margin-right: 7px;
+			& img {
+				max-width: 27px;
+				min-width: 27px;
+			}
+		}
+
+		&_info {
+			font-family: "Montserrat", sans-serif;
+			display: flex;
+			margin-left: 9px;
+			flex-direction: column;
+			color: #4f4f4f;
+
+			& span {
+				display: inline-block;
+				font-size: 10px;
+
+				&:first-child {
+					margin-bottom: 4px;
+				}
+
+				&:last-child {
+					transition: color .3s ease;
+					line-height: 1.5;
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+.lesson__materials {
+	background-color: #fff;
+	border-radius: 4px;
+
+	&_inner {
+		padding: 24px;
+	}
+}
+
+.lesson__rating {
+	text-align: center;
+
+	& .courses__stars {
+		cursor: pointer;
+		margin-top: 8px;
+
+		& img {
+			width: 18px;
+		}
+	}
+}
