@@ -39,7 +39,12 @@
 				&:first-child {
 					font-weight: 700;
 					color: $purple;
+					line-height: 1;
 					font-size: 30px;
+
+					& small {
+						font-size: 10px;
+					}
 				}
 
 				&:last-child {
@@ -107,7 +112,7 @@
 				}
 
 				&:last-child {
-					transition: color .3s ease;
+					transition: color 0.3s ease;
 					line-height: 1.5;
 					font-weight: 600;
 				}
@@ -134,6 +139,108 @@
 
 		& img {
 			width: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.lesson {
+		&__additional {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+
+		&__rating {
+			margin-bottom: 18px;
+		}
+
+		&__attach {
+			&_files {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.lesson {
+		&__attach {
+			&_files {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.lesson {
+		&__meta {
+			grid-gap: 10px;
+
+			&_card {
+				padding: 12px;
+				padding-top: 10px;
+
+				& span {
+					&:first-child {
+						font-size: 18px;
+					}
+
+					&:last-child {
+						margin-top: 4px;
+					}
+				}
+			}
+		}
+
+		&__selector {
+			&_wrapper {
+				grid-template-columns: 0.6fr;
+			}
+		}
+
+		&__title {
+			font-size: 16px;
+		}
+
+		&__subtitle {
+			font-size: 14px;
+		}
+
+		&__materials {
+			&_inner {
+				padding: 15px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 500px) {
+	.lesson {
+		&__attach {
+			&_files {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		&__meta {
+			grid-gap: 5px;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__selector_wrapper {
+			grid-template-columns: 1fr;
+			margin-bottom: 24px;
+		}
+	}
+}
+
+@media screen and (max-width: 415px) {
+	.lesson {
+		&__title {
+			font-size: 14px;
+			margin-bottom: 16px;
 		}
 	}
 }

@@ -1,4 +1,5 @@
 $purple: #352e7d;
+$light-purple: #5C51D9;
 $red: #ec5252;
 $blue: #081f32;
 
@@ -39,6 +40,8 @@ input:focus:invalid + span {
 
 html {
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: auto;
 	height: 100%;
 }
 

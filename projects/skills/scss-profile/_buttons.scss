@@ -54,7 +54,6 @@
 		}
 	}
 
-	
 	&--red {
 		color: $red;
 		border-color: $red;
@@ -66,7 +65,7 @@
 
 		& option {
 			color: $red;
-	
+
 			&:checked,
 			&:hover,
 			&:focus {
@@ -115,6 +114,8 @@
 		}
 	}
 }
+
+// Кнопки
 
 .button {
 	font-family: inherit;
@@ -259,6 +260,49 @@
 	}
 }
 
+.button-question {
+	font-size: 14px;
+	border-radius: 4px;
+	padding: 12px 6px;
+	border: 1px solid $light-purple;
+	width: 240px;
+	font-family: 'Gothic', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	background-color: $light-purple;
+
+	&:hover, &:focus {
+		background-color: transparent;
+		color: $light-purple;
+	}
+}
+
+.button-note {
+	border-color: #FFCC18;
+	background-color: #FFCC18;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& svg {
+		margin-right: 14px;
+		max-width: 17px;
+		min-width: 17px;
+		height: 17px;
+		& path {
+			transition: fill .3s ease;
+		}
+	}
+
+	&:hover, &:focus {
+		color: #FFCC18;
+
+		& svg path {
+			fill: #FFCC18;
+		}
+	}
+}
+
 .button-favorite {
 	max-width: 215px;
 	width: 100%;
@@ -284,6 +328,10 @@
 
 .button-test {
 	max-width: 240px;
+}
+
+.button-discuss {
+	font-family: "Gothic", sans-serif;
 }
 
 .button-test-hero {
@@ -322,6 +370,10 @@
 	.button-test-hero {
 		font-size: 14px;
 	}
+	.button-discuss {
+		font-size: 14px;
+		padding: 13px 6px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -333,7 +385,8 @@
 	.button-restore,
 	.button-test,
 	.button-test-hero,
-	.button-profile {
+	.button-profile,
+	.button-question {
 		font-size: 12px;
 		padding: 12px;
 	}
@@ -352,5 +405,9 @@
 @media screen and (max-width: 415px) {
 	.button-test {
 		max-width: none;
+	}
+	.button-question, .button-note {
+		max-width: none;
+		width: 100%;
 	}
 }

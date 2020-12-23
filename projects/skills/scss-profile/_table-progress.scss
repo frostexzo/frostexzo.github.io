@@ -1,0 +1,28 @@
+.table {
+	&__meta {
+		margin-bottom: 50px;
+	}
+
+	&__wrapper {
+		background-color: #fff;
+	}
+
+	&__inner {
+		padding: 26px;
+		padding-top: 21px;
+	}
+
+	&__managers {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 20px;
+	}
+
+	&__date {
+		&_inner {
+			display: grid;
+			grid-template-columns: repeat(5, auto);
+			grid-gap: 10px;
+		}
+	}
+}
