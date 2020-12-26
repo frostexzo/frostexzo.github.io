@@ -24,7 +24,7 @@
 
 		&_inner {
 			width: 100%;
-			max-width: 870px;
+			max-width: 880px;
 			padding-left: 40px;
 			padding-top: 40px;
 			padding-right: 15px;
@@ -68,6 +68,10 @@
 		&__title {
 			font-size: 20px;
 			margin-bottom: 20px;
+		}
+		&__subtitle {
+			margin-bottom: 15px;
+			font-size: 16px;
 		}
 	}
 }

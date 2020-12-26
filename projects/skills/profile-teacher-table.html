@@ -6,6 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
 		<link rel="stylesheet" href="css/profile.css" />
+		<link rel="stylesheet" href="css/datepicker.minimal.css" />
 
 		<title>Skills Academy Profile</title>
 	</head>
@@ -111,7 +112,7 @@
 			</aside>
 
 			<div class="profile__content">
-				<div class="profile__content_inner">
+				<div id="teacher-table" class="profile__content_inner">
 					<h1 class="profile__title">Главная</h1>
 
 					<div class="lesson__meta table__meta">
@@ -141,19 +142,25 @@
 					<div class="table__wrapper">
 						<div class="table__inner">
 							<div class="table__managers">
-								<div class="table__search_name">
+								<div class="table__block table__search_name">
 									<span class="table__managers_label">Поиск по студентам</span>
 									<input
-										type="text"
+										type="search"
 										class="input-blue"
+										id="name-search"
 										placeholder="Введите имя"
 									/>
 								</div>
 
-								<div class="table__select">
+								<div class="table__block table__select">
 									<span class="table__managers_label">Курс</span>
 									<div class="selector__wrapper">
-										<select autocomplete="off" class="selector" name="lang">
+										<select
+											autocomplete="off"
+											class="selector selector-table"
+											name="course"
+											id="course-select"
+										>
 											<option value="all" selected>Все</option>
 											<option value="course1">Курс Elementary</option>
 											<option value="course2">Курс 2</option>
@@ -161,25 +168,479 @@
 									</div>
 								</div>
 
-								<div class="table__search_price">
-									<span class="table__managers_label">Поиск по студентам</span>
-									<input type="text" class="input-blue input-short" />
+								<div class="table__block table__search_price">
+									<span class="table__managers_label">Цена</span>
+									<input
+										type="tel"
+										class="input-blue input-short"
+										id="price-search"
+									/>
 								</div>
 
-								<div class="table__date">
+								<div class="table__block table__date">
 									<span class="table__managers_label">Период</span>
 
 									<div class="table__date_inner">
 										<span class="table__date_text">с</span>
-										<input type="date" name="" id="" />
+										<input
+											type="text"
+											name=""
+											id="firstDate"
+											class="js-datepicker"
+											autocomplete="off"
+											readonly
+											placeholder="дд.мм.гг"
+										/>
 										<span class="table__date_text">до</span>
-										<input type="date" name="" id="" />
-										<img src="imgs/calendar.svg" alt="" />
+										<input
+											type="text"
+											name=""
+											id="lastDate"
+											class="js-datepicker"
+											autocomplete="off"
+											readonly
+											placeholder="дд.мм.гг"
+										/>
+										<img id="date-search" class="date-icon" src="imgs/calendar.svg" alt="" />
 									</div>
+								</div>
+							</div>
+
+							<div class="table__main">
+								<div class="table__main_inner">
+									<table class="table">
+										<thead>
+											<tr>
+												<th class="sort" data-sort="name">Студент</th>
+												<th class="sort" data-sort="course">Курс</th>
+												<th class="sort" data-sort="price">Цена</th>
+												<th class="sort" data-sort="progress">Прогресс</th>
+												<th class="sort" data-sort="date">Дата</th>
+											</tr>
+										</thead>
+
+										<tbody class="list">
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс 2</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">06.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Андрей Иванов</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">10/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">07.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">3 000 тг</td>
+												<td>
+													<span class="progress">10/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="100"
+													></progress>
+												</td>
+												<td class="date">08.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">99 000 тг</td>
+												<td>
+													<span class="progress">10/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="50"
+													></progress>
+												</td>
+												<td class="date">09.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">10/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">10.11.2020</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">10/30</span>
+													<progress
+														max="100"
+														min="1"
+														step="1"
+														value="20"
+													></progress>
+												</td>
+												<td class="date">11.11.2020</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
 							</div>
 						</div>
 					</div>
+
+					<div class="pagination table__pagination"></div>
 				</div>
 
 				<footer class="footer footer-profile">
@@ -212,7 +673,8 @@
 		</div>
 
 		<script src="js/alpine.js"></script>
-		<script src="js/swiper.js"></script>
+		<script src="js/datepicker.js"></script>
+		<script src="js/table.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -4,6 +4,13 @@ const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
 const locationMap = document.querySelector("#location-map");
 const numInputs = document.querySelectorAll(".restore__input_code");
+const firstTableDate = document.querySelector("#firstDate");
+const lastTableDate = document.querySelector("#lastDate");
+const tableDateSearch = document.getElementById("date-search");
+const teacherTable = document.getElementById("teacher-table");
+const tableNameSearch = document.getElementById("name-search");
+const tablePriceSearch = document.getElementById("price-search");
+const tableCourseSelect = document.getElementById("course-select");
 
 window.addEventListener("load", () => {
 	fonts.rel = "stylesheet";
@@ -128,3 +135,120 @@ const videoPlay = (e) => {
 		e.innerHTML = `<video src="${videoUrl}" allowfullscreen playsinline controls autoplay></video>`;
 	}
 };
+
+const initDatepickers = (e) => {
+	const initFirstDatepicker = new Datepicker(".js-datepicker", {
+		min: (function () {
+			let date = new Date();
+			date.setDate(date.getDate() - 180);
+			return date;
+		})(),
+
+		max: (function () {
+			return new Date();
+		})(),
+	});
+};
+
+if (firstTableDate && lastTableDate) {
+	initDatepickers();
+}
+
+if (teacherTable) {
+	const options = {
+		valueNames: ["name", "course", "price", "progress", "date"],
+		indexAsync: true,
+		page: 15,
+		pagination: true,
+	};
+
+	const table = new List("teacher-table", options);
+
+	tableCourseSelect.addEventListener("change", (e) => {
+		const currentValue = e.target.options[e.target.selectedIndex].text;
+
+		const debounce = setTimeout(() => {
+			if (e.target.selectedIndex != 0) {
+				table.fuzzySearch(currentValue, ["course"]);
+			} else {
+				table.fuzzySearch("", ["course"]);
+			}
+			clearTimeout(debounce);
+		}, 500);
+	});
+
+	tableNameSearch.addEventListener("input", (e) => {
+		const currentValue = e.target.value;
+
+		const debounce = setTimeout(() => {
+			table.fuzzySearch(currentValue, ["name"]);
+			clearTimeout(debounce);
+		}, 500);
+	});
+
+	tablePriceSearch.addEventListener("input", (e) => {
+		const debounce = setTimeout(() => {
+			const separate = (val) => {
+				var n = val.toString();
+				var separator = " ";
+				return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + separator);
+			};
+
+			let currentValue = e.target.value;
+			const formattedValue = separate(currentValue);
+			table.search(formattedValue, ["price"]);
+			clearTimeout(debounce);
+		}, 500);
+	});
+
+	tableDateSearch.addEventListener("click", (e) => {
+		if (firstTableDate.value && lastTableDate.value) {
+			e.target.classList.add("disabled");
+
+			const debounce = setTimeout(() => {
+				e.target.classList.remove("disabled");
+				clearTimeout(debounce);
+			}, 1000);
+
+			let firstInputVal = firstTableDate.value
+				.replace(/\./g, "-")
+				.split("-")
+				.reverse()
+				.join("-");
+			let lastInputVal = lastTableDate.value
+				.replace(/\./g, "-")
+				.split("-")
+				.reverse()
+				.join("-");
+
+			const getDaysArray = function (start, end) {
+				for (
+					var arr = [], date = new Date(start);
+					date <= end;
+					date.setDate(date.getDate() + 1)
+				) {
+					arr.push(new Date(date));
+				}
+				return arr;
+			};
+
+			const dateList = getDaysArray(
+				new Date(firstInputVal),
+				new Date(lastInputVal),
+			);
+			const finalDateList = dateList.map((date) =>
+				date
+					.toISOString()
+					.slice(0, 10)
+					.replace(/\-/g, ".")
+					.split(".")
+					.reverse()
+					.join("."),
+			);
+
+			table.filter(function (item) {
+				if (finalDateList.includes(item._values.date)) return true;
+			});
+		}
+	});
+}
