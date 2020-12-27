@@ -112,7 +112,7 @@
 			</aside>
 
 			<div class="profile__content">
-				<div id="teacher-table" class="profile__content_inner">
+				<div id="teacher-table" x-data={} x-init="{...initDatepickers(), ...initTableAndInputs()}" class="profile__content_inner">
 					<h1 class="profile__title">Главная</h1>
 
 					<div class="lesson__meta table__meta">
@@ -234,7 +234,30 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
+														min="1"
+														step="1"
+														value="9"
+													></progress>
+												</td>
+												<td class="date">06.11.2019</td>
+											</tr>
+
+											<tr>
+												<td>
+													<img
+														src="imgs/course-placeholder.jpg"
+														width="30"
+														height="30"
+														alt=""
+													/><span class="name">Арапбай Эльмира</span>
+												</td>
+												<td class="course">Курс Elementary</td>
+												<td class="price">5 000 тг</td>
+												<td>
+													<span class="progress">9/30</span>
+													<progress
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -257,7 +280,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -280,7 +303,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -303,7 +326,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -326,7 +349,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -349,7 +372,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -372,7 +395,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -395,7 +418,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -418,7 +441,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -441,7 +464,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -464,7 +487,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -487,30 +510,7 @@
 												<td>
 													<span class="progress">9/30</span>
 													<progress
-														max="100"
-														min="1"
-														step="1"
-														value="20"
-													></progress>
-												</td>
-												<td class="date">06.11.2020</td>
-											</tr>
-
-											<tr>
-												<td>
-													<img
-														src="imgs/course-placeholder.jpg"
-														width="30"
-														height="30"
-														alt=""
-													/><span class="name">Арапбай Эльмира</span>
-												</td>
-												<td class="course">Курс Elementary</td>
-												<td class="price">5 000 тг</td>
-												<td>
-													<span class="progress">9/30</span>
-													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -533,7 +533,7 @@
 												<td>
 													<span class="progress">10/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -556,10 +556,10 @@
 												<td>
 													<span class="progress">10/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
-														value="100"
+														value="30"
 													></progress>
 												</td>
 												<td class="date">08.11.2020</td>
@@ -579,7 +579,7 @@
 												<td>
 													<span class="progress">10/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="50"
@@ -602,7 +602,7 @@
 												<td>
 													<span class="progress">10/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"
@@ -625,7 +625,7 @@
 												<td>
 													<span class="progress">10/30</span>
 													<progress
-														max="100"
+														max="30"
 														min="1"
 														step="1"
 														value="20"

@@ -4,6 +4,9 @@ const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
 const locationMap = document.querySelector("#location-map");
 const numInputs = document.querySelectorAll(".restore__input_code");
+const draggableBlocks = document.querySelectorAll(".question__arrange");
+
+// Table Page
 const firstTableDate = document.querySelector("#firstDate");
 const lastTableDate = document.querySelector("#lastDate");
 const tableDateSearch = document.getElementById("date-search");
@@ -136,32 +139,27 @@ const videoPlay = (e) => {
 	}
 };
 
-const initDatepickers = (e) => {
-	const initFirstDatepicker = new Datepicker(".js-datepicker", {
-		min: (function () {
+const initDatepickers = () => {
+	const datepicker = new Datepicker(".js-datepicker", {
+		min: (() => {
 			let date = new Date();
 			date.setDate(date.getDate() - 180);
 			return date;
 		})(),
 
-		max: (function () {
+		max: (() => {
 			return new Date();
 		})(),
 	});
 };
 
-if (firstTableDate && lastTableDate) {
-	initDatepickers();
-}
-
-if (teacherTable) {
+const initTableAndInputs = () => {
 	const options = {
 		valueNames: ["name", "course", "price", "progress", "date"],
 		indexAsync: true,
 		page: 15,
 		pagination: true,
 	};
-
 	const table = new List("teacher-table", options);
 
 	tableCourseSelect.addEventListener("change", (e) => {
@@ -174,7 +172,7 @@ if (teacherTable) {
 				table.fuzzySearch("", ["course"]);
 			}
 			clearTimeout(debounce);
-		}, 500);
+		}, 400);
 	});
 
 	tableNameSearch.addEventListener("input", (e) => {
@@ -183,7 +181,7 @@ if (teacherTable) {
 		const debounce = setTimeout(() => {
 			table.fuzzySearch(currentValue, ["name"]);
 			clearTimeout(debounce);
-		}, 500);
+		}, 400);
 	});
 
 	tablePriceSearch.addEventListener("input", (e) => {
@@ -198,7 +196,7 @@ if (teacherTable) {
 			const formattedValue = separate(currentValue);
 			table.search(formattedValue, ["price"]);
 			clearTimeout(debounce);
-		}, 500);
+		}, 400);
 	});
 
 	tableDateSearch.addEventListener("click", (e) => {
@@ -246,9 +244,18 @@ if (teacherTable) {
 					.join("."),
 			);
 
-			table.filter(function (item) {
+			table.filter((item) => {
 				if (finalDateList.includes(item._values.date)) return true;
 			});
 		}
 	});
+};
+
+const initDraggableEls = () => {
+	draggableBlocks.forEach((el) => {
+		dragula([el], {
+			direction: "horizontal",
+		});
+	});
 }
+

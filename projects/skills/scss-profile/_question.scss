@@ -30,6 +30,7 @@
 	&__variants {
 		display: flex;
 		flex-direction: column;
+		counter-reset: nums;
 	}
 
 	&__variant {
@@ -75,16 +76,20 @@
 		display: grid;
 		margin-right: 15px;
 		grid-gap: 5px;
-		grid-template-columns: repeat(6, 1fr);
+		grid-template-columns: repeat(6, auto);
+		justify-content: flex-start;
 
 		&_button {
 			font-weight: 700;
-			padding: 12px 0;
 			border: 1px solid $purple;
 			font-size: 14px;
 			font-family: inherit;
 			border-radius: 2px;
 			width: 44px;
+			height: 44px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			cursor: pointer;
 			transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
@@ -133,7 +138,7 @@
 			line-height: 1.6;
 			margin: 0 auto;
 			max-width: 465px;
-			font-family: 'Gothic', sans-serif;
+			font-family: "Gothic", sans-serif;
 		}
 
 		&_links {
@@ -186,6 +191,36 @@
 		justify-content: center;
 		margin-top: 50px;
 	}
+
+	&__hear {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-gap: 12px;
+		min-height: 250px;
+
+		&_field {
+			resize: none;
+			border: 1px solid #bcbcbc;
+			border-radius: 4px;
+			padding: 12px 18px;
+			font-family: inherit;
+			color: #969696;
+			font-size: 16px;
+			min-height: inherit;
+			transition: border-color 0.3s ease, color 0.3s ease;
+
+			&:focus {
+				border-color: $purple;
+				color: $purple;
+			}
+		}
+
+		&_video {
+			width: 100%;
+			background-color: #000;
+			min-height: inherit;
+		}
+	}
 }
 
 @media screen and (max-width: 950px) {
@@ -211,6 +246,11 @@
 					display: none;
 				}
 			}
+		}
+
+		&__hear {
+			grid-template-columns: 1fr;
+			min-height: 150px;
 		}
 	}
 }
@@ -249,6 +289,15 @@
 			}
 		}
 
+		&__hear {
+			min-height: 100px;
+
+			&_field {
+				font-size: 14px;
+				padding: 10px 12px;
+			}
+		}
+
 		&__variant {
 			font-size: 14px;
 			padding: 12px;
@@ -265,7 +314,8 @@
 			}
 
 			&_button {
-				max-width: 42px;
+				width: 32px;
+				height: 32px;
 				font-size: 12px;
 			}
 		}
@@ -280,7 +330,6 @@
 		}
 	}
 }
-
 
 @media screen and (max-width: 415px) {
 	.question {
