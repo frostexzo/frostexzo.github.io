@@ -257,5 +257,20 @@ const initDraggableEls = () => {
 			direction: "horizontal",
 		});
 	});
-}
+};
 
+const selectLessonImg = (e) => {
+	const imgInput = e.querySelector("input");
+	const allImgs = document.querySelectorAll(".question__card");
+	const allImgsInputs = document.querySelectorAll(".question__card input");
+
+	if (e.classList.contains("active")) return;
+
+	for (let i = 0; i < allImgs.length; i++) {
+		allImgs[i].classList.remove("active");
+		allImgsInputs[i].checked = false;
+	}
+
+	e.classList.add("active");
+	imgInput.checked = true;
+};

@@ -27,6 +27,15 @@
 		font-weight: 700;
 	}
 
+	&__task {
+		font-size: 14px;
+		color: #333;
+		line-height: 1.8;
+		padding-bottom: 10px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid rgba(188, 188, 188, 0.4);
+	}
+
 	&__variants {
 		display: flex;
 		flex-direction: column;
@@ -69,6 +78,108 @@
 
 		& span {
 			margin-left: 18px;
+		}
+	}
+
+	&__radio {
+		display: flex;
+		align-items: center;
+		margin-right: 35px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			& input {
+				border-color: #000;
+			}
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		& span {
+			margin-left: 10px;
+		}
+
+		&_desc {
+			margin-bottom: 16px;
+		}
+
+		& input {
+			width: 18px;
+			height: 18px;
+			border: 1px solid #bcbcbc;
+			transition: border-color 0.2s ease, background-color 0.2s ease;
+			appearance: none;
+			border-radius: 100%;
+
+			&:checked {
+				background-color: #000;
+				border-color: #000;
+			}
+		}
+
+		&_variant {
+			display: flex;
+			flex-direction: column;
+			color: #333;
+			margin-bottom: 25px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&_block {
+			display: flex;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: 16px;
+	}
+
+	&__card {
+		padding: 10px 15px;
+		padding-top: 16px;
+		border: 1px solid #bcbcbc;
+		border-radius: 4px;
+		width: 100%;
+		cursor: pointer;
+		transition: border-color 0.3s ease;
+
+		&:hover,
+		&:focus {
+			border-color: #666;
+		}
+
+		&.active {
+			border-color: #000;
+		}
+
+		&_img {
+			width: inherit;
+			text-align: center;
+			min-height: 182px;
+			margin-bottom: 15px;
+			pointer-events: none;
+			padding: 0 10px;
+
+			& img {
+				width: 100%;
+			}
+		}
+
+		& input {
+			display: none;
+		}
+
+		& span {
+			pointer-events: none;
+			color: #333;
 		}
 	}
 
@@ -231,6 +342,16 @@
 				font-size: 16px;
 			}
 		}
+
+		&__cards {
+			grid-gap: 10px;
+		}
+
+		&__card {
+			&_img {
+				padding: 0;
+			}
+		}
 	}
 }
 
@@ -251,6 +372,12 @@
 		&__hear {
 			grid-template-columns: 1fr;
 			min-height: 150px;
+		}
+
+		&__card {
+			&_img {
+				min-height: 100px;
+			}
 		}
 	}
 }
@@ -302,6 +429,45 @@
 			font-size: 14px;
 			padding: 12px;
 			margin-bottom: 10px;
+		}
+
+		&__cards {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__card {
+			font-size: 12px;
+			padding: 10px;
+
+			&_img {
+				margin-bottom: 10px;
+			}
+		}
+
+		&__task {
+			font-size: 12px;
+		}
+
+		&__radio {
+			margin-right: 20px;
+
+			&_desc {
+				font-size: 12px;
+				margin-bottom: 12px;
+			}
+
+			& span {
+				font-size: 12px;
+			}
+
+			& input {
+				width: 15px;
+				height: 15px;
+			}
+
+			&_variant {
+				margin-bottom: 20px;
+			}
 		}
 
 		&__pagination {
@@ -358,5 +524,10 @@
 			font-size: 14px;
 			margin-bottom: 16px;
 		}
+
+		&__cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
+
