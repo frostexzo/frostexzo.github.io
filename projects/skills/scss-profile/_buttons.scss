@@ -179,6 +179,11 @@
 	}
 }
 
+.button-cart {
+	width: 100%;
+	max-width: none !important;
+}
+
 .button-hero {
 	padding: 28px 0;
 	width: 367px;
@@ -299,6 +304,18 @@
 	&:focus {
 		background-color: transparent;
 		color: $light-purple;
+	}
+
+	&-red {
+		border-color: $red;
+		max-width: 200px;
+		background-color: $red;
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: $red;
+		}
 	}
 }
 
@@ -431,6 +448,12 @@
 	.input-blue {
 		font-size: 12px;
 		padding: 8px 13px;
+	}
+
+	.button-cart {
+		padding: 10px;
+		font-size: 12px;
+		padding-bottom: 12px;
 	}
 }
 

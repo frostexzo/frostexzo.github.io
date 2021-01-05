@@ -33,6 +33,21 @@
 	}
 }
 
+.courses__no-info {
+	& .courses__buttons {
+		margin-top: 0;
+	}
+
+	& .courses__link {
+		margin-top: auto;
+		margin-bottom: 20px;
+	}
+
+	& .courses__desc {
+		color: #6E798C;
+	}
+}
+
 .courses__selects {
 	padding: 20px 0;
 	display: grid;
@@ -83,6 +98,11 @@
 	.courses__selects {
 		grid-gap: 10px;
 		grid-template-columns: repeat(2, 1fr);
+	}
+	.courses {
+		&__link a {
+			font-size: 12px;
+		}
 	}
 }
 

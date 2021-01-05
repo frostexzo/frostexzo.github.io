@@ -279,46 +279,62 @@
 					<div class="question">
 						<form action="#" method="POST" class="question__inner">
 							<span class="question__number">Задание #2</span>
-							<p class="question__desc">
-								Read the questions carefully and choose the correct option
-							</p>
-							<h4 class="question__title">
-								They _____ a real tiger in the zoo.
-							</h4>
+							<p class="question__desc">Type what you hear</p>
+							<h4 class="question__title">Напишите то, что вы слышите</h4>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
-
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
-
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
-
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+							<div class="question__hear true-answer">
+								<video
+									class="question__hear_video"
+									controls
+									playsinline
+									preload="auto"
+									src="imgs/sound-placeholder.mp3"
+								></video>
+								<textarea
+									class="question__hear_field"
+									name="typewhathear"
+									placeholder="Введите текст..."
+								></textarea>
 							</div>
+
+							<div class="question__pagination_wrapper">
+								<div class="question__pagination">
+									<button class="question__pagination_button active">1</button>
+									<button class="question__pagination_button">2</button>
+									<button class="question__pagination_button">3</button>
+								</div>
+
+								<div class="question__submit">
+									<button type="submit" class="button button-question">
+										Проверить
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="question">
+						<form action="#" method="POST" class="question__inner">
+							<span class="question__number">Задание #2</span>
+							<p class="question__desc">Type what you hear</p>
+							<h4 class="question__title">Напишите то, что вы слышите</h4>
+
+							<div class="question__hear false-answer">
+								<video
+									class="question__hear_video"
+									controls
+									playsinline
+									preload="auto"
+									src="imgs/sound-placeholder.mp3"
+								></video>
+								<textarea
+									class="question__hear_field"
+									name="typewhathear"
+									placeholder="Введите текст..."
+								></textarea>
+							</div>
+
+							<span class="question__lesson_result"><strong>Правильный ответ:</strong>I walk to school everyday.</span>
 
 							<div class="question__pagination_wrapper">
 								<div class="question__pagination">

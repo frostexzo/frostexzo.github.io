@@ -279,45 +279,53 @@
 					<div class="question">
 						<form action="#" method="POST" class="question__inner">
 							<span class="question__number">Задание #2</span>
-							<p class="question__desc">
-								Read the questions carefully and choose the correct option
+							<p class="question__desc">TRUE or FALSE</p>
+							<h4 class="question__title">Правда или Ложь</h4>
+							<p class="question__task">
+								On Sunday, Tom gets up at 10 o'clock. Then he reads his
+								newspaper in the kitchen. He has breakfast at 11.30 and then he
+								telephones his mother in Scotland. In the afternoon, at 1.00,
+								Tom plays tennis with his sister and after that, they eat dinner
+								in a restaurant. At 6.00, Tom swims for one hour and then he
+								goes by bike to his brother´s house. They talk and listen to
+								music. Tom watches television in the evening and drinks a glass
+								of warm milk. He goes to bed at 11.30.
 							</p>
-							<h4 class="question__title">
-								They _____ a real tiger in the zoo.
-							</h4>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+							<div class="question__variants">
+								<div class="question__radio_variant">
+									<span class="question__radio_desc"
+										>Tom gets up at 10am on Sundays.
+									</span>
+									<div class="question__radio_block">
+										<label class="question__radio true-answer">
+											<input type="radio" name="q1" autocomplete="off" />
+											<span>True</span>
+										</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+										<label class="question__radio">
+											<input type="radio" name="q1" autocomplete="off" />
+											<span>False</span>
+										</label>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								</div>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								<div class="question__radio_variant">
+									<span class="question__radio_desc"
+										>Tom gets up at 10am on Sundays.
+									</span>
+									<div class="question__radio_block">
+										<label class="question__radio">
+											<input type="radio" name="q2" autocomplete="off" />
+											<span>True</span>
+										</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+										<label class="question__radio false-answer">
+											<input type="radio" name="q2" autocomplete="off" />
+											<span>False</span>
+										</label>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								</div>
 							</div>
 
 							<div class="question__pagination_wrapper">

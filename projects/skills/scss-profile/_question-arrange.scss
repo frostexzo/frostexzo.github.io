@@ -1,11 +1,45 @@
+.question__lesson_result {
+	margin-top: 10px;
+	line-height: 1.6;
+	display: block;
+	color: #000;
+
+	& strong {
+		font-weight: 400;
+		color: $red;
+		margin-right: 5px;
+	}
+}
+
 .question__arrange {
-	position: relative;
-	display: flex;
-	align-items: center;
-	grid-gap: 14px;
+	&.false-answer {
+		& .question__arrange_el {
+			border-color: $red;
+		}
+	}
+
+	&.true-answer {
+		& .question__arrange_el {
+			border-color: #177c3a;
+			background-color: #177c3a;
+			color: #fff;
+		}
+
+		& .question__lesson_result {
+			color: #177c3a;
+		}
+	}
+
 	margin-bottom: 24px;
 	padding-left: 25px;
-	flex-wrap: wrap;
+
+	&_inner {
+		display: flex;
+		align-items: center;
+		grid-gap: 14px;
+		flex-wrap: wrap;
+	}
+	position: relative;
 
 	&:last-child {
 		margin-bottom: 0;
@@ -37,9 +71,11 @@
 
 @media screen and (max-width: 768px) {
 	.question__arrange {
-		grid-gap: 10px;
 		padding-left: 20px;
 		margin-bottom: 20px;
+		&_inner {
+			grid-gap: 10px;
+		}
 
 		&:before {
 			font-size: 12px;

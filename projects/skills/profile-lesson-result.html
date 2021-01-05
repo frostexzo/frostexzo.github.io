@@ -277,59 +277,54 @@
 					</div>
 
 					<div class="question">
+						<div class="question__header">
+							<span class="question__header_title"
+								>Для повышения уровня своих знаний изучите материалы
+								курса.</span
+							>
+							<span class="question__header_result"
+								>Вы правильно ответили на <strong>4</strong> из
+								<strong>6</strong> с первой попытки.</span
+							>
+						</div>
+
 						<form action="#" method="POST" class="question__inner">
-							<span class="question__number">Задание #2</span>
-							<p class="question__desc">
-								Read the questions carefully and choose the correct option
-							</p>
-							<h4 class="question__title">
-								They _____ a real tiger in the zoo.
-							</h4>
+							<div class="question__realized true-answer">
+								<span class="question__realized_title">Что вы усвоили</span>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
+							</div>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+							<div class="question__realized false-answer">
+								<span class="question__realized_title">Что вам следует проверить</span>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
-
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
+								<div class="question__realized_task">
+									Задание #1 | They _____ a real tiger in the zoo.
+								</div>
 							</div>
 
 							<div class="question__pagination_wrapper">
-								<div class="question__pagination">
-									<button class="question__pagination_button active">1</button>
-									<button class="question__pagination_button">2</button>
-									<button class="question__pagination_button">3</button>
-								</div>
-
 								<div class="question__submit">
-									<button type="submit" class="button button-question">
-										Проверить
+									<button class="question__submit_btn-text">Продолжить</button>
+									<button
+										type="submit"
+										class="button button-question button-question-red"
+									>
+										Повторить тест
 									</button>
 								</div>
 							</div>

@@ -286,37 +286,89 @@
 								They _____ a real tiger in the zoo.
 							</h4>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+							<div x-data="{}" class="question__cards">
+								<label
+									class="question__card"
+									@click.prevent="selectSingleVariant($event.target)"
+								>
+									<div class="question__card_inner">
+										<div class="question__card_img">
+											<img src="imgs/lesson-placeholder.jpg" alt="" />
+										</div>
+										<input type="radio" name="q1" autocomplete="off" />
+										<span>a shirt</span>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+								<label
+									class="question__card true-answer"
+									@click.prevent="selectSingleVariant($event.target)"
+								>
+									<div class="question__card_inner">
+										<div class="question__card_img">
+											<img src="imgs/lesson-placeholder.jpg" alt="" />
+										</div>
+										<input type="radio" name="q1" autocomplete="off" />
+										<span>a shirt</span>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+								<label
+									class="question__card"
+									@click.prevent="selectSingleVariant($event.target)"
+								>
+									<div class="question__card_inner">
+										<div class="question__card_img">
+											<img src="imgs/lesson-placeholder.jpg" alt="" />
+										</div>
+										<input type="radio" name="q1" autocomplete="off" />
+										<span>a shirt</span>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+								<label
+									class="question__card false-answer"
+									@click.prevent="selectSingleVariant($event.target)"
+								>
+									<div class="question__card_inner">
+										<div class="question__card_img">
+											<img src="imgs/lesson-placeholder.jpg" alt="" />
+										</div>
+										<input type="radio" name="q1" autocomplete="off" />
+										<span>a shirt</span>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
+
+									<div class="question__tooltip">
+										<div class="question__tooltip_inner">
+											<p class="question__tooltip_text">
+												Инфинитив в английском языке представляет собой неличную
+												форму английского глагола, которая обозначает только
+												действие, не указывая ни лица, ни числа. Инфинитив
+												отвечает на вопросы: что делать? что сделать?
+											</p>
+											<div x-data="{}" class="question__tooltip_tips">
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
+
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</label>
 							</div>
 

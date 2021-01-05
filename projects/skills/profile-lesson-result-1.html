@@ -278,7 +278,7 @@
 
 					<div class="question">
 						<form action="#" method="POST" class="question__inner">
-							<span class="question__number">Задание #2</span>
+							<span class="question__number">Задание #1</span>
 							<p class="question__desc">
 								Read the questions carefully and choose the correct option
 							</p>
@@ -286,37 +286,69 @@
 								They _____ a real tiger in the zoo.
 							</h4>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
+							<div x-data="{}" class="question__variants">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant false-answer"
+								>
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
+
+									<div class="question__tooltip">
+										<div class="question__tooltip_inner">
+											<p class="question__tooltip_text">
+												Инфинитив в английском языке представляет собой неличную
+												форму английского глагола, которая обозначает только
+												действие, не указывая ни лица, ни числа. Инфинитив
+												отвечает на вопросы: что делать? что сделать?
+											</p>
+											<div x-data="{}" class="question__tooltip_tips">
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
+
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
+											</div>
+										</div>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
 								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant true-answer"
+								>
+									<input type="radio" autocomplete="off" name="q1" />
+									<span>A: have saw</span>
 								</label>
 							</div>
 
@@ -379,13 +411,18 @@
 							>
 						</div>
 						<p class="question__nav_text">
-							Для получения доступа к следующему уроку выполните задание
-							предыдущего
+							Результат теста <strong>11</strong> из <strong>25</strong> 
+							<br><br>
+							К сожалению вы дали меньше <strong>50%</strong> правильных
+							ответов за выполненное задание. Для получения доступа к следующему
+							уроку, выполните задание повторно
 						</p>
 
 						<div class="question__discuss_button">
-							<button class="button button-course button-test button-discuss">
-								Обсудить урок
+							<button
+								class="button button-course button-test button-discuss button-work"
+							>
+								Работа над ошибками
 							</button>
 						</div>
 					</div>
@@ -421,7 +458,7 @@
 		</main>
 
 		<script src="js/alpine.js"></script>
-		<script src="js/draggable.js"></script>
+		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -280,44 +280,68 @@
 						<form action="#" method="POST" class="question__inner">
 							<span class="question__number">Задание #2</span>
 							<p class="question__desc">
-								Read the questions carefully and choose the correct option
+								Put these words in the correct order to make a sentence
 							</p>
 							<h4 class="question__title">
-								They _____ a real tiger in the zoo.
+								Поставьте слова в правильном порядке
 							</h4>
 
-							<div x-data={} class="question__cards">
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+							<div
+								x-data="{}"
+								x-init="{...initDraggableEls()}"
+								class="question__variants"
+							>
+								<div class="question__arrange false-answer">
+									<div class="question__arrange_inner">
+										<div class="question__arrange_el">walk</div>
+										<div class="question__arrange_el">i</div>
+										<div class="question__arrange_el">to</div>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+									<span class="question__lesson_result"><strong>Правильный ответ:</strong>I walk to school everyday.</span>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
-									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+									<div class="question__tooltip">
+										<div class="question__tooltip_inner">
+											<p class="question__tooltip_text">
+												Инфинитив в английском языке представляет собой неличную
+												форму английского глагола, которая обозначает только
+												действие, не указывая ни лица, ни числа. Инфинитив
+												отвечает на вопросы: что делать? что сделать?
+											</p>
+											<div x-data="{}" class="question__tooltip_tips">
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
 
-								<label class="question__card" @click.prevent="selectSingleVariant($event.target)">
-									<div class="question__card_img">
-										<img src="imgs/lesson-placeholder.jpg" alt="">
+												<div
+													data-audio-url="URL_HERE"
+													@click="tooltipPlayAudio($event.target)"
+													class="question__tooltip_tip"
+												>
+													<span>to read</span>
+													-
+													<span>читать</span>
+												</div>
+											</div>
+										</div>
 									</div>
-									<input type="radio" name="q1" autocomplete="off">
-									<span>a shirt</span>
-								</label>
+								</div>
+
+								<div class="question__arrange true-answer">
+									<div class="question__arrange_inner">
+										<div class="question__arrange_el">walk</div>
+										<div class="question__arrange_el">i</div>
+										<div class="question__arrange_el">to</div>
+									</div>
+
+									<span class="question__lesson_result">Вы ответили верно</span>
+								</div>
 							</div>
 
 							<div class="question__pagination_wrapper">
@@ -328,8 +352,9 @@
 								</div>
 
 								<div class="question__submit">
+									<span>Вы ответили неверно</span>
 									<button type="submit" class="button button-question">
-										Проверить
+										Дальше
 									</button>
 								</div>
 							</div>

@@ -4,7 +4,8 @@ const altContainer = document.querySelector(".container-alt");
 const fonts = document.getElementById("fonts");
 const locationMap = document.querySelector("#location-map");
 const numInputs = document.querySelectorAll(".restore__input_code");
-const draggableBlocks = document.querySelectorAll(".question__arrange");
+const draggableBlocks = document.querySelectorAll(".question__arrange_inner");
+const audio = new Audio();
 
 // Table Page
 const firstTableDate = document.querySelector("#firstDate");
@@ -259,18 +260,44 @@ const initDraggableEls = () => {
 	});
 };
 
-const selectLessonImg = (e) => {
-	const imgInput = e.querySelector("input");
-	const allImgs = document.querySelectorAll(".question__card");
-	const allImgsInputs = document.querySelectorAll(".question__card input");
+const selectSingleVariant = (e) => {
+	const vars = document.querySelectorAll(".question__variant");
+	const cards = document.querySelectorAll(".question__card");
+
+	const currentInput = e.querySelector("input");
+
+	const varsInputs = document.querySelectorAll(".question__variant input");
+	const cardsInputs = document.querySelectorAll(".question__card input");
 
 	if (e.classList.contains("active")) return;
 
-	for (let i = 0; i < allImgs.length; i++) {
-		allImgs[i].classList.remove("active");
-		allImgsInputs[i].checked = false;
+	if (vars) {
+		for (let i = 0; i < vars.length; i++) {
+			vars[i].classList.remove("active");
+			varsInputs[i].checked = false;
+		}
 	}
 
-	e.classList.add("active");
-	imgInput.checked = true;
+	if (cards) {
+		for (let i = 0; i < cards.length; i++) {
+			cards[i].classList.remove("active");
+			cardsInputs[i].checked = false;
+		}
+	}
+
+	try {
+		e.classList.add("active");
+		currentInput.checked = true;
+	} catch (err) {}
+};
+
+const tooltipPlayAudio = (e) => {
+	const audioUrl = e.dataset.audioUrl;
+
+	audio.src = audioUrl;
+	audio.load();
+
+	audio.addEventListener("canplaythrough", (e) => {
+		audio.play();
+	});
 };
