@@ -16,6 +16,21 @@ const tableNameSearch = document.getElementById("name-search");
 const tablePriceSearch = document.getElementById("price-search");
 const tableCourseSelect = document.getElementById("course-select");
 
+try {
+	window.Spruce.store("modalRegister", {
+		open: false,
+	});
+	window.Spruce.store("modalRegisterTab", {
+		tab: "register",
+	});
+	window.Spruce.store("modalNotes", {
+		open: false,
+	});
+	window.Spruce.store("modalComments", {
+		open: false,
+	});
+} catch (err) {}
+
 window.addEventListener("load", () => {
 	fonts.rel = "stylesheet";
 
@@ -263,11 +278,13 @@ const initDraggableEls = () => {
 const selectSingleVariant = (e) => {
 	const vars = document.querySelectorAll(".question__variant");
 	const cards = document.querySelectorAll(".question__card");
+	const payment = document.querySelectorAll(".cart__payment");
 
 	const currentInput = e.querySelector("input");
 
 	const varsInputs = document.querySelectorAll(".question__variant input");
 	const cardsInputs = document.querySelectorAll(".question__card input");
+	const paymentInputs = document.querySelectorAll(".cart__payment input");
 
 	if (e.classList.contains("active")) return;
 
@@ -275,6 +292,13 @@ const selectSingleVariant = (e) => {
 		for (let i = 0; i < vars.length; i++) {
 			vars[i].classList.remove("active");
 			varsInputs[i].checked = false;
+		}
+	}
+
+	if (payment) {
+		for (let i = 0; i < payment.length; i++) {
+			payment[i].classList.remove("active");
+			paymentInputs[i].checked = false;
 		}
 	}
 

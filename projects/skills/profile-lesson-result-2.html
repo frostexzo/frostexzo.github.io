@@ -152,7 +152,7 @@
 							</h3>
 
 							<div
-								x-data="{}"
+								x-data
 								class="videos__item"
 								data-video-url="https://www.youtube.com/embed/ztbcLu6rBwk"
 								@click="videoPlay($el)"
@@ -287,7 +287,7 @@
 							</h4>
 
 							<div
-								x-data="{}"
+								x-data
 								x-init="{...initDraggableEls()}"
 								class="question__variants"
 							>
@@ -308,7 +308,7 @@
 												действие, не указывая ни лица, ни числа. Инфинитив
 												отвечает на вопросы: что делать? что сделать?
 											</p>
-											<div x-data="{}" class="question__tooltip_tips">
+											<div x-data class="question__tooltip_tips">
 												<div
 													data-audio-url="URL_HERE"
 													@click="tooltipPlayAudio($event.target)"

@@ -114,7 +114,7 @@
 				<section class="profile__content_inner">
 					<h1 class="profile__title">Моя корзина</h1>
 
-					<form action="#" method="POST" class="profile__content_wrapper">
+					<form x-data action="#" method="POST" class="profile__content_wrapper">
 						<div class="profile__content_block">
 							<div class="cart__info">
 								<div class="cart__info_wrapper">
@@ -144,25 +144,35 @@
 							<h3 class="profile__subtitle cart__subtitle">
 								Выберите способ оплаты
 							</h3>
-							<div class="cart__info">
-								<div class="cart__info_img">
+
+							<label class="cart__payment" @click.prevent="selectSingleVariant($event.target)">
+								<input type="radio" name="payment" autocomplete="off" />
+								<div class="cart__payment_img">
 									<img src="imgs/kaspi-pay.svg" alt="" />
 								</div>
+								<div class="cart__payment_info">
+									<span class="lesson__title cart__payment_title"
+										>Kaspi Gold</span
+									>
+									<span class="cart__payment_text"
+										>Перевод по номеру 8 708 700 50 20</span
+									>
+								</div>
+							</label>
 
-								<span class="lesson__title"
-									>Вы выбрали оплату с помощью перевода по Kaspi.kz</span
-								>
+							<label class="cart__payment" @click.prevent="selectSingleVariant($event.target)">
+								<input type="radio" name="payment" autocomplete="off" />
 
-								<p class="cart__info_text">
-									Для оплаты вам нужно перевести указанную общую стоимость в
-									вашем заказе на карту Kaspi по номеру 8 708 700 50 20.
-								</p>
-
-								<p class="cart__info_text">
-									После оплаты просим отправить чек на WhatsApp нашему
-									менеджеру, который откроет вам доступы к курсу.
-								</p>
-							</div>
+								<div class="cart__payment_img">
+									<img src="imgs/card-pay.svg" alt="" />
+								</div>
+								<div class="cart__payment_info">
+									<span class="lesson__title cart__payment_title"
+										>Онлайн оплата</span
+									>
+									<span class="cart__payment_text">Картой на сайте</span>
+								</div>
+							</label>
 						</div>
 
 						<div class="profile__content_block">
@@ -202,25 +212,29 @@
 									</div>
 
 									<label class="checkbox-label cart-checkbox">
-										<input class="general-checkbox" type="checkbox" name="offer" required>
-										<span class="general-checkbox-text">Я даю согласие на обработку персональных данных и принимаю. <a href="#">Договор оферты</a></span>
+										<input
+											class="general-checkbox"
+											type="checkbox"
+											name="offer"
+											required
+										/>
+										<span class="general-checkbox-text"
+											>Я даю согласие на обработку персональных данных и
+											принимаю. <a href="#">Договор оферты</a></span
+										>
 									</label>
 
-
 									<div class="cart__buttons">
-									<button
-									type="submit"
-									class="button button-nav button-cart"
-								>
-									Назад
-								</button>
-									<button
-										type="submit"
-										class="button button-nav button-nav-reverse button-cart"
-									>
-										Оплатить
-									</button>
-								</div>
+										<button type="submit" class="button button-nav button-cart">
+											Назад
+										</button>
+										<button
+											type="submit"
+											class="button button-nav button-nav-reverse button-cart"
+										>
+											Оплатить
+										</button>
+									</div>
 								</div>
 							</div>
 						</div>

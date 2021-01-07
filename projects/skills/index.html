@@ -80,8 +80,8 @@
 						</div>
 
 						<div class="header-nav__block">
-							<button class="button button-nav">Вход</button>
-							<button class="button button-nav button-nav-reverse">
+							<button class="button button-nav" @click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'login'" >Вход</button>
+							<button class="button button-nav button-nav-reverse" @click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'register'">
 								Регистрация
 							</button>
 						</div>
@@ -103,8 +103,8 @@
 								<img src="imgs/close-sm.svg" width="20" height="20" alt="" />
 							</button>
 							<div class="header__menu_buttons">
-								<button class="button button-nav">Вход</button>
-								<button class="button button-nav button-nav-reverse">
+								<button class="button button-nav" @click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'login'">Вход</button>
+								<button class="button button-nav button-nav-reverse" @click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'register'">
 									Регистрация
 								</button>
 							</div>
@@ -2596,6 +2596,110 @@
 			</div>
 		</footer>
 
+		<div x-data x-cloak x-show.transition.opacity.duration.400.ms="$store.modalRegister.open === true" class="modal modal-register">
+			<div @click.away="$store.modalRegister.open = false" class="register">
+				<div class="register__inner">
+					<div class="register__selectors">
+						<img class="register__close" @click="$store.modalRegister.open = false" src="imgs/ion_close.svg" alt="">
+
+						<div class="register__selector" @click="$store.modalRegisterTab.tab = 'login'" :class="{ 'active': $store.modalRegisterTab.tab === 'login' }">Войти</div>
+						<div class="register__selector active" @click="$store.modalRegisterTab.tab = 'register'" :class="{ 'active': $store.modalRegisterTab.tab === 'register' }">Регистрация</div>
+					</div>
+
+					<div class="register__body">
+						<form x-show="$store.modalRegisterTab.tab === 'register'" action="#" method="POST" class="register__signup">
+							<span class="modal__text">
+								Присоединитесь к обучению в Skills Academy
+							</span>
+
+							<span class="modal__title">
+								Введите данные для регистрации
+							</span>
+
+							<div class="register__inputs">
+								<label class="input-default restore__input_label">
+									<input class="restore__input" type="text" name="name" required="">
+									<span>Имя*</span>
+								</label>
+
+								<label class="input-default restore__input_label">
+									<input class="restore__input" type="email" name="emailOrtel" required="">
+									<span>Телефон или e-mail*</span>
+								</label>
+
+								<label class="input-default restore__input_label">
+									<input class="restore__input" type="password" name="password" required="">
+									<span>Пароль*</span>
+								</label>
+
+								<label class="checkbox-label register__checkbox">
+									<input class="general-checkbox" type="checkbox" name="offer" id="">
+									<span class="general-checkbox-text">Я принимаю Условия Пользования и Политику Конфиденциальности.</span>
+								</label>
+
+								<label class="checkbox-label register__checkbox">
+									<input class="general-checkbox" type="checkbox" name="offer1" id="">
+									<span class="general-checkbox-text">Я разрешаю присылать мне полезные сообщения о скидках, спецпредложениях, рекомендациях и советов для обучения.</span>
+								</label>
+
+								<button type="submit" class="button button-course button-restore">
+									Зарегистрироваться
+								</button>
+
+								<span class="register__divider">или</span>
+
+								<span class="register__additional">
+									Регистрация с помощью аккаунта
+								</span>
+
+								<div class="register__socials">
+									<button><img src="imgs/fb.svg" alt=""></button>
+									<button><img src="imgs/vkontakte.svg" alt=""></button>
+									<button><img src="imgs/google.svg" alt=""></button>
+								</div>
+							</div>
+
+						</form>
+
+						<form x-show="$store.modalRegisterTab.tab === 'login'" action="#" method="POST" class="register__signin">
+
+							<span class="modal__text">
+								Присоединитесь к обучению в Skills Academy
+							</span>
+
+							<span class="modal__title">
+								Введите данные для входа
+							</span>
+
+							<div class="register__inputs">
+								<label class="input-default restore__input_label">
+									<input class="restore__input" type="text" name="name" required="">
+									<span>Имя*</span>
+								</label>
+
+								<label class="input-default restore__input_label">
+									<input class="restore__input" type="password" name="password" required="">
+									<span>Пароль*</span>
+								</label>
+
+								<button type="submit" class="button button-course button-restore">
+									Войти
+								</button>
+
+								<span class="register__divider">или</span>
+
+								<a href class="register__additional">
+									Забыли пароль?
+								</a>
+							</div>
+
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="js/spruce.js"></script>
 		<script src="js/alpine.js"></script>
 		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>

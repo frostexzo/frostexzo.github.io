@@ -19,6 +19,32 @@
 		margin-top: 30px;
 	}
 
+	&__buttons {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 10px;
+	}
+
+	&-checkbox {
+		align-items: flex-start;
+		margin-bottom: 20px;
+
+		& span {
+			font-size: 12px;
+			margin-left: 12px;
+
+			& a {
+				color: #67A4FF;
+				transition: border-color .3s ease;
+				border-bottom: 1px solid transparent;
+
+				&:hover, &:focus {
+					border-color: #67A4FF;
+				}
+			}
+		}
+	}
+
 	&__courses {
 		&_list {
 			& .courses__item {
@@ -184,6 +210,68 @@
 			}
 		}
 	}
+
+	&__payment {
+		display: flex;
+		align-items: center;
+		border-radius: 4px;
+		background-color: #fff;
+		padding: 24px 28px;
+		border: 1px solid transparent;
+		transition: border-color .3s ease;
+		margin-bottom: 20px;
+		cursor: pointer;
+		max-height: 112px;
+
+		& input {
+			display: none;
+		}
+
+		&:hover, &:focus {
+			border-color: #333;
+		}
+
+		&.active {
+			border-color: $red;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_img {
+			margin-right: 20px;
+			pointer-events: none;
+			& img {
+				max-width: 58px;
+			}
+		}
+
+		&_info {
+			display: flex;
+			pointer-events: none;
+			flex-direction: column;
+		}
+
+		&_title {
+			margin-bottom: 8px;
+		}
+
+		&_text {
+			font-family: 'Montserrat', sans-serif;
+			color: #333;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.cart {
+		&__payment {
+			&_text {
+				font-size: 14px;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -202,6 +290,27 @@
 
 @media screen and (max-width: 600px) {
 	.cart {
+		&__payment {
+			padding: 15px;
+			max-height: none;
+			margin-bottom: 15px;
+
+			&_img {
+				width: 45px;
+				display: flex;
+				justify-content: center;
+
+				& img {
+					max-width: 45px;
+					max-height: 45px;
+				}
+			}
+
+			&_text {
+				font-size: 12px;
+			}
+		}
+
 		&__info {
 			font-size: 14px;
 			padding: 15px;

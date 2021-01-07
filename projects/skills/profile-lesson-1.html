@@ -152,7 +152,7 @@
 							</h3>
 
 							<div
-								x-data="{}"
+								x-data
 								class="videos__item"
 								data-video-url="https://www.youtube.com/embed/ztbcLu6rBwk"
 								@click="videoPlay($el)"
@@ -286,23 +286,35 @@
 								They _____ a real tiger in the zoo.
 							</h4>
 
-							<div x-data="{}" class="question__variants">
-								<label @click.prevent="selectSingleVariant($event.target)" class="question__variant">
+							<div x-data class="question__variants">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
 									<input type="radio" autocomplete="off" name="q1" />
 									<span>A: have saw</span>
 								</label>
 
-								<label @click.prevent="selectSingleVariant($event.target)" class="question__variant">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
 									<input type="radio" autocomplete="off" name="q1" />
 									<span>A: have saw</span>
 								</label>
 
-								<label @click.prevent="selectSingleVariant($event.target)" class="question__variant">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
 									<input type="radio" autocomplete="off" name="q1" />
 									<span>A: have saw</span>
 								</label>
 
-								<label @click.prevent="selectSingleVariant($event.target)" class="question__variant">
+								<label
+									@click.prevent="selectSingleVariant($event.target)"
+									class="question__variant"
+								>
 									<input type="radio" autocomplete="off" name="q1" />
 									<span>A: have saw</span>
 								</label>
@@ -316,36 +328,73 @@
 								</div>
 
 								<div class="question__submit">
-									<button type="submit" class="button button-question">Проверить</button>
+									<button type="submit" class="button button-question">
+										Проверить
+									</button>
 								</div>
 							</div>
 						</form>
 					</div>
 
 					<div class="question__note">
-						<button class="button button-question button-note">
-							<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M14.8086 0.53125H2.19141C0.983045 0.53125 0 1.51429 0 2.72266V14.2773C0 15.4857 0.983045 16.4688 2.19141 16.4688H13.2812C13.937 16.4688 14.5535 16.2134 15.0172 15.7497L16.2809 14.486C16.7446 14.0223 17 13.4058 17 12.75V2.72266C17 1.51429 16.017 0.53125 14.8086 0.53125ZM2.19141 1.59375H14.8086C15.4311 1.59375 15.9375 2.10016 15.9375 2.72266V4.25H1.0625V2.72266C1.0625 2.10016 1.56891 1.59375 2.19141 1.59375ZM1.0625 14.2773V5.3125H15.9375V12.2188H14.2773C13.4352 12.2188 12.75 12.9039 12.75 13.7461V15.4062H2.19141C1.56891 15.4062 1.0625 14.8998 1.0625 14.2773ZM15.5296 13.7347L14.266 14.9984C14.1339 15.1304 13.9801 15.2327 13.8125 15.3018V13.7461C13.8125 13.4898 14.021 13.2812 14.2773 13.2812H15.833C15.7639 13.4488 15.6616 13.6027 15.5296 13.7347Z" fill="white"/>
-							<path d="M13.2812 7.4375C13.2812 7.14412 13.0434 6.90625 12.75 6.90625H4.25C3.95658 6.90625 3.71875 7.14412 3.71875 7.4375C3.71875 7.73088 3.95658 7.96875 4.25 7.96875H12.75C13.0434 7.96875 13.2812 7.73088 13.2812 7.4375Z" fill="white"/>
-							<path d="M11.6875 9.5625H5.3125C5.01908 9.5625 4.78125 9.80037 4.78125 10.0938C4.78125 10.3871 5.01908 10.625 5.3125 10.625H11.6875C11.9809 10.625 12.2188 10.3871 12.2188 10.0938C12.2188 9.80037 11.9809 9.5625 11.6875 9.5625Z" fill="white"/>
+						<button
+							x-data
+							@click="$store.modalNotes.open = true"
+							class="button button-question button-note"
+						>
+							<svg
+								width="17"
+								height="17"
+								viewBox="0 0 17 17"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M14.8086 0.53125H2.19141C0.983045 0.53125 0 1.51429 0 2.72266V14.2773C0 15.4857 0.983045 16.4688 2.19141 16.4688H13.2812C13.937 16.4688 14.5535 16.2134 15.0172 15.7497L16.2809 14.486C16.7446 14.0223 17 13.4058 17 12.75V2.72266C17 1.51429 16.017 0.53125 14.8086 0.53125ZM2.19141 1.59375H14.8086C15.4311 1.59375 15.9375 2.10016 15.9375 2.72266V4.25H1.0625V2.72266C1.0625 2.10016 1.56891 1.59375 2.19141 1.59375ZM1.0625 14.2773V5.3125H15.9375V12.2188H14.2773C13.4352 12.2188 12.75 12.9039 12.75 13.7461V15.4062H2.19141C1.56891 15.4062 1.0625 14.8998 1.0625 14.2773ZM15.5296 13.7347L14.266 14.9984C14.1339 15.1304 13.9801 15.2327 13.8125 15.3018V13.7461C13.8125 13.4898 14.021 13.2812 14.2773 13.2812H15.833C15.7639 13.4488 15.6616 13.6027 15.5296 13.7347Z"
+									fill="white"
+								/>
+								<path
+									d="M13.2812 7.4375C13.2812 7.14412 13.0434 6.90625 12.75 6.90625H4.25C3.95658 6.90625 3.71875 7.14412 3.71875 7.4375C3.71875 7.73088 3.95658 7.96875 4.25 7.96875H12.75C13.0434 7.96875 13.2812 7.73088 13.2812 7.4375Z"
+									fill="white"
+								/>
+								<path
+									d="M11.6875 9.5625H5.3125C5.01908 9.5625 4.78125 9.80037 4.78125 10.0938C4.78125 10.3871 5.01908 10.625 5.3125 10.625H11.6875C11.9809 10.625 12.2188 10.3871 12.2188 10.0938C12.2188 9.80037 11.9809 9.5625 11.6875 9.5625Z"
+									fill="white"
+								/>
 							</svg>
-							Написать заметку</button>
-						<p class="question__note_text">Здесь вы может добавить в разделе «Заметки» переводы слов,
-							ошибки, которые допустил, задания и уроки.</p>
+							Написать заметку
+						</button>
+						<p class="question__note_text">
+							Здесь вы может добавить в разделе «Заметки» переводы слов, ошибки,
+							которые допустил, задания и уроки.
+						</p>
 					</div>
 
 					<div class="question__nav">
 						<div class="question__nav_links">
-							<a href="" class="question__nav_link question__nav_link--prev"><strong>Вернуться к</strong> Урок 1. Введение <img src="imgs/prev-arrow.svg" alt=""></a>
+							<a href="" class="question__nav_link question__nav_link--prev"
+								><strong>Вернуться к</strong> Урок 1. Введение
+								<img src="imgs/prev-arrow.svg" alt=""
+							/></a>
 
-							<a href="" class="question__nav_link question__nav_link--next"><img src="imgs/next-arrow.svg" alt=""> <strong>Перейти к</strong> Урок 2. Введение</a>
+							<a href="" class="question__nav_link question__nav_link--next"
+								><img src="imgs/next-arrow.svg" alt="" />
+								<strong>Перейти к</strong> Урок 2. Введение</a
+							>
 						</div>
 						<p class="question__nav_text">
-							Для получения доступа к следующему уроку выполните задание предыдущего
+							Для получения доступа к следующему уроку выполните задание
+							предыдущего
 						</p>
 
 						<div class="question__discuss_button">
-							<button class="button button-course button-test button-discuss">Обсудить урок</button>
+							<button
+								x-data
+								@click="$store.modalComments.open = true"
+								class="button button-course button-test button-discuss"
+							>
+								Обсудить урок
+							</button>
 						</div>
 					</div>
 				</section>
@@ -379,8 +428,130 @@
 			</div>
 		</main>
 
+		<div
+			x-data
+			x-cloak
+			x-show.transition.opacity.duration.400ms="$store.modalNotes.open === true"
+			class="modal modal-notes"
+		>
+			<form
+				@click.away="$store.modalNotes.open = false"
+				action="#"
+				method="POST"
+				class="modal__block notes"
+			>
+				<div class="modal__inner">
+					<div class="modal__title_block">
+						<div class="modal__title">Написать заметку</div>
+						<img
+							class="modal__close"
+							@click="$store.modalNotes.open = false"
+							src="imgs/ion_close-dark.svg"
+							alt=""
+						/>
+					</div>
+
+					<textarea name="note" class="modal-textarea" required></textarea>
+
+					<div class="modal__button">
+						<button
+							type="submit"
+							class="button button-course button-test button-discuss"
+						>
+							Отправить
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div
+			x-data
+			x-cloak
+			x-show.transition.opacity.duration.400ms="$store.modalComments.open === true"
+			class="modal modal-notes"
+		>
+			<form
+				@click.away="$store.modalComments.open = false"
+				action="#"
+				method="POST"
+				class="modal__block comments"
+			>
+				<div class="modal__inner">
+					<div class="modal__title_block">
+						<div class="modal__title">
+							Урок 2. Как будет происходить обучение
+						</div>
+						<img
+							class="modal__close"
+							@click="$store.modalComments.open = false"
+							src="imgs/ion_close-dark.svg"
+							alt=""
+						/>
+					</div>
+
+					<div class="modal__comments">
+						<div class="alerts__item">
+							<div class="alerts__item_img">
+								<img src="imgs/course-placeholder.jpg" alt="" />
+							</div>
+							<div class="alerts__item_info">
+								<div class="alerts__item_meta">
+									<h3 class="alerts__title">Арапбай Эльмира</h3>
+									<time datetime="20.01.2020">30 секунд назад</time>
+								</div>
+								<p class="alerts__item_desc">
+									Complex Subject переводится как «сложное подлежащее» - именно
+									такую роль он и играет в предложении. Образуется эта
+									синтаксическая конструкция по строго установленному правилу.
+								</p>
+							</div>
+						</div>
+
+						<div class="alerts__item">
+							<div class="alerts__item_img">
+								<img src="imgs/course-placeholder.jpg" alt="" />
+							</div>
+							<div class="alerts__item_info">
+								<div class="alerts__item_meta">
+									<h3 class="alerts__title">Арапбай Эльмира</h3>
+									<time datetime="20.01.2020">30 секунд назад</time>
+								</div>
+								<p class="alerts__item_desc">
+									Complex Subject переводится как «сложное подлежащее» - именно
+									такую роль он и играет в предложении. Образуется эта
+									синтаксическая конструкция по строго установленному правилу.
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal__title_block">
+						<div class="modal__subtitle">Оставить комментарий</div>
+					</div>
+
+					<textarea
+						name="comment"
+						class="modal-textarea modal__comments_textarea"
+						maxlength="150"
+						required
+					></textarea>
+
+					<div class="modal__button">
+						<span>Ограничение в 150 символов</span>
+						<button
+							type="submit"
+							class="button button-course button-test button-discuss"
+						>
+							Отправить
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="js/spruce.js"></script>
 		<script src="js/alpine.js"></script>
-		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>
