@@ -1,0 +1,52 @@
+$green: #95C11F;
+
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: 'Gotham', 'Arial', sans-serif;
+}
+
+a, img, button {
+	user-select: none;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.title {
+	&--md {
+		font-weight: 400;
+		font-size: 36px;
+		letter-spacing: 0.01em;
+		line-height: 1.25;
+		max-width: 583px;
+		text-transform: uppercase;
+		color: #fff;
+	}
+}
+
+.button {
+	background-color: $green;
+	color: #fff;
+	font-family: inherit;
+	font-size: 18px;
+	line-height: 1;
+	padding: 18px 20px;
+}
