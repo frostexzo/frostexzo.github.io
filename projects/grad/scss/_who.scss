@@ -1,0 +1,48 @@
+.who {
+	background-color: #fff;
+	background-image: url("../imgs/who.jpg");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-size: auto 100%;
+	position: relative;
+	z-index: 2;
+
+	&__inner {
+		display: flex;
+		background-color: #fff;
+		max-width: 60%;
+		flex-direction: column;
+		padding: 135px 0;
+		position: relative;
+		z-index: 2;
+	}
+
+	&__img {
+		margin-bottom: 120px;
+	}
+
+	&__info {
+		max-width: 640px;
+		position: relative;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		color: #434343;
+
+		&_bg {
+			position: absolute;
+			font-weight: 500;
+			user-select: none;
+			right: 0;
+			top: 2px;
+			line-height: 0.66;
+			color: #E1E1E1;
+			font-size: 200px;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

@@ -1,9 +1,12 @@
-$green: #95C11F;
+$green: #95c11f;
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	outline: none;
 }
 
 html {
@@ -12,10 +15,40 @@ html {
 }
 
 body {
-	font-family: 'Gotham', 'Arial', sans-serif;
+	font-family: "Gotham", "Arial", sans-serif;
+
+	&.mainpage {
+		position: relative;
+
+		&:before {
+			position: fixed;
+			width: 1px;
+			height: 100%;
+			left: 160px;
+			top: 0;
+			background-color: #6d6d6d;
+			opacity: 0.5;
+			content: "";
+			z-index: 2;
+		}
+
+		&:after {
+			position: fixed;
+			width: 1px;
+			height: 100%;
+			right: 160px;
+			top: 0;
+			background-color: #6d6d6d;
+			opacity: 0.5;
+			content: "";
+			z-index: 2;
+		}
+	}
 }
 
-a, img, button {
+a,
+img,
+button {
 	user-select: none;
 }
 
@@ -30,12 +63,18 @@ button {
 	background-color: transparent;
 }
 
+.container {
+	max-width: 1650px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
 .title {
 	&--md {
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 36px;
 		letter-spacing: 0.01em;
-		line-height: 1.25;
+		line-height: 1.2;
 		max-width: 583px;
 		text-transform: uppercase;
 		color: #fff;
@@ -48,5 +87,13 @@ button {
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 1;
-	padding: 18px 20px;
+	border: 2px solid $green;
+	padding: 17px 20px;
+	transition: color 0.2s ease, background-color 0.2s ease;
+
+	&:hover,
+	&:focus {
+		background-color: transparent;
+		color: $green;
+	}
 }

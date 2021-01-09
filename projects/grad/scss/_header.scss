@@ -1,36 +1,15 @@
 .header {
 	background-color: #000;
-	position: relative;
-	height: 100vh;
 	overflow: hidden;
-
-	&:before {
-		position: fixed;
-		width: 1px;
-		height: 100%;
-		left: 160px;
-		top: 0;
-		background-color: #5A5A5A;
-		opacity: .5;
-		content: '';
-		z-index: 2;
-	}
-	&:after {
-		position: fixed;
-		width: 1px;
-		height: 100%;
-		right: 160px;
-		top: 0;
-		z-index: 2;
-		background-color: #6D6D6D;
-		opacity: .5;
-		content: '';
-	}
+	max-height: 100vh;
+	position: sticky;
+	top: 0;
 
 	&__bg {
 		position: absolute;
 		width: 100%;
 		z-index: 1;
+		transform-origin: top right;
 
 		&_neon {
 			z-index: 2;
@@ -46,8 +25,8 @@
 	}
 
 	&__container {
-		padding: 40px 50px;
-		padding-top: 80px;
+		padding: 80px 50px;
+		padding-bottom: 150px;
 		z-index: 10;
 		position: relative;
 		height: inherit;
@@ -63,7 +42,7 @@
 
 	&__body {
 		margin-top: 14%;
-		margin-left: 350px;
+		margin-left: 19%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

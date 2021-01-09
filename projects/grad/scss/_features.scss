@@ -1,0 +1,48 @@
+.features {
+	background-color: #333;
+	z-index: 3;
+	position: relative;
+	background-image: url("../imgs/need.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__inner {
+		padding-bottom: 150px;
+	}
+
+	&__title {
+		font-weight: 500;
+		font-size: 138px;
+		max-width: 680px;
+		line-height: 0.67;
+		color: $green;
+		margin-bottom: 70px;
+		transform: translateY(-60px);
+	}
+
+	&__items {
+		grid-gap: 120px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+
+	&__item {
+		max-width: 350px;
+		display: flex;
+		flex-direction: column;
+
+		&_title {
+			color: $green;
+			margin-bottom: 18px;
+			font-weight: 500;
+			font-size: 24px;
+			display: block;
+		}
+
+		&_desc {
+			color: #fff;
+			line-height: 1.1;
+		}
+	}
+}

@@ -5,3 +5,19 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/GothamPro-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/GothamPro-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
