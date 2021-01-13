@@ -9,6 +9,11 @@ $green: #95c11f;
 	outline: none;
 }
 
+::selection {
+	color: #fff;
+	background-color: $green;
+}
+
 html {
 	font-size: 16px;
 	overflow-x: hidden;
@@ -16,8 +21,11 @@ html {
 
 body {
 	font-family: "Gotham", "Arial", sans-serif;
+	max-width: 2256px;
+	margin: 0 auto;
 
 	&.mainpage {
+		background-color: #222;
 		position: relative;
 
 		&:before {
@@ -88,12 +96,39 @@ button {
 	font-size: 18px;
 	line-height: 1;
 	border: 2px solid $green;
-	padding: 17px 20px;
+	padding: 17px 34px;
 	transition: color 0.2s ease, background-color 0.2s ease;
+
+	&--lg {
+		text-transform: uppercase;
+		padding: 24px 32px;
+		text-align: center;
+	}
 
 	&:hover,
 	&:focus {
 		background-color: transparent;
 		color: $green;
+	}
+}
+
+
+.tab__selector {
+	background-color: #2d2d2d;
+	font-weight: 400;
+	padding: 14px 20px;
+	font-size: 24px;
+	color: #fff;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+
+	&:hover {
+		background-color: #222;
+	}
+
+	&.active {
+		background-color: #828282;
+		font-weight: 500;
+		cursor: default;
 	}
 }

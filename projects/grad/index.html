@@ -4,8 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Grad Media Group</title>
+		<link rel="stylesheet" href="css/swiper.css" />
 		<link rel="stylesheet" href="css/styles.css" />
 		<link rel="preload" href="imgs/bg.mp4" as="video" />
+		<link rel="preload" href="imgs/bg-who.mp4" as="video" />
+		<link rel="preload" href="imgs/bg-need.mp4" as="video" />
 	</head>
 	<body class="mainpage">
 		<header class="header">
@@ -18,15 +21,24 @@
 				autoplay
 				src="imgs/bg.mp4"
 			></video>
-			<img class="header__bg_neon" src="imgs/bg_neon.svg" alt="" />
+			<img
+				decoding="async"
+				class="header__bg_neon"
+				src="imgs/bg_neon.svg"
+				alt=""
+			/>
 
 			<div class="header__container">
 				<div class="header__nav">
-					<button class="header__burger">
-						<img src="imgs/burger.svg" alt="" />
+					<button class="header__burger js-button" data-btn="nav">
+						<img decoding="async" src="imgs/burger.svg" alt="" />
 					</button>
-					<a href="" class="header__logo"><img src="imgs/logo.svg" alt="" /></a>
-					<a href="" class="header__tel"><img src="imgs/phone.svg" alt="" /></a>
+					<a href="" class="header__logo"
+						><img decoding="async" src="imgs/logo.svg" alt=""
+					/></a>
+					<button class="header__tel js-button" data-btn="tel"
+						><img decoding="async" src="imgs/phone.svg" alt=""
+					/></button>
 				</div>
 
 				<div class="header__body">
@@ -35,7 +47,7 @@
 					</h1>
 
 					<div class="header__button">
-						<button class="button">Заказать сайт</button>
+						<button class="button js-button" data-btn="call">Заказать сайт</button>
 					</div>
 				</div>
 			</div>
@@ -45,13 +57,21 @@
 			<section class="last">
 				<div class="container">
 					<div class="last__inner">
+						<span class="title--md last__hidden">
+							Оцените наш<br />
+							последний проект
+						</span>
 						<div class="last__frame">
-							<iframe src="https://ucg.kz" frameborder="0"></iframe>
+							<iframe
+								data-src="https://ucg.kz"
+								class="lazy"
+								frameborder="0"
+							></iframe>
 						</div>
 
 						<div class="last__info">
 							<div class="last__info_inner">
-								<h2 class="title--md">
+								<h2 class="title--md last__title">
 									Оцените наш<br />
 									последний проект
 								</h2>
@@ -73,12 +93,20 @@
 			</section>
 
 			<section class="who">
+				<video
+					data-src="imgs/bg-who.mp4"
+					muted
+					autoplay
+					loop
+					playsinline
+					class="who__bg lazy"
+				></video>
 				<div class="container">
 					<div class="who__inner">
 						<span class="who__text_bg">Кто<br />мы?</span>
 						<div class="who__info">
 							<div class="who__img">
-								<img src="imgs/logo-lg.svg" alt="" />
+								<img decoding="async" src="imgs/logo-lg.svg" alt="" />
 							</div>
 
 							<p class="who__text">Digital агентство полного цикла.</p>
@@ -100,19 +128,19 @@
 				<div class="portfolio__inner">
 					<div class="container">
 						<div class="portfolio__selectors">
-							<div class="portfolio__selector active">Продуктовые сайты</div>
-							<div class="portfolio__selector">Pharma</div>
-							<div class="portfolio__selector">B2B сегмент</div>
-							<div class="portfolio__selector">Интернет-магазины</div>
-							<div class="portfolio__selector">Для интерьера помещений</div>
-							<div class="portfolio__selector">Fashion & Beauty</div>
+							<div class="tab__selector active">Продуктовые сайты</div>
+							<div class="tab__selector">Pharma</div>
+							<div class="tab__selector">B2B сегмент</div>
+							<div class="tab__selector">Интернет-магазины</div>
+							<div class="tab__selector">Для интерьера помещений</div>
+							<div class="tab__selector">Fashion & Beauty</div>
 						</div>
 					</div>
 
 					<div class="portfolio__examples">
 						<a href="#" class="portfolio__example">
 							<div class="portfolio__img">
-								<img src="imgs/portfolio-1.jpg" alt="" />
+								<img decoding="async" src="imgs/portfolio-1.jpg" alt="" />
 							</div>
 
 							<div class="portfolio__info">
@@ -126,7 +154,7 @@
 
 						<a href="#" class="portfolio__example">
 							<div class="portfolio__img">
-								<img src="imgs/portfolio-2.jpg" alt="" />
+								<img decoding="async" src="imgs/portfolio-2.jpg" alt="" />
 							</div>
 
 							<div class="portfolio__info">
@@ -140,7 +168,7 @@
 
 						<a href="#" class="portfolio__example">
 							<div class="portfolio__img">
-								<img src="imgs/portfolio-1.jpg" alt="" />
+								<img decoding="async" src="imgs/portfolio-1.jpg" alt="" />
 							</div>
 
 							<div class="portfolio__info">
@@ -155,13 +183,24 @@
 
 					<div class="portfolio__more_wrapper">
 						<a href="#" class="portfolio__more"
-							><span>Еще</span> <img src="imgs/arrow-right.svg" alt=""
+							><span>Еще</span>
+							<img decoding="async" src="imgs/arrow-right.svg" alt=""
 						/></a>
 					</div>
 				</div>
 			</section>
 
 			<section class="features">
+				<div class="features__bg_wrapper">
+					<video
+						class="features__bg lazy"
+						data-src="imgs/bg-need.mp4"
+						playsinline
+						muted
+						autoplay
+						loop
+					></video>
+				</div>
 				<div class="container">
 					<div class="features__inner">
 						<h2 class="features__title">Мы — то, что надо!</h2>
@@ -219,8 +258,202 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="team">
+				<div class="container">
+					<span class="team__text">Наша<br />команда</span>
+					<div class="team__inner">
+						<div class="team__selectors">
+							<div class="tab__selector">Менеджер Digital проектов</div>
+							<div class="tab__selector">Веб-дизайнеры</div>
+							<div class="tab__selector">Верстальщики</div>
+							<div class="tab__selector">Веб-разработчики</div>
+							<div class="tab__selector">Сео-специалист</div>
+							<div class="tab__selector">Копирайтер</div>
+							<div class="tab__selector">Директор по развитию</div>
+							<div class="tab__selector">Менеджер по продажам</div>
+							<div class="tab__selector">Таргетолог</div>
+							<div class="tab__selector">Контекстный менеджер</div>
+						</div>
+
+						<div class="team__wrapper">
+							<div class="swiper-container team__container">
+								<div class="swiper-wrapper team__container_inner">
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-1.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-2.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-3.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-4.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-5.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-6.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-7.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-8.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-9.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-10.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-11.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-12.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-13.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-14.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-15.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-16.jpg" alt="" />
+									</div>
+									<div class="swiper-slide team__item">
+										<img decoding="async" src="imgs/team-img-17.jpg" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="brands">
+				<div class="brands__inner">
+					<div class="swiper-container brands__container">
+						<div class="swiper-wrapper brands__wrapper">
+							<div class="swiper-slide brands__item">
+								<img decoding="async" src="imgs/brands.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contacts">
+				<div class="contacts__inner">
+					<div class="contacts__info">
+						<h2 class="title--md contacts__title">Контакты</h2>
+
+						<div class="contacts__info_text">
+							<span>г. Алматы, проспект Аль-Фараби, 7к4А, офис 6</span>
+							<a href="tel:+77273131880"> +7 727 313 18 80 </a>
+
+							<a href="tel:+77071511511"> +7 707 151 15 11 </a>
+							<a href="mailto:info@gradmedia.kz"> info@gradmedia.kz </a>
+						</div>
+
+						<div class="contacts__button">
+							<button class="button js-button" data-btn="call">Заказать звонок</button>
+						</div>
+					</div>
+
+					<div id="map" class="contacts__map"></div>
+				</div>
+			</section>
 		</main>
 
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__block">
+						<a href=""
+							><img decoding="async" src="imgs/logo-dark.svg" alt=""
+						/></a>
+						<span>Все права защищены, © 2010-2021</span>
+					</div>
+
+					<div class="footer__block">
+						<span>Адрес: г. Алматы, проспект Аль-Фараби, 7к4А, офис 6</span>
+						<span>БИН 140540017426</span>
+					</div>
+
+					<div class="footer__block">
+						<a href="">+7 727 313 18 80</a>
+						<a href="">+7 707 151 15 11</a>
+					</div>
+
+					<div class="footer__block">
+						<div class="footer__subblock">
+							<a href="">info@gradmedia.kz</a>
+							<div class="footer__socials">
+								<a href=""
+									><img decoding="async" src="imgs/instagram.svg" alt=""
+								/></a>
+								<a href=""><img decoding="async" src="imgs/fb.svg" alt="" /></a>
+							</div>
+						</div>
+						<a href="" class="footer__privacy">Политика конфиденциальности</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div class="modal-background" aria-hidden="true"></div>
+
+		<div class="modal modal-nav" role="dialog">
+			<div class="modal-nav__inner">
+				<button class="modal-nav__close"><img class="modal-close" width="33" height="33" src="imgs/popup-close.svg" alt=""></button>
+				<nav class="modal-nav__nav">
+				<!--	<a href="" class="modal-nav__link">О компании</a> -->
+					<a href="" class="modal-nav__link">Разработка сайтов</a>
+				<!--	<a href="" class="modal-nav__link">СММ</a> -->
+				<!--	<a href="" class="modal-nav__link">Контекстная реклама</a> -->
+				<!--	<a href="" class="modal-nav__link">Портфолио</a> -->
+					<a href="" class="modal-nav__link">Заполнить бриф</a>
+					<a href="" class="modal-nav__link">Контакты</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="modal modal-general modal-call" role="dialog">
+			<div class="modal-general__inner">
+				<button class="modal-general__close"><img class="modal-close" src="imgs/popup-close.svg" alt=""></button>
+				<div class="modal-general__title">Оставьте заявку<br>
+					Мы перезвоним вам!</div>
+					<form action="#" method="POST" class="modal-general__form">
+						<input type="text" class="form-control" placeholder="Имя*" required>
+						<input type="tel" class="form-control form-control--tel" required placeholder="Телефон*">
+						<button type="submit" class="button button--lg">Заказать звонок</button>
+					</form>
+			</div>
+		</div>
+
+		<div class="modal modal-general modal-tel" role="dialog">
+			<div class="modal-general__inner">
+				<button class="modal-general__close"><img class="modal-close" src="imgs/popup-close.svg" alt=""></button>
+				<a href="tel:87071511511" class="modal-tel__phone">8 707 151 1511</a>
+			<div class="modal-tel__buttons">
+				<a href="tel:87071511511" class="button button--lg">Позвонить</a>
+				<button class="button button--lg js-button" data-btn="tel2call">Заказать звонок</button>
+			</div>
+			</div>
+		</div>
+
+		<script
+			async
+			src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"
+		></script>
+		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

@@ -1,0 +1,200 @@
+.modal {
+	z-index: 999;
+
+	&-background {
+		will-change: opacity, visibility;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 500;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&-close {
+		cursor: pointer;
+	}
+}
+
+.modal-nav {
+	will-change: transform;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	max-width: 320px;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	transform: translateX(-100%);
+	transition: transform 0.6s ease;
+
+	&.active {
+		transform: translateX(0);
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 50px;
+		position: relative;
+		height: inherit;
+	}
+
+	&__close {
+		position: absolute;
+		margin-bottom: 30px;
+		top: 50px;
+	}
+
+	&__link {
+		font-size: 20px;
+		color: #2d2d2d;
+		margin-bottom: 50px;
+		transition: color 0.3s ease;
+
+		&:hover {
+			color: $green;
+		}
+	}
+}
+
+.modal-general {
+	position: fixed;
+	will-change: transform, opacity, visibility;
+	left: 50%;
+	top: 50%;
+	width: 100%;
+	max-width: 650px;
+	background-color: #fff;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .3s ease, visibility .3s ease;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__inner {
+		padding: 100px 60px;
+		padding-bottom: 150px;
+		position: relative;
+		overflow-y: auto;
+	}
+
+	&__close {
+		position: absolute;
+		right: 24px;
+		top: 21px;
+	}
+
+	&__title {
+		letter-spacing: 0.01em;
+		color: #505050;
+		font-size: 36px;
+		text-transform: uppercase;
+		font-weight: 500;
+		text-align: center;
+		width: 100%;
+		margin-bottom: 100px;
+	}
+
+	&__form {
+		display: flex;
+		max-width: 300px;
+		margin: 0 auto;
+		flex-direction: column;
+	}
+}
+
+.modal-tel {
+	&__buttons {
+		display: flex;
+		justify-content: center;
+		grid-gap: 20px;
+	}
+
+	&__phone {
+		color: #434343;
+		font-size: 24px;
+		display: block;
+		transition: color .3s ease;
+		text-align: center;
+		margin-bottom: 80px;
+
+		&:hover, &:focus {
+			color: $green;
+		}
+	}
+}
+
+.form-control {
+	border: none;
+	box-shadow: none;
+	outline: none;
+	font-family: inherit;
+	font-size: 16px;
+	color: #505050;
+	padding-bottom: 16px;
+	padding-left: 28px;
+	border-bottom: 1px solid #4d4d4d;
+	margin-bottom: 44px;
+
+	&:focus {
+		border-color: $green;
+	}
+
+	&:focus:invalid {
+		border-color: darkred;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.modal-nav {
+		&__link {
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.modal-general {
+		max-width: none;
+		height: 100%;
+
+		&__inner {
+			padding: 80px 15px;
+			padding-bottom: 30px;
+		}
+
+		&__title {
+			font-size: 24px;
+			margin-bottom: 50px;
+		}
+	}
+
+	.modal-tel {
+		&__buttons {
+			flex-direction: column;
+		}
+
+		&__phone {
+			margin-bottom: 60px;
+		}
+	}
+}

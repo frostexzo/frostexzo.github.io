@@ -2,6 +2,7 @@
 	background-color: #000;
 	overflow: hidden;
 	max-height: 100vh;
+	position: initial;
 	position: sticky;
 	top: 0;
 
@@ -38,6 +39,19 @@
 
 	&__tel {
 		margin-left: auto;
+		transition: opacity 0.3s ease;
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
+	}
+
+	&__burger {
+		transition: opacity 0.3s ease;
+		&:hover,
+		&:focus {
+			opacity: 0.8;
+		}
 	}
 
 	&__body {
@@ -50,5 +64,164 @@
 
 	&__button {
 		margin-top: 120px;
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	body.mainpage {
+		&:before,
+		&:after {
+			content: none;
+		}
+	}
+
+	.header {
+		max-height: none;
+
+		&__body {
+			margin-left: 16%;
+		}
+
+		&__container {
+			padding: 40px 15px;
+			padding-bottom: 60px;
+		}
+
+		&__button {
+			margin-top: 80px;
+		}
+
+		&__bg {
+			transform: scale(1.25);
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title--md {
+		font-size: 28px;
+	}
+
+	.header {
+		&__logo {
+			margin-left: 50px;
+			& img {
+				max-width: 200px;
+			}
+		}
+
+		&__burger {
+			& img {
+				max-width: 45px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.header {
+		&__body {
+			margin-left: 0;
+			margin-top: 100px;
+		}
+
+		&__button {
+			margin-top: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header {
+		min-height: 667px;
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			min-height: inherit;
+		}
+
+		&__body {
+			margin: auto 0;
+		}
+
+		&__button {
+			margin-top: 60px;
+		}
+
+		&__bg {
+			transform: scale(1);
+			left: -95%;
+			width: auto;
+
+			&_neon {
+				width: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.title--md {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 515px) {
+	.header {
+		&__bg {
+			left: -120%;
+		}
+
+		&__container {
+			padding-top: 35px;
+		}
+
+		&__body {
+			margin-top: 80px;
+			min-height: calc(667px - 47px - 95px - 80px);
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.header {
+		&__bg {
+			left: -150%;
+		}
+
+		&__nav {
+			justify-content: space-between;
+		}
+
+		&__logo {
+			margin-left: 0;
+
+			& img {
+				max-width: 150px;
+			}
+		}
+
+		&__tel {
+			margin-left: 0;
+		}
+
+		&__burger {
+			& img {
+				max-width: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.header {
+		&__bg {
+			left: -175%;
+			transform: scale(1.2);
+		}
 	}
 }

@@ -15,26 +15,6 @@
 		margin-bottom: 55px;
 	}
 
-	&__selector {
-		background-color: #2d2d2d;
-		font-weight: 400;
-		padding: 14px 20px;
-		font-size: 24px;
-		color: #fff;
-		cursor: pointer;
-		transition: background-color 0.3s ease;
-
-		&:hover {
-			background-color: #222;
-		}
-
-		&.active {
-			background-color: #828282;
-			font-weight: 500;
-			cursor: default;
-		}
-	}
-
 	&__examples {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -55,6 +35,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+		padding: 15px;
 		width: 100%;
 		height: 100%;
 		text-align: center;
@@ -81,6 +62,12 @@
 	&__img {
 		transform: scale(1.05);
 		transform-origin: center;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 
 	&__more {
@@ -100,5 +87,113 @@
 		&:hover {
 			background-color: #333;
 		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.portfolio {
+		&__info_title {
+			font-size: 42px;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.portfolio {
+		&__inner {
+			padding: 80px 0;
+		}
+
+		&__examples {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		&__info_title {
+			font-size: 36px;
+		}
+		&__info_desc {
+			font-size: 18px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.portfolio {
+		&__selectors {
+			grid-gap: 15px;
+		}
+	}
+
+	.tab__selector {
+		font-size: 18px;
+		padding: 12px 18px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.portfolio {
+		&__examples {
+			grid-template-columns: 1fr;
+			grid-gap: 55px 0;
+		}
+
+		&__example {
+			display: none;
+			&:nth-child(-n+3) {
+				display: block;
+			}
+		}
+
+		&__info {
+			position: initial;
+			transform: none;
+			margin-top: 20px;
+			padding-top: 0;
+			height: auto;
+			background-color: transparent;
+
+			&:hover,
+			&:focus {
+				transform: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.portfolio {
+		&__inner {
+			padding: 0;
+			padding-top: 35px;
+		}
+
+		&__selectors {
+			grid-gap: 10px;
+			margin-bottom: 45px;
+		}
+
+		&__info {
+			&_title {
+				font-size: 24px;
+				margin-bottom: 15px;
+			}
+
+			&_desc {
+				font-size: 12px;
+			}
+		}
+
+		&__more {
+			font-size: 16px;
+			padding: 18px 45px;
+
+			&_wrapper {
+				margin-top: 75px;
+			}
+		}
+	}
+
+	.tab__selector {
+		font-size: 14px;
+		padding: 10px 14px;
 	}
 }

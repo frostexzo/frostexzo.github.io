@@ -2,12 +2,26 @@
 	background-color: #333;
 	z-index: 3;
 	position: relative;
-	background-image: url("../imgs/need.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+
+	&__bg {
+		width: 100%;
+		height: 100%;
+		transform: scale(1.4);
+
+		&_wrapper {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+		}
+	}
 
 	&__inner {
 		padding-bottom: 150px;
+		position: relative;
+		z-index: 3;
 	}
 
 	&__title {
@@ -43,6 +57,98 @@
 		&_desc {
 			color: #fff;
 			line-height: 1.1;
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.features {
+		&__bg {
+			transform: scale(2);
+		}
+	}
+}
+
+@media screen and (max-width: 1150px) {
+	.features {
+		&__items {
+			grid-gap: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.features {
+		&__inner {
+			padding-top: 40px;
+			padding-bottom: 80px;
+		}
+
+		&__bg {
+			transform: scale(2) rotate(90deg);
+		}
+
+		&__title {
+			transform: none;
+			max-width: 640px;
+			font-size: 100px;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.features {
+		&__items {
+			justify-content: flex-start;
+		}
+
+		&__item {
+			&:nth-child(even) {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.features {
+		&__items {
+			grid-gap: 40px;
+		}
+
+		&__item {
+			max-width: 85%;
+
+			&_title {
+				font-size: 18px;
+				margin-bottom: 12px;
+			}
+
+			&_desc {
+				font-size: 12px;
+			}
+		}
+
+		&__title {
+			font-size: 60px;
+			margin-bottom: 45px;
+			max-width: 350px;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.features {
+		&__bg {
+			transform: scale(2.5) rotate(90deg);
+		}
+	}
+}
+
+@media screen and (max-width: 355px) {
+	.features {
+		&__bg {
+			transform: scale(3.2) rotate(90deg);
 		}
 	}
 }

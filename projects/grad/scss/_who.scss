@@ -1,9 +1,5 @@
 .who {
 	background-color: #fff;
-	background-image: url("../imgs/who.jpg");
-	background-repeat: no-repeat;
-	background-position: right top;
-	background-size: auto 100%;
 	position: relative;
 	z-index: 2;
 
@@ -15,6 +11,13 @@
 		padding: 135px 0;
 		position: relative;
 		z-index: 2;
+	}
+
+	&__bg {
+		position: absolute;
+		right: -350px;
+		top: 0;
+		height: 100%;
 	}
 
 	&__img {
@@ -37,12 +40,103 @@
 			right: 0;
 			top: 2px;
 			line-height: 0.66;
-			color: #E1E1E1;
+			color: #e1e1e1;
 			font-size: 200px;
 		}
 
 		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.who {
+		&__inner {
+			padding: 100px 0;
+			padding-right: 15px;
+			max-width: 55%;
+		}
+
+		&__img {
+			& img {
+				width: 100%;
+			}
+		}
+
+		&__text {
+			&_bg {
+				font-size: 150px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.who {
+		&__inner {
+			width: 100%;
+			max-width: none;
+			padding: 60px 0;
+			padding-bottom: 90px;
+		}
+
+		&__bg {
+			display: none;
+		}
+
+		&__img {
+			& img {
+				width: 75%;
+			}
+		}
+
+		&__text {
+			&_bg {
+				font-size: 180px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.who {
+		&__text {
+			font-size: 14px;
+			margin-bottom: 17px;
+
+			&_bg {
+				font-size: 150px;
+			}
+		}
+
+		&__img {
+			margin-bottom: 80px;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.who {
+		&__inner {
+			padding-top: 35px;
+			padding-bottom: 80px;
+		}
+
+		&__text {
+			font-size: 12px;
+			margin-bottom: 16px;
+
+			&_bg {
+				font-size: 100px;
+			}
+		}
+
+		&__img {
+			 & img {
+				 width: 100%;
+				 max-width: 250px;
+			 }
 		}
 	}
 }

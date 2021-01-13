@@ -1,0 +1,32 @@
+.brands {
+	background-color: #fff;
+	position: relative;
+	z-index: 3;
+
+	&__inner {
+		padding: 65px 0;
+	}
+
+	&__wrapper {
+		transition-timing-function: linear !important;
+	}
+
+	&__item {
+		width: 14067px !important;
+
+		& img {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.brands {
+		&__inner {
+			padding: 40px 0;
+		}
+		&__item {
+			width: 9000px !important;
+		}
+	}
+}
