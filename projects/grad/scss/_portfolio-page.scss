@@ -1,0 +1,83 @@
+.portfolio-page {
+	&__pagination {
+		padding: 70px 0;
+
+		&_inner {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+	}
+
+	&__pages {
+		display: flex;
+		align-items: center;
+
+		& a {
+			display: inline-block;
+			margin-right: 25px;
+			font-size: 24px;
+			color: #b1b1b1;
+			transition: color 0.3s ease;
+
+			&:hover,
+			&:focus {
+				color: #fff;
+			}
+
+			&.active {
+				font-size: 36px;
+				color: #fff;
+			}
+
+			&:last-child {
+				margin-right: 15px;
+			}
+
+			&:first-child {
+				margin-left: 15px;
+				margin-right: 25px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.portfolio-page {
+		&__pagination_inner {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.portfolio-page {
+		&__pagination {
+			padding: 40px 0;
+
+			& img {
+				max-width: 38px;
+			}
+		}
+
+		&__pages {
+			& a {
+				font-size: 20px;
+				margin-right: 20px;
+
+				&.active {
+					font-size: 24px;
+				}
+
+				&:last-child {
+					margin-right: 15px;
+				}
+
+				&:first-child {
+					margin-left: 15px;
+					margin-right: 20px;
+				}
+			}
+		}
+	}
+}

@@ -33,6 +33,15 @@
 		height: inherit;
 	}
 
+	&__home {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		align-items: flex-end;
+	}
+
 	&__logo {
 		margin-left: 160px;
 	}
@@ -128,6 +137,10 @@
 		&__button {
 			margin-top: 60px;
 		}
+
+		&__home {
+			display: none;
+		}
 	}
 }
 
@@ -173,13 +186,17 @@
 			left: -120%;
 		}
 
+		& .title--md {
+			max-width: 250px;
+		}
+
 		&__container {
 			padding-top: 35px;
 		}
 
 		&__body {
 			margin-top: 80px;
-			min-height: calc(667px - 47px - 95px - 80px);
+			min-height: calc(640px - 47px - 95px - 80px);
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;

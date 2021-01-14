@@ -78,15 +78,25 @@
 		align-items: flex-end;
 		grid-gap: 20px;
 
+		&.selected {
+			pointer-events: none;
+		}
+
 		&_result {
-			color: #95c11f;
+			color: $green;
 			font-size: 64px;
 			align-self: center;
 		}
 
 		&_thumb {
+			cursor: pointer;
 			width: 34px;
 			background-color: #9c9c9c;
+			transition: background-color .3s ease;
+
+			&.active, &.selected {
+				background-color: $green;
+			}
 		}
 
 		&--1 {
