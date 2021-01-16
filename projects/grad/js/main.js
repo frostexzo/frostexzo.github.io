@@ -16,6 +16,9 @@ const ratingThumbs = document.querySelectorAll(".last__rating_thumb");
 
 const teamBtns = document.querySelectorAll(".team__selectors .tab__selector");
 const teamPersons = document.querySelectorAll(".team__item");
+
+const lastSite = document.getElementById("lastSite");
+const lastSitePlaceholder = document.querySelector(".last__frame_placeholder");
 let mapFlag = true;
 
 window.addEventListener("load", () => {
@@ -25,24 +28,8 @@ window.addEventListener("load", () => {
 			el.src = dataUrl;
 		});
 		clearTimeout(onLoad);
-	}, 200);
+	}, 250);
 });
-
-const initMap = () => {
-	mapFlag = false;
-	mapboxgl.accessToken =
-		"pk.eyJ1IjoiZ21ibG9nZ2VycyIsImEiOiJja2M2aGZtdjUwYjN1MnlwODk4NDNuMGxtIn0._IIb-Ofy4fn2tJGzZoWgZA";
-	const map = new mapboxgl.Map({
-		container: "map",
-		style: "mapbox://styles/mapbox/dark-v10",
-		center: [76.945997, 43.230079],
-		zoom: 16,
-	});
-
-	const marker = new mapboxgl.Marker()
-		.setLngLat([76.946597, 43.230089])
-		.addTo(map);
-};
 
 try {
 	if (teamBtns.length != 0) {
@@ -134,6 +121,13 @@ try {
 					modalPrivacy.classList.add("active");
 					break;
 				}
+				case "lastSite": {
+					btn.remove();
+					lastSitePlaceholder.remove();
+					const lastSiteSrc = lastSite.dataset.src;
+					lastSite.src = lastSiteSrc;
+					break;
+				}
 			}
 		});
 	});
@@ -163,10 +157,6 @@ try {
 				briefEl.classList.remove("active");
 			}
 		});
-	}
-
-	if (document.querySelector(".contacts-page")) {
-		initMap();
 	}
 
 	const brandsSlider = new Swiper(".brands__container", {

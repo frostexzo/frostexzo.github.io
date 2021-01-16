@@ -183,9 +183,11 @@
 	font-size: 16px;
 	color: #505050;
 	padding-bottom: 16px;
+	background-color: transparent;
 	padding-left: 28px;
 	border-bottom: 1px solid #4d4d4d;
 	margin-bottom: 44px;
+	transition: border-color .2s ease;
 
 	&:focus {
 		border-color: $green;

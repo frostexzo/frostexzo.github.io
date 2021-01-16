@@ -30,43 +30,277 @@
 		</header>
 
 		<main>
-			<section class="contacts-page">
-				<div class="container">
-					<div class="contacts-page__inner">
-						<h1 class="title--def">Контакты Grad Media Group</h1>
+			<section class="brief">
+				<form action="#" method="POST" class="brief__inner">
+					<div class="container">
+						<h1 class="title--def brief__title">Заполните бриф</h1>
+						<p class="brief__desc">
+							Бриф - это краткая форма письменной передачи информации. Благодаря
+							заполненному брифу нам будет проще понять, какой сайт вам
+							подходит.
+						</p>
 					</div>
-				</div>
 
-				<div class="contacts">
-					<div class="contacts__inner">
-						<div class="contacts__info">
-							<h2 class="title--md contacts__title">Контакты</h2>
+					<div class="brief__block brief__block_type">
+						<div class="container container-sm">
+							<h2 class="title--md brief__subtitle">Вид сайта</h2>
+							<div class="brief__types">
+								<label class="brief__type">
+									<input type="radio" name="type" value="" />
+									<img src="imgs/lp.svg" alt="" />
+									<span>Landing Page</span>
+								</label>
 
-							<div class="contacts__info_text">
-								<span>г. Алматы, проспект Аль-Фараби, 7к4А, офис 6</span>
-								<a href="tel:+77273131880"> +7 727 313 18 80 </a>
+								<label class="brief__type">
+									<input type="radio" name="type" value="" />
+									<img src="imgs/im.svg" alt="" />
+									<span>Интернет-магазин</span>
+								</label>
 
-								<a href="tel:+77071511511"> +7 707 151 15 11 </a>
-								<a href="mailto:info@gradmedia.kz"> info@gradmedia.kz </a>
+								<label class="brief__type">
+									<input type="radio" name="type" value="" />
+									<img src="imgs/card.svg" alt="" />
+									<span>Сайт-визитка</span>
+								</label>
+
+								<label class="brief__type">
+									<input type="radio" name="type" value="" />
+									<img src="imgs/blog.svg" alt="" />
+									<span>Сайт с элементами блога</span>
+								</label>
+
+								<label class="brief__type">
+									<input type="radio" name="type" value="" />
+									<img src="imgs/tip.svg" alt="" />
+									<span>Хочу вашего совета</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="brief__block brief__block_budget">
+						<div class="container">
+							<h2 class="title--md brief__subtitle">Бюджет</h2>
+
+							<div class="brief__budget_wrapper">
+								<div class="brief__budget">
+									<label
+										class="brief__budget_item included selected"
+										data-budget="1"
+									>
+										<input type="radio" name="budget" />
+										<span><small>до</small>300 000 тг.</span>
+									</label>
+									<label class="brief__budget_item" data-budget="2">
+										<input type="radio" name="budget" />
+										<span><small>до</small>500 000 тг.</span>
+									</label>
+									<label class="brief__budget_item" data-budget="3">
+										<input type="radio" name="budget" />
+										<span><small>до</small>1 000 000 тг.</span>
+									</label>
+									<label class="brief__budget_item" data-budget="4">
+										<input type="radio" name="budget" />
+										<span><small>до</small>2 000 000 тг.</span>
+									</label>
+									<label class="brief__budget_item" data-budget="no">
+										<p>
+											Бюджет не важен. <br />
+											Главное - результат
+										</p>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="brief__block">
+						<div class="container container-sm">
+							<h2 class="title--md brief__subtitle">
+								Для каких целей вам нужен сайт
+							</h2>
+
+							<div class="brief__checks">
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Привлечение новых клиентов</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Продажа товаров онлайн</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Поддержание имиджа компании</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Размещение актуальной информации для клиентов</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Упрощение процесса продаж</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<span>Инструмент для взаимодействия с клиентами</span>
+								</label>
+
+								<label class="brief__check ownVariant">
+									<input
+										type="checkbox"
+										name="selectTargets"
+										class="general-checkbox"
+									/>
+									<div class="brief__check_more">
+										<span>Свой вариант</span>
+										<textarea
+											name="ownVariant"
+											placeholder="введите текст*"
+										></textarea>
+									</div>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="brief__block">
+						<div class="container container-sm">
+							<h2 class="title--md brief__subtitle">
+								Сфера деятельности вашей компании
+							</h2>
+
+							<div class="brief__checks">
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Услуги для населения</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Услуги для бизнеса</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Продажа товаров для населения</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Дистрибуция / оптовые продажи</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Сфера строительства</span>
+								</label>
+
+								<label class="brief__check">
+									<input
+										type="radio"
+										name="selectSphere"
+										class="general-checkbox"
+									/>
+									<span>Производство товаров</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="brief__block">
+						<div class="container container-tiny">
+							<h2 class="title--md brief__subtitle">Ваши контактные данные</h2>
+
+							<div class="brief__inputs">
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Название компании*"
+									required
+								/>
+								<input
+									type="text"
+									class="form-control"
+									placeholder="Имя*"
+									required
+								/>
+								<input
+									type="tel"
+									class="form-control"
+									placeholder="Телефон*"
+									required
+								/>
+								<input
+									type="email"
+									class="form-control"
+									placeholder="E-mail*"
+									required
+								/>
+								<label class="brief__attach">
+									<input type="file" name="attachment" />
+									<img src="imgs/attach.svg" alt="" />
+									<span>прикрепить файл</span>
+								</label>
 							</div>
 
-							<div class="contacts__button">
-								<button class="button js-button" data-btn="call">
-									Заказать звонок
+							<div class="brief__submit">
+								<button type="submit" class="button button--lg">
+									Отправить
 								</button>
 							</div>
 						</div>
-
-						<div class="contacts__map">
-							<iframe id="map" class="lazy"
-								data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b957794d1da7809433620351b8e1f03ab7de3477b809cad31fd89929078e1b1&amp;source=constructor"
-								width="100%"
-								height="100%"
-								frameborder="0"
-							></iframe>
 					</div>
-					</div>
-				</div>
+				</form>
 			</section>
 		</main>
 

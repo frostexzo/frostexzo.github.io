@@ -66,9 +66,13 @@
 						<div class="last__frame">
 							<iframe
 								data-src="https://ucg.kz"
-								class="lazy"
+								id="lastSite"
 								frameborder="0"
 							></iframe>
+							<button class="button js-button" data-btn="lastSite">Посмотреть сайт</button>
+							<div class="last__frame_placeholder">
+								<img src="imgs/placeholder.jpg" alt="">
+							</div>
 						</div>
 
 						<div class="last__info">
@@ -396,7 +400,14 @@
 						</div>
 					</div>
 
-					<div id="map" class="contacts__map"></div>
+					<div class="contacts__map">
+							<iframe id="map" class="lazy"
+								data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A8b957794d1da7809433620351b8e1f03ab7de3477b809cad31fd89929078e1b1&amp;source=constructor"
+								width="100%"
+								height="100%"
+								frameborder="0"
+							></iframe>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -605,10 +616,7 @@
 			</div>
 		</div>
 
-		<script
-			async
-			src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"
-		></script>
+
 		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>
 	</body>

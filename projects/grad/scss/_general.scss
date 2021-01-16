@@ -83,6 +83,14 @@ button {
 		padding: 60px 15px;
 		padding-bottom: 0;
 	}
+
+	&-sm {
+		max-width: 1200px;	
+	}
+
+	&-tiny {
+		max-width: 850px;
+	}
 }
 
 .title {
