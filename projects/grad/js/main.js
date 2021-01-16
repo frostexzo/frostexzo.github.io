@@ -19,6 +19,14 @@ const teamPersons = document.querySelectorAll(".team__item");
 
 const lastSite = document.getElementById("lastSite");
 const lastSitePlaceholder = document.querySelector(".last__frame_placeholder");
+
+const briefTypes = document.querySelectorAll(".brief__type");
+const briefTypesRadios = document.querySelectorAll(".brief__type input");
+
+const briefBudget = document.querySelectorAll(".brief__budget_item");
+const briefBudgetRadios = document.querySelectorAll(
+	".brief__budget_item input",
+);
 let mapFlag = true;
 
 window.addEventListener("load", () => {
@@ -31,32 +39,66 @@ window.addEventListener("load", () => {
 	}, 250);
 });
 
-try {
-	if (teamBtns.length != 0) {
-		teamBtns.forEach((btn) => {
-			btn.addEventListener("click", () => {
-				if (btn.classList.contains("active")) return;
+const selectRadio = (elems, inputs, activeClass = "active") => {
+	elems.forEach((btn) => {
+		btn.addEventListener("click", (el) => {
+			el.preventDefault();
+			if (btn.classList.contains(`${activeClass}`) && !btn.dataset.budget)
+				return;
 
-				const btnData = btn.dataset.btn;
-				for (let i = 0; i < teamBtns.length; i++) {
-					teamBtns[i].classList.remove("active");
+			for (let i = 0; i < elems.length; i++) {
+				elems[i].classList.remove(`${activeClass}`);
+				elems[i].classList.remove("selected");
+				inputs[i].checked = false;
+			}
+
+			btn.classList.add(`${activeClass}`);
+			const btnRadio = btn.querySelector("input");
+			btnRadio.checked = true;
+
+			if (btn.dataset.budget && btn.dataset.budget != "no") {
+				const btnData = btn.dataset.budget;
+
+				btn.classList.add("selected");
+				for (let i = 0; i < btnData; i++) {
+					elems[i].classList.add(`${activeClass}`);
 				}
-
-				for (let i = 0; i < teamPersons.length; i++) {
-					teamPersons[i].classList.remove("notActive");
+			} else {
+				for (let i = 0; i < elems.length; i++) {
+					elems[i].classList.remove("selected");
 				}
-
-				btn.classList.add("active");
-
-				const categoryPersons = document.querySelectorAll(
-					`.team__item:not([data-team="${btnData}"])`,
-				);
-				for (let i = 0; i < categoryPersons.length; i++) {
-					categoryPersons[i].classList.add("notActive");
-				}
-			});
+			}
 		});
-	}
+	});
+};
+
+try {
+	selectRadio(briefTypes, briefTypesRadios);
+	selectRadio(briefBudget, briefBudgetRadios, "included");
+
+	teamBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			if (btn.classList.contains("active")) return;
+
+			const btnData = btn.dataset.btn;
+			for (let i = 0; i < teamBtns.length; i++) {
+				teamBtns[i].classList.remove("active");
+			}
+
+			for (let i = 0; i < teamPersons.length; i++) {
+				teamPersons[i].classList.remove("notActive");
+			}
+
+			btn.classList.add("active");
+
+			const categoryPersons = document.querySelectorAll(
+				`.team__item:not([data-team="${btnData}"])`,
+			);
+			for (let i = 0; i < categoryPersons.length; i++) {
+				categoryPersons[i].classList.add("notActive");
+			}
+		});
+	});
 
 	if (ratingThumbs.length != 0) {
 		ratingThumbs.forEach((thumb) => {
@@ -147,10 +189,6 @@ try {
 
 	if (document.body.classList.contains("mainpage")) {
 		window.addEventListener("scroll", () => {
-			if (window.pageYOffset > 2500 && mapFlag) {
-				initMap();
-			}
-
 			if (window.pageYOffset > 667 && window.innerWidth <= 600) {
 				briefEl.classList.add("active");
 			} else {

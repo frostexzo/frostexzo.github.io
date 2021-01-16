@@ -72,9 +72,8 @@
 		height: 110px;
 		display: flex;
 		align-items: center;
-		background-color: #2d2d2d;
 		overflow-y: hidden;
-		justify-content: space-between;
+		justify-content: center;
 
 		& input {
 			display: none;
@@ -87,13 +86,15 @@
 			padding: 0 40px;
 			font-size: 32px;
 			cursor: pointer;
-			transition: background-color 0.3s ease;
+			transition: background-color 0.2s ease, opacity 0.2s ease,
+				visibility 0.2s ease;
 			background-color: #2d2d2d;
 
 			&:hover,
 			&:focus {
 				background-color: #333;
 			}
+
 
 			& small {
 				margin-right: 5px;
