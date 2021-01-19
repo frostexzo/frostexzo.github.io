@@ -32,8 +32,6 @@
 	&-alt {
 		&__block {
 			margin-top: 40px;
-			display: flex;
-			justify-content: space-around;
 		}
 	}
 
@@ -96,24 +94,6 @@
 			min-height: 240px;
 		}
 
-		&-alt {
-			&__block {
-				flex-wrap: wrap;
-
-				& .best__item {
-					flex-basis: 40%;
-
-					&:last-child {
-						margin-top: 60px;
-					}
-				}
-
-				& .best__img {
-					max-width: 270px;
-				}
-			}
-		}
-
 		&__inner {
 			padding-top: 45px;
 			padding-bottom: 40px;
@@ -151,15 +131,6 @@
 		&-alt {
 			&__block {
 				flex-direction: column;
-
-				& .best__item {
-					&:last-child {
-						margin-top: 32px;
-					}
-					&:first-child {
-						margin-bottom: 32px;
-					}
-				}
 
 				& .best__img {
 					max-width: 320px;

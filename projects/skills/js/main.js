@@ -29,6 +29,12 @@ try {
 	window.Spruce.store("modalComments", {
 		open: false,
 	});
+	window.Spruce.store("modalFree", {
+		open: false,
+	});
+	window.Spruce.store("addedToCart", {
+		open: false,
+	});
 } catch (err) {}
 
 window.addEventListener("load", () => {
@@ -57,55 +63,116 @@ if (altContainer) {
 }
 
 try {
-	const popularCourses = new Swiper(".popular__courses_wrapper", {
-		slidesPerView: 4,
-		spaceBetween: 16,
-		observer: true,
-		observeParents: true,
-		navigation: {
-			prevEl: ".courses__arrow--left",
-			nextEl: ".courses__arrow--right",
-		},
-		breakpoints: {
-			1500: {
-				slidesPerView: 4,
+	if (
+		document.querySelector(".popular__courses_wrapper") ||
+		document.querySelector(".best__block")
+	) {
+		const popularCourses = new Swiper(".popular__courses_wrapper", {
+			slidesPerView: 4,
+			spaceBetween: 16,
+			observer: true,
+			observeParents: true,
+			navigation: {
+				prevEl: ".courses__arrow--left",
+				nextEl: ".courses__arrow--right",
 			},
-			900: {
-				slidesPerView: 3,
-				slidesOffsetAfter: 0,
+			breakpoints: {
+				1500: {
+					slidesPerView: 4,
+				},
+				900: {
+					slidesPerView: 3,
+					slidesOffsetAfter: 0,
+				},
+				320: {
+					slidesPerView: "auto",
+					slidesOffsetAfter: 15,
+					slidesOffsetBefore: 15,
+				},
 			},
-			320: {
-				slidesPerView: "auto",
-				slidesOffsetAfter: 15,
-				slidesOffsetBefore: 15,
-			},
-		},
-	});
+		});
 
-	const bestSlider = new Swiper(".best__block", {
-		slidesPerView: 4,
+		const bestSlider = new Swiper(".best__block", {
+			slidesPerView: 4,
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+			spaceBetween: 20,
+			breakpoints: {
+				950: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+				650: {
+					spaceBetween: 12,
+					slidesPerView: 3,
+				},
+				420: {
+					slidesPerView: 2,
+				},
+				320: {
+					slidesPerView: 1,
+				},
+			},
+		});
+	}
+
+	const teamSlider = new Swiper(".best-alt__block", {
+		slidesPerView: 3,
 		pagination: {
 			el: ".swiper-pagination",
 			clickable: true,
 		},
-		spaceBetween: 20,
+		spaceBetween: 90,
 		breakpoints: {
 			950: {
-				slidesPerView: 4,
-				spaceBetween: 20,
+				slidesPerView: 3,
+				spaceBetween: 90,
 			},
 			650: {
-				spaceBetween: 12,
-				slidesPerView: 3,
+				spaceBetween: 20,
+				slidesPerView: 2,
 			},
 			420: {
+				spaceBetween: 15,
 				slidesPerView: 2,
 			},
 			320: {
+				spaceBetween: 15,
 				slidesPerView: 1,
 			},
 		},
 	});
+
+	if (window.innerWidth <= 1000) {
+		const partnersSlider = new Swiper(".partners__block_container", {
+			slidesPerView: 4,
+			spaceBetween: 50,
+			autoplay: {
+				delay: 3000,
+			},
+			breakpoints: {
+				950: {
+					slidesPerView: 3,
+					spaceBetween: 50,
+				},
+				650: {
+					spaceBetween: 35,
+					slidesPerView: 2,
+				},
+				420: {
+					spaceBetween: 25,
+					slidesPerView: 2,
+				},
+				320: {
+					spaceBetween: 25,
+					slidesPerView: 2,
+				},
+			},
+		});
+	}
+
 } catch (err) {}
 
 const validateRestoreNumbers = (e) => {
@@ -288,21 +355,21 @@ const selectSingleVariant = (e) => {
 
 	if (e.classList.contains("active")) return;
 
-	if (vars) {
+	if (vars.length != 0) {
 		for (let i = 0; i < vars.length; i++) {
 			vars[i].classList.remove("active");
 			varsInputs[i].checked = false;
 		}
 	}
 
-	if (payment) {
+	if (payment.length != 0) {
 		for (let i = 0; i < payment.length; i++) {
 			payment[i].classList.remove("active");
 			paymentInputs[i].checked = false;
 		}
 	}
 
-	if (cards) {
+	if (cards.length != 0) {
 		for (let i = 0; i < cards.length; i++) {
 			cards[i].classList.remove("active");
 			cardsInputs[i].checked = false;

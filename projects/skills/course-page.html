@@ -4,12 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-		<link
-			rel="preload"
-			id="fonts"
-			as="style"
-			href="css/fonts.css"
-		/>
+		<link rel="preload" id="fonts" as="style" href="css/fonts.css" />
 		<!-- crossorigin="anonymous" -->
 		<link rel="stylesheet" href="css/styles.css" />
 
@@ -145,7 +140,6 @@
 
 		<main>
 			<section class="courses-hero course-page">
-
 				<div class="courses-hero__main">
 					<div class="container wh-100 container-course relative">
 						<div class="courses-hero__top_inner course-page__inner">
@@ -176,7 +170,9 @@
 								<span class="courses__price--prev">4 000 ₸</span>
 							</div>
 
-							<span class="courses__title course-content__text">Данный курс включает:</span>
+							<span class="courses__title course-content__text"
+								>Данный курс включает:</span
+							>
 
 							<div class="courses__content">
 								<div class="courses__content_item">
@@ -250,7 +246,9 @@
 								<button class="button button-course">В корзину</button>
 							</div>
 							<div class="courses__button course-content__button">
-								<button class="button button-course button-course-reverse">Купить сейчас</button>
+								<button class="button button-course button-course-reverse">
+									Купить сейчас
+								</button>
 							</div>
 						</div>
 					</div>
@@ -350,9 +348,7 @@
 			<section class="author">
 				<div class="container">
 					<div class="author__inner">
-						<h2 class="section-title">
-							Автор курса
-						</h2>
+						<h2 class="section-title">Автор курса</h2>
 
 						<div class="reviews__items author__wrapper">
 							<div class="reviews__item author__item">
@@ -382,13 +378,12 @@
 									</p>
 
 									<div class="author__socials">
-										<a href=""><img src="imgs/vk.svg" alt=""></a>
+										<a href=""><img src="imgs/vk.svg" alt="" /></a>
 
-										<a href=""><img src="imgs/instagram.svg" alt=""></a>
+										<a href=""><img src="imgs/instagram.svg" alt="" /></a>
 									</div>
 								</div>
 							</div>
-
 						</div>
 					</div>
 				</div>
@@ -397,10 +392,9 @@
 			<section class="program">
 				<div class="container">
 					<div class="program__inner">
-
 						<h2 class="section-title">Программа курса</h2>
 
-						<div class="program__table">
+						<div x-data class="program__table">
 							<dl>
 								<dt>Урок 1</dt>
 								<dd>Текст</dd>
@@ -409,10 +403,10 @@
 							<dl>
 								<dt>Урок 2</dt>
 								<dd>
-									<a href="">Введение</a>
-									<span class="program__table_label">
-										Free
-									</span>
+									<a href="" @click.prevent="$store.modalFree.open = true"
+										>Введение</a
+									>
+									<span class="program__table_label"> Free </span>
 								</dd>
 							</dl>
 
@@ -615,6 +609,63 @@
 			</div>
 		</footer>
 
+		<div
+			x-cloak
+			x-data
+			x-show.transition.opacity.duration.400ms="$store.modalFree.open === true"
+			class="modal modal-free"
+		>
+			<form
+				@click.away="$store.modalFree.open = false"
+				action="#"
+				method="POST"
+				class="modal__block comments"
+			>
+				<div class="modal__inner">
+					<div class="modal__title_block">
+						<div class="modal__title">
+							Урок 2. Как будет происходить обучение
+						</div>
+						<img
+							class="modal__close"
+							@click="$store.modalFree.open = false"
+							src="imgs/ion_close-dark.svg"
+							alt=""
+						/>
+					</div>
+
+					<div class="modal__free">
+						<div class="alerts__item">
+							<div class="alerts__item_img">
+								<img src="imgs/course-placeholder.jpg" alt="" />
+							</div>
+							<div class="alerts__item_info">
+								<div class="alerts__item_meta">
+									<h3 class="alerts__title">Арапбай Эльмира</h3>
+									<time datetime="20.01.2020">30 секунд назад</time>
+								</div>
+								<p class="modal__free_desc">Сообщение</p>
+							</div>
+						</div>
+
+						<div class="alerts__item">
+							<div class="alerts__item_img">
+								<img src="imgs/course-placeholder.jpg" alt="" />
+							</div>
+							<div class="alerts__item_info">
+								<div class="alerts__item_meta">
+									<h3 class="alerts__title">Арапбай Эльмира</h3>
+									<time datetime="20.01.2020">30 секунд назад</time>
+								</div>
+								<p class="modal__free_desc">Сообщение</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="js/spruce.js"></script>
 		<script src="js/alpine.js"></script>
 		<script src="js/swiper.js"></script>
 		<script src="js/main.js"></script>

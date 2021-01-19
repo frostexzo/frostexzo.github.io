@@ -61,7 +61,7 @@
 				</div>
 			</div>
 
-			<div x-data="{ menu: false }" class="header-nav">
+			<div x-data="{ menu: false, userPopup: false }" class="header-nav">
 				<div class="container">
 					<div class="header-nav__inner">
 						<div class="header-nav__block">
@@ -81,19 +81,49 @@
 							</nav>
 						</div>
 
-						<div class="header-nav__block">
-							<button
-								class="button button-nav"
-								@click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'login'"
-							>
-								Вход
-							</button>
-							<button
-								class="button button-nav button-nav-reverse"
-								@click="$store.modalRegister.open = true; $store.modalRegisterTab.tab = 'register'"
-							>
-								Регистрация
-							</button>
+						<div class="header-user__block">
+							<div class="header-user__links">
+								<a href="" class="header-user__link">
+									<div class="header-user__icon">
+										<img src="imgs/cart.svg" alt="" />
+									</div>
+									<span>Корзина</span>
+								</a>
+
+								<a href="" class="header-user__link">
+									<div class="header-user__icon">
+										<img src="imgs/heart-header.svg" alt="" />
+									</div>
+									<span>Избранное</span>
+								</a>
+							</div>
+
+							<div class="header-user__profile">
+								<div @click="userPopup = !userPopup" class="header-person">
+									<div class="header-person__img">
+										<img src="imgs/course-placeholder.jpg" alt="" />
+									</div>
+									<div class="header-person__info">
+										<span class="header-person__name">Құмарова Нұрай</span>
+										<span class="header-person__status">Студент</span>
+									</div>
+								</div>
+
+								<ul
+									x-cloak
+									x-show.transition.opacity.duration.300ms="userPopup === true"
+									class="header-person__popup"
+								>
+									<li><a href="">Мой профиль</a></li>
+									<li><a href="">Мои курсы</a></li>
+									<li><a href="">Уведомления</a></li>
+									<li><a href="">Заметки к урокам</a></li>
+									<li><a href="">История платежей</a></li>
+									<li>
+										<button><strong>Выйти</strong></button>
+									</li>
+								</ul>
+							</div>
 						</div>
 
 						<div @click="menu = !menu" class="header-nav__burger">
@@ -377,7 +407,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -467,7 +502,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -538,7 +578,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -628,7 +673,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -698,7 +748,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -788,7 +843,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -858,7 +918,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -948,7 +1013,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1018,7 +1088,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1108,7 +1183,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1198,7 +1278,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1288,7 +1373,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1359,7 +1449,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1449,7 +1544,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1519,7 +1619,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1609,7 +1714,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1679,7 +1789,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1769,7 +1884,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1839,7 +1959,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1929,7 +2054,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -2817,7 +2947,12 @@
 						</div>
 						<div class="modal-cart__column">
 							<span class="modal-cart__title">Курс добавлен в корзину</span>
-							<button @click="$store.addedToCart.open = false" class="button button-nav button-nav-reverse">Продолжить покупки</button>
+							<button
+								@click="$store.addedToCart.open = false"
+								class="button button-nav button-nav-reverse"
+							>
+								Продолжить покупки
+							</button>
 							<a href="" class="button button-nav">Перейти к оформлению</a>
 						</div>
 					</div>

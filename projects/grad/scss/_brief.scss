@@ -20,7 +20,7 @@
 	}
 
 	&__block {
-		margin-bottom: 120px;
+		margin-bottom: 120px !important;
 		width: 100%;
 
 		&:last-child {
@@ -34,20 +34,17 @@
 		margin-bottom: 85px;
 	}
 
-	&__types {
-		display: flex;
-		flex-wrap: wrap;
-		grid-gap: 20px;
-	}
-
 	&__type {
 		background-color: #2d2d2d;
 		display: flex;
 		align-items: center;
-		grid-gap: 0 20px;
 		padding: 30px;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
+
+		& img {
+			margin-right: 20px;
+		}
 
 		& input {
 			display: none;
@@ -95,7 +92,6 @@
 				background-color: #333;
 			}
 
-
 			& small {
 				margin-right: 5px;
 				font-size: 16px;
@@ -142,7 +138,10 @@
 	&__check {
 		display: flex;
 		align-items: flex-start;
-		grid-gap: 15px;
+
+		& input {
+			margin-right: 15px;
+		}
 
 		& span {
 			cursor: pointer;
@@ -204,8 +203,11 @@
 		color: $green;
 		display: flex;
 		align-items: center;
-		grid-gap: 12px;
 		cursor: pointer;
+
+		& img {
+			margin-right: 12px;
+		}
 
 		& input {
 			display: none;
@@ -242,7 +244,7 @@
 		}
 
 		&__budget {
-			min-width: 100%;
+			min-width: max-content;
 
 			&_wrapper {
 				overflow-x: scroll;
@@ -260,7 +262,10 @@
 	.brief {
 		&__type {
 			padding: 15px;
-			grid-gap: 15px;
+
+			& img {
+				margin-right: 15px;
+			}
 
 			& span {
 				font-size: 16px;
@@ -295,7 +300,7 @@
 @media screen and (max-width: 768px) {
 	.brief {
 		&__block {
-			margin-bottom: 60px;
+			margin-bottom: 60px !important;
 		}
 
 		&__subtitle {

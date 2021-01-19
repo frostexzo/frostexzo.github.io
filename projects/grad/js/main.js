@@ -198,10 +198,10 @@ try {
 	}
 
 	const brandsSlider = new Swiper(".brands__container", {
-		slidesPerView: "auto",
+		slidesPerView: 1,
 		freeMode: true,
 		loop: true,
-		speed: 90000,
+		speed: 70000,
 		onlyExternal: true,
 		spaceBetween: 90,
 		allowTouchMove: false,

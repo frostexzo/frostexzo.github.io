@@ -1,6 +1,14 @@
 .header-alert {
 	padding: 15px 0;
 	background-color: #e8da70;
+	position: relative;
+
+	&__close {
+		position: absolute;
+		right: 10px;
+		top: 6px;
+		cursor: pointer;
+	}
 
 	&__text {
 		text-align: center;
@@ -107,7 +115,136 @@
 	display: none;
 }
 
-@media screen and (min-width: 951px) {
+.header-user {
+	display: flex;
+
+	&__block {
+		display: flex;
+		align-items: center;
+	}
+
+	&__links {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 24px;
+		align-items: baseline;
+		margin-right: 24px;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		transition: filter 0.3s ease;
+
+		& span {
+			font-family: "Montserrat", sans-serif;
+			font-size: 12px;
+			display: block;
+			margin-top: 3px;
+		}
+
+		&:hover,
+		&:focus {
+			filter: brightness(30%);
+		}
+	}
+
+	&__profile {
+		position: relative;
+	}
+}
+
+.header-person {
+	display: flex;
+	cursor: pointer;
+
+	&__img {
+		& img {
+			max-width: 44px;
+			width: 100%;
+			object-fit: cover;
+			height: 44px;
+			border-radius: 100%;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		margin-left: 13px;
+		position: relative;
+		justify-content: center;
+		padding-right: 26px;
+
+		&:before {
+			content: "";
+			position: absolute;
+			right: 0;
+			background-image: url("../imgs/toggleDown.svg");
+			background-repeat: no-repeat;
+			width: 17px;
+			height: 10px;
+		}
+	}
+
+	&__name {
+		color: $blue;
+		margin-bottom: 5px;
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	&__status {
+		font-size: 12px;
+		font-family: "Montserrat", sans-serif;
+		color: #6e798c;
+	}
+
+	&__popup {
+		position: absolute;
+		right: 0;
+		width: 100%;
+		min-width: 225px;
+		list-style: none;
+		background-color: #fff;
+		box-shadow: 3px 7px 12px rgba(0, 0, 0, 0.25);
+		border-radius: 0px 0px 4px 4px;
+		margin-top: 15px;
+		padding-bottom: 16px;
+
+		& li {
+			padding: 12px 24px;
+			padding-right: 15px;
+			margin-top: 12px;
+			padding-bottom: 0;
+			border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+			&:first-child {
+				margin-top: 0;
+			}
+
+			& a,
+			& button {
+				font-size: 16px;
+				font-family: "Montserrat", sans-serif;
+				color: #828282;
+				transition: color 0.3s ease;
+				display: inline-block;
+				width: 100%;
+				text-align: left;
+				cursor: pointer;
+
+				&:hover,
+				&:focus {
+					color: $purple;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1001px) {
 	.header-nav {
 		&__burger {
 			display: none;
@@ -120,10 +257,49 @@
 	}
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1000px) {
 	.header-nav {
 		&__block:not(:first-child) {
 			display: none;
+		}
+	}
+
+	.header-person {
+		&__status {
+			display: none;
+		}
+
+		&__name {
+			display: none;
+		}
+
+		&__info {
+			padding-right: 14px;
+		}
+
+		&__popup {
+			& li a,
+			& li button {
+				font-size: 14px;
+			}
+		}
+	}
+
+	.header-user {
+		&__block {
+			margin-left: auto;
+			margin-right: 24px;
+		}
+
+		&__links {
+			grid-gap: 18px;
+			margin-right: 18px;
+		}
+
+		&__link {
+			& span {
+				display: none;
+			}
 		}
 	}
 
@@ -165,31 +341,16 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
-	.header-alert {
-		font-size: 10px;
-		line-height: 2;
-
-		& strong {
-			font-size: 12px;
-		}
-	}
-
+@media screen and (max-width: 750px) {
 	.tablet-hidden {
 		display: initial;
 		font-size: 14px;
 	}
 
-	.header-top {
-		display: none;
-
-		&__langs {
-			margin-top: 20px;
-			margin-bottom: 15px;
-		}
-
-		&__slogan {
-			margin-top: 20px;
+	.header-person {
+		&__popup {
+			margin-top: 8px;
+			right: -50px;
 		}
 	}
 
@@ -237,6 +398,48 @@
 				justify-content: flex-start;
 				padding: 12px 15px;
 				flex-direction: column;
+			}
+		}
+	}
+
+	.header-top {
+		display: none;
+
+		&__langs {
+			margin-top: 20px;
+			margin-bottom: 15px;
+		}
+
+		&__slogan {
+			margin-top: 20px;
+		}
+	}
+
+}
+
+@media screen and (max-width: 600px) {
+	.header-alert {
+		font-size: 10px;
+		line-height: 2;
+
+		& strong {
+			font-size: 12px;
+		}
+	}
+
+	.header-person {
+		&__img {
+			& img {
+				max-width: 36px;
+				height: 36px;
+			}
+		}
+	}
+
+	.header-user {
+		&__icon {
+			& img {
+				max-width: 22px;
 			}
 		}
 	}

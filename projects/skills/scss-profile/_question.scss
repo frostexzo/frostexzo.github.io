@@ -166,7 +166,7 @@
 		}
 
 		&.active {
-			border-color: #333;
+			border-color: #594fc5;
 		}
 
 		& input {
@@ -179,8 +179,8 @@
 			transition: border-color 0.2s ease, background-color 0.2s ease;
 
 			&:checked {
-				border-color: #000;
-				background-color: #000;
+				border-color: #594fc5;
+				background-color: #594fc5;
 			}
 		}
 
@@ -210,6 +210,7 @@
 
 		& span {
 			margin-left: 18px;
+			pointer-events: none;
 		}
 	}
 
@@ -334,6 +335,7 @@
 			min-height: 182px;
 			margin-bottom: 15px;
 			padding: 0 10px;
+			pointer-events: none;
 
 			& img {
 				width: 100%;
@@ -346,6 +348,7 @@
 
 		& span {
 			color: #333;
+			pointer-events: none;
 		}
 	}
 

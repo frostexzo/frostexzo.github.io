@@ -36,9 +36,9 @@
 
 	&__items {
 		grid-gap: 120px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
 	}
 
 	&__item {
@@ -73,6 +73,8 @@
 	.features {
 		&__items {
 			grid-gap: 60px;
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: initial;
 		}
 	}
 }
@@ -114,6 +116,7 @@
 	.features {
 		&__items {
 			grid-gap: 40px;
+			grid-template-columns: 1fr;
 		}
 
 		&__item {

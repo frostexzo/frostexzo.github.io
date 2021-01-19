@@ -36,7 +36,6 @@
 	&_inner {
 		display: flex;
 		align-items: center;
-		grid-gap: 14px;
 		flex-wrap: wrap;
 	}
 	position: relative;
@@ -51,7 +50,12 @@
 		color: #333;
 		padding: 9px 18px;
 		cursor: pointer;
+		margin-right: 14px;
 		transition: border-color 0.3s ease;
+
+		&:last-child {
+			margin-right: 0;
+		}
 
 		&:hover {
 			cursor: grab;
@@ -73,9 +77,6 @@
 	.question__arrange {
 		padding-left: 20px;
 		margin-bottom: 20px;
-		&_inner {
-			grid-gap: 10px;
-		}
 
 		&:before {
 			font-size: 12px;
@@ -84,6 +85,7 @@
 		&_el {
 			font-size: 14px;
 			padding: 7px 15px;
+			margin-right: 10px;
 		}
 	}
 }
