@@ -1,5 +1,18 @@
+.hero-slider {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	background-color: #3d3485;
+}
+
+.hero-features {
+	position: absolute;
+	bottom: 65px;
+	z-index: 1;
+	color: #fff;
+}
+
 .hero {
-	background-image: url("../imgs/main-bg.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -7,7 +20,7 @@
 
 	&__inner {
 		padding-top: 105px;
-		padding-bottom: 65px;
+		padding-bottom: 320px;
 		color: #fff;
 	}
 
@@ -71,12 +84,11 @@
 	}
 }
 
-
 @media screen and (max-width: 950px) {
 	.hero {
 		&__inner {
-			padding-top: 50px;
-			padding-bottom: 30px;
+			padding-top: 40px;
+			padding-bottom: 250px;
 		}
 
 		&__courses {
@@ -90,6 +102,9 @@
 			}
 		}
 	}
+	.hero-features {
+		bottom: 35px;
+	}
 }
 
 @media screen and (max-width: 750px) {
@@ -97,6 +112,11 @@
 		&__courses {
 			display: none;
 		}
+
+		&__inner {
+			padding-bottom: 35px;
+		}
+
 		&__button {
 			margin-top: 30px;
 			margin-bottom: 0;
@@ -106,6 +126,7 @@
 			&--sm {
 				font-size: 10px;
 			}
+
 			&--md {
 				font-size: 14px;
 				max-width: 65%;
@@ -117,6 +138,10 @@
 				max-width: 65%;
 			}
 		}
+	}
+
+	.hero-features {
+		display: none;
 	}
 }
 

@@ -162,28 +162,69 @@
 		</header>
 
 		<main>
-			<section class="hero">
-				<div class="container">
-					<div class="hero__inner">
-						<span class="hero__text--sm"
-							>База образовательных курсов №1 в Казахстане</span
+			<section class="hero-slider">
+				<div class="swiper-container hero-slider__container">
+					<div class="swiper-wrapper">
+						<div
+							class="swiper-slide hero"
+							style="background-image: url('./imgs/main-bg.jpg')"
 						>
+							<div class="container">
+								<div class="hero__inner">
+									<span class="hero__text--sm"
+										>База образовательных курсов №1 в Казахстане</span
+									>
 
-						<h1 class="hero__text--lg">
-							Skills Academy - это твой прямой путь к успешному будущему
-						</h1>
+									<h1 class="hero__text--lg">
+										Skills Academy - это твой прямой путь к успешному будущему
+									</h1>
 
-						<h2 class="hero__text--md">
-							Обучайся онлайн из дома в удобном для себя темпе В 2 раза дешевле
-							репетитора
-						</h2>
+									<h2 class="hero__text--md">
+										Обучайся онлайн из дома в удобном для себя темпе В 2 раза
+										дешевле репетитора
+									</h2>
 
-						<div class="hero__button">
-							<button class="button button-hero">
-								Присоединиться бесплатно
-							</button>
+									<div class="hero__button">
+										<button class="button button-hero">
+											Присоединиться бесплатно
+										</button>
+									</div>
+								</div>
+							</div>
 						</div>
 
+						<div
+							class="swiper-slide hero"
+							style="background-image: url('./imgs/main-bg.jpg')"
+						>
+							<div class="container">
+								<div class="hero__inner">
+									<span class="hero__text--sm"
+										>База образовательных курсов №1 в Казахстане</span
+									>
+
+									<h1 class="hero__text--lg">
+										SKILLS ACADEMY - это твой прямой путь к успешному будущему
+									</h1>
+
+									<h2 class="hero__text--md">
+										Обучайся онлайн из дома в удобном для себя темпе В 2 раза
+										дешевле репетитора
+									</h2>
+
+									<div class="hero__button">
+										<button class="button button-hero">
+											Присоединиться бесплатно
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hero-features">
+					<div class="container">
 						<div class="hero__courses">
 							<span class="hero__courses_title"
 								>Курсы в Skills Academy помогут тебе:</span
@@ -193,9 +234,9 @@
 									<img
 										decoding="async"
 										src="imgs/courses-img1.svg"
+										alt=""
 										width="75"
 										height="75"
-										alt=""
 									/>
 									<span>Сдать ЕНТ и КТА на высший балл</span>
 								</div>
@@ -204,9 +245,9 @@
 									<img
 										decoding="async"
 										src="imgs/courses-img2.svg"
+										alt=""
 										width="75"
 										height="75"
-										alt=""
 									/>
 									<span>Получить стипендию в лучших вузах Казахстана</span>
 								</div>
@@ -215,9 +256,9 @@
 									<img
 										decoding="async"
 										src="imgs/courses-img3.svg"
+										alt=""
 										width="75"
 										height="75"
-										alt=""
 									/>
 									<span>Обрести навыки, открывающие дорогу к успеху</span>
 								</div>
@@ -226,9 +267,9 @@
 									<img
 										decoding="async"
 										src="imgs/courses-img4.svg"
+										alt=""
 										width="75"
 										height="75"
-										alt=""
 									/>
 									<span>Переехать в развитую страну на ПМЖ </span>
 								</div>
@@ -237,9 +278,9 @@
 									<img
 										decoding="async"
 										src="imgs/courses-img5.svg"
+										alt=""
 										width="75"
 										height="75"
-										alt=""
 									/>
 									<span>Поступить в лучшие вузы мира</span>
 								</div>
@@ -377,7 +418,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -467,7 +513,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -538,7 +589,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -628,7 +684,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -698,7 +759,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -788,7 +854,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -858,7 +929,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -948,7 +1024,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1018,7 +1099,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1108,7 +1194,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1198,7 +1289,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1288,7 +1384,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1359,7 +1460,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1449,7 +1555,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1519,7 +1630,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1609,7 +1725,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1679,7 +1800,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1769,7 +1895,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -1839,7 +1970,12 @@
 											</div>
 
 											<div class="courses__buttons">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 												<button
 													class="button button-course button-course-reverse"
 												>
@@ -1929,7 +2065,12 @@
 											</div>
 
 											<div class="courses__button">
-												<button @click="$store.addedToCart.open = true" class="button button-course">В корзину</button>
+												<button
+													@click="$store.addedToCart.open = true"
+													class="button button-course"
+												>
+													В корзину
+												</button>
 											</div>
 										</div>
 									</div>
@@ -2817,7 +2958,12 @@
 						</div>
 						<div class="modal-cart__column">
 							<span class="modal-cart__title">Курс добавлен в корзину</span>
-							<button @click="$store.addedToCart.open = false" class="button button-nav button-nav-reverse">Продолжить покупки</button>
+							<button
+								@click="$store.addedToCart.open = false"
+								class="button button-nav button-nav-reverse"
+							>
+								Продолжить покупки
+							</button>
 							<a href="" class="button button-nav">Перейти к оформлению</a>
 						</div>
 					</div>

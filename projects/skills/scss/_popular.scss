@@ -45,6 +45,7 @@
 				position: absolute;
 				content: "";
 				right: 0;
+				pointer-events: none;
 				top: 15px;
 				height: calc(100% - 30px);
 				z-index: 3;

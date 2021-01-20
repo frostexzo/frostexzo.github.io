@@ -118,6 +118,18 @@ try {
 		});
 	}
 
+	if (document.querySelector('.hero-slider')) {
+		const bestSlider = new Swiper(".hero-slider__container", {
+			slidesPerView: 1,
+			loop: true,
+			grabCursor: true,
+			effect: 'fade',
+			autoplay: {
+				delay: 4000,
+			}
+		});
+	}
+
 	const teamSlider = new Swiper(".best-alt__block", {
 		slidesPerView: 3,
 		pagination: {
