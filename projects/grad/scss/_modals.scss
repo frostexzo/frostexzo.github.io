@@ -80,7 +80,6 @@
 	top: 50%;
 	width: 100%;
 	max-width: 650px;
-	overflow-y: auto;
 	background-color: #fff;
 	transform: translate(-50%, -50%);
 	opacity: 0;
@@ -97,6 +96,7 @@
 		padding-bottom: 150px;
 		position: relative;
 		overflow-y: auto;
+		max-height: 100vh;
 	}
 
 	&__close {
@@ -114,7 +114,13 @@
 		text-align: center;
 		width: 100%;
 		margin-bottom: 100px;
+
+		&--md {
+			font-size: 24px;
+			margin-bottom: 35px;
+		}
 	}
+
 
 	&__form {
 		display: flex;
@@ -175,11 +181,23 @@
 	}
 }
 
+.modal-resume {
+	max-width: 800px;
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		max-width: none;
+		grid-gap: 45px 60px;
+	}
+}
+
 .form-control {
 	border: none;
 	box-shadow: none;
 	outline: none;
 	font-family: inherit;
+	width: 100%;
 	font-size: 16px;
 	color: #505050;
 	padding-bottom: 16px;
@@ -195,6 +213,48 @@
 
 	&:focus:invalid {
 		border-color: darkred;
+	}
+
+	&__attach {
+		cursor: pointer;
+
+		&:hover, &:focus {
+			& span {
+				color: #333;
+			}
+		}
+
+		& input {
+			display: none;
+		}
+
+		& div {
+			display: flex;
+			align-items: center;
+			color: #000;
+			font-size: 14px;
+			font-weight: 500;
+		}
+
+		& span {
+			transition: color .3s ease;
+			margin-left: 7px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	.modal-resume {
+		&__form {
+			grid-template-columns: 1fr;
+			grid-gap: 0;
+			margin-bottom: 45px;
+		}
+	}
+
+	.form-control__attach {
+		margin-bottom: 25px;
 	}
 }
 
@@ -218,6 +278,11 @@
 		&__title {
 			font-size: 24px;
 			margin-bottom: 50px;
+
+			&--md {
+				font-size: 16px;
+				margin-bottom: 20px;
+			}
 		}
 	}
 

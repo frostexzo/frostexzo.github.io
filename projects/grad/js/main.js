@@ -9,6 +9,7 @@ const modalNav = document.querySelector(".modal-nav");
 const modalCall = document.querySelector(".modal-call");
 const modalTel = document.querySelector(".modal-tel");
 const modalPrivacy = document.querySelector(".modal-privacy");
+const modalResume = document.querySelector(".modal-resume");
 
 const ratingEl = document.querySelector(".last__rating");
 const ratingResult = document.querySelector(".last__rating_result");
