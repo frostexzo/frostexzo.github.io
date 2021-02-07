@@ -45,6 +45,7 @@
 			& img {
 				width: 100%;
 				height: 100%;
+				object-position: left top;
 				object-fit: cover;
 			}
 		}
@@ -270,7 +271,7 @@
 			}
 
 			& iframe {
-				height: 90vw;
+				height: 70vw;
 			}
 		}
 
@@ -307,10 +308,6 @@
 @media screen and (max-width: 450px) {
 	.last {
 		&__frame {
-			& iframe {
-				height: 110vw;
-			}
-
 			& button {
 				width: 100%;
 			}
