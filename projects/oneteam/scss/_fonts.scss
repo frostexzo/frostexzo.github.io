@@ -1,0 +1,32 @@
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: 300;
+	src: local(""), url("../fonts/Roboto-Light.woff2") format("woff2"),
+		url("../fonts/Roboto-Light.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	font-style: normal;
+	font-weight: 300;
+	src: local(""), url("../fonts/GothamPro-Light.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	font-style: normal;
+	font-weight: 400;
+	src: local(""), url("../fonts/GothamPro.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gotham";
+	font-style: normal;
+	font-weight: 700;
+	src: local(""), url("../fonts/GothamPro-Bold.woff") format("woff");
+	font-display: swap;
+}

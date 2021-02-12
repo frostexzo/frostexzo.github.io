@@ -1,0 +1,60 @@
+*,
+*::after,
+*:before {
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+html {
+	font-size: 16px;
+	font-family: "Gotham", sans-serif;
+}
+
+a,
+img,
+button {
+	user-select: none;
+}
+
+input {
+	border: none;
+}
+
+a {
+	color: #fff;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
+
+.container {
+	padding: 0 25px;
+	max-width: 1330px;
+	margin: 0 auto;
+}
+
+.wrapper {
+	position: relative;
+	padding: 60px 0;
+	min-height: 100vh;
+	background-color: #000;
+	background-image: url('../imgs/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 85%;
+	background-position: 46% 100%;
+	overflow: hidden;
+}
+
+.main {
+	position: relative;
+	z-index: 5;
+}
+
+::selection {
+	color: #FF9900;
+	text-shadow: 0 0 6px #FF9900;
+}

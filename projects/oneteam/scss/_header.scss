@@ -1,0 +1,18 @@
+.header {
+	margin-bottom: 35px;
+
+	&__title {
+		font-size: 60px;
+		line-height: 1.2;
+		font-weight: 700;
+		font-family: "Gotham", sans-serif;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		background: linear-gradient(to left, #ad00ff, #ff0099, #ff9900, #ff4a22);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		color: #ff9900;
+	}
+}

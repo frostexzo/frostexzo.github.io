@@ -1,0 +1,80 @@
+.login {
+	&__form {
+		max-width: 500px;
+		margin: 0 auto;
+		background-color: #270824;
+		width: 100%;
+		padding: 55px;
+		padding-bottom: 70px;
+
+		&_title {
+			color: #ff4a22;
+			font-size: 40px;
+			font-weight: 300;
+			margin-bottom: 45px;
+		}
+
+		&_label {
+			display: flex;
+			flex-direction: column;
+			max-width: 340px;
+			margin: 0 auto;
+			margin-bottom: 18px;
+
+			& span {
+				font-size: 18px;
+				font-style: italic;
+				font-family: "Roboto", sans-serif;
+				font-weight: 300;
+				color: #fff;
+				text-transform: uppercase;
+			}
+		}
+
+		&_btn {
+			border: 3px solid #ff7a00;
+			text-transform: uppercase;
+			max-width: 278px;
+			width: 100%;
+			padding: 21px 0;
+			font-weight: 700;
+			letter-spacing: 0.37em;
+			color: #ff7a00;
+			margin: 0 auto;
+			font-size: 22px;
+			font-family: "Gotham", sans-serif;
+			transition: background-color 0.2s ease, color 0.2s ease;
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				background-color: #ff7a00;
+				color: #fff;
+			}
+
+			&-wrapper {
+				text-align: center;
+				margin-top: 50px;
+			}
+		}
+	}
+}
+
+.form-control {
+	height: 42px;
+	background-color: #5a1854;
+	padding: 0 15px;
+	font-family: "Gotham", sans-serif;
+	font-size: 18px;
+	color: #fff;
+	width: 100%;
+
+	&::-webkit-input-placeholder {
+		color: inhrit;
+		opacity: 1;
+	}
+
+	&::placeholder {
+		opacity: 1;
+	}
+}
