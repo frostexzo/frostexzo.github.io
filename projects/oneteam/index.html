@@ -28,8 +28,10 @@
 			crossorigin="anonymous"
 			href="fonts/Roboto-Light.woff2"
 		/>
+		<link rel="preload" as="script" href="js/main.js">
 		<link rel="stylesheet" href="css/styles.css" />
 		<title>One Team Love</title>
+		<script defer src="js/main.js"></script>
 	</head>
 	<body>
 		<div class="wrapper">
@@ -49,13 +51,14 @@
 			</header>
 
 			<main class="main">
-				<section class="login">
+				<section data-cloak class="login">
 					<div class="container">
-						<form class="login__form">
+						<form method="POST" action="login.php" class="login__form">
 							<h3 class="login__form_title">Вход / Login / Кіру</h3>
 
 							<label class="login__form_label">
 								<input
+									required
 									id="input-firstname"
 									type="text"
 									class="form-control"
@@ -67,6 +70,7 @@
 
 							<label class="login__form_label">
 								<input
+									required
 									id="input-surname"
 									type="text"
 									class="form-control"
@@ -78,6 +82,7 @@
 
 							<label class="login__form_label">
 								<input
+									required
 									id="input-depart"
 									type="text"
 									class="form-control"
@@ -93,9 +98,32 @@
 						</form>
 					</div>
 				</section>
+
+				<section class="preview">
+					<div class="container container-alt">
+						<div class="preview__inner">
+							<div class="preview__video">
+								<iframe
+									src=""
+									data-src=""
+									class="preview__video_iframe"
+									frameborder="0"
+								></iframe>
+
+								<div class="preview__lines left">
+									<img class="line-large" src="imgs/line.svg" alt="" />
+									<img src="imgs/line-sm.svg" alt="" />
+								</div>
+								<div class="preview__lines right">
+									<img class="reversed" src="imgs/line-sm.svg" alt="" />
+									<img class="reversed line-large" src="imgs/line.svg" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 			</main>
 		</div>
 
-		<script src="js/main.js"></script>
 	</body>
 </html>

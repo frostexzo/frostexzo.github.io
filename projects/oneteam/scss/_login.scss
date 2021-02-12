@@ -1,4 +1,20 @@
 .login {
+	will-change: opacity, visibility, transform;
+	transition: opacity $delay ease, visibility $delay ease;
+
+	&.inactive {
+		opacity: 0;
+		top: 0;
+		visibility: collapse;
+		overflow: hidden;
+		position: absolute;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		pointer-events: none;
+		margin-top: -60px;
+	}
+
 	&__form {
 		max-width: 500px;
 		margin: 0 auto;
@@ -96,6 +112,14 @@
 	}
 }
 
+@media screen and (max-width: 650px) {
+	.login {
+		&.inactive {
+			margin-top: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 600px) {
 	.login {
 		&__form {
@@ -146,6 +170,18 @@
 		&.has-value {
 			& + span {
 				transform: translateY(-20px);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.login {
+		&__form {
+			&_label {
+				& span {
+					font-size: 11px;
+				}
 			}
 		}
 	}

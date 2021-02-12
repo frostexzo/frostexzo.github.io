@@ -1,3 +1,5 @@
+$delay: 0.75s;
+
 *,
 *::after,
 *:before {
@@ -11,9 +13,14 @@ html {
 	font-family: "Gotham", sans-serif;
 }
 
+[data-cloak] {
+	display: none !important;
+}
+
 a,
 img,
-button {
+button,
+iframe {
 	user-select: none;
 }
 
@@ -33,8 +40,13 @@ button {
 
 .container {
 	padding: 0 25px;
-	max-width: 1330px;
+	max-width: 1350px;
 	margin: 0 auto;
+
+	&-alt {
+		display: flex;
+		justify-content: center;
+	}
 }
 
 .wrapper {
