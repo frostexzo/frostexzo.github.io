@@ -4,14 +4,40 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="preload"
+			as="font"
+			crossorigin="anonymous"
+			href="fonts/GothamPro-Bold.woff"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			crossorigin="anonymous"
+			href="fonts/GothamPro-Light.woff"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			crossorigin="anonymous"
+			href="fonts/GothamPro.woff"
+		/>
+		<link
+			rel="preload"
+			as="font"
+			crossorigin="anonymous"
+			href="fonts/Roboto-Light.woff2"
+		/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<title>One Team Love</title>
 	</head>
 	<body>
 		<div class="wrapper">
 			<img class="img img__ellipse" src="imgs/ellipse.svg" alt="" />
-			<div class="img img__light-right"></div>
-			<div class="img img__light-left"></div>
+			<div class="img img__round-right"></div>
+			<div class="img img__round-left"></div>
+			<img class="img img__light-left" src="imgs/left-light.svg" alt="" />
+			<img class="img img__light-right" src="imgs/right-light.svg" alt="" />
 
 			<header class="header">
 				<div class="container">
@@ -29,33 +55,36 @@
 							<h3 class="login__form_title">Вход / Login / Кіру</h3>
 
 							<label class="login__form_label">
-								<span>Имя / FirstName / Аты</span>
 								<input
 									id="input-firstname"
 									type="text"
 									class="form-control"
 									name="firstname"
+									autocomplete="off"
 								/>
+								<span>Имя / FirstName / Аты</span>
 							</label>
 
 							<label class="login__form_label">
-								<span>Фамилия / SurName / Тегіңіз</span>
 								<input
 									id="input-surname"
 									type="text"
 									class="form-control"
 									name="surname"
+									autocomplete="off"
 								/>
+								<span>Фамилия / SurName / Тегіңіз</span>
 							</label>
 
 							<label class="login__form_label">
-								<span>Департамент / Department / БӨЛІМ</span>
 								<input
 									id="input-depart"
 									type="text"
 									class="form-control"
 									name="department"
+									autocomplete="off"
 								/>
+								<span>Департамент / Department / БӨЛІМ</span>
 							</label>
 
 							<div class="login__form_btn-wrapper">

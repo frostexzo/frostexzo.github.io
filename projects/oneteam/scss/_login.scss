@@ -12,11 +12,12 @@
 			font-size: 40px;
 			font-weight: 300;
 			margin-bottom: 45px;
+			text-align: center;
 		}
 
 		&_label {
 			display: flex;
-			flex-direction: column;
+			flex-direction: column-reverse;
 			max-width: 340px;
 			margin: 0 auto;
 			margin-bottom: 18px;
@@ -64,17 +65,88 @@
 	height: 42px;
 	background-color: #5a1854;
 	padding: 0 15px;
-	font-family: "Gotham", sans-serif;
+	font-style: italic;
+	font-weight: 300;
+	font-family: "Roboto", sans-serif;
 	font-size: 18px;
 	color: #fff;
 	width: 100%;
 
 	&::-webkit-input-placeholder {
-		color: inhrit;
+		color: inherit;
 		opacity: 1;
 	}
 
 	&::placeholder {
 		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.login {
+		&__form {
+			padding: 30px 15px;
+			padding-bottom: 50px;
+			max-width: 450px;
+
+			&_title {
+				font-size: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.login {
+		&__form {
+			padding: 32px;
+			padding-bottom: 40px;
+			max-width: 350px;
+
+			&_title {
+				font-size: 20px;
+			}
+
+			&_label {
+				position: relative;
+				margin-bottom: 35px;
+
+				& span {
+					position: absolute;
+					font-size: 12px;
+					top: 0;
+					left: 0;
+					will-change: transform;
+					transition: transform 0.2s ease;
+				}
+			}
+
+			&_btn {
+				max-width: 170px;
+				font-size: 12px;
+				padding: 18px;
+			}
+		}
+	}
+
+	.form-control {
+		height: auto;
+		font-size: 16px;
+		background-color: transparent;
+		border-bottom: 1px solid #ff4a22;
+		padding: 0;
+		padding-bottom: 5px;
+
+		&:focus {
+			& + span {
+				transform: translateY(-20px);
+			}
+		}
+
+		&.has-value {
+			& + span {
+				transform: translateY(-20px);
+			}
+		}
 	}
 }

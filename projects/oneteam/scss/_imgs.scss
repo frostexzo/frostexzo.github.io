@@ -1,12 +1,13 @@
 .img {
 	position: absolute;
+	pointer-events: none;
 
 	&__ellipse {
 		bottom: 0;
 		width: 100%;
 	}
 
-	&__light {
+	&__round {
 		&-left {
 			top: 45%;
 			left: 40%;
@@ -34,6 +35,54 @@
 			border-radius: 100%;
 			width: 2110px;
 			height: 1540px;
+		}
+	}
+
+	&__light {
+		&-left {
+			top: 20%;
+			left: 10%;
+		}
+
+		&-right {
+			top: 30%;
+			right: 15%;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.img {
+		&__ellipse {
+			min-width: 800px;
+			width: 180%;
+			left: -50%;
+			object-fit: cover;
+		}
+
+		&__round {
+			&-left {
+				top: 55%;
+				width: 1100px;
+				height: 700px;
+				left: 13%;
+			}
+
+			&-right {
+				display: none;
+			}
+		}
+
+		&__light {
+			&-left {
+				top: 0;
+				left: -150px;
+			}
+
+			&-right {
+				top: 40px;
+				right: 50px;
+			}
 		}
 	}
 }
