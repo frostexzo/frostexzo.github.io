@@ -28,7 +28,7 @@
 			crossorigin="anonymous"
 			href="fonts/Roboto-Light.woff2"
 		/>
-		<link rel="preload" as="script" href="js/main.js">
+		<link rel="preload" as="script" href="js/main.js" />
 		<link rel="stylesheet" href="css/styles.css" />
 		<title>One Team Love</title>
 	</head>
@@ -39,6 +39,7 @@
 			<div class="img img__round-left"></div>
 			<img class="img img__light-left" src="imgs/left-light.svg" alt="" />
 			<img class="img img__light-right" src="imgs/right-light.svg" alt="" />
+			<div class="dark-bg"></div>
 
 			<header class="header">
 				<div class="container">
@@ -98,23 +99,25 @@
 					</div>
 				</section>
 
-				<section class="preview">
+				<section class="live">
 					<div class="container container-alt">
-						<div class="preview__inner">
-							<div class="preview__video">
+						<div class="live__inner">
+							<div class="live__video">
 								<iframe
 									src=""
-									data-src=""
-									class="preview__video_iframe"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen
+									data-src="https://www.youtube.com/embed/5qap5aO4i9A"
+									class="live__video_iframe"
 									frameborder="0"
 								></iframe>
 
-								<div class="preview__lines left">
+								<div class="live__lines left">
 									<img class="line-large" src="imgs/line.svg" alt="" />
-									<img src="imgs/line-sm.svg" alt="" />
+									<img class="line-sm" src="imgs/line-sm.svg" alt="" />
 								</div>
-								<div class="preview__lines right">
-									<img class="reversed" src="imgs/line-sm.svg" alt="" />
+								<div class="live__lines right">
+									<img class="reversed line-sm" src="imgs/line-sm.svg" alt="" />
 									<img class="reversed line-large" src="imgs/line.svg" alt="" />
 								</div>
 							</div>
