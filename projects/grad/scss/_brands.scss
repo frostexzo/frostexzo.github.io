@@ -12,6 +12,7 @@
 	}
 
 	&__item {
+		min-width: max-content;
 		& img {
 			height: 378px;
 		}

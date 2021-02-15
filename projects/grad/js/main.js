@@ -199,12 +199,11 @@ try {
 	}
 
 	const brandsSlider = new Swiper(".brands__container", {
-		slidesPerView: 1,
+		slidesPerView: 'auto',
 		freeMode: true,
 		loop: true,
-		speed: 70000,
+		speed: 15000,
 		onlyExternal: true,
-		spaceBetween: 90,
 		allowTouchMove: false,
 		simulateTouch: false,
 		autoplay: {
