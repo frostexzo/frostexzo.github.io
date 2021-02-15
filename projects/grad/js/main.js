@@ -198,9 +198,21 @@ try {
 		});
 	}
 
-	const brandsSlider = new Swiper(".brands__container", {
-		slidesPerView: 'auto',
-		freeMode: true,
+	const brandsSliderUp = new Swiper(".brands-1", {
+		slidesPerView: "auto",
+		loop: true,
+		speed: 8000,
+		spaceBetween: 70,
+		onlyExternal: true,
+		allowTouchMove: false,
+		simulateTouch: false,
+		autoplay: {
+			delay: 0,
+		},
+	});
+
+	const brandsSliderDown = new Swiper(".brands-2", {
+		slidesPerView: "auto",
 		loop: true,
 		speed: 15000,
 		onlyExternal: true,

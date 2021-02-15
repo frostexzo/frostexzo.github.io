@@ -3,6 +3,10 @@
 	position: relative;
 	z-index: 3;
 
+	&-1 {
+		margin-bottom: 60px;
+	}
+
 	&__inner {
 		padding: 65px 0;
 	}
@@ -12,10 +16,7 @@
 	}
 
 	&__item {
-		min-width: max-content;
-		& img {
-			height: 378px;
-		}
+		width: auto;
 	}
 }
 

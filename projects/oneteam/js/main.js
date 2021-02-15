@@ -15,6 +15,8 @@ const img_round_left = document.querySelector(".img__round-left");
 const img_light_right = document.querySelector(".img__light-right");
 const img_light_left = document.querySelector(".img__light-right");
 
+let liveFlag = false;
+
 if (localStorage.getItem("name")) {
 	loginWindow.remove();
 	videoWindow.classList.add("active");
@@ -40,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const toLive = () => {
 		if (!liveWindow.classList.contains("opened")) {
+			liveFlag = true;
 			liveInner.classList.remove("transition");
 			liveWindow.classList.add("opened");
 			videoWindow.classList.add("opened");
@@ -51,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				liveFrame.classList.add("opened");
 			}, 400);
 		} else {
+			liveFlag = false;
 			document.documentElement.classList.remove("anim-enabled");
 			liveInner.classList.add("transition");
 			liveWindow.classList.remove("opened");
@@ -72,6 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	liveWindow.addEventListener("click", toLive);
+
+	document.addEventListener("click", (e) => {
+		if (!liveWindow.contains(e.target) && liveFlag) {
+			toLive();
+		}
+	});
 
 	loginForm.addEventListener("submit", function (el) {
 		el.preventDefault();
