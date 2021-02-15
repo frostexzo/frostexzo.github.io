@@ -22,10 +22,15 @@
 		height: 100%;
 		overflow: hidden;
 
-		& iframe {
+		& div {
 			filter: grayscale(1) invert(1);
 			height: 100%;
 			width: 100%;
+		}
+
+		& .ymaps-2-1-78-map {
+			height: 100% !important;
+			width: 100% !important;
 		}
 	}
 

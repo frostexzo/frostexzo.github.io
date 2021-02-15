@@ -2,7 +2,6 @@
 	z-index: 999;
 
 	&-background {
-		will-change: opacity, visibility;
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -26,7 +25,6 @@
 }
 
 .modal-nav {
-	will-change: transform;
 	position: fixed;
 	height: 100%;
 	width: 100%;
@@ -75,7 +73,6 @@
 
 .modal-general {
 	position: fixed;
-	will-change: transform, opacity, visibility;
 	left: 50%;
 	top: 50%;
 	width: 100%;

@@ -28,17 +28,8 @@ const briefBudget = document.querySelectorAll(".brief__budget_item");
 const briefBudgetRadios = document.querySelectorAll(
 	".brief__budget_item input",
 );
-let mapFlag = true;
 
-window.addEventListener("load", () => {
-	const onLoad = setTimeout(() => {
-		lazyEls.forEach((el) => {
-			const dataUrl = el.dataset.src;
-			el.src = dataUrl;
-		});
-		clearTimeout(onLoad);
-	}, 250);
-});
+let mapFlag = true;
 
 const selectRadio = (elems, inputs, activeClass = "active") => {
 	elems.forEach((btn) => {
@@ -203,23 +194,36 @@ try {
 		loop: true,
 		speed: 8000,
 		spaceBetween: 70,
-		onlyExternal: true,
-		allowTouchMove: false,
 		simulateTouch: false,
 		autoplay: {
-			delay: 0,
+			delay: 100,
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 40,
+			},
+			600: {
+				spaceBetween: 70,
+			},
 		},
 	});
 
 	const brandsSliderDown = new Swiper(".brands-2", {
 		slidesPerView: "auto",
 		loop: true,
-		speed: 15000,
-		onlyExternal: true,
-		allowTouchMove: false,
+		speed: 8000,
+		spaceBetween: 70,
 		simulateTouch: false,
 		autoplay: {
-			delay: 0,
+			delay: 100,
+		},
+		breakpoints: {
+			320: {
+				spaceBetween: 40,
+			},
+			600: {
+				spaceBetween: 70,
+			},
 		},
 	});
 
@@ -228,6 +232,16 @@ try {
 			slidesPerView: "auto",
 		});
 	}
+
+	window.addEventListener("load", () => {
+		const onLoad = setTimeout(() => {
+			lazyEls.forEach((el) => {
+				const dataUrl = el.dataset.src;
+				el.src = dataUrl;
+			});
+			clearTimeout(onLoad);
+		}, 300);
+	});
 } catch (err) {
 	console.log(err);
 }
