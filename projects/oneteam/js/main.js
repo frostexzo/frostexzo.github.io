@@ -6,7 +6,10 @@ const loginForm = document.querySelector(".login__form");
 const videoWindow = document.querySelector(".live");
 const liveWindow = document.querySelector(".live__video");
 const liveInner = document.querySelector(".live__inner");
-const liveFrame = document.querySelector(".live__video_iframe");
+const liveFrame =
+	document.querySelector(".live__video_iframe") ||
+	document.querySelector("iframe");
+
 const darkBg = document.querySelector(".dark-bg");
 
 const img_ellipse = document.querySelector(".img__ellipse");
@@ -27,7 +30,6 @@ if (localStorage.getItem("name")) {
 
 window.addEventListener("load", () => {
 	document.documentElement.classList.add("page-loaded");
-	liveFrame.src = liveFrame.dataset.src;
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -40,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 750);
 	};
 
-	const toLive = () => {
+	const toLive = (e) => {
 		if (!liveWindow.classList.contains("opened")) {
 			liveFlag = true;
 			liveInner.classList.remove("transition");
@@ -52,8 +54,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			const frameTimeout = setTimeout(() => {
 				liveFrame.classList.add("opened");
+				try {
+					liveFrame.play();
+				} catch (err) {
+					console.log(err);
+				}
 			}, 400);
 		} else {
+			try {
+				liveFrame.pause();
+			} catch (err) {
+				console.log(err);
+			}
+			if (liveFrame.contains(e.target)) return;
 			liveFlag = false;
 			document.documentElement.classList.remove("anim-enabled");
 			liveInner.classList.add("transition");
@@ -79,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.addEventListener("click", (e) => {
 		if (!liveWindow.contains(e.target) && liveFlag) {
-			toLive();
+			toLive(e);
 		}
 	});
 
@@ -90,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		let request = new XMLHttpRequest();
 		request.onreadystatechange = function () {
-			if (this.status !== 200) {
+			if (this.status === 200) {
 				toPreview();
 				localStorage.setItem("name", inputs[0].value.trim());
 			}

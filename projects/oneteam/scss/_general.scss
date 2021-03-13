@@ -118,7 +118,8 @@ button {
 
 @media screen and (max-width: 900px) and (orientation: landscape) {
 	.wrapper {
-		min-height: 600px;
+		height: 100vh;
+		min-height: 650px;
 	}
 }
 

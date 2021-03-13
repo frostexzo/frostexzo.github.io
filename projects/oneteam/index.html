@@ -103,14 +103,20 @@
 					<div class="container container-alt">
 						<div class="live__inner">
 							<div class="live__video">
-								<iframe
-									src=""
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen
-									data-src="https://www.youtube.com/embed/5qap5aO4i9A"
+								<video
 									class="live__video_iframe"
-									frameborder="0"
-								></iframe>
+									width="100%"
+									height="100%"
+									controls="controls"
+									poster=""
+									loop
+									preload="auto"
+								>
+									<source
+										src="imgs/live.mp4"
+										type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+									/>
+								</video>
 								<div class="live__lines left">
 									<img class="line-large" src="imgs/line.svg" alt="" />
 									<img class="line-sm" src="imgs/line-sm.svg" alt="" />
