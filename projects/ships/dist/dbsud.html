@@ -2,57 +2,73 @@
 
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- <base href="/"> -->
 
-<head>
+		<title>Трекинг судов</title>
+		<meta
+			name="description"
+			content="Startup HTML template OptimizedHTML 5"
+		/>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
 
-	<title>Трекинг судов</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+		<link rel="icon" href="images/favicon.png" />
+		<meta property="og:image" content="images/dist/preview.jpg" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
 
-	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
-	
-	<link rel="stylesheet" href="css/main.min.css">
+	<body class='dbsud-low nohome''>
+		<header class="header">
+			<div class="header-logo">
+				<a href="/"
+					><img src="images/dist/logo.svg" alt="Трекинг судов"
+				/></a>
+			</div>
+			<div class="header-mnu">
+				<ul>
+					<li><a href="/">Карта</a></li>
+					<li><a href="/dbsud.html">Суда</a></li>
+					<li><a href="/photosud.html">Фото судов</a></li>
+					<li><a href="/dbports.html">Порты</a></li>
+					<li><a href="#">Больше</a></li>
+				</ul>
+			</div>
+			<div class="header-search">
+				<form action="">
+					<button class="btn-search"></button>
+					<input type="search" placeholder="Поиск судов" />
+				</form>
+			</div>
+			<div class="header-links">
+				<div class="header-links--item vac">
+					<a href="#">Найти вакансию</a>
+				</div>
+				<div class="header-links--item login">
+					<a href="/lk.html"
+						><img src="images/dist/icons/gr.svg" alt=""
+					/></a>
+				</div>
+				<div class="header-links--item gr">
+					<a href="#"
+						><img src="images/dist/icons/login.svg" alt=""
+					/></a>
+				</div>
+				<div class="header-links--item lang">
+					<a href="#"
+						><img src="images/dist/icons/lang.svg" alt=""
+					/></a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
 
-</head>
-
-<body class='dbsud-low nohome'>
-
-<header class="header">
- <div class="header-logo">
-  <a href="/"><img src="images/dist/logo.svg" alt="Трекинг судов"></a>
- </div>
- <div class="header-mnu">
-  <ul>
-   <li><a href="/">Карта</a></li>
-   <li><a href="#">Суда</a></li>
-   <li><a href="/photosud.html">Фото судов</a></li>
-   <li><a href="/dbsud.html">Порты</a></li>
-   <li><a href="#">Больше</a></li>
-  </ul>
- </div>
- <div class="header-search">
-  <form action="">
-   <button class="btn-search"></button>
-   <input type="search" placeholder="Поиск судов">
-  </form>
- </div>
- <div class="header-links">
-  <div class="header-links--item login">
-   <a href="/lk.html"><img src="images/dist/icons/gr.svg" alt=""></a>
-  </div>
-   <div class="header-links--item gr">
-    <a href="#"><img src="images/dist/icons/login.svg" alt=""></a>
-   </div>
-   <div class="header-links--item lang">
-    <a href="#"><img src="images/dist/icons/lang.svg" alt=""></a>
-   </div>
- </div>
-</header>
 
 <section class="filter dbsud">
 	<form action="">
@@ -60,12 +76,67 @@
 			<input type="search" placeholder="Поиск" />
 			<span>Имя порта / LOCODE</span>
 		</label>
-		<label for="">
+		<label for="" class="no-search-icon">
 			<select name="" id="">
 				<option value="">Все страны</option>
 			</select>
 		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">Длина (m)</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">GT</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">DWT (t)</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">Постройка</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
 		<button class="btn-filter">Поиск</button>
+		<button class="btn-reset">
+			Сброс <img src="images/dist/icons/reset.svg" alt="" />
+		</button>
 	</form>
 </section>
 
@@ -84,7 +155,7 @@
 				<a href="#">Постройка</a>
 			</div>
 			<div class="content-pagination--nav">
-				<span>1600 портов</span>
+				<span>1600 судов</span>
 				<ul>
 					<li></li>
 					<li>1 / 300</li>
@@ -94,9 +165,11 @@
 		</div>
 		<div class="content-items-name">
 			<ul>
-				<li>Порт</li>
-				<li>LOCODE</li>
-				<li>Карта</li>
+				<li>Судно</li>
+				<li>Постройка</li>
+				<li>GT</li>
+				<li>DWT</li>
+				<li>Размеры (m)</li>
 			</ul>
 		</div>
 		<div class="content-items">
@@ -114,15 +187,17 @@
 					</div>
 				</div>
 				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
 				</div>
 			</div>
-
 			<div class="content-item">
 				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
 					<div class="content-item--title-img">
 						<img src="images/dist/flag.png" alt="" />
 					</div>
@@ -132,15 +207,17 @@
 					</div>
 				</div>
 				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
 				</div>
 			</div>
-
 			<div class="content-item">
 				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
 					<div class="content-item--title-img">
 						<img src="images/dist/flag.png" alt="" />
 					</div>
@@ -150,15 +227,17 @@
 					</div>
 				</div>
 				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
 				</div>
 			</div>
-
 			<div class="content-item">
 				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
 					<div class="content-item--title-img">
 						<img src="images/dist/flag.png" alt="" />
 					</div>
@@ -168,118 +247,10 @@
 					</div>
 				</div>
 				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
-				</div>
-			</div>
-
-			<div class="content-item">
-				<div class="content-item--title">
-					<div class="content-item--title-img">
-						<img src="images/dist/flag.png" alt="" />
-					</div>
-					<div class="content-item--title-text">
-						<h2 class="h2">Aalborg</h2>
-						<span>Denmark</span>
-					</div>
-				</div>
-				<div class="content-item--info">
-					<span>DKAAL</span>
-					<a href="#">
-						<img src="images/dist/icons/maps-icons.svg" alt="" />
-					</a>
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
 				</div>
 			</div>
 		</div>

@@ -2,64 +2,342 @@
 
 <!DOCTYPE html>
 <html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- <base href="/"> -->
 
-<head>
+		<title>Трекинг судов</title>
+		<meta
+			name="description"
+			content="Startup HTML template OptimizedHTML 5"
+		/>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
 
-	<title>Трекинг судов</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
+		<link rel="icon" href="images/favicon.png" />
+		<meta property="og:image" content="images/dist/preview.jpg" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
 
-	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
-	
-	<link rel="stylesheet" href="css/main.min.css">
+	<body class='tariffs''>
+		<header class="header">
+			<div class="header-logo">
+				<a href="/"
+					><img src="images/dist/logo.svg" alt="Трекинг судов"
+				/></a>
+			</div>
+			<div class="header-mnu">
+				<ul>
+					<li><a href="/">Карта</a></li>
+					<li><a href="/dbsud.html">Суда</a></li>
+					<li><a href="/photosud.html">Фото судов</a></li>
+					<li><a href="/dbports.html">Порты</a></li>
+					<li><a href="#">Больше</a></li>
+				</ul>
+			</div>
+			<div class="header-search">
+				<form action="">
+					<button class="btn-search"></button>
+					<input type="search" placeholder="Поиск судов" />
+				</form>
+			</div>
+			<div class="header-links">
+				<div class="header-links--item vac">
+					<a href="#">Найти вакансию</a>
+				</div>
+				<div class="header-links--item login">
+					<a href="/lk.html"
+						><img src="images/dist/icons/gr.svg" alt=""
+					/></a>
+				</div>
+				<div class="header-links--item gr">
+					<a href="#"
+						><img src="images/dist/icons/login.svg" alt=""
+					/></a>
+				</div>
+				<div class="header-links--item lang">
+					<a href="#"
+						><img src="images/dist/icons/lang.svg" alt=""
+					/></a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
 
-</head>
-
-<body class='tariffs'>
-
-<header class="header">
- <div class="header-logo">
-  <a href="/"><img src="images/dist/logo.svg" alt="Трекинг судов"></a>
- </div>
- <div class="header-mnu">
-  <ul>
-   <li><a href="/">Карта</a></li>
-   <li><a href="#">Суда</a></li>
-   <li><a href="/photosud.html">Фото судов</a></li>
-   <li><a href="/dbsud.html">Порты</a></li>
-   <li><a href="#">Больше</a></li>
-  </ul>
- </div>
- <div class="header-search">
-  <form action="">
-   <button class="btn-search"></button>
-   <input type="search" placeholder="Поиск судов">
-  </form>
- </div>
- <div class="header-links">
-  <div class="header-links--item login">
-   <a href="/lk.html"><img src="images/dist/icons/gr.svg" alt=""></a>
-  </div>
-   <div class="header-links--item gr">
-    <a href="#"><img src="images/dist/icons/login.svg" alt=""></a>
-   </div>
-   <div class="header-links--item lang">
-    <a href="#"><img src="images/dist/icons/lang.svg" alt=""></a>
-   </div>
- </div>
-</header>
 
 <section class="tariff">
- <div class="containers">
-  <div class="tariff--title">
-   <h1 class="h1">Премиум пакеты</h1>
-  </div>
- </div>
+	<div class="containers">
+		<div class="tariff--title">
+			<h1 class="h1">Премиум пакеты</h1>
+		</div>
+		<div class="tariff-grid tariff-main">
+			<div class="tariff-main--text">
+				<span>Выберите валюту</span>
+				<div class="tariff-switch">
+					<input
+						type="checkbox"
+						name="flot-mode"
+						data-default-value="RUB"
+						data-checked-value="USD"
+						class="modal-filters__mode-checkbox"
+					/>
+				</div>
+			</div>
+			<div class="tariff-main--heading">SATELLITE</div>
+			<div class="tariff-main--heading op-40">PREMIUM</div>
+			<div class="tariff-main--heading op-20">FREE</div>
+		</div>
+
+		<div class="tariff-grid tariff-price">
+			<div class="tariff-general--text"><span>Цена</span></div>
+			<div class="tariff-general--text flex-column">
+				<span>$ 116 / месяц (1392 / год)</span>
+				<div class="tariff-switch tariff-switch--duration">
+					<input
+						type="checkbox"
+						name="flot-mode"
+						data-default-value="ЗА ГОД"
+						data-checked-value="ЗА МЕСЯЦ"
+						class="modal-filters__mode-checkbox"
+					/>
+				</div>
+			</div>
+			<div class="tariff-general--text"><span>$ 59 / год</span></div>
+			<div class="tariff-general--text"><span>FREE</span></div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Спутниковое покрытие</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Наземное покрытие</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>История трекинга</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<span>30 дней</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>7 дней</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>1 день</span>
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Мой флот</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<span>500 кораблей</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>500 кораблей</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>10 кораблей</span>
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Последние посещенные порты</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<span>5</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>5</span>
+			</div>
+			<div class="tariff-general--text">
+				<span>1</span>
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Информация о судне</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Плотность по типу судна</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Расширенные фильтры портов</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Автообновление карты</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Полноэкранный просмотр</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Без рекламы</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-features">
+			<div class="tariff-general--text">
+				<span>Быстрое отслеживание</span>
+				<div class="tariff-tooltip">
+					<img src="images/dist/icons/tooltip.svg" alt="" />
+				</div>
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/check.svg" alt="" />
+			</div>
+			<div class="tariff-general--text">
+				<img src="images/dist/icons/none.svg" alt="" />
+			</div>
+		</div>
+
+		<div class="tariff-grid tariff-buttons">
+			<div></div>
+			<div class="tariff-button--wrapper">
+				<a href="#" class="tariff-button--btn">Купить</a>
+			</div>
+			<div class="tariff-button--wrapper">
+				<a href="#" class="tariff-button--btn op-40">Купить</a>
+			</div>
+			<div></div>
+		</div>
+	</div>
 </section>
 
 	
