@@ -1,0 +1,192 @@
+<!--#set var="title" value="Трекинг судов" -->
+<!--#set var="class" value="dbsud-low nohome" -->
+<!--#include virtual="/parts/header.html" -->
+
+<section class="filter dbsud">
+	<form action="">
+		<label for="">
+			<input type="search" placeholder="Поиск" />
+			<span>Имя порта / LOCODE</span>
+		</label>
+		<label for="" class="no-search-icon">
+			<select name="" id="">
+				<option value="">Все страны</option>
+			</select>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">Длина (m)</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">GT</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">DWT (t)</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<label for="" class="no-search-icon">
+			<div class="sidebar-filter--text">Постройка</div>
+			<div class="sidebar-filter--values">
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">min</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+				<div class="sidebar-filter--value">
+					<div class="sidebar-filter--value-label">max</div>
+					<input type="number" class="sidebar-filter--value-input" />
+				</div>
+			</div>
+		</label>
+		<button class="btn-filter">Поиск</button>
+		<button class="btn-reset">
+			Сброс <img src="images/dist/icons/reset.svg" alt="" />
+		</button>
+	</form>
+</section>
+
+<section class="content">
+	<div class="container">
+		<div class="content--title">
+			<h1 class="h1">База данных судов</h1>
+			<p>AIS Информация судна / позиция</p>
+		</div>
+		<div class="content-pagination between">
+			<div class="content-pagination--filters">
+				<span>Сортировать по: </span>
+				<a href="#">Длина</a>
+				<a href="#">GT</a>
+				<a href="#">DWT</a>
+				<a href="#">Постройка</a>
+			</div>
+			<div class="content-pagination--nav">
+				<span>1600 судов</span>
+				<ul>
+					<li></li>
+					<li>1 / 300</li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-items-name">
+			<ul>
+				<li>Судно</li>
+				<li>Постройка</li>
+				<li>GT</li>
+				<li>DWT</li>
+				<li>Размеры (m)</li>
+			</ul>
+		</div>
+		<div class="content-items">
+			<div class="content-item">
+				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
+					<div class="content-item--title-img">
+						<img src="images/dist/flag.png" alt="" />
+					</div>
+					<div class="content-item--title-text">
+						<h2 class="h2">Aalborg</h2>
+						<span>Denmark</span>
+					</div>
+				</div>
+				<div class="content-item--info">
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
+				</div>
+			</div>
+			<div class="content-item">
+				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
+					<div class="content-item--title-img">
+						<img src="images/dist/flag.png" alt="" />
+					</div>
+					<div class="content-item--title-text">
+						<h2 class="h2">Aalborg</h2>
+						<span>Denmark</span>
+					</div>
+				</div>
+				<div class="content-item--info">
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
+				</div>
+			</div>
+			<div class="content-item">
+				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
+					<div class="content-item--title-img">
+						<img src="images/dist/flag.png" alt="" />
+					</div>
+					<div class="content-item--title-text">
+						<h2 class="h2">Aalborg</h2>
+						<span>Denmark</span>
+					</div>
+				</div>
+				<div class="content-item--info">
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
+				</div>
+			</div>
+			<div class="content-item">
+				<div class="content-item--title">
+					<div class="content-item--photo">
+						<img src="images/dist/dbsud.jpg" alt="" />
+					</div>
+					<div class="content-item--title-img">
+						<img src="images/dist/flag.png" alt="" />
+					</div>
+					<div class="content-item--title-text">
+						<h2 class="h2">Aalborg</h2>
+						<span>Denmark</span>
+					</div>
+				</div>
+				<div class="content-item--info">
+					<span>2017</span>
+					<span>499167</span>
+					<span>394330</span>
+					<span>488 / 74</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--#include virtual="/parts/footer.html" -->

@@ -1,0 +1,307 @@
+<!--#set var="title" value="Трекинг судов" -->
+<!--#include virtual="/parts/header.html" -->
+
+<section class="filter">
+	<div class="filter-mnu">
+		<ul>
+			<li class="filter-btn" data-modal="flot" title="Флоты">
+				<svg
+					width="20"
+					height="20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M10 .5a1 1 0 01.894.553l2.58 5.158 5.67.824a1 1 0 01.554 1.706l-4.127 4.024.928 5.674a1 1 0 01-1.455 1.044L10 16.807l-5.044 2.676a1 1 0 01-1.455-1.044l.928-5.674L.302 8.74a1 1 0 01.554-1.706l5.67-.824 2.58-5.158A1 1 0 0110 .5zm0 3.236L8.082 7.572a1 1 0 01-.75.543l-4.184.608 3.05 2.973a1 1 0 01.289.878L5.8 16.771l3.731-1.98a1 1 0 01.938 0l3.731 1.98-.687-4.197a1 1 0 01.289-.877l3.05-2.974-4.183-.608a1 1 0 01-.75-.543L10 3.736z"
+						fill="#fff"
+					/>
+				</svg>
+			</li>
+			<li class="filter-btn" data-modal="filter" title="Фильтры">
+				<svg
+					width="16"
+					height="18"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M5 2a1 1 0 100 2 1 1 0 000-2zM2.17 2a3.001 3.001 0 015.66 0H15a1 1 0 110 2H7.83a3.001 3.001 0 01-5.66 0H1a1 1 0 010-2h1.17zM11 8a1 1 0 100 2 1 1 0 000-2zM8.17 8a3.001 3.001 0 015.66 0H15a1 1 0 110 2h-1.17a3.001 3.001 0 01-5.66 0H1a1 1 0 110-2h7.17zM5 14a1 1 0 100 2 1 1 0 000-2zm-2.83 0a3.001 3.001 0 015.66 0H15a1 1 0 110 2H7.83a3.001 3.001 0 01-5.66 0H1a1 1 0 110-2h1.17z"
+						fill="#fff"
+					/>
+				</svg>
+			</li>
+			<li title="Полноэкранный режим">
+				<svg
+					width="16"
+					height="16"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M2 3.414V5a1 1 0 11-2 0V1a1 1 0 011-1h4a1 1 0 110 2H3.414l2.293 2.293a1 1 0 01-1.414 1.414L2 3.414zM11 2a1 1 0 110-2h4a1 1 0 011 1v4a1 1 0 11-2 0V3.414l-2.293 2.293a1 1 0 11-1.414-1.414L12.586 2H11zM1 10a1 1 0 011 1v1.586l2.293-2.293a1 1 0 111.414 1.414L3.414 14H5a1 1 0 110 2H1a1 1 0 01-1-1v-4a1 1 0 011-1zm9.293 1.707a1 1 0 111.414-1.414L14 12.586V11a1 1 0 112 0v4a1 1 0 01-1 1h-4a1 1 0 110-2h1.586l-2.293-2.293z"
+						fill="#fff"
+					/>
+				</svg>
+			</li>
+			<li title="Обновить">
+				<svg
+					width="17"
+					height="20"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M8.793.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L10.086 5H8.5C4.952 5 2 7.952 2 11.5S4.952 18 8.5 18s6.5-2.952 6.5-6.5a1 1 0 112 0c0 4.652-3.848 8.5-8.5 8.5S0 16.152 0 11.5 3.848 3 8.5 3h1.586L8.793 1.707a1 1 0 010-1.414z"
+						fill="#fff"
+					/>
+				</svg>
+			</li>
+		</ul>
+		<div class="modal-filters-wrapper" id="modal-filter">
+			<div class="modal-filters">
+				<div class="modal-filters--title">
+					<h2 class="h2">Фильтры</h2>
+					<button class="btn-close">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+								fill="white"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-filters--button">
+					<button class="btn-filter">Сбросить фильтры</button>
+					<button class="btn-filter">Разблокировать</button>
+				</div>
+				<div class="modal-filters--items">
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Тип судна</span>
+						</div>
+					</div>
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Вместимость</span>
+						</div>
+					</div>
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Характеристики</span>
+						</div>
+					</div>
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Текущий статус</span>
+						</div>
+					</div>
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Рейс</span>
+						</div>
+					</div>
+					<div class="modal-filters-item">
+						<div class="modal-filters-item--title">
+							<span>Последняя полученная позиция</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-filters-wrapper" id="modal-flot">
+			<div class="modal-filters">
+				<div class="modal-filters--title">
+					<h2 class="h2">Флоты</h2>
+					<button class="btn-close">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7 5.58579L12.2929 0.292893C12.6834 -0.0976311 13.3166 -0.0976311 13.7071 0.292893C14.0976 0.683417 14.0976 1.31658 13.7071 1.70711L8.41421 7L13.7071 12.2929C14.0976 12.6834 14.0976 13.3166 13.7071 13.7071C13.3166 14.0976 12.6834 14.0976 12.2929 13.7071L7 8.41421L1.70711 13.7071C1.31658 14.0976 0.683417 14.0976 0.292893 13.7071C-0.0976311 13.3166 -0.0976311 12.6834 0.292893 12.2929L5.58579 7L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"
+								fill="white"
+							/>
+						</svg>
+					</button>
+				</div>
+				<div class="modal-filters--button">
+					<div class="modal-filters__mode">
+						<h4 class="modal-filters__mode-heading">Режим флот</h4>
+						<div class="modal-filters__mode-btns">
+							<input
+								type="checkbox"
+								name="flot-mode"
+								class="modal-filters__mode-checkbox"
+							/>
+							<button
+								class="
+									modal-filters__mode-btn
+									modal-filters__mode-add
+								"
+							>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8 0C8.55228 0 9 0.447715 9 1V7H15C15.5523 7 16 7.44772 16 8C16 8.55229 15.5523 9 15 9H9V15C9 15.5523 8.55228 16 8 16C7.44772 16 7 15.5523 7 15V9H1C0.447715 9 0 8.55229 0 8C0 7.44772 0.447715 7 1 7H7V1C7 0.447715 7.44772 0 8 0Z"
+										fill="white"
+										fill-opacity="0.8"
+									/>
+								</svg>
+							</button>
+							<button
+								class="
+									modal-filters__mode-btn
+									modal-filters__mode-edit
+								"
+							>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 16 16"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M11.8159 0.26035C12.163 -0.0867832 12.7259 -0.0867832 13.073 0.26035L15.7397 2.92702C16.0868 3.27415 16.0868 3.83696 15.7397 4.1841L7.73965 12.1841C7.57295 12.3508 7.34686 12.4444 7.11111 12.4444H4.44444C3.95352 12.4444 3.55556 12.0465 3.55556 11.5556V8.88889C3.55556 8.65314 3.64921 8.42705 3.81591 8.26035L11.8159 0.26035ZM5.33333 9.25708V10.6667H6.74292L13.854 3.55556L12.4444 2.14597L5.33333 9.25708ZM0 3.55556C0 2.57372 0.795938 1.77778 1.77778 1.77778H6.22222C6.71314 1.77778 7.11111 2.17575 7.11111 2.66667C7.11111 3.15759 6.71314 3.55556 6.22222 3.55556H1.77778V14.2222H12.4444V9.77778C12.4444 9.28686 12.8424 8.88889 13.3333 8.88889C13.8243 8.88889 14.2222 9.28686 14.2222 9.77778V14.2222C14.2222 15.2041 13.4263 16 12.4444 16H1.77778C0.795938 16 0 15.2041 0 14.2222V3.55556Z"
+										fill="white"
+										fill-opacity="0.8"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-filters--items">
+					<div class="modal-filters-item flots">
+						<div class="modal-filters-item--title no-arrow">
+								<svg
+									width="16"
+									height="15"
+									viewBox="0 0 16 15"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M8.12073 3C5.63545 3 3.62073 5.01472 3.62073 7.5C3.62073 9.98528 5.63545 12 8.12073 12C10.606 12 12.6207 9.98528 12.6207 7.5C12.6207 5.01472 10.606 3 8.12073 3ZM2.12073 7.5C2.12073 4.18629 4.80702 1.5 8.12073 1.5C11.4344 1.5 14.1207 4.18629 14.1207 7.5C14.1207 8.88653 13.6504 10.1632 12.8606 11.1792L16.9011 15.2197C17.194 15.5126 17.194 15.9874 16.9011 16.2803C16.6082 16.5732 16.1333 16.5732 15.8404 16.2803L11.8 12.2399C10.7839 13.0297 9.50726 13.5 8.12073 13.5C4.80702 13.5 2.12073 10.8137 2.12073 7.5Z"
+										fill="black"
+										fill-opacity="0.6"
+									/>
+								</svg>
+								<input
+								type="text"
+								placeholder="Поиск"
+								class="modal-filters-item--input"
+							/>
+								
+							</button>
+						</div>
+						<span class="modal-filters-item--label">Имя / IMO / MMSI</span>
+					</div>
+				</div>
+				<div class="modal-filters--items flots-default">
+					<div class="modal-filters-item flots-default">
+						<div class="modal-filters-item--title no-arrow">
+							<span class="modal-filters-item--heading">
+								Флот по умолчанию</span
+							>
+						</div>
+						<div class="modal-filters__mode-btns">
+							<input
+								class="modal-filters__flot-number"
+								type="text"
+								readonly
+								value="0"
+							/>
+							<button class="modal-filters__flot-btn">
+								<svg
+									width="7"
+									height="12"
+									viewBox="0 0 7 12"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										d="M0.96967 11.0303C0.676777 10.7374 0.676777 10.2626 0.96967 9.96967L4.93934 6L0.96967 2.03033C0.676776 1.73744 0.676776 1.26256 0.969669 0.96967C1.26256 0.676777 1.73744 0.676777 2.03033 0.96967L6.53033 5.46967C6.82322 5.76256 6.82322 6.23744 6.53033 6.53033L2.03033 11.0303C1.73744 11.3232 1.26256 11.3232 0.96967 11.0303Z"
+										fill="black"
+									/>
+								</svg>
+							</button>
+						</div>
+					</div>
+
+					<button class="modal-filters-item__subitem">флот 1</button>
+					<button class="modal-filters-item__subitem">флот 2</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="content">
+	<div class="content-buttons">
+		<button class="content-button">
+			<svg
+				width="14"
+				height="14"
+				viewBox="0 0 14 14"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M7 0C7.48325 0 7.875 0.391751 7.875 0.875V6.125H13.125C13.6082 6.125 14 6.51675 14 7C14 7.48325 13.6082 7.875 13.125 7.875H7.875V13.125C7.875 13.6082 7.48325 14 7 14C6.51675 14 6.125 13.6082 6.125 13.125V7.875H0.875C0.391751 7.875 0 7.48325 0 7C0 6.51675 0.391751 6.125 0.875 6.125H6.125V0.875C6.125 0.391751 6.51675 0 7 0Z"
+					fill="white"
+					fill-opacity="0.8"
+				/>
+			</svg>
+		</button>
+		<button class="content-button">
+			<svg
+				width="14"
+				height="3"
+				viewBox="0 0 14 3"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M0 1.70825C0 1.225 0.391751 0.833252 0.875 0.833252H13.125C13.6082 0.833252 14 1.225 14 1.70825C14 2.1915 13.6082 2.58325 13.125 2.58325H0.875C0.391751 2.58325 0 2.1915 0 1.70825Z"
+					fill="white"
+					fill-opacity="0.8"
+				/>
+			</svg>
+		</button>
+		<button class="content-button">
+			<svg
+				width="14"
+				height="13"
+				viewBox="0 0 14 13"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M4.67864 0.20267C4.82233 0.154774 4.97767 0.154774 5.12136 0.20267L9.1 1.52888L12.1573 0.50979C13.0638 0.207608 14 0.882366 14 1.83795V10.1622C14 10.7648 13.6144 11.2998 13.0427 11.4904L9.32136 12.7308C9.17767 12.7787 9.02233 12.7787 8.87864 12.7308L4.9 11.4046L1.84272 12.4237C0.936175 12.7259 0 12.0511 0 11.0956V2.77128C0 2.16868 0.385602 1.63368 0.957281 1.44312L4.67864 0.20267ZM5.6 10.1622L8.4 11.0956V2.77128L5.6 1.83795V10.1622ZM4.2 1.83795L1.4 2.77128V11.0956L4.2 10.1622V1.83795ZM9.8 2.77128V11.0956L12.6 10.1622V1.83795L9.8 2.77128Z"
+					fill="white"
+					fill-opacity="0.8"
+				/>
+			</svg>
+		</button>
+	</div>
+	<div class="map">
+		<img src="images/dist/map.png" alt="" />
+	</div>
+</section>
+
+<!--#include virtual="/parts/footer.html" -->
