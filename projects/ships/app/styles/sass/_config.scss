@@ -266,6 +266,17 @@ body::before {
 	height: calc(100vh - 120px);
 	overflow: hidden;
 	position: relative;
+
+	&.fullscreen {
+		margin-left: 0;
+	}
+}
+
+.content-close {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	display: none;
 }
 
 .content-buttons {
@@ -289,6 +300,12 @@ body::before {
 
 	&:hover {
 		background-color: #33839d;
+	}
+
+	&--close {
+		width: 36px;
+		height: 36px;
+		background: rgba(29, 118, 147, 0.4);
 	}
 }
 

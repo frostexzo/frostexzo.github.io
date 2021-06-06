@@ -6,15 +6,23 @@
 	<form action="">
 		<label for="">
 			<input type="search" placeholder="Поиск" />
-			<span>Имя / IMO / MMSI</span>
+			<span class="filter-input--placeholder">Имя / IMO / MMSI</span>
 		</label>
 		<label for="">
 			<input type="search" placeholder="Поиск по фотографу" />
 		</label>
-		<label for="">
-			<select name="" id="">
-				<option value="">Все страны</option>
-			</select>
+		<label for="" class="filter-select no-search-icon">
+			<div class="filter-selected">
+				<span>Все страны</span>
+			</div>
+			<div class="filter-fields">
+				<div class="filter-field">
+					Страна 1
+				</div>
+				<div class="filter-field">
+					Страна 2
+				</div>
+			</div>
 		</label>
 		<button class="btn-filter">Поиск</button>
 	</form>
