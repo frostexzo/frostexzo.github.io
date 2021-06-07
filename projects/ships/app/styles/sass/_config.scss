@@ -445,3 +445,12 @@ body::before {
 	font-weight: normal;
 	color: rgba(0, 0, 0, 0.6);
 }
+
+
+
+
+@media screen and (max-width: 1600px) {
+	.header-search {
+		max-width: 400px;
+	}
+}
