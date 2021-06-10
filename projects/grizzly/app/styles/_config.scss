@@ -1,0 +1,62 @@
+$m-right: 30px;
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+	}
+}
+
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2');
+@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2');
+@include font('OpenSans', normal, 700, '../fonts/OpenSans-Bold.woff2');
+@include font('ME', normal, 800, '../fonts/MonumentExtended-Ultrabold.woff2');
+
+// GENERAL DOCUMENT STYLES
+
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: inherit;
+	opacity: 1;
+}
+
+body {
+	font-size: 16px;
+	background-color: #151516;
+	font-family: OpenSans, sans-serif;
+	color: #fff;
+}
+
+img, a, button {
+	user-select: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+input, button {
+	background-color: transparent;
+	border: 0;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+.container {
+	max-width: 1210px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
