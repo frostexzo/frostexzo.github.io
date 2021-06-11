@@ -5,18 +5,30 @@ $m-right: 30px;
 		font-family: $fname;
 		font-style: $fstyle;
 		font-weight: $fweight;
-		src: url($furl) format('woff2');
+		src: url($furl) format("woff2");
 	}
 }
 
-@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2');
-@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2');
-@include font('OpenSans', normal, 700, '../fonts/OpenSans-Bold.woff2');
-@include font('ME', normal, 800, '../fonts/MonumentExtended-Ultrabold.woff2');
+@include font("OpenSans", normal, 400, "../fonts/OpenSans-Regular.woff2");
+@include font("OpenSans", normal, 600, "../fonts/OpenSans-SemiBold.woff2");
+@include font("OpenSans", normal, 700, "../fonts/OpenSans-Bold.woff2");
+@include font("ME", normal, 800, "../fonts/MonumentExtended-Ultrabold.woff2");
 
-// GENERAL DOCUMENT STYLES
+[x-cloak] {
+	display: none !important;
+}
 
-*, *:before, *:after {
+html.overflow {
+	overflow: hidden !important;
+
+	& body {
+		overflow: hidden !important;
+	}
+}
+
+*,
+*:before,
+*:after {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -35,17 +47,20 @@ $m-right: 30px;
 body {
 	font-size: 16px;
 	background-color: #151516;
-	font-family: OpenSans, sans-serif;
+	font-family: "OpenSans", sans-serif;
 	color: #fff;
 }
 
-img, a, button {
+img,
+a,
+button {
 	user-select: none;
 	text-decoration: none;
 	color: #fff;
 }
 
-input, button {
+input,
+button {
 	background-color: transparent;
 	border: 0;
 	font-family: inherit;
@@ -55,8 +70,35 @@ button {
 	cursor: pointer;
 }
 
+h1, h2, h3 {
+	font-size: 24px;
+	font-weight: 800;
+	font-family: "ME", "Helvetica", sans-serif;
+}
+
 .container {
 	max-width: 1210px;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+.background {
+	&-part,
+	&-full {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 50;
+		background: rgba(21,21,22,.5);
+	}
+
+	&-part {
+		top: 115px;
+	}
+}
+
+.main {
+	margin-top: 38px;
 }

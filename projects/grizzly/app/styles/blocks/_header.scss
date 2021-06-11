@@ -1,5 +1,6 @@
 .header {
 	background-color: #151516;
+	position: relative;
 
 	&__inner {
 		padding: 30px 0;
@@ -25,6 +26,44 @@
 	&-logo {
 		& img {
 			max-width: 46px;
+		}
+	}
+}
+
+// Header Select
+.header-select {
+	position: absolute;
+	top: 100%;
+	z-index: 5;
+	left: auto;
+	min-width: 100%;
+	background: #151516;
+	border: 1px solid #27272a;
+	padding: 12px 25px;
+	opacity: 0;
+	visibility: collapse;
+	transition: opacity 0.1s ease, visibility 0.1s ease;
+
+	&.wide {
+		min-width: 180px;
+		width: 100%;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+
+		text-transform: uppercase;
+		font-size: 14px;
+		color: #fff;
+		transition: color 0.1s ease;
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		&:hover {
+			color: #ff7a00;
 		}
 	}
 }
@@ -76,11 +115,11 @@
 		display: flex;
 		align-items: center;
 
-		& a:not(:last-child) {
+		& .header-support__link:not(:last-child) {
 			margin-right: 8px;
 		}
 
-		& a {
+		& .header-support__link {
 			display: flex;
 
 			& path {
@@ -109,7 +148,7 @@
 	display: flex;
 	align-items: center;
 
-	& input {
+	&__input {
 		color: #e5e5e5;
 		opacity: 0.5;
 		max-width: 220px;
@@ -126,7 +165,13 @@
 }
 
 .header-lang {
+	position: relative;
 	margin-right: 24px;
+
+	&:hover .header-select {
+		opacity: 1;
+		visibility: visible;
+	}
 
 	&__selector {
 		cursor: pointer;
@@ -147,7 +192,8 @@
 
 	&__icon {
 		position: relative;
-		z-index: 5;
+		display: flex;
+		z-index: 2;
 
 		& span {
 			position: absolute;
@@ -181,6 +227,19 @@
 		display: flex;
 		align-items: center;
 		flex: 1 1 auto;
+		position: relative;
+
+		&:hover .header-select {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&:last-child {
+			& .header-select {
+				left: auto;
+				right: 0;
+			}
+		}
 
 		&:not(:last-child) {
 			margin-right: 20px;
@@ -218,6 +277,55 @@
 
 		& img {
 			margin-right: 8px;
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.header {
+		&__panel {
+			&_left {
+				& > :not(:last-child) {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	.header-search {
+		margin-right: 15px;
+
+		& input {
+			max-width: 125px;
+		}
+	}
+
+	.header-lang {
+		margin-right: 12px;
+	}
+
+	.header-support {
+		&__links {
+			margin-left: 15px;
+		}
+	}
+
+	.header__category {
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+	}
+}
+
+
+@media screen and (max-width: 900px) {
+	.header {
+		&__panel, &__categories {
+			display: none !important;
+		}
+
+		&__inner {
+			padding: 0;
 		}
 	}
 }

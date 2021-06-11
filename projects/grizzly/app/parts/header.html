@@ -4,7 +4,9 @@
 		<meta charset="utf-8" />
 		<title>Grizzly</title>
 		<meta name="description" content="description" />
-		<link rel="preload" href="js/app.min.js" as="script" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
 		<link
 			rel="preload"
 			href="./fonts/OpenSans-Bold.woff2"
@@ -38,8 +40,20 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body>
+	<body x-data="app()">
 		<header class="header">
+			<div
+				class="background-part"
+				x-cloak
+				x-show.transition.opacity.duration.300ms="bgPart === true"
+				@click="bgClick"
+			></div>
+			<div
+				class="background-full"
+				x-cloak
+				x-show.transition.opacity.duration.300ms="bgFull === true"
+				@click="bgClick"
+			></div>
 			<div class="container">
 				<div class="header__inner">
 					<div class="header__panel">
@@ -76,12 +90,12 @@
 								</div>
 							</div>
 
-							<div class="header-support">
+							<button class="header-support">
 								<div class="header-support__title">
 									Support 24/7
 								</div>
 								<div class="header-support__links">
-									<a href="#" class="discord">
+									<div class="header-support__link discord">
 										<svg
 											width="21"
 											height="16"
@@ -95,8 +109,8 @@
 												/>
 											</g>
 										</svg>
-									</a>
-									<a href="#" class="skype">
+									</div>
+									<div class="header-support__link skype">
 										<svg
 											width="19"
 											height="19"
@@ -110,8 +124,8 @@
 												/>
 											</g>
 										</svg>
-									</a>
-									<a href="mailto:#" class="mail">
+									</div>
+									<div class="header-support__link mail">
 										<svg
 											width="18"
 											height="16"
@@ -127,9 +141,9 @@
 												fill="#6F6F79"
 											/>
 										</svg>
-									</a>
+									</div>
 								</div>
-							</div>
+							</button>
 						</div>
 
 						<div class="header__panel_right">
@@ -139,6 +153,7 @@
 								class="header-search"
 							>
 								<input
+									class="header-search__input"
 									type="text"
 									name="search"
 									placeholder="Search for service..."
@@ -174,6 +189,19 @@
 										alt=""
 									/>
 								</div>
+
+								<div class="header-select">
+									<a href="#" class="header-select__item"
+										><img
+											src="./images/dist/usa.svg"
+											alt="US"
+											width="26"
+											height="15"
+											style="margin-right: 5px"
+										/>
+										US</a
+									>
+								</div>
 							</div>
 
 							<div class="header-cart">
@@ -194,36 +222,277 @@
 					<div class="header__categories">
 						<div class="header__category">
 							<a href="#" class="header__category_main">RAIDS</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main"
 								>DUNGEONS & TORGHAST</a
 							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main">PVP</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main"
 								>POWERLEVELING</a
 							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main"
 								>BUNDLES</a
 							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main">MOUNTS</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
 						</div>
 
 						<div class="header__category">
 							<a href="#" class="header__category_main">TBC</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header-mobile">
+				<div class="header-mobile__top">
+					<a href="#" class="header-trust mobile">
+						<img
+							src="./images/dist/trustpilot.svg"
+							alt="Trustpilot"
+						/>
+						<img src="./images/dist/stars.svg" alt="Stars" />
+					</a>
+
+					<div class="header-lang mobile el-center">
+						<div class="header-lang__selector">
+							<img
+								src="./images/dist/europe.svg"
+								alt="EU"
+								width="33"
+								height="22"
+							/>
+							<span>EU</span>
+							<img src="./images/dist/arrow-down.svg" alt="" />
+						</div>
+
+						<div class="header-select">
+							<a href="#" class="header-select__item"
+								><img
+									src="./images/dist/usa.svg"
+									alt="US"
+									width="26"
+									height="15"
+									style="margin-right: 5px"
+								/>
+								US</a
+							>
+						</div>
+					</div>
+
+					<button class="header-support mobile">
+						<div class="header-support__title">Get Support</div>
+					</button>
+				</div>
+
+				<div class="header-mobile__bottom">
+					<div class="header-mobile__bottom_main">
+						<div class="header-mobile__buttons">
+							<button
+								@click.prevent="toggleMenu"
+								class="header-mobile__burger"
+							>
+								<img
+									src="./images/dist/burger.svg"
+									alt="Menu"
+									width="19"
+									height="16"
+								/>
+							</button>
+
+							<button
+								@click.prevent="toggleSearch"
+								class="header-mobile__search"
+							>
+								<img
+									src="../images/dist/search.svg"
+									alt="Search"
+									width="17"
+									height="17"
+								/>
+							</button>
+						</div>
+
+						<a href="#" class="header-logo mobile el-center">
+							<img
+								src="./images/dist/logo.png"
+								width="36"
+								height="36"
+								alt="Grizzly"
+							/>
+						</a>
+
+						<div class="header-cart">
+							<div class="header-cart__icon">
+								<img
+									src="./images/dist/cart.svg"
+									alt="Cart"
+									width="21"
+									height="21"
+								/>
+								<span>1</span>
+							</div>
+							<div class="header-cart__sum">$999.99</div>
+						</div>
+					</div>
+
+					<div
+						x-cloak
+						x-show.transition.opacity="isSearchActive === true"
+						class="header-mobile__bottom_search"
+					>
+						<div class="header-mobile__buttons">
+							<button
+								@click.prevent="toggleSearch"
+								class="header-mobile__burger"
+							>
+								<img
+									src="./images/dist/close.svg"
+									alt="Close search"
+									width="19"
+									height="19"
+								/>
+							</button>
+						</div>
+
+						<form
+							action="#"
+							method="POST"
+							class="header-search mobile"
+						>
+							<button class="header-mobile__search">
+								<img
+									src="../images/dist/search.svg"
+									alt="Search"
+									width="17"
+									height="17"
+								/>
+							</button>
+							<input
+								class="header-search__input"
+								type="text"
+								name="search"
+								placeholder="Search for service..."
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show="isMenuOpen === true"
+				x-transition:enter-start="menu-slide-0"
+				x-transition:enter-end="menu-slide-1"
+				x-transition:leave-start="menu-slide-1"
+				x-transition:leave-end="menu-slide-0"
+				class="header-menu"
+			>
+				<div class="header-menu__inner">
+					<h3 class="header-menu__title">Services</h3>
+
+					<div class="header-menu__categories_wrapper">
+						<button
+							@click.prevent="toggleMenu"
+							class="header-menu__burger"
+						>
+							<img
+								src="./images/dist/burger-orange.svg"
+								width="19"
+								height="16"
+								alt="Close menu"
+							/>
+						</button>
+						<div class="header-menu__categories">
+							<a href="#" class="header-menu__category"
+								>DUNGEONS & TORGHAST</a
+							>
+							<a href="#" class="header-menu__category"
+								>POWERLEVELING</a
+							>
+							<a href="#" class="header-menu__category"
+								>BUNDLES</a
+							>
+							<a href="#" class="header-menu__category">RAIDS</a>
+							<a href="#" class="header-menu__category">TBC</a>
+							<a href="#" class="header-menu__category">MOUNTS</a>
+							<a href="#" class="header-menu__category">PVP</a>
 						</div>
 					</div>
 				</div>
@@ -232,7 +501,12 @@
 			<div class="header__sale">
 				<div class="container">
 					<div class="header__sale_inner">
-						<img src="./images/dist/sale.svg" alt="Sale" width="16" height="16" />
+						<img
+							src="./images/dist/sale.svg"
+							alt="Sale"
+							width="16"
+							height="16"
+						/>
 						<span>We’ve lowered our prices for the holidays!</span>
 					</div>
 				</div>

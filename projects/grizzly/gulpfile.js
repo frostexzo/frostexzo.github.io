@@ -15,6 +15,8 @@ const imagemin     = require('gulp-imagemin')
 const newer        = require('gulp-newer')
 const rsync        = require('gulp-rsync')
 const del          = require('del')
+const concat 	   = require('gulp-concat');
+const rimraf	   = require('gulp-rimraf');
 
 function browsersync() {
 	browserSync.init({
@@ -24,35 +26,9 @@ function browsersync() {
 		},
 		ghostMode: { clicks: false },
 		notify: false,
-		online: true,
+		online: false,
 		// tunnel: 'yousutename', // Attempt to use the URL https://yousutename.loca.lt
 	})
-}
-
-function scripts() {
-	return src(['app/js/*.js', '!app/js/*.min.js'])
-		.pipe(webpack({
-			mode: 'production',
-			performance: { hints: false },
-			module: {
-				rules: [
-					{
-						test: /\.(js)$/,
-						exclude: /(node_modules)/,
-						loader: 'babel-loader',
-						query: {
-							presets: ['@babel/env'],
-							plugins: ['babel-plugin-root-import']
-						}
-					}
-				]
-			}
-		})).on('error', function handleError() {
-			this.emit('end')
-		})
-		.pipe(rename('app.min.js'))
-		.pipe(dest('app/js'))
-		.pipe(browserSync.stream())
 }
 
 function styles() {
@@ -76,7 +52,8 @@ function images() {
 
 function buildcopy() {
 	return src([
-		'{app/js,app/css}/*.min.*',
+		'app/css/*.min.*',
+		'app/js/*.*',
 		'app/images/**/*.*',
 		'!app/images/src/**/*',
 		'app/fonts/**/*'
@@ -112,15 +89,14 @@ function deploy() {
 
 function startwatch() {
 	watch(`app/styles/**/*`, { usePolling: true }, styles)
-	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true }, scripts)
+	watch(['app/js/**/*.js', '!app/js/**/*.min.js'], { usePolling: true })
 	watch('app/images/src/**/*.{jpg,jpeg,png,webp,svg,gif}', { usePolling: true }, images)
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
-exports.scripts = scripts
 exports.styles  = styles
 exports.images  = images
 exports.deploy  = deploy
-exports.assets  = series(scripts, styles, images)
-exports.build   = series(cleandist, scripts, styles, images, buildcopy, buildhtml)
-exports.default = series(scripts, styles, images, parallel(browsersync, startwatch))
+exports.assets  = series(styles, images)
+exports.build   = series(cleandist,styles, images, buildcopy, buildhtml)
+exports.default = series(styles, images, parallel(browsersync, startwatch))
