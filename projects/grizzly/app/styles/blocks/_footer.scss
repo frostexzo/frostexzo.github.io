@@ -1,0 +1,120 @@
+.footer {
+	&__content {
+		padding: 80px 0;
+		background: #151516;
+		border: 1px solid #27272a;
+
+		&_left,
+		&_right {
+			flex-basis: 50%;
+		}
+
+		&_right {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_inner {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_logo {
+			margin-bottom: 5px;
+		}
+
+		&_text {
+			max-width: 280px;
+			color: #e5e5e5;
+			font-size: 14px;
+			margin-bottom: 20px;
+
+			&.payment {
+				margin-bottom: 5px;
+			}
+
+			&.rights {
+				max-width: none;
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		&_payment img {
+			max-width: 382px;
+			width: 100%;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__link {
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		text-transform: uppercase;
+		font-weight: 600;
+		transition: color 0.1s ease;
+
+		&:hover {
+			color: #ff7a00;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: column;
+
+		&_link {
+			display: flex;
+			align-items: center;
+
+			& path {
+				transition: fill 0.1s ease;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 13px;
+			}
+
+			& span {
+				color: #e5e5e5;
+				margin-left: 15px;
+				display: block;
+				font-size: 14px;
+			}
+
+			&:hover {
+				&.discord path {
+					fill: #5865f2;
+				}
+				&.skype path {
+					fill: #00aff0;
+				}
+				&.fb path {
+					fill: #1977f3;
+				}
+				&.instagram path {
+					fill: #B13394;
+				}
+				&.twitter path {
+					fill: #08A0E9;
+				}
+				&.mail path {
+					fill: #FF7A00;
+				}
+			}
+		}
+	}
+
+
+	&__rights {
+		&_inner {
+			padding: 20px 0;
+		}
+	}
+}

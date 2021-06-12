@@ -35,11 +35,27 @@ if (popularSliderEl) {
 		slidesPerView: 5,
 		spaceBetween: 15,
 		navigation: {
-			prevEl: ".swiper-button-prev",
-			nextEl: ".swiper-button-next",
+			prevEl: ".popular .swiper-button-prev",
+			nextEl: ".popular .swiper-button-next",
 		},
 		breakpoints: {
 
 		},
 	});
 }
+
+const feedbackSliderEl = document.querySelector('.feedback__container');
+if (popularSliderEl) {
+	const feedbackSlider = new Swiper(".feedback__container", {
+		slidesPerView: 3,
+		spaceBetween: 20,
+		navigation: {
+			prevEl: ".feedback .swiper-button-prev",
+			nextEl: ".feedback .swiper-button-next",
+		},
+		breakpoints: {
+
+		},
+	});
+}
+
