@@ -1,0 +1,39 @@
+.breadcrumbs {
+
+	&__inner {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		color: rgba(255,255,255,.5);
+		font-size: 14px;
+		transition: color .1s ease;
+		position: relative;
+
+		&:not(:last-child)::before {
+			position: absolute;
+			content: '/';
+			right: -10px;
+			color: rgba(255,255,255,.5);
+		}
+	
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
+		&:hover {
+			color: rgb(255,255,255);
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.breadcrumbs {
+		&__inner {
+			justify-content: center;
+		}
+	}
+}
