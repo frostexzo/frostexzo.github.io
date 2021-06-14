@@ -5,6 +5,8 @@ const app = () => {
 		isSearchActive: false,
 		isMenuOpen: false,
 		isMoreActive: false,
+		isFilterOpen: false,
+		filterValue: "LOWEST PRICE",
 		bgPart: false,
 		bgFull: false,
 
@@ -22,6 +24,15 @@ const app = () => {
 
 		showMore() {
 			this.isMoreActive = true;
+		},
+
+		toggleFilter() {
+			this.isFilterOpen = !this.isFilterOpen;
+		},
+
+		filterSelect(e) {
+			if (e == document.querySelector(".products__select_popup")) return;
+			this.filterValue = e.textContent.trim();
 		},
 
 		bgClick() {
