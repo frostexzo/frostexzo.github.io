@@ -39,3 +39,30 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	.news {
+		&__content {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__item img {
+			max-height: 300px;
+			height: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.news {
+		&__item {
+			&_info {
+				padding: 10px;
+			}
+
+			& .features__item_desc {
+				font-size: 12px;
+			}
+		}
+	}
+}

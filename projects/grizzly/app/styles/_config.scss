@@ -82,6 +82,14 @@ h3 {
 	}
 }
 
+@media screen and (max-width: 500px) {
+	h1, h2, h3 {
+		&.center {
+			font-size: 18px;
+		}
+	}
+}
+
 .container {
 	max-width: 1210px;
 	padding: 0 15px;
@@ -144,5 +152,12 @@ section {
 			#0e0e0f 0%,
 			rgba(21, 21, 22, 0) 100%
 		);
+	}
+}
+
+
+@media screen and (max-width: 1280px) {
+	.slider-arrow {
+		display: none !important;
 	}
 }

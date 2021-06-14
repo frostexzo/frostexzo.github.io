@@ -99,22 +99,68 @@
 					fill: #1977f3;
 				}
 				&.instagram path {
-					fill: #B13394;
+					fill: #b13394;
 				}
 				&.twitter path {
-					fill: #08A0E9;
+					fill: #08a0e9;
 				}
 				&.mail path {
-					fill: #FF7A00;
+					fill: #ff7a00;
 				}
 			}
 		}
 	}
 
-
 	&__rights {
 		&_inner {
 			padding: 20px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.footer {
+		&__content {
+			padding: 40px 0;
+
+			&_inner {
+				flex-direction: column-reverse;
+			}
+
+			&_left {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.footer {
+		&__content {
+			&_logo {
+				& img {
+					width: 82px;
+					height: 82px;
+				}
+			}
+
+			&_right {
+				flex-direction: column;
+			}
+
+			&_text {
+				line-height: 1.7;
+			}
+		}
+
+		&__links {
+			margin-bottom: 40px;
+		}
+
+		&__rights {
+			&_inner {
+				padding: 40px 0;
+			}
 		}
 	}
 }

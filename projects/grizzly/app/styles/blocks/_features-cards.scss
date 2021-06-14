@@ -25,3 +25,24 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 900px) {
+	.features-cards {
+		&__inner {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.features-cards {
+		&__inner {
+			grid-template-columns: 1fr;
+		}
+
+		&__item {
+			min-height: 213px;
+		}
+	}
+}

@@ -69,3 +69,45 @@
 		}
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.features {
+		&__block {
+			flex-basis: 48%;
+		}
+
+		&__logo {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.features {
+		&__content {
+			flex-direction: column;
+		}
+
+		&__block {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&.align-right {
+				text-align: left;
+
+				& .features__item {
+					flex-direction: row;
+
+					&_info {
+						margin-right: 0;
+						margin-left: 13px;
+					}
+				}
+			}
+		}
+	}
+}
