@@ -827,7 +827,7 @@
 				>
 
 				<div class="feedback__wrapper">
-					<div class="swiper-container feedback__container">
+					<div class="swiper-container feedback__container" :class="isMoreActive ? 'more' : ''">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide feedback__item">
 								<div class="feedback__item_meta">
@@ -921,6 +921,10 @@
 					<div class="swiper-button-prev slider-arrow"></div>
 					<div class="swiper-button-next slider-arrow"></div>
 				</div>
+
+				<button @click.prevent="showMore" class="feedback__button">
+					SHOW MORE
+				</button>
 
 				<div class="feedback__trust">
 					<a href="">
