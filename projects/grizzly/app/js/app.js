@@ -36,7 +36,8 @@ const app = () => {
 		},
 
 		bgClick() {
-			(this.isMenuOpen = false), (this.isSearchActive = false);
+			this.isMenuOpen = false;
+			this.isSearchActive = false;
 			this.bgPart = false;
 			this.bgFull = false;
 			html.classList.remove("overflow");
