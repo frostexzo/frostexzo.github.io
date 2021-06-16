@@ -76,6 +76,10 @@
 			display: flex;
 			align-items: center;
 
+			& svg {
+				min-width: 31px;
+			}
+
 			& path {
 				transition: fill 0.1s ease;
 			}

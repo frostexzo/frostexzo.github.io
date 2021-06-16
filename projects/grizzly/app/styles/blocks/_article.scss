@@ -77,6 +77,7 @@
 .table-wrapper {
 	overflow-y: auto;
 }
+
 @media screen and (max-width: 600px) {
 	.table-wrapper {
 		& table {
@@ -85,7 +86,6 @@
 	}
 }
 
-
 @media screen and (max-width: 1200px) {
 	.article {
 		& .no-pd {
@@ -93,13 +93,13 @@
 		}
 	}
 
-	.main-article .main__bg {
+	.main-hidden-bg .main__bg {
 		display: none;
 	}
 }
 
 @media screen and (max-width: 600px) {
-	.main-article {
+	.main-hidden-bg {
 		padding-top: 20px;
 	}
 

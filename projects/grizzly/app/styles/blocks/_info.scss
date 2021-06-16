@@ -1,0 +1,150 @@
+.info {
+	margin-bottom: 80px;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__left {
+		margin-right: 20px;
+		background: #151516;
+		border: 1px solid #27272a;
+		padding: 30px 40px;
+		flex-basis: 50%;
+	}
+
+	&__right {
+		flex-basis: 50%;
+		display: flex;
+
+		&.socials {
+			align-items: flex-start;
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__subtitle {
+		margin-bottom: 10px;
+		font-weight: 700;
+		display: block;
+	}
+
+	&__label {
+		width: 100%;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&_text {
+			font-size: 14px;
+			margin-bottom: 5px;
+			display: block;
+		}
+
+		&_error {
+			top: 0;
+			right: 0;
+			font-size: 14px;
+			color: #ff4b55;
+			position: absolute;
+			opacity: 0;
+			visibility: collapse;
+			transition: opacity 0.1s ease, visibility 0.1s ease;
+		}
+	}
+
+	&__input {
+		font-size: 16px;
+		padding: 10px 14px;
+		border: 1px solid #48484c;
+		width: 100%;
+		outline: none;
+		color: rgba(255, 255, 255, 0.3);
+		font-weight: 600;
+		resize: none;
+		background-color: #151516;
+		transition: color 0.1s ease, border-color 0.1s ease;
+
+		&:focus {
+			color: #fff;
+		}
+
+		&:invalid:not(:placeholder-shown):not(:focus) {
+			border-color: #ff4b55;
+		}
+
+		&:invalid:not(:placeholder-shown):not(:focus) + .info__label_error {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__button {
+		padding: 10px;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 700;
+		background-color: #ff7a00;
+		margin-top: 10px;
+		transition: background 0.1s ease;
+
+		&:hover {
+			background-color: darken(#ff7a00, 10%);
+		}
+	}
+}
+
+.info__socials {
+	padding: 30px 15px;
+	flex-basis: 50%;
+	background: #151516;
+	border: 1px solid #27272a;
+
+	&:not(:last-child) {
+		margin-right: 20px;
+	}
+}
+
+
+
+@media screen and (max-width: 1000px) {
+	.info {
+		&__inner {
+			flex-direction: column;
+		}
+
+		&__left {
+			margin: 0;
+			margin-bottom: 20px;
+			transform: translateX(-15px);
+			width: 100vw;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.info {
+		&__right.socials {
+			flex-direction: column;
+		}
+
+		&__socials {
+			width: 100%;
+			margin: 0;
+
+			&:last-child {
+				margin-top: 20px;
+			}
+		}
+	}
+}
