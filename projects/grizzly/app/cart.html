@@ -1,0 +1,488 @@
+<!--#include virtual="/parts/header.html" -->
+
+<main class="main main-hidden-bg">
+	<div class="main__bg">
+		<img
+			class="main__bg_img"
+			decoding="async"
+			src="./images/dist/bg.jpg"
+			alt=""
+		/>
+		<div class="main__bg_shadow"></div>
+	</div>
+
+	<section class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__inner">
+				<a href="#" class="breadcrumbs__link">Main page</a>
+				<a href="#" class="breadcrumbs__link">PVP</a>
+				<a href="#" class="breadcrumbs__link">Arena rating</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="info__inner cart">
+				<div class="info__left">
+					<form action="#" method="POST" class="info__form">
+						<h2 class="info__title desktop">Checkout</h2>
+						<span class="info__subtitle">Enter your info.</span>
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Character name:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Your Name"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Character server:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Server Name"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Your Email:*</span>
+							<input
+								type="email"
+								class="info__input"
+								required
+								placeholder="yourmail@example.com"
+							/>
+							<span class="info__label_error"
+								>invalid email!</span
+							>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Order note:</span>
+							<textarea rows="2" class="info__input"></textarea>
+						</label>
+
+						<div class="info__label payment">
+							<span class="info__label_text"
+								>Payment method:*</span
+							>
+							<label for="fondy" class="cart__payment">
+								<input
+									id="fondy"
+									type="radio"
+									required
+									name="payment"
+									checked
+									value="fondy"
+								/>
+								<span class="cart__payment_name">Fondy</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.png"
+									alt=""
+								/>
+							</label>
+
+							<label for="unitpay" class="cart__payment">
+								<input
+									id="unitpay"
+									type="radio"
+									required
+									name="payment"
+									value="unitpay"
+								/>
+								<span class="cart__payment_name">Unitpay</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.png"
+									alt=""
+								/>
+							</label>
+						</div>
+
+						<label for="terms" class="info__label checkbox">
+							<input id="terms" type="checkbox" name="terms" />
+							<div class="cart__payment_name">
+								I have read the
+								<a href="#">terms and conditions</a>
+							</div>
+						</label>
+
+						<button class="info__button">
+							PROCEED TO CHECKOUT
+						</button>
+					</form>
+				</div>
+				<div class="info__right cart">
+					<div class="cart__items_wrapper">
+						<h2 class="info__title mobile">Checkout</h2>
+						<span class="info__subtitle">Check your cart.</span>
+						<span class="cart__text">Products in cart:</span>
+						<div class="cart__items">
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart__result">
+							<span class="cart__result_title">Subtotal:</span>
+							<span class="cart__result_sum-sm">$72.95</span>
+						</div>
+						<div class="cart__result">
+							<span class="cart__result_title">Total:</span>
+							<span class="cart__result_sum-lg">$72.95</span>
+						</div>
+
+						<form action="#" method="POST" class="cart__promo_wrapper">
+							<span class="cart__text promo">Discount code:</span>
+
+							<div class="cart__promo">
+								<input type="text" class="cart__promo_input" placeholder="Enter discount code">
+								<button class="cart__promo_button apply">Apply</button>
+								<button class="cart__promo_button remove">Remove</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="popular">
+		<div class="container">
+			<div class="popular__inner">
+				<h2 class="popular__title center">Best Seller Boosts</h2>
+
+				<div class="popular__items_wrapper">
+					<div class="swiper-container popular__items_container">
+						<div class="swiper-wrapper">
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="swiper-button-prev slider-arrow"></div>
+					<div class="swiper-button-next slider-arrow"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="feedback">
+		<div class="container">
+			<div class="feedback__inner">
+				<h2 class="feedback__title center">Customer’s voice</h2>
+				<span class="feedback__total"
+					>Excellent 4.9 rating, 124 reviews</span
+				>
+
+				<div class="feedback__wrapper">
+					<div
+						class="swiper-container feedback__container"
+						:class="isMoreActive ? 'more' : ''"
+					>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev slider-arrow"></div>
+					<div class="swiper-button-next slider-arrow"></div>
+				</div>
+
+				<button @click.prevent="showMore" class="feedback__button">
+					SHOW MORE
+				</button>
+
+				<div class="feedback__trust">
+					<a href="">
+						<img
+							class="feedback__trust_logo"
+							src="./images/dist/trustpilot.svg"
+							alt=""
+						/>
+						<img
+							class="feedback__trust_stars"
+							src="./images/dist/stars.svg"
+							alt=""
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<!--#include virtual="/parts/footer.html" -->

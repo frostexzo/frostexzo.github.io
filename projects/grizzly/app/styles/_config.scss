@@ -172,3 +172,52 @@ section {
 		display: none !important;
 	}
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	min-width: 15px;
+	position: relative;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	transition: box-shadow 0.1s ease, border-color 0.1s ease;
+
+	&:before {
+		opacity: 0;
+		position: absolute;
+		content: "";
+		top: 21%;
+		left: 24%;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		background-color: #ff7a00;
+		transition: opacity 0.1s ease;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.5);
+	}
+
+	&:checked {
+		border-color: #ff7a00;
+
+		&:hover {
+			box-shadow: 0 0 0 1px #ff7a00;
+		}
+
+		&:before {
+			opacity: 1;
+		}
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: 0;
+
+	&:before {
+		border-radius: 0;
+	}
+}

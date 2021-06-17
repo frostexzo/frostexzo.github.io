@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Grizzly</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link
+			rel="preload"
+			href="./fonts/OpenSans-Bold.woff2"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/OpenSans-Regular.woff"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/OpenSans-SemiBold.woff2"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="preload"
+			href="./fonts/MonumentExtended-Ultrabold.woff2"
+			as="font"
+			crossorigin="anonymous"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="header">
+			<div
+				class="background-part"
+				x-cloak
+				x-show.transition.opacity.duration.300ms="bgPart === true"
+				@click="bgClick"
+			></div>
+			<div
+				class="background-full"
+				x-cloak
+				x-show.transition.opacity.duration.300ms="bgFull === true"
+				@click="bgClick"
+			></div>
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__panel">
+						<div class="header__panel_left">
+							<a href="#" class="header-logo">
+								<img
+									src="./images/dist/logo.png"
+									width="46"
+									height="46"
+									alt="Grizzly"
+								/>
+							</a>
+
+							<div class="header-trust">
+								<div class="header-trust__logo">
+									<img
+										src="./images/dist/trustpilot.svg"
+										alt="Trustpilot"
+									/>
+									<img
+										src="./images/dist/stars.svg"
+										alt="Stars"
+									/>
+								</div>
+								<div class="header-trust__meta">
+									<div class="header-trust__meta_link">
+										<span>TrustScore</span>
+										<a href="#">4.9</a>
+									</div>
+									<div class="header-trust__meta_link">
+										<span>Reviews</span>
+										<a href="#">123</a>
+									</div>
+								</div>
+							</div>
+
+							<button class="header-support">
+								<div class="header-support__title">
+									Support 24/7
+								</div>
+								<div class="header-support__links">
+									<div class="header-support__link discord">
+										<svg
+											width="21"
+											height="16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0)">
+												<path
+													d="M17.777 1.425A17.53 17.53 0 0013.503.12a.065.065 0 00-.069.032c-.184.323-.389.744-.532 1.075a16.252 16.252 0 00-4.801 0 10.81 10.81 0 00-.54-1.075.068.068 0 00-.07-.032c-1.5.254-2.934.699-4.274 1.304a.06.06 0 00-.028.024C.467 5.449-.279 9.35.087 13.205a.07.07 0 00.027.048 17.532 17.532 0 005.244 2.607.069.069 0 00.074-.024c.403-.542.764-1.114 1.072-1.716a.065.065 0 00-.036-.09 11.56 11.56 0 01-1.638-.769.066.066 0 01-.007-.11c.11-.08.22-.165.325-.25a.066.066 0 01.068-.01c3.437 1.544 7.158 1.544 10.554 0a.066.066 0 01.069.009c.105.085.215.17.326.252a.066.066 0 01-.006.11c-.523.3-1.067.554-1.639.766a.066.066 0 00-.035.092c.315.601.675 1.173 1.072 1.716a.067.067 0 00.073.024 17.476 17.476 0 005.252-2.607.066.066 0 00.028-.047c.437-4.456-.734-8.326-3.105-11.757a.053.053 0 00-.028-.024zm-10.76 9.433c-1.034 0-1.887-.934-1.887-2.081 0-1.148.836-2.082 1.888-2.082 1.059 0 1.903.942 1.887 2.082 0 1.147-.836 2.081-1.887 2.081zm6.978 0c-1.034 0-1.887-.934-1.887-2.081 0-1.148.836-2.082 1.887-2.082 1.06 0 1.904.942 1.888 2.082 0 1.147-.828 2.081-1.888 2.081z"
+													fill="#6F6F79"
+												/>
+											</g>
+										</svg>
+									</div>
+									<div class="header-support__link skype">
+										<svg
+											width="19"
+											height="19"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<g clip-path="url(#clip0)">
+												<path
+													d="M9.443 15.153c-3.143 0-4.579-1.6-4.579-2.775A1.019 1.019 0 015.94 11.36c1.346 0 .994 2.018 3.504 2.018 1.283 0 2.037-.773 2.037-1.498 0-.436-.249-.935-1.096-1.134l-2.803-.707C5.33 9.466 4.937 8.214 4.937 7.052c0-2.411 2.205-3.283 4.305-3.283 1.934 0 4.233 1.068 4.233 2.513 0 .623-.52.957-1.125.957-1.15 0-.956-1.614-3.267-1.614-1.15 0-1.754.54-1.754 1.293 0 .754.894 1.009 1.68 1.18l2.067.468c2.268.51 2.872 1.84 2.872 3.114 0 1.96-1.517 3.473-4.507 3.473h.003zm8.678-4.146c.09-.514.135-1.035.134-1.557A8.852 8.852 0 007.87.695 5.208 5.208 0 005.26 0 5.295 5.295 0 00.69 7.915a8.858 8.858 0 0010.255 10.31 5.205 5.205 0 002.607.694 5.295 5.295 0 004.569-7.912z"
+													fill="#6F6F79"
+												/>
+											</g>
+										</svg>
+									</div>
+									<div class="header-support__link mail">
+										<svg
+											width="18"
+											height="16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M17.753 1.01L10.37 8.511a1.917 1.917 0 01-2.742 0L.247 1.01A1.986 1.986 0 000 1.971v12.057C0 15.116.87 16 1.94 16h14.12c1.07 0 1.94-.884 1.94-1.972V1.971c0-.349-.09-.677-.247-.962z"
+												fill="#6F6F79"
+											/>
+											<path
+												d="M9.626 7.754l7.38-7.503A1.903 1.903 0 0016.062 0H1.94c-.344 0-.667.092-.947.251l7.381 7.503a.876.876 0 001.252 0z"
+												fill="#6F6F79"
+											/>
+										</svg>
+									</div>
+								</div>
+							</button>
+						</div>
+
+						<div class="header__panel_right">
+							<form
+								action="#"
+								method="POST"
+								class="header-search"
+							>
+								<input
+									class="header-search__input"
+									type="text"
+									name="search"
+									placeholder="Search for service..."
+								/>
+								<button type="submit">
+									<svg
+										width="13"
+										height="13"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g clip-path="url(#clip0)">
+											<path
+												d="M8.682 1.488a5.093 5.093 0 00-7.194 0 5.095 5.095 0 000 7.194 5.093 5.093 0 006.499.576c.041.198.137.386.29.54l2.888 2.887a1.074 1.074 0 101.52-1.52L9.797 8.278a1.075 1.075 0 00-.539-.29 5.092 5.092 0 00-.576-6.5zM7.77 7.77a3.802 3.802 0 01-5.37 0 3.803 3.803 0 010-5.37 3.803 3.803 0 015.37 0 3.802 3.802 0 010 5.37z"
+												fill="#E5E5E5"
+											/>
+										</g>
+									</svg>
+								</button>
+							</form>
+
+							<div class="header-lang">
+								<div class="header-lang__selector">
+									<img
+										src="./images/dist/europe.svg"
+										alt="EU"
+										width="33"
+										height="22"
+									/>
+									<span>EU</span>
+									<img
+										src="./images/dist/arrow-down.svg"
+										alt=""
+									/>
+								</div>
+
+								<div class="header-select">
+									<a href="#" class="header-select__item"
+										><img
+											src="./images/dist/usa.svg"
+											alt="US"
+											width="26"
+											height="15"
+											style="margin-right: 5px"
+										/>
+										US</a
+									>
+								</div>
+							</div>
+
+							<div class="header-cart">
+								<div class="header-cart__icon">
+									<img
+										src="./images/dist/cart.svg"
+										alt="Cart"
+										width="21"
+										height="21"
+									/>
+									<span>1</span>
+								</div>
+								<div class="header-cart__sum">$999.99</div>
+							</div>
+						</div>
+					</div>
+
+					<nav class="header__categories">
+						<div class="header__category">
+							<a href="#" class="header__category_main">RAIDS</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main"
+								>DUNGEONS & TORGHAST</a
+							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main">PVP</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main"
+								>POWERLEVELING</a
+							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main"
+								>BUNDLES</a
+							>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main">MOUNTS</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+
+						<div class="header__category">
+							<a href="#" class="header__category_main">TBC</a>
+
+							<div class="header-select wide">
+								<a href="#" class="header-select__item"
+									>ARENA RATING</a
+								>
+								<a href="#" class="header-select__item"
+									>HONOR FARM</a
+								>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+
+			<div class="header-mobile">
+				<div class="header-mobile__top">
+					<a href="#" class="header-trust mobile">
+						<img
+							src="./images/dist/trustpilot.svg"
+							alt="Trustpilot"
+						/>
+						<img src="./images/dist/stars.svg" alt="Stars" />
+					</a>
+
+					<div class="header-lang mobile el-center">
+						<div class="header-lang__selector">
+							<img
+								src="./images/dist/europe.svg"
+								alt="EU"
+								width="33"
+								height="22"
+							/>
+							<span>EU</span>
+							<img src="./images/dist/arrow-down.svg" alt="" />
+						</div>
+
+						<div class="header-select">
+							<a href="#" class="header-select__item"
+								><img
+									src="./images/dist/usa.svg"
+									alt="US"
+									width="26"
+									height="15"
+									style="margin-right: 5px"
+								/>
+								US</a
+							>
+						</div>
+					</div>
+
+					<button class="header-support mobile">
+						<div class="header-support__title">Get Support</div>
+					</button>
+				</div>
+
+				<div class="header-mobile__bottom">
+					<div class="header-mobile__bottom_main">
+						<div class="header-mobile__buttons">
+							<button
+								@click.prevent="toggleMenu"
+								class="header-mobile__burger"
+							>
+								<img
+									src="./images/dist/burger.svg"
+									alt="Menu"
+									width="19"
+									height="16"
+								/>
+							</button>
+
+							<button
+								@click.prevent="toggleSearch"
+								class="header-mobile__search"
+							>
+								<img
+									src="./images/dist/search.svg"
+									alt="Search"
+									width="17"
+									height="17"
+								/>
+							</button>
+						</div>
+
+						<a href="#" class="header-logo mobile el-center">
+							<img
+								src="./images/dist/logo.png"
+								width="36"
+								height="36"
+								alt="Grizzly"
+							/>
+						</a>
+
+						<div class="header-cart">
+							<div class="header-cart__icon">
+								<img
+									src="./images/dist/cart.svg"
+									alt="Cart"
+									width="21"
+									height="21"
+								/>
+								<span>1</span>
+							</div>
+							<div class="header-cart__sum">$999.99</div>
+						</div>
+					</div>
+
+					<div
+						x-cloak
+						x-show.transition.opacity="isSearchActive === true"
+						class="header-mobile__bottom_search"
+					>
+						<div class="header-mobile__buttons">
+							<button
+								@click.prevent="toggleSearch"
+								class="header-mobile__burger"
+							>
+								<img
+									src="./images/dist/close.svg"
+									alt="Close search"
+									width="19"
+									height="19"
+								/>
+							</button>
+						</div>
+
+						<form
+							action="#"
+							method="POST"
+							class="header-search mobile"
+						>
+							<button class="header-mobile__search">
+								<img
+									src="./images/dist/search.svg"
+									alt="Search"
+									width="17"
+									height="17"
+								/>
+							</button>
+							<input
+								class="header-search__input"
+								type="text"
+								name="search"
+								placeholder="Search for service..."
+							/>
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show="isMenuOpen === true"
+				x-transition:enter-start="menu-slide-0"
+				x-transition:enter-end="menu-slide-1"
+				x-transition:leave-start="menu-slide-1"
+				x-transition:leave-end="menu-slide-0"
+				class="header-menu"
+			>
+				<div class="header-menu__inner">
+					<h3 class="header-menu__title">Services</h3>
+
+					<div class="header-menu__categories_wrapper">
+						<button
+							@click.prevent="toggleMenu"
+							class="header-menu__burger"
+						>
+							<img
+								src="./images/dist/burger-orange.svg"
+								width="19"
+								height="16"
+								alt="Close menu"
+							/>
+						</button>
+						<div class="header-menu__categories">
+							<a href="#" class="header-menu__category"
+								>DUNGEONS & TORGHAST</a
+							>
+							<a href="#" class="header-menu__category"
+								>POWERLEVELING</a
+							>
+							<a href="#" class="header-menu__category"
+								>BUNDLES</a
+							>
+							<a href="#" class="header-menu__category">RAIDS</a>
+							<a href="#" class="header-menu__category">TBC</a>
+							<a href="#" class="header-menu__category">MOUNTS</a>
+							<a href="#" class="header-menu__category">PVP</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="header__sale">
+				<div class="container">
+					<div class="header__sale_inner">
+						<img
+							src="./images/dist/sale.svg"
+							alt="Sale"
+							width="16"
+							height="16"
+						/>
+						<span>We’ve lowered our prices for the holidays!</span>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+
+<main class="main main-hidden-bg">
+	<div class="main__bg">
+		<img
+			class="main__bg_img"
+			decoding="async"
+			src="./images/dist/bg.jpg"
+			alt=""
+		/>
+		<div class="main__bg_shadow"></div>
+	</div>
+
+	<section class="breadcrumbs">
+		<div class="container">
+			<div class="breadcrumbs__inner">
+				<a href="#" class="breadcrumbs__link">Main page</a>
+				<a href="#" class="breadcrumbs__link">PVP</a>
+				<a href="#" class="breadcrumbs__link">Arena rating</a>
+			</div>
+		</div>
+	</section>
+
+	<section class="info">
+		<div class="container">
+			<div class="info__inner cart">
+				<div class="info__left">
+					<form action="#" method="POST" class="info__form">
+						<h2 class="info__title desktop">Checkout</h2>
+						<span class="info__subtitle">Enter your info.</span>
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Character name:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Your Name"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text"
+								>Character server:*</span
+							>
+							<input
+								type="text"
+								required
+								class="info__input"
+								placeholder="Server Name"
+							/>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Your Email:*</span>
+							<input
+								type="email"
+								class="info__input"
+								required
+								placeholder="yourmail@example.com"
+							/>
+							<span class="info__label_error"
+								>invalid email!</span
+							>
+						</label>
+
+						<label for="" class="info__label">
+							<span class="info__label_text">Order note:</span>
+							<textarea rows="2" class="info__input"></textarea>
+						</label>
+
+						<div class="info__label payment">
+							<span class="info__label_text"
+								>Payment method:*</span
+							>
+							<label for="fondy" class="cart__payment">
+								<input
+									id="fondy"
+									type="radio"
+									required
+									name="payment"
+									checked
+									value="fondy"
+								/>
+								<span class="cart__payment_name">Fondy</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.png"
+									alt=""
+								/>
+							</label>
+
+							<label for="unitpay" class="cart__payment">
+								<input
+									id="unitpay"
+									type="radio"
+									required
+									name="payment"
+									value="unitpay"
+								/>
+								<span class="cart__payment_name">Unitpay</span>
+								<img
+									class="cart__payment_img"
+									src="./images/dist/payment.png"
+									alt=""
+								/>
+							</label>
+						</div>
+
+						<label for="terms" class="info__label checkbox">
+							<input id="terms" type="checkbox" name="terms" />
+							<div class="cart__payment_name">
+								I have read the
+								<a href="#">terms and conditions</a>
+							</div>
+						</label>
+
+						<button class="info__button">
+							PROCEED TO CHECKOUT
+						</button>
+					</form>
+				</div>
+				<div class="info__right cart">
+					<div class="cart__items_wrapper">
+						<h2 class="info__title mobile">Checkout</h2>
+						<span class="info__subtitle">Check your cart.</span>
+						<span class="cart__text">Products in cart:</span>
+						<div class="cart__items">
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+
+							<div class="cart__item">
+								<a href="#" class="cart__item_remove">
+									<img
+										src="./images/dist/remove-item.svg"
+										width="12"
+										height="12"
+										alt="Remove"
+									/>
+								</a>
+
+								<a href="#" class="cart__item_img">
+									<img
+										src="./images/dist/placeholder.jpg"
+										width="83"
+										height="83"
+										alt="Product"
+									/>
+								</a>
+								<div class="cart__item_info">
+									<h4 class="cart__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+
+									<div class="cart__item_meta">
+										<p class="cart__item_text">
+											Twisted corridors boost run options:
+											10/10 bosses boost run;
+										</p>
+										<p class="cart__item_text">
+											Boosting method: Piloted;
+										</p>
+										<p class="cart__item_text">
+											Select loot option: x4 loot.
+										</p>
+										<p class="cart__item_text">
+											Quantity: 2
+										</p>
+									</div>
+									<span class="cart__item_price">
+										$72.95
+									</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="cart__result">
+							<span class="cart__result_title">Subtotal:</span>
+							<span class="cart__result_sum-sm">$72.95</span>
+						</div>
+						<div class="cart__result">
+							<span class="cart__result_title">Total:</span>
+							<span class="cart__result_sum-lg">$72.95</span>
+						</div>
+
+						<form action="#" method="POST" class="cart__promo_wrapper">
+							<span class="cart__text promo">Discount code:</span>
+
+							<div class="cart__promo">
+								<input type="text" class="cart__promo_input" placeholder="Enter discount code">
+								<button class="cart__promo_button apply">Apply</button>
+								<button class="cart__promo_button remove">Remove</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="popular">
+		<div class="container">
+			<div class="popular__inner">
+				<h2 class="popular__title center">Best Seller Boosts</h2>
+
+				<div class="popular__items_wrapper">
+					<div class="swiper-container popular__items_container">
+						<div class="swiper-wrapper">
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+
+							<a href="#" class="swiper-slide popular__item">
+								<img
+									src="./images/dist/placeholder.jpg"
+									alt=""
+								/>
+								<div class="popular__item_info">
+									<h4 class="popular__item_title">
+										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+										AMET POR
+									</h4>
+									<span class="popular__item_price">
+										$9.95
+									</span>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="swiper-button-prev slider-arrow"></div>
+					<div class="swiper-button-next slider-arrow"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="feedback">
+		<div class="container">
+			<div class="feedback__inner">
+				<h2 class="feedback__title center">Customer’s voice</h2>
+				<span class="feedback__total"
+					>Excellent 4.9 rating, 124 reviews</span
+				>
+
+				<div class="feedback__wrapper">
+					<div
+						class="swiper-container feedback__container"
+						:class="isMoreActive ? 'more' : ''"
+					>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+
+							<div class="swiper-slide feedback__item">
+								<div class="feedback__item_meta">
+									<h4 class="feedback__item_name">
+										Jared Quebek
+									</h4>
+									<time>1 day ago</time>
+								</div>
+								<div class="feedback__item_review">
+									<img
+										src="./images/dist/stars.svg"
+										alt="5 stars"
+									/>
+								</div>
+								<p class="feedback__item_desc">
+									We're no strangers to love. You know the
+									rules and so do I. A full commitment's what
+									I'm thinking of you wouldn't get this from
+									any other guy. I just wanna tell you how I'm
+									feeling.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-button-prev slider-arrow"></div>
+					<div class="swiper-button-next slider-arrow"></div>
+				</div>
+
+				<button @click.prevent="showMore" class="feedback__button">
+					SHOW MORE
+				</button>
+
+				<div class="feedback__trust">
+					<a href="">
+						<img
+							class="feedback__trust_logo"
+							src="./images/dist/trustpilot.svg"
+							alt=""
+						/>
+						<img
+							class="feedback__trust_stars"
+							src="./images/dist/stars.svg"
+							alt=""
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+	<div class="footer__content">
+		<div class="container">
+			<div class="footer__content_inner">
+				<div class="footer__content_left">
+					<a href="#" class="footer__content_logo">
+						<img src="./images/dist/logo-large.png" alt="Grizzly" width="106" height="106">
+					</a>
+					<p class="footer__content_text">
+						Grizzlyboost.com - Ingame boosting services 2020-2021Ⓒ
+					</p>
+
+					<div class="footer__content_payment">
+						<p class="footer__content_text payment">
+							Payment methods we accept:
+						</p>
+						<div class="footer__content_payment">
+							<img src="./images/dist/payment.png" alt="Payments">
+						</div>
+					</div>
+				</div>
+
+				<div class="footer__content_right">
+					<div class="footer__links">
+						<a href="#" class="footer__link">ABOUT US</a>
+						<a href="#" class="footer__link">CONTACTS</a>
+						<a href="#" class="footer__link">F.A.Q.</a>
+						<a href="#" class="footer__link">PRIVACY POLICY</a>
+						<a href="#" class="footer__link">TERMS & CONDITIONS</a>
+						<a href="#" class="footer__link">REFUND POLICY</a>
+					</div>
+
+					<div class="footer__socials">
+						<a href="#" class="footer__socials_link discord">
+							<svg width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0)">
+								<path d="M25.3963 2.04811C23.4842 1.17979 21.4337 0.540059 19.2899 0.173656C19.2508 0.166585 19.2118 0.184257 19.1917 0.219601C18.928 0.683788 18.6359 1.28936 18.4314 1.76533C16.1255 1.42368 13.8315 1.42368 11.5729 1.76533C11.3683 1.27878 11.0656 0.683788 10.8007 0.219601C10.7806 0.185436 10.7416 0.167764 10.7026 0.173656C8.55989 0.538888 6.50945 1.17862 4.59617 2.04811C4.57961 2.05517 4.56541 2.06697 4.55599 2.08227C0.66674 7.83286 -0.398688 13.4421 0.123975 18.9818C0.12634 19.0089 0.141712 19.0348 0.162998 19.0513C2.72901 20.9163 5.21463 22.0485 7.6541 22.799C7.69314 22.8108 7.73451 22.7967 7.75935 22.7648C8.33641 21.9849 8.8508 21.1626 9.29185 20.2978C9.31787 20.2471 9.29303 20.187 9.23983 20.167C8.42391 19.8607 7.647 19.4872 6.89966 19.0631C6.84055 19.0289 6.83582 18.9452 6.8902 18.9052C7.04747 18.7886 7.20477 18.6672 7.35494 18.5447C7.38211 18.5223 7.41997 18.5176 7.45192 18.5317C12.3616 20.7502 17.6769 20.7502 22.5287 18.5317C22.5606 18.5164 22.5985 18.5211 22.6268 18.5435C22.7771 18.666 22.9343 18.7886 23.0928 18.9052C23.1472 18.9452 23.1436 19.0289 23.0845 19.0631C22.3372 19.4954 21.5602 19.8607 20.7431 20.1658C20.6899 20.1859 20.6663 20.2471 20.6923 20.2978C21.1428 21.1614 21.6572 21.9837 22.2236 22.7637C22.2473 22.7967 22.2898 22.8108 22.3289 22.799C24.7802 22.0485 27.2658 20.9163 29.8318 19.0513C29.8543 19.0348 29.8685 19.0101 29.8708 18.983C30.4964 12.5785 28.8231 7.01523 25.4353 2.08344C25.427 2.06697 25.4128 2.05517 25.3963 2.04811ZM10.025 15.6087C8.54687 15.6087 7.32892 14.2656 7.32892 12.6162C7.32892 10.9668 8.52325 9.62368 10.025 9.62368C11.5386 9.62368 12.7448 10.9785 12.7211 12.6162C12.7211 14.2656 11.5268 15.6087 10.025 15.6087ZM19.9934 15.6087C18.5153 15.6087 17.2974 14.2656 17.2974 12.6162C17.2974 10.9668 18.4917 9.62368 19.9934 9.62368C21.507 9.62368 22.7132 10.9785 22.6896 12.6162C22.6896 14.2656 21.507 15.6087 19.9934 15.6087Z" fill="white"/>
+								</g>
+							</svg>
+								
+							<span>Grizzlyboost.com#5413</span>
+						</a>
+
+						<a href="#" class="footer__socials_link skype">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<g clip-path="url(#clip0)">
+								<path d="M14.9118 23.9263C9.94952 23.9263 7.68231 21.3984 7.68231 19.5443C7.68164 19.102 7.86317 18.6789 8.18419 18.3746C8.50522 18.0704 8.93739 17.9117 9.37903 17.9361C11.5036 17.9361 10.9479 21.123 14.9118 21.123C16.938 21.123 18.1282 19.9033 18.1282 18.7574C18.1282 18.0689 17.7348 17.282 16.3971 16.9672L11.9708 15.8508C8.4151 14.9459 7.79542 12.9689 7.79542 11.1344C7.79542 7.32789 11.2774 5.95084 14.5921 5.95084C17.6462 5.95084 21.2758 7.63773 21.2758 9.91969C21.2758 10.9033 20.4544 11.4295 19.5003 11.4295C17.6856 11.4295 17.9905 8.88199 14.3413 8.88199C12.5266 8.88199 11.5725 9.73281 11.5725 10.923C11.5725 12.1131 12.9839 12.5164 14.2233 12.7869L17.4889 13.5246C21.0692 14.3312 22.0233 16.4312 22.0233 18.4426C22.0233 21.5361 19.6282 23.9263 14.9069 23.9263H14.9118ZM28.6135 17.3803C28.7552 16.5684 28.826 15.7456 28.8249 14.9213C28.8423 10.7809 27.023 6.84586 23.8575 4.17694C20.692 1.50801 16.5062 0.379918 12.4282 1.09674C11.1748 0.375085 9.75321 -0.00321187 8.3069 2.05422e-05C5.33818 0.0181558 2.60173 1.60924 1.11737 4.18029C-0.366981 6.75135 -0.376583 9.91673 1.09214 12.4967C0.272605 16.9999 1.70819 21.619 4.93585 24.8643C8.1635 28.1096 12.7748 29.5704 17.2823 28.7754C18.5342 29.4965 19.954 29.8748 21.3987 29.8722C24.3659 29.853 27.1007 28.2626 28.5847 25.6931C30.0688 23.1236 30.0797 19.96 28.6135 17.3803Z" fill="white"/>
+								</g>
+							</svg>								
+								
+							<span>grizzlyboost1.com@gmail.com</span>
+						</a>
+
+						<a href="#" class="footer__socials_link fb">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15.0912C30 6.75721 23.2836 0 15 0C6.71637 0 0 6.75721 0 15.0912C0 22.623 5.48451 28.8666 12.6565 30V19.4546H8.84685V15.0912H12.6565V11.7656C12.6565 7.98379 14.8967 5.89338 18.3223 5.89338C19.9634 5.89338 21.6805 6.18836 21.6805 6.18836V9.90233H19.7883C17.9258 9.90233 17.3435 11.0653 17.3435 12.2601V15.0911H21.5032L20.8387 19.4544H17.3434V29.9999C24.5154 28.8686 29.9999 22.625 29.9999 15.0911L30 15.0912Z" fill="white"/>
+							</svg>				
+								
+							<span>grizzlyboost.com@gmail.com</span>
+						</a>
+
+						<a href="#" class="footer__socials_link instagram">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M15 2.70276C19.0052 2.70276 19.4795 2.718 21.0612 2.79017C22.5237 2.85691 23.318 3.10128 23.8466 3.30664C24.5467 3.57875 25.0464 3.90385 25.5713 4.42872C26.0961 4.95359 26.4213 5.45333 26.6933 6.15343C26.8987 6.68205 27.1431 7.47629 27.2098 8.93871C27.282 10.5205 27.2972 10.9948 27.2972 15C27.2972 19.0052 27.282 19.4796 27.2098 21.0613C27.1431 22.5238 26.8987 23.318 26.6933 23.8466C26.4213 24.5467 26.0961 25.0465 25.5713 25.5713C25.0464 26.0962 24.5467 26.4213 23.8466 26.6934C23.318 26.8988 22.5237 27.1431 21.0612 27.2099C19.4798 27.2821 19.0054 27.2973 15 27.2973C10.9945 27.2973 10.5202 27.2821 8.93871 27.2099C7.47623 27.1431 6.68199 26.8988 6.15343 26.6934C5.45327 26.4213 4.95353 26.0962 4.42866 25.5713C3.90379 25.0465 3.57869 24.5467 3.30664 23.8466C3.10122 23.318 2.85685 22.5238 2.79011 21.0613C2.71794 19.4796 2.7027 19.0052 2.7027 15C2.7027 10.9948 2.71794 10.5205 2.79011 8.93877C2.85685 7.47629 3.10122 6.68205 3.30664 6.15343C3.57869 5.45333 3.90379 4.95359 4.42866 4.42872C4.95353 3.90385 5.45327 3.57875 6.15343 3.30664C6.68199 3.10128 7.47623 2.85691 8.93865 2.79017C10.5204 2.718 10.9948 2.70276 15 2.70276ZM15 0C10.9262 0 10.4154 0.0172674 8.81552 0.0902666C7.21888 0.163147 6.12854 0.416679 5.17437 0.78751C4.18799 1.17085 3.35147 1.68375 2.51758 2.51764C1.68369 3.35153 1.17079 4.18805 0.787451 5.17443C0.41662 6.1286 0.163087 7.21894 0.090207 8.81558C0.0172078 10.4154 0 10.9262 0 15C0 19.0738 0.0172078 19.5846 0.090207 21.1845C0.163087 22.7811 0.41662 23.8715 0.787451 24.8256C1.17079 25.812 1.68369 26.6485 2.51758 27.4824C3.35147 28.3163 4.18799 28.8292 5.17437 29.2125C6.12854 29.5834 7.21888 29.8369 8.81552 29.9098C10.4154 29.9828 10.9262 30 15 30C19.0738 30 19.5846 29.9828 21.1844 29.9098C22.7811 29.8369 23.8714 29.5834 24.8256 29.2125C25.812 28.8292 26.6485 28.3163 27.4824 27.4824C28.3163 26.6485 28.8292 25.812 29.2125 24.8256C29.5833 23.8715 29.8369 22.7811 29.9097 21.1845C29.9827 19.5846 30 19.0738 30 15C30 10.9262 29.9827 10.4154 29.9097 8.81558C29.8369 7.21894 29.5833 6.1286 29.2125 5.17443C28.8292 4.18805 28.3163 3.35153 27.4824 2.51764C26.6485 1.68375 25.812 1.17085 24.8256 0.78751C23.8714 0.416679 22.7811 0.163147 21.1844 0.0902666C19.5846 0.0172674 19.0738 0 15 0ZM15 7.2973C10.7459 7.2973 7.29724 10.746 7.29724 15C7.29724 19.2541 10.7459 22.7028 15 22.7028C19.2541 22.7028 22.7027 19.2541 22.7027 15C22.7027 10.746 19.2541 7.2973 15 7.2973ZM15 20.0001C12.2386 20.0001 9.99994 17.7614 9.99994 15C9.99994 12.2386 12.2386 10 15 10C17.7614 10 20 12.2386 20 15C20 17.7614 17.7614 20.0001 15 20.0001ZM24.807 6.99298C24.807 7.9871 24.0011 8.79301 23.007 8.79301C22.0129 8.79301 21.207 7.9871 21.207 6.99298C21.207 5.99886 22.0129 5.19301 23.007 5.19301C24.0011 5.19301 24.807 5.99886 24.807 6.99298Z" fill="white"/>
+							</svg>		
+								
+							<span>@Grizzlyboost</span>
+						</a>
+						
+						<a href="#" class="footer__socials_link twitter">
+							<svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M26.4993 5.97181C26.5173 6.23206 26.5173 6.49232 26.5173 6.75497C26.5173 14.7581 20.4247 23.9882 9.28406 23.9882V23.9834C5.99308 23.9882 2.77046 23.0455 0 21.2681C0.478535 21.3257 0.959468 21.3545 1.4416 21.3557C4.16889 21.3581 6.81822 20.443 8.96383 18.7579C6.37207 18.7087 4.09933 17.0189 3.30537 14.5519C4.21327 14.727 5.14875 14.691 6.03985 14.4475C3.21422 13.8766 1.18135 11.394 1.18135 8.5108C1.18135 8.48441 1.18135 8.45923 1.18135 8.43404C2.02328 8.90298 2.96596 9.16324 3.93022 9.19202C1.2689 7.41341 0.448551 3.87297 2.05566 1.1049C5.13076 4.88881 9.66784 7.18913 14.5383 7.4326C14.0502 5.32896 14.717 3.12458 16.2906 1.6458C18.73 -0.647326 22.5667 -0.529792 24.8598 1.90846C26.2163 1.64101 27.5164 1.14328 28.7061 0.438072C28.2539 1.8401 27.3077 3.03104 26.0436 3.78782C27.2441 3.64629 28.4171 3.32487 29.5216 2.83434C28.7085 4.05287 27.6843 5.11428 26.4993 5.97181Z" fill="white"/>
+							</svg>
+											
+							<span>@Grizzlyboost</span>
+						</a>
+
+						<a href="#" class="footer__socials_link mail">
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M27.6153 3.34961L16.1335 14.8314C15.5451 15.4197 14.7727 15.7137 14 15.7137C13.2273 15.7137 12.4549 15.4197 11.8668 14.8314L0.384735 3.34961C0.14035 3.7854 0 4.2872 0 4.82147V23.2732C0 24.9366 1.3533 26.2902 3.017 26.2902H24.9832C26.6467 26.2902 28 24.9366 28 23.2732V4.82147C28 4.2872 27.8596 3.7854 27.6153 3.34961Z" fill="white"/>
+								<path d="M14.9733 13.6714L26.4551 2.18942C26.0193 1.94482 25.5173 1.80469 24.9832 1.80469H3.017C2.48273 1.80469 1.98071 1.94482 1.54492 2.18942L13.0267 13.6714C13.5636 14.2081 14.4366 14.2081 14.9733 13.6714Z" fill="white"/>
+							</svg>
+								
+											
+							<span>@Grizzlyboostcom</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__rights">
+		<div class="container">
+			<div class="footer__rights_inner">
+				<p class="footer__content_text rights">
+					All product names, trademarks and registered trademarks are property of their respective owners. World of Warcraft™ is a trademark of Blizzard Entertainment inc. All rights on related materials, logos and characters respectively belongs to Blizzard Entertainment inc.
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
