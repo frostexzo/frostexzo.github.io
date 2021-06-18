@@ -41,8 +41,18 @@
 	border: 1px solid #27272a;
 	padding: 12px 25px;
 	opacity: 0;
+	user-select: none;
 	visibility: collapse;
 	transition: opacity 0.1s ease, visibility 0.1s ease;
+
+	&.clickable {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&.lang {
+		margin-left: -26px;
+	}
 
 	&.wide {
 		min-width: 180px;
@@ -109,6 +119,7 @@
 	border: 2px solid #27272a;
 	color: #e5e5e5;
 	font-size: 14px;
+	user-select: none;
 
 	&__links {
 		margin-left: 24px;
@@ -167,10 +178,10 @@
 .header-lang {
 	position: relative;
 	margin-right: 24px;
+	user-select: none;
 
-	&:hover .header-select {
-		opacity: 1;
-		visibility: visible;
+	&__arrow {
+		transition: transform 0.15s ease;
 	}
 
 	&__selector {
@@ -181,6 +192,12 @@
 
 		& > *:not(:last-child) {
 			margin-right: 5px;
+		}
+
+		&.active {
+			& .header-lang__arrow {
+				transform: scale(-1);
+			}
 		}
 	}
 }
@@ -317,10 +334,10 @@
 	}
 }
 
-
 @media screen and (max-width: 900px) {
 	.header {
-		&__panel, &__categories {
+		&__panel,
+		&__categories {
 			display: none !important;
 		}
 

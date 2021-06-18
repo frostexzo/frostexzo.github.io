@@ -60,7 +60,7 @@
 						<div class="header__panel_left">
 							<a href="#" class="header-logo">
 								<img
-									src="./images/dist/logo.png"
+									src="./images/dist/logo.svg"
 									width="46"
 									height="46"
 									alt="Grizzly"
@@ -68,7 +68,7 @@
 							</a>
 
 							<div class="header-trust">
-								<div class="header-trust__logo">
+								<a href="" class="header-trust__logo">
 									<img
 										src="./images/dist/trustpilot.svg"
 										alt="Trustpilot"
@@ -77,7 +77,7 @@
 										src="./images/dist/stars.svg"
 										alt="Stars"
 									/>
-								</div>
+								</a>
 								<div class="header-trust__meta">
 									<div class="header-trust__meta_link">
 										<span>TrustScore</span>
@@ -175,8 +175,11 @@
 								</button>
 							</form>
 
-							<div class="header-lang">
-								<div class="header-lang__selector">
+							<div @click="toggleLang" class="header-lang">
+								<div
+									class="header-lang__selector"
+									:class="isLangOpen ? 'active' : ''"
+								>
 									<img
 										src="./images/dist/europe.svg"
 										alt="EU"
@@ -185,18 +188,24 @@
 									/>
 									<span>EU</span>
 									<img
+										class="header-lang__arrow"
 										src="./images/dist/arrow-down.svg"
 										alt=""
 									/>
 								</div>
 
-								<div class="header-select">
+								<div
+									@click.away="isLangOpen = false"
+									x-cloak
+									x-show.transition.opacity.duration.100ms="isLangOpen === true"
+									class="header-select clickable lang"
+								>
 									<a href="#" class="header-select__item"
 										><img
 											src="./images/dist/usa.svg"
 											alt="US"
-											width="26"
-											height="15"
+											width="33"
+											height="20"
 											style="margin-right: 5px"
 										/>
 										US</a
@@ -330,8 +339,14 @@
 						<img src="./images/dist/stars.svg" alt="Stars" />
 					</a>
 
-					<div class="header-lang mobile el-center">
-						<div class="header-lang__selector">
+					<div
+						@click="toggleLang"
+						class="header-lang mobile el-center"
+					>
+						<div
+							class="header-lang__selector"
+							:class="isLangOpen ? 'active' : ''"
+						>
 							<img
 								src="./images/dist/europe.svg"
 								alt="EU"
@@ -339,16 +354,25 @@
 								height="22"
 							/>
 							<span>EU</span>
-							<img src="./images/dist/arrow-down.svg" alt="" />
+							<img
+								class="header-lang__arrow"
+								src="./images/dist/arrow-down.svg"
+								alt=""
+							/>
 						</div>
 
-						<div class="header-select">
+						<div
+							@click.away="isLangOpen = false"
+							x-cloak
+							x-show.transition.opacity.duration.100ms="isLangOpen === true"
+							class="header-select clickable lang"
+						>
 							<a href="#" class="header-select__item"
 								><img
 									src="./images/dist/usa.svg"
 									alt="US"
-									width="26"
-									height="15"
+									width="33"
+									height="20"
 									style="margin-right: 5px"
 								/>
 								US</a

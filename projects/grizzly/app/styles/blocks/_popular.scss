@@ -47,6 +47,11 @@
 			font-weight: 600;
 			font-size: 14px;
 			margin-bottom: 5px;
+			transition: color .1s ease;
+
+			&:hover {
+				color: #ff7a00;
+			}
 		}
 
 		&_price {

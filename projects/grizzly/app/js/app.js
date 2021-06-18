@@ -6,6 +6,8 @@ const app = () => {
 		isMenuOpen: false,
 		isMoreActive: false,
 		isFilterOpen: false,
+		isLangOpen: false,
+		productActiveTab: "desc",
 		filterValue: "LOWEST PRICE",
 		bgPart: false,
 		bgFull: false,
@@ -22,6 +24,10 @@ const app = () => {
 			html.classList.toggle("overflow");
 		},
 
+		toggleLang() {
+			this.isLangOpen = !this.isLangOpen;
+		},
+
 		showMore() {
 			this.isMoreActive = true;
 		},
@@ -32,7 +38,12 @@ const app = () => {
 
 		filterSelect(e) {
 			if (e == document.querySelector(".products__select_popup")) return;
-			this.filterValue = e.textContent.trim();
+			this.filterValue = e.textContent.trim() || "LOWEST PRICE";
+		},
+
+		selectProductTab(e) {
+			const tab = e.dataset.tab || "desc";
+			this.productActiveTab = tab;
 		},
 
 		bgClick() {
@@ -49,6 +60,7 @@ const popularSliderEl = document.querySelector(".popular__items_container");
 if (popularSliderEl) {
 	const popularSlider = new Swiper(".popular__items_container", {
 		spaceBetween: 15,
+		resistanceRatio: 0,
 		navigation: {
 			prevEl: ".popular .swiper-button-prev",
 			nextEl: ".popular .swiper-button-next",
@@ -77,6 +89,7 @@ const feedbackSliderEl = document.querySelector(".feedback__container");
 if (feedbackSliderEl && window.innerWidth > 600) {
 	const feedbackSlider = new Swiper(".feedback__container", {
 		spaceBetween: 20,
+		resistanceRatio: 0,
 		navigation: {
 			prevEl: ".feedback .swiper-button-prev",
 			nextEl: ".feedback .swiper-button-next",

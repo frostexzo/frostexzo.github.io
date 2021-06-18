@@ -131,7 +131,7 @@
 		}
 
 		&__title {
-			text-align: center;
+			margin-left: 30px;
 			margin-bottom: 20px;
 		}
 
@@ -139,7 +139,6 @@
 			&_wrapper {
 				display: flex;
 				align-items: flex-start;
-				justify-content: space-between;
 			}
 
 			margin-top: -4px;
