@@ -7,8 +7,8 @@
 
 	&__left {
 		margin-right: 20px;
-		background: #151516;
-		border: 1px solid #27272a;
+		background: $bg-color;
+		border: 1px solid $border-color;
 		padding: 30px 40px;
 		flex-basis: 50%;
 	}
@@ -74,7 +74,7 @@
 			margin-left: 5px;
 			line-height: 1;
 			margin-right: 10px;
-			color: rgba(255, 255, 255, 0.5);
+			color: $main-font-half-opacity;
 		}
 
 		&_name a {
@@ -90,17 +90,17 @@
 	&__input {
 		font-size: 16px;
 		padding: 10px 14px;
-		border: 1px solid #48484c;
+		border: 1px solid $input-border;
 		width: 100%;
 		outline: none;
 		color: rgba(255, 255, 255, 0.3);
 		font-weight: 600;
 		resize: none;
-		background-color: #151516;
+		background-color: $bg-color;
 		transition: color 0.1s ease, border-color 0.1s ease;
 
 		&:focus {
-			color: #fff;
+			color: $main-font-color;
 		}
 
 		&:invalid:not(:placeholder-shown):not(:focus) {
@@ -118,12 +118,12 @@
 		width: 100%;
 		text-transform: uppercase;
 		font-weight: 700;
-		background-color: #ff7a00;
+		background-color: $orange;
 		margin-top: 10px;
 		transition: background 0.1s ease;
 
 		&:hover {
-			background-color: darken(#ff7a00, 10%);
+			background-color: darken($orange, 10%);
 		}
 	}
 }
@@ -131,8 +131,8 @@
 .info__socials {
 	padding: 30px 15px;
 	flex-basis: 50%;
-	background: #151516;
-	border: 1px solid #27272a;
+	background: $bg-color;
+	border: 1px solid $border-color;
 
 	&:not(:last-child) {
 		margin-right: 20px;

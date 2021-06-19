@@ -13,12 +13,12 @@
 	}
 
 	&__items {
-		border-bottom: 1px solid #27272a;
+		border-bottom: 1px solid $border-color;
 		margin-bottom: 10px;
 
 		&_wrapper {
-			background: #151516;
-			border: 1px solid #27272a;
+			background: $bg-color;
+			border: 1px solid $border-color;
 			width: 100%;
 			padding: 20px;
 		}
@@ -67,12 +67,12 @@
 	}
 
 	&_text {
-		color: rgba(255, 255, 255, 0.5);
+		color: $main-font-half-opacity;
 		line-height: 1.4;
 	}
 
 	&_price {
-		color: rgba(255, 255, 255, 0.8);
+		color: $main-font-8-opacity;
 		font-weight: 700;
 		font-size: 16px;
 	}
@@ -84,7 +84,7 @@
 	align-items: center;
 
 	&_title {
-		color: #fff;
+		color: $main-font-color;
 		font-size: 14px;
 		width: 100px;
 	}
@@ -92,12 +92,12 @@
 	&_sum {
 		&-sm {
 			font-weight: 700;
-			color: rgba(255, 255, 255, 0.8);
+			color: $main-font-8-opacity;
 		}
 		&-lg {
 			font-weight: 700;
 			font-size: 22px;
-			color: #fff;
+			color: $main-font-color;
 		}
 	}
 }
@@ -114,9 +114,9 @@
 		padding: 10px 14px;
 		font-weight: 700;
 		font-size: 14px;
-		border: 1px solid #48484C;
+		border: 1px solid $input-border;
 		outline: none;
-		color: #fff;
+		color: $main-font-color;
 		text-align: center;
 		max-width: 180px;
 	}
@@ -124,11 +124,11 @@
 	&_button {
 		text-decoration: underline;
 		font-size: 14px;
-		color: #fff;
+		color: $main-font-color;
 		transition: color .1s ease;
 
 		&:hover {
-			color: #FF7A00;
+			color: $orange;
 		}
 	}
 }

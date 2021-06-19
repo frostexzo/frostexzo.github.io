@@ -1,5 +1,5 @@
 .header {
-	background-color: #151516;
+	background-color: $bg-color;
 	position: relative;
 
 	&__inner {
@@ -37,8 +37,8 @@
 	z-index: 5;
 	left: auto;
 	min-width: 100%;
-	background: #151516;
-	border: 1px solid #27272a;
+	background: $bg-color;
+	border: 1px solid $border-color;
 	padding: 12px 25px;
 	opacity: 0;
 	user-select: none;
@@ -66,14 +66,14 @@
 
 		text-transform: uppercase;
 		font-size: 14px;
-		color: #fff;
+		color: $main-font-color;
 		transition: color 0.1s ease;
 		display: flex;
 		align-items: center;
 		width: 100%;
 
 		&:hover {
-			color: #ff7a00;
+			color: $orange;
 		}
 	}
 }
@@ -93,7 +93,7 @@
 		display: flex;
 
 		&_link {
-			color: #e5e5e5;
+			color: $dark-font-color;
 			font-size: 14px;
 
 			&:last-child {
@@ -101,7 +101,7 @@
 			}
 
 			& a {
-				color: #e5e5e5;
+				color: $dark-font-color;
 				text-decoration: underline;
 
 				&:hover {
@@ -116,8 +116,8 @@
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;
-	border: 2px solid #27272a;
-	color: #e5e5e5;
+	border: 2px solid $border-color;
+	color: $dark-font-color;
 	font-size: 14px;
 	user-select: none;
 
@@ -146,7 +146,7 @@
 			}
 
 			&.mail:hover path {
-				fill: #ff7a00;
+				fill: $orange;
 			}
 		}
 	}
@@ -155,12 +155,12 @@
 .header-search {
 	margin-right: $m-right;
 	padding: 10px 20px;
-	border: 2px solid #27272a;
+	border: 2px solid $border-color;
 	display: flex;
 	align-items: center;
 
 	&__input {
-		color: #e5e5e5;
+		color: $dark-font-color;
 		opacity: 0.5;
 		max-width: 220px;
 		width: 100%;
@@ -218,7 +218,7 @@
 			right: -14px;
 			font-weight: 700;
 			font-size: 14px;
-			background-color: #a80303;
+			background-color: $cart-number-color;
 			border-radius: 100%;
 			width: 20px;
 			height: 20px;
@@ -268,13 +268,13 @@
 			width: 100%;
 			font-weight: 600;
 			padding: 8px;
-			border: 2px solid rgba(255, 122, 0, 0.5);
+			border: 2px solid $orange-half-opacity;
 			border-radius: 4px;
 			transition: background 0.1s ease, border-color 0.1s ease;
 
 			&:hover {
 				background-color: #231a11;
-				border-color: rgb(255, 122, 0);
+				border-color: $orange;
 			}
 		}
 	}
@@ -282,8 +282,8 @@
 
 // Header Sale
 .header__sale {
-	background: #392a59;
-	border: 1px solid #694ea4;
+	background: $header-note-color;
+	border: 1px solid $header-note-border;
 	padding: 6px 0;
 	padding-bottom: 7px;
 	font-size: 14px;

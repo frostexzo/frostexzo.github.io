@@ -20,7 +20,7 @@
 			width: calc(100% - 30px);
 			height: 100%;
 			z-index: 2;
-			background-color: #151516;
+			background-color: $bg-color;
 			display: flex;
 			align-items: center;
 		}
@@ -40,8 +40,8 @@
 		}
 
 		&__bottom {
-			background-color: #151516;
-			border: 1px solid #27272a;
+			background-color: $bg-color;
+			border: 1px solid $border-color;
 		}
 	}
 
@@ -100,7 +100,7 @@
 			margin-left: 10px;
 			padding-bottom: 5px;
 			padding-left: 5px;
-			border-bottom: 1px solid #27272a;
+			border-bottom: 1px solid $border-color;
 		}
 	}
 
@@ -148,7 +148,7 @@
 			&:not(:last-child) {
 				margin-bottom: 10px;
 				padding-bottom: 10px;
-				border-bottom: 1px solid #27272a;
+				border-bottom: 1px solid $border-color;
 			}
 
 			text-transform: uppercase;
@@ -157,7 +157,7 @@
 			display: block;
 
 			&:hover {
-				color: #ff7a00;
+				color: $orange;
 			}
 		}
 	}

@@ -24,7 +24,7 @@
 		display: flex;
 		flex-direction: column;
 		max-width: 223px;
-		border: 1px solid #27272a;
+		border: 1px solid $border-color;
 		transition: box-shadow 0.1s ease;
 
 		& img {
@@ -50,7 +50,7 @@
 			transition: color .1s ease;
 
 			&:hover {
-				color: #ff7a00;
+				color: $orange;
 			}
 		}
 
@@ -84,7 +84,7 @@
 	margin-top: -15px;
 
 	&:hover {
-		color: #ff7a00;
+		color: $orange;
 	}
 }
 

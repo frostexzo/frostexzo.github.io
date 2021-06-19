@@ -14,7 +14,7 @@
 	&__item {
 		background-color: #1b1b1d;
 		transition: box-shadow 0.1s ease;
-		border: 1px solid #27272a;
+		border: 1px solid $border-color;
 
 		&:hover {
 			box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.35);
@@ -26,7 +26,7 @@
 
 			& time {
 				margin-top: 10px;
-				color: #e5e5e5;
+				color: $dark-font-color;
 				display: block;
 				font-size: 14px;
 			}

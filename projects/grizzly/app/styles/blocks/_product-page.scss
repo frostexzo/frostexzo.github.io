@@ -27,8 +27,8 @@
 		display: flex;
 		padding: 20px;
 		flex-direction: column;
-		background: #151516;
-		border: 2px solid #ff7a00;
+		background: $bg-color;
+		border: 2px solid $orange;
 		border-radius: 4px;
 
 		&_block {
@@ -49,13 +49,13 @@
 				}
 
 				& input[type="checkbox"]:checked + .info__label_name {
-					color: #fff;
+					color: $main-font-color;
 				}
 			}
 		}
 
 		&_text {
-			color: rgba(255, 255, 255, 0.5);
+			color: $main-font-half-opacity;
 			font-size: 14px;
 			text-transform: uppercase;
 			margin-bottom: 5px;
@@ -74,11 +74,11 @@
 		margin-bottom: 18px;
 		padding-bottom: 18px;
 		text-transform: uppercase;
-		border-bottom: 1px solid #27272a;
+		border-bottom: 1px solid $border-color;
 	}
 
 	&__select {
-		border: 1px solid #27272a;
+		border: 1px solid $border-color;
 		display: flex;
 		align-items: center;
 
@@ -88,9 +88,9 @@
 			width: 15px;
 			height: 15px;
 			border-radius: 100%;
-			border: 3px solid #151516;
-			box-shadow: 0 0 0 1px #ff7a00;
-			background-color: #ff7a00;
+			border: 3px solid $bg-color;
+			box-shadow: 0 0 0 1px $orange;
+			background-color: $orange;
 			left: 10px;
 		}
 
@@ -122,29 +122,29 @@
 		& .products__select_popup {
 			border: 0;
 			top: 39px;
-			box-shadow: 0 0 0 1px #27272a;
+			box-shadow: 0 0 0 1px $border-color;
 		}
 	}
 
 	&__button {
 		font-weight: 700;
 		font-size: 16px;
-		color: #fff;
+		color: $main-font-color;
 		padding: 10px;
 		text-transform: uppercase;
 		width: 100%;
-		background-color: #222222;
+		background-color: $btn-color;
 		transition: background-color 0.1s ease;
 
 		&:hover {
-			background-color: lighten(#222222, 3%);
+			background-color: lighten($btn-color, 3%);
 		}
 
 		&.cart {
-			background-color: #ff7a00;
+			background-color: $orange;
 
 			&:hover {
-				background-color: darken(#ff7a00, 10%);
+				background-color: darken($orange, 10%);
 			}
 		}
 
@@ -162,14 +162,14 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		font-size: 16px;
-		color: rgba(255, 255, 255, 0.5);
+		color: $main-font-half-opacity;
 		width: 100%;
-		border: 1px solid #27272a;
+		border: 1px solid $border-color;
 		transition: border-color 0.1s ease, color 0.1s ease;
 
 		&.active {
-			color: #fff;
-			border-color: #ff7a00;
+			color: $main-font-color;
+			border-color: $orange;
 		}
 	}
 }
@@ -197,7 +197,7 @@
 		font-weight: 600;
 		font-size: 16px;
 		outline: none;
-		color: #fff;
+		color: $main-font-color;
 	}
 
 	&_button {
@@ -219,12 +219,12 @@
 		text-transform: uppercase;
 		padding: 10px 20px;
 		padding-top: 0;
-		border-bottom: 2px solid #27272a;
+		border-bottom: 2px solid $border-color;
 		font-size: 16px;
 		transition: border-color 0.1s ease;
 
 		&.active {
-			border-color: #ff7a00;
+			border-color: $orange;
 		}
 	}
 }
@@ -237,7 +237,7 @@
 	& ul {
 		margin-bottom: 10px;
 		line-height: 1.6;
-		color: #e5e5e5;
+		color: $dark-font-color;
 		display: block;
 		min-height: 10px;
 		font-size: 14px;
