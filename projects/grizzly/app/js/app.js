@@ -4,11 +4,17 @@ const app = () => {
 	return {
 		isSearchActive: false,
 		isMenuOpen: false,
-		isMoreActive: false,
-		isFilterOpen: false,
 		isLangOpen: false,
+		isMoreActive: false,
+
+		isOptionsOpen: false,
+		optionValue: null,
+		optionData: null,
+
 		productActiveTab: "desc",
-		filterValue: "LOWEST PRICE",
+		methodData: null,
+		quantityValue: 1,
+
 		bgPart: false,
 		bgFull: false,
 
@@ -32,13 +38,33 @@ const app = () => {
 			this.isMoreActive = true;
 		},
 
-		toggleFilter() {
-			this.isFilterOpen = !this.isFilterOpen;
+		toggleOptions() {
+			this.isOptionsOpen = !this.isOptionsOpen;
 		},
 
-		filterSelect(e) {
-			if (e == document.querySelector(".products__select_popup")) return;
-			this.filterValue = e.textContent.trim() || "LOWEST PRICE";
+		optionSelect(e) {
+			if (!e.classList.contains("products__select_item")) return;
+			this.optionValue = e.textContent.trim();
+			this.optionData = e.dataset.option;
+			this.toggleOptions();
+		},
+
+		methodSelect(e) {
+			if (!e.classList.contains("product__methods_item")) return;
+			this.methodData = e.dataset.method;
+		},
+
+		quantityChange(e) {
+			if (!e.classList.contains("product__quantity_button")) return;
+			const btnType = e.dataset.btn;
+			if (btnType === "plus") {
+				if (this.quantityValue >= 10) return;
+				this.quantityValue++;
+			}
+			else {
+				if (this.quantityValue <= 1) return;
+				this.quantityValue--;
+			}
 		},
 
 		selectProductTab(e) {

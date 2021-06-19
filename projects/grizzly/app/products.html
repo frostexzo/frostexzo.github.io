@@ -25,47 +25,57 @@
 		<div class="container">
 			<div class="products__inner">
 				<div class="products__meta">
-					<h2 class="products__title">Arena rating</h2>
+					<h1 class="products__title">Arena Rating</h1>
 
 					<div class="products__filter">
 						<span class="products__filter_text">Sort by:</span>
-						<div class="products__select" :class="isFilterOpen ? 'active' : ''">
+						<div
+							class="products__select"
+							:class="isOptionsOpen ? 'active' : ''"
+						>
+							<!-- Default Value in :value below -->
 							<input
-								@click.prevent="toggleFilter"
+								@click.prevent="toggleOptions"
 								readonly
 								class="products__select_input"
-								name="filter"
+								name="filters"
 								type="text"
-								:value="filterValue"
+								:value="optionValue || 'LOWEST PRICE'"
+							/>
+							<!-- Default Tech Value Here (use for backend) -->
+							<input
+								type="hidden"
+								name="filterData"
+								:value="optionData || 'lowest'"
 							/>
 							<div
-								@click.away="toggleFilter"
+								@click.away="toggleOptions"
 								x-cloak
-								x-show.transition.opacity="isFilterOpen === true"
+								x-show.transition.opacity="isOptionsOpen === true"
 								class="products__select_popup"
-								@click="filterSelect(event.target)"
+								@click.prevent="optionSelect(event.target)"
 							>
 								<button
 									class="products__select_item"
-									data-filter="lowest"
+									data-option="lowest"
 								>
 									LOWEST PRICE
 								</button>
 								<button
 									class="products__select_item"
-									data-filter="highest"
+									data-option="highest"
 								>
 									HIGHEST PRICE
 								</button>
 								<button
 									class="products__select_item"
-									data-filter="az"
+									data-option="az"
 								>
 									A - Z
 								</button>
 								<button
 									class="products__select_item"
-									data-filter="za"
+									data-option="za"
 								>
 									Z - A
 								</button>
@@ -75,8 +85,12 @@
 
 					<div class="products__subcats">
 						<a href="#" class="products__subcats_link">PVP</a>
-						<a href="#" class="products__subcats_link">ARENA RATING</a>
-						<a href="#" class="products__subcats_link">HONOR FARM</a>
+						<a href="#" class="products__subcats_link"
+							>ARENA RATING</a
+						>
+						<a href="#" class="products__subcats_link"
+							>HONOR FARM</a
+						>
 					</div>
 				</div>
 

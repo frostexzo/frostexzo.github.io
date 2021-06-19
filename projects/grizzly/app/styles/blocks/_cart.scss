@@ -7,24 +7,6 @@
 			margin-top: 8px;
 		}
 
-		&_name,
-		&_name a {
-			font-weight: 600;
-			margin-left: 5px;
-			line-height: 1;
-			margin-right: 10px;
-			color: rgba(255, 255, 255, 0.5);
-		}
-
-		&_name a {
-			margin: 0;
-			text-decoration: underline;
-
-			&:hover {
-				text-decoration: none;
-			}
-		}
-
 		&_img {
 			max-width: 210px;
 		}

@@ -17,6 +17,7 @@ const rsync        = require('gulp-rsync')
 const del          = require('del')
 const concat 	   = require('gulp-concat');
 const rimraf	   = require('gulp-rimraf');
+const px2rem       = require('gulp-px-to-rem');
 
 function browsersync() {
 	browserSync.init({
@@ -36,6 +37,7 @@ function styles() {
 		.pipe(eval(`${preprocessor}glob`)())
 		.pipe(eval(preprocessor)())
 		.pipe(autoprefixer({ overrideBrowserslist: ['last 1 version'], grid: true }))
+		.pipe(px2rem({accuracy: 4, rootPX: 16}))
 		.pipe(cleancss({ level: { 1: { specialComments: 0 } },/* format: 'beautify' */ }))
 		.pipe(rename({ suffix: ".min" }))
 		.pipe(dest('app/css'))
