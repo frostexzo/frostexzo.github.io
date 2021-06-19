@@ -189,6 +189,7 @@
 		padding: 3px 12px;
 		width: 100%;
 		display: flex;
+		min-height: 29px;
 		height: 100%;
 		align-items: center;
 		justify-content: center;
@@ -323,7 +324,7 @@
 	.product {
 		&__selectors {
 			flex-direction: column;
-			
+
 			&_item {
 				font-size: 14px;
 			}
