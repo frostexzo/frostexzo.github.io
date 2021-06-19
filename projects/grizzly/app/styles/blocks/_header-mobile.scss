@@ -136,12 +136,15 @@
 		}
 
 		&__categories {
+			margin-left: 10px;
+			width: 100%;
+
 			&_wrapper {
 				display: flex;
 				align-items: flex-start;
 			}
 
-			margin-top: -4px;
+			margin-top: -5px;
 		}
 
 		&__category {
@@ -151,6 +154,7 @@
 				border-bottom: 1px solid $border-color;
 			}
 
+			width: 100%;
 			text-transform: uppercase;
 			font-weight: 600;
 			transition: color 0.1s ease;
