@@ -40,7 +40,7 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()">
+	<body x-data="app()" x-init="checkCookie">
 		<header class="header">
 			<div
 				class="background-part"
@@ -90,7 +90,7 @@
 								</div>
 							</div>
 
-							<button class="header-support">
+							<button @click.prevent="toggleSupport" class="header-support">
 								<div class="header-support__title">
 									Support 24/7
 								</div>
@@ -190,6 +190,8 @@
 									<img
 										class="header-lang__arrow"
 										src="./images/dist/arrow-down.svg"
+										width="9"
+										height="6"
 										alt=""
 									/>
 								</div>
@@ -380,7 +382,7 @@
 						</div>
 					</div>
 
-					<button class="header-support mobile">
+					<button @click.prevent="toggleSupport" class="header-support mobile">
 						<div class="header-support__title">Get Support</div>
 					</button>
 				</div>

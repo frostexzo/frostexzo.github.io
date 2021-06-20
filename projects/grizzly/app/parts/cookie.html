@@ -1,0 +1,29 @@
+<div x-cloak x-show.transition.opacity="isCookieAccepted === false" class="cookie">
+	<div class="container">
+		<div class="cookie__inner">
+			<div class="cookie__block">
+				<img
+					src="./images/dist/cookie.svg"
+					width="42"
+					height="42"
+					alt="Cookie"
+				/>
+
+				<div class="cookie__info">
+					<span class="cookie__title">This site uses cookies!</span>
+					<p class="cookie__text">
+						We use cookies to offer you a better browsing
+						experience, analyze site traffic and personalize
+						content. By using this site or clicking I agree, you
+						consent to our use of cookies. You can read our policy
+						<a href="#">here</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="cookie__button_wrapper">
+				<button class="cookie__button" @click.prevent.once="acceptCookie">ACCEPT</button>
+			</div>
+		</div>
+	</div>
+</div>

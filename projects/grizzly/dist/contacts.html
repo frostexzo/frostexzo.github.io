@@ -40,7 +40,7 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()">
+	<body x-data="app()" x-init="checkCookie">
 		<header class="header">
 			<div
 				class="background-part"
@@ -90,7 +90,7 @@
 								</div>
 							</div>
 
-							<button class="header-support">
+							<button @click.prevent="toggleSupport" class="header-support">
 								<div class="header-support__title">
 									Support 24/7
 								</div>
@@ -190,6 +190,8 @@
 									<img
 										class="header-lang__arrow"
 										src="./images/dist/arrow-down.svg"
+										width="9"
+										height="6"
 										alt=""
 									/>
 								</div>
@@ -380,7 +382,7 @@
 						</div>
 					</div>
 
-					<button class="header-support mobile">
+					<button @click.prevent="toggleSupport" class="header-support mobile">
 						<div class="header-support__title">Get Support</div>
 					</button>
 				</div>
@@ -1092,6 +1094,134 @@
 		</div>
 	</div>
 </footer>
+
+<div x-cloak x-show.transition.opacity="isCookieAccepted === false" class="cookie">
+	<div class="container">
+		<div class="cookie__inner">
+			<div class="cookie__block">
+				<img
+					src="./images/dist/cookie.svg"
+					width="42"
+					height="42"
+					alt="Cookie"
+				/>
+
+				<div class="cookie__info">
+					<span class="cookie__title">This site uses cookies!</span>
+					<p class="cookie__text">
+						We use cookies to offer you a better browsing
+						experience, analyze site traffic and personalize
+						content. By using this site or clicking I agree, you
+						consent to our use of cookies. You can read our policy
+						<a href="#">here</a>.
+					</p>
+				</div>
+			</div>
+
+			<div class="cookie__button_wrapper">
+				<button class="cookie__button" @click.prevent.once="acceptCookie">ACCEPT</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div x-cloak x-show.transition.opacity="isSupportOpen === true" class="support">
+	<div class="support__inner">
+		<button @click.prevent.debounce.100ms="toggleSupport" class="support__close">
+			<img
+				src="./images/dist/close-orange.svg"
+				width="12"
+				height="12"
+				alt="Close Support"
+			/>
+		</button>
+
+		<img
+			class="support__img"
+			src="./images/dist/support.svg"
+			width="35"
+			height="35"
+			alt=""
+		/>
+		<span class="support__title">Live support</span>
+
+		<div class="support__links">
+			<div class="support__link">
+				<a href="#" class="footer__socials_link discord">
+					<svg
+						width="30"
+						height="23"
+						viewBox="0 0 30 23"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g clip-path="url(#clip0)">
+							<path
+								d="M25.3963 2.04811C23.4842 1.17979 21.4337 0.540059 19.2899 0.173656C19.2508 0.166585 19.2118 0.184257 19.1917 0.219601C18.928 0.683788 18.6359 1.28936 18.4314 1.76533C16.1255 1.42368 13.8315 1.42368 11.5729 1.76533C11.3683 1.27878 11.0656 0.683788 10.8007 0.219601C10.7806 0.185436 10.7416 0.167764 10.7026 0.173656C8.55989 0.538888 6.50945 1.17862 4.59617 2.04811C4.57961 2.05517 4.56541 2.06697 4.55599 2.08227C0.66674 7.83286 -0.398688 13.4421 0.123975 18.9818C0.12634 19.0089 0.141712 19.0348 0.162998 19.0513C2.72901 20.9163 5.21463 22.0485 7.6541 22.799C7.69314 22.8108 7.73451 22.7967 7.75935 22.7648C8.33641 21.9849 8.8508 21.1626 9.29185 20.2978C9.31787 20.2471 9.29303 20.187 9.23983 20.167C8.42391 19.8607 7.647 19.4872 6.89966 19.0631C6.84055 19.0289 6.83582 18.9452 6.8902 18.9052C7.04747 18.7886 7.20477 18.6672 7.35494 18.5447C7.38211 18.5223 7.41997 18.5176 7.45192 18.5317C12.3616 20.7502 17.6769 20.7502 22.5287 18.5317C22.5606 18.5164 22.5985 18.5211 22.6268 18.5435C22.7771 18.666 22.9343 18.7886 23.0928 18.9052C23.1472 18.9452 23.1436 19.0289 23.0845 19.0631C22.3372 19.4954 21.5602 19.8607 20.7431 20.1658C20.6899 20.1859 20.6663 20.2471 20.6923 20.2978C21.1428 21.1614 21.6572 21.9837 22.2236 22.7637C22.2473 22.7967 22.2898 22.8108 22.3289 22.799C24.7802 22.0485 27.2658 20.9163 29.8318 19.0513C29.8543 19.0348 29.8685 19.0101 29.8708 18.983C30.4964 12.5785 28.8231 7.01523 25.4353 2.08344C25.427 2.06697 25.4128 2.05517 25.3963 2.04811ZM10.025 15.6087C8.54687 15.6087 7.32892 14.2656 7.32892 12.6162C7.32892 10.9668 8.52325 9.62368 10.025 9.62368C11.5386 9.62368 12.7448 10.9785 12.7211 12.6162C12.7211 14.2656 11.5268 15.6087 10.025 15.6087ZM19.9934 15.6087C18.5153 15.6087 17.2974 14.2656 17.2974 12.6162C17.2974 10.9668 18.4917 9.62368 19.9934 9.62368C21.507 9.62368 22.7132 10.9785 22.6896 12.6162C22.6896 14.2656 21.507 15.6087 19.9934 15.6087Z"
+								fill="white"
+							/>
+						</g>
+					</svg>
+
+					<span>Grizzlyboost.com#5413</span>
+				</a>
+			</div>
+
+			<div class="support__link">
+				<a href="#" class="footer__socials_link skype">
+					<svg
+						width="30"
+						height="30"
+						viewBox="0 0 30 30"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g clip-path="url(#clip0)">
+							<path
+								d="M14.9118 23.9263C9.94952 23.9263 7.68231 21.3984 7.68231 19.5443C7.68164 19.102 7.86317 18.6789 8.18419 18.3746C8.50522 18.0704 8.93739 17.9117 9.37903 17.9361C11.5036 17.9361 10.9479 21.123 14.9118 21.123C16.938 21.123 18.1282 19.9033 18.1282 18.7574C18.1282 18.0689 17.7348 17.282 16.3971 16.9672L11.9708 15.8508C8.4151 14.9459 7.79542 12.9689 7.79542 11.1344C7.79542 7.32789 11.2774 5.95084 14.5921 5.95084C17.6462 5.95084 21.2758 7.63773 21.2758 9.91969C21.2758 10.9033 20.4544 11.4295 19.5003 11.4295C17.6856 11.4295 17.9905 8.88199 14.3413 8.88199C12.5266 8.88199 11.5725 9.73281 11.5725 10.923C11.5725 12.1131 12.9839 12.5164 14.2233 12.7869L17.4889 13.5246C21.0692 14.3312 22.0233 16.4312 22.0233 18.4426C22.0233 21.5361 19.6282 23.9263 14.9069 23.9263H14.9118ZM28.6135 17.3803C28.7552 16.5684 28.826 15.7456 28.8249 14.9213C28.8423 10.7809 27.023 6.84586 23.8575 4.17694C20.692 1.50801 16.5062 0.379918 12.4282 1.09674C11.1748 0.375085 9.75321 -0.00321187 8.3069 2.05422e-05C5.33818 0.0181558 2.60173 1.60924 1.11737 4.18029C-0.366981 6.75135 -0.376583 9.91673 1.09214 12.4967C0.272605 16.9999 1.70819 21.619 4.93585 24.8643C8.1635 28.1096 12.7748 29.5704 17.2823 28.7754C18.5342 29.4965 19.954 29.8748 21.3987 29.8722C24.3659 29.853 27.1007 28.2626 28.5847 25.6931C30.0688 23.1236 30.0797 19.96 28.6135 17.3803Z"
+								fill="white"
+							/>
+						</g>
+					</svg>
+
+					<span>grizzlyboost1.com@gmail.com</span>
+				</a>
+			</div>
+
+			<div class="support__link">
+				<a href="#" class="footer__socials_link mail">
+					<svg
+						width="28"
+						height="28"
+						viewBox="0 0 28 28"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M27.6153 3.34961L16.1335 14.8314C15.5451 15.4197 14.7727 15.7137 14 15.7137C13.2273 15.7137 12.4549 15.4197 11.8668 14.8314L0.384735 3.34961C0.14035 3.7854 0 4.2872 0 4.82147V23.2732C0 24.9366 1.3533 26.2902 3.017 26.2902H24.9832C26.6467 26.2902 28 24.9366 28 23.2732V4.82147C28 4.2872 27.8596 3.7854 27.6153 3.34961Z"
+							fill="white"
+						/>
+						<path
+							d="M14.9733 13.6714L26.4551 2.18942C26.0193 1.94482 25.5173 1.80469 24.9832 1.80469H3.017C2.48273 1.80469 1.98071 1.94482 1.54492 2.18942L13.0267 13.6714C13.5636 14.2081 14.4366 14.2081 14.9733 13.6714Z"
+							fill="white"
+						/>
+					</svg>
+
+					<span>@Grizzlyboostcom</span>
+				</a>
+			</div>
+		</div>
+
+		<span class="support__text"
+			>Copy our ID and add us to your friend list.</span
+		>
+
+		<a href="#" class="support__link-orange"
+			>How to add friend in Discord?</a
+		>
+	</div>
+</div>
+
 
 <script src="js/alpine.js"></script>
 <script src="js/swiper.js"></script>

@@ -15,6 +15,8 @@ const app = () => {
 		methodData: null,
 		quantityValue: 1,
 
+		isCookieAccepted: null,
+		isSupportOpen: false,
 		bgPart: false,
 		bgFull: false,
 
@@ -60,8 +62,7 @@ const app = () => {
 			if (btnType === "plus") {
 				if (this.quantityValue >= 10) return;
 				this.quantityValue++;
-			}
-			else {
+			} else {
 				if (this.quantityValue <= 1) return;
 				this.quantityValue--;
 			}
@@ -72,9 +73,28 @@ const app = () => {
 			this.productActiveTab = tab;
 		},
 
+		acceptCookie() {
+			localStorage.setItem("cookieAccepted", "yes");
+			this.isCookieAccepted = true;
+		},
+
+		checkCookie() {
+			if (localStorage.getItem("cookieAccepted") === "yes") {
+				return (this.isCookieAccepted = true);
+			}
+			return (this.isCookieAccepted = false);
+		},
+
+		toggleSupport() {
+			this.isSupportOpen = !this.isSupportOpen;
+			this.bgFull = !this.bgFull;
+			html.classList.toggle("overflow");
+		},
+
 		bgClick() {
 			this.isMenuOpen = false;
 			this.isSearchActive = false;
+			this.isSupportOpen = false;
 			this.bgPart = false;
 			this.bgFull = false;
 			html.classList.remove("overflow");
