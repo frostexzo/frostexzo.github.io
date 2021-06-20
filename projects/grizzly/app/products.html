@@ -55,25 +55,25 @@
 								class="products__select_popup"
 								@click.prevent="optionSelect(event.target)"
 							>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="lowest"
 								>
 									LOWEST PRICE
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="highest"
 								>
 									HIGHEST PRICE
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="az"
 								>
 									A - Z
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="za"
 								>
@@ -392,7 +392,7 @@
 					<div class="swiper-button-next slider-arrow"></div>
 				</div>
 
-				<button @click.prevent="showMore" class="feedback__button">
+				<button type="button" @click.prevent="showMore" class="feedback__button">
 					SHOW MORE
 				</button>
 

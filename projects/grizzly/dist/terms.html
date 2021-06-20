@@ -90,7 +90,7 @@
 								</div>
 							</div>
 
-							<button @click.prevent="toggleSupport" class="header-support">
+							<button type="button" @click.prevent="toggleSupport" class="header-support">
 								<div class="header-support__title">
 									Support 24/7
 								</div>
@@ -158,7 +158,7 @@
 									name="search"
 									placeholder="Search for service..."
 								/>
-								<button type="submit">
+								<button type="button" type="submit">
 									<svg
 										width="13"
 										height="13"
@@ -382,7 +382,7 @@
 						</div>
 					</div>
 
-					<button @click.prevent="toggleSupport" class="header-support mobile">
+					<button type="button" @click.prevent="toggleSupport" class="header-support mobile">
 						<div class="header-support__title">Get Support</div>
 					</button>
 				</div>
@@ -390,7 +390,7 @@
 				<div class="header-mobile__bottom">
 					<div class="header-mobile__bottom_main">
 						<div class="header-mobile__buttons">
-							<button
+							<button type="button"
 								@click.prevent="toggleMenu"
 								class="header-mobile__burger"
 							>
@@ -402,7 +402,7 @@
 								/>
 							</button>
 
-							<button
+							<button type="button"
 								@click.prevent="toggleSearch"
 								class="header-mobile__search"
 							>
@@ -444,7 +444,7 @@
 						class="header-mobile__bottom_search"
 					>
 						<div class="header-mobile__buttons">
-							<button
+							<button type="button"
 								@click.prevent="toggleSearch"
 								class="header-mobile__burger"
 							>
@@ -462,7 +462,7 @@
 							method="POST"
 							class="header-search mobile"
 						>
-							<button class="header-mobile__search">
+							<button type="button" class="header-mobile__search">
 								<img
 									src="./images/dist/search.svg"
 									alt="Search"
@@ -494,7 +494,7 @@
 					<h3 class="header-menu__title">Services</h3>
 
 					<div class="header-menu__categories_wrapper">
-						<button
+						<button type="button"
 							@click.prevent="toggleMenu"
 							class="header-menu__burger"
 						>
@@ -897,7 +897,7 @@
 					<div class="swiper-button-next slider-arrow"></div>
 				</div>
 
-				<button @click.prevent="showMore" class="feedback__button">
+				<button type="button" @click.prevent="showMore" class="feedback__button">
 					SHOW MORE
 				</button>
 
@@ -1050,7 +1050,7 @@
 			</div>
 
 			<div class="cookie__button_wrapper">
-				<button class="cookie__button" @click.prevent.once="acceptCookie">ACCEPT</button>
+				<button type="button" class="cookie__button" @click.prevent.once="acceptCookie">ACCEPT</button>
 			</div>
 		</div>
 	</div>
@@ -1058,7 +1058,7 @@
 
 <div x-cloak x-show.transition.opacity="isSupportOpen === true" class="support">
 	<div class="support__inner">
-		<button @click.prevent.debounce.100ms="toggleSupport" class="support__close">
+		<button type="button" @click.prevent="toggleSupport" class="support__close">
 			<img
 				src="./images/dist/close-orange.svg"
 				width="12"

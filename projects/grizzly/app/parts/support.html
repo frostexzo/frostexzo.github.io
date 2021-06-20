@@ -1,6 +1,6 @@
 <div x-cloak x-show.transition.opacity="isSupportOpen === true" class="support">
 	<div class="support__inner">
-		<button @click.prevent.debounce.100ms="toggleSupport" class="support__close">
+		<button type="button" @click.prevent="toggleSupport" class="support__close">
 			<img
 				src="./images/dist/close-orange.svg"
 				width="12"

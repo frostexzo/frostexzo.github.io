@@ -71,25 +71,25 @@
 								class="products__select_popup"
 								@click.prevent="optionSelect(event.target)"
 							>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="10boss"
 								>
 									10/10 bosses boost run
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="10boss"
 								>
 									10/10 bosses boost run
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="10boss"
 								>
 									10/10 bosses boost run
 								</button>
-								<button
+								<button type="button"
 									class="products__select_item"
 									data-option="10boss"
 								>
@@ -111,7 +111,7 @@
 								name="method"
 								:value="methodData"
 							/>
-							<button
+							<button type="button"
 								class="product__methods_item"
 								:class="methodData === 'piloted' ? 'active' : ''"
 								data-method="piloted"
@@ -119,7 +119,7 @@
 								PILOTED
 							</button>
 
-							<button
+							<button type="button"
 								class="product__methods_item"
 								:class="methodData === 'self' ? 'active' : ''"
 								data-method="self"
@@ -158,21 +158,21 @@
 							Quantity:
 						</span>
 						<div class="product__quantity" @click.prevent="quantityChange(event.target)">
-							<button class="product__quantity_button" data-btn="minus">
+							<button type="button" class="product__quantity_button" data-btn="minus">
 								<img src="./images/dist/minus.svg" alt="">
 							</button>
 
 							<input type="text" readonly class="product__quantity_input" :value="quantityValue">
 
-							<button class="product__quantity_button" data-btn="plus">
+							<button type="button" class="product__quantity_button" data-btn="plus">
 								<img src="./images/dist/plus.svg" alt="">
 							</button>
 						</div>
 					</div>
 
 					<div class="product__info_block row">
-						<button class="product__button">BUY NOW</button>
-						<button class="product__button cart">ADD TO CART</button>
+						<button type="button" class="product__button">BUY NOW</button>
+						<button type="button" class="product__button cart">ADD TO CART</button>
 					</div>
 				</div>
 			</div>
@@ -182,21 +182,21 @@
 					class="product__selectors"
 					@click.prevent="selectProductTab(event.target)"
 				>
-					<button
+					<button type="button"
 						:class="productActiveTab === 'desc' ? 'active' : ''"
 						data-tab="desc"
 						class="product__selectors_item"
 					>
 						DESCRIPTION
 					</button>
-					<button
+					<button type="button"
 						:class="productActiveTab === 'method' ? 'active' : ''"
 						data-tab="method"
 						class="product__selectors_item"
 					>
 						BOOST METHOD
 					</button>
-					<button
+					<button type="button"
 						:class="productActiveTab === 'reqs' ? 'active' : ''"
 						data-tab="reqs"
 						class="product__selectors_item"
@@ -472,7 +472,7 @@
 					<div class="swiper-button-next slider-arrow"></div>
 				</div>
 
-				<button @click.prevent="showMore" class="feedback__button">
+				<button type="button" @click.prevent="showMore" class="feedback__button">
 					SHOW MORE
 				</button>
 
