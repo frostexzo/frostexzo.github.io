@@ -1,0 +1,150 @@
+<section class="products">
+	<div class="container">
+		<div class="products__inner">
+			<div class="products__meta">
+				<h1 class="products__title">Arena Rating</h1>
+
+				<div class="products__filter">
+					<span class="products__filter_text">Sort by:</span>
+					<div
+						class="products__select"
+						:class="isOptionsOpen ? 'active' : ''"
+					>
+						<!-- Default Value in :value below -->
+						<input
+							@click.prevent="toggleOptions"
+							readonly
+							class="products__select_input"
+							name="filters"
+							type="text"
+							:value="optionValue || 'LOWEST PRICE'"
+						/>
+						<!-- Default Tech Value Here (use for backend) -->
+						<input
+							type="hidden"
+							name="filterData"
+							:value="optionData || 'lowest'"
+						/>
+						<div
+							@click.away="toggleOptions"
+							x-cloak
+							x-show.transition.opacity="isOptionsOpen === true"
+							class="products__select_popup"
+							@click.prevent="optionSelect(event.target)"
+						>
+							<button type="button"
+								class="products__select_item"
+								data-option="lowest"
+							>
+								LOWEST PRICE
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="highest"
+							>
+								HIGHEST PRICE
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="az"
+							>
+								A - Z
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="za"
+							>
+								Z - A
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="products__subcats">
+					<a href="#" class="products__subcats_link">PVP</a>
+					<a href="#" class="products__subcats_link"
+						>ARENA RATING</a
+					>
+					<a href="#" class="products__subcats_link"
+						>HONOR FARM</a
+					>
+				</div>
+			</div>
+
+			<div class="products__list">
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+				<a href="product.html" class="popular__item">
+					<img src="./images/dist/placeholder.jpg" alt="" />
+					<div class="popular__item_info">
+						<h4 class="popular__item_title">
+							CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR AMET POR
+						</h4>
+						<span class="popular__item_price"> $9.95 </span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>

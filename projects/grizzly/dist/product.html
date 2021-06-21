@@ -58,7 +58,7 @@
 				<div class="header__inner">
 					<div class="header__panel">
 						<div class="header__panel_left">
-							<a href="#" class="header-logo">
+							<a href="index.html" class="header-logo">
 								<img
 									src="./images/dist/logo.svg"
 									width="46"
@@ -215,7 +215,7 @@
 								</div>
 							</div>
 
-							<div class="header-cart">
+							<a href="cart.html" class="header-cart">
 								<div class="header-cart__icon">
 									<img
 										src="./images/dist/cart.svg"
@@ -226,103 +226,103 @@
 									<span>1</span>
 								</div>
 								<div class="header-cart__sum">$999.99</div>
-							</div>
+							</a>
 						</div>
 					</div>
 
 					<nav class="header__categories">
 						<div class="header__category">
-							<a href="#" class="header__category_main">RAIDS</a>
+							<a href="products.html" class="header__category_main">RAIDS</a>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main"
+							<a href="products.html" class="header__category_main"
 								>DUNGEONS & TORGHAST</a
 							>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main">PVP</a>
+							<a href="products.html" class="header__category_main">PVP</a>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main"
+							<a href="products.html" class="header__category_main"
 								>POWERLEVELING</a
 							>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main"
+							<a href="products.html" class="header__category_main"
 								>BUNDLES</a
 							>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main">MOUNTS</a>
+							<a href="products.html" class="header__category_main">MOUNTS</a>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
 						</div>
 
 						<div class="header__category">
-							<a href="#" class="header__category_main">TBC</a>
+							<a href="products.html" class="header__category_main">TBC</a>
 
 							<div class="header-select wide">
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>ARENA RATING</a
 								>
-								<a href="#" class="header-select__item"
+								<a href="products.html" class="header-select__item"
 									>HONOR FARM</a
 								>
 							</div>
@@ -557,484 +557,486 @@
 		<div class="container">
 			<div class="breadcrumbs__inner">
 				<a href="#" class="breadcrumbs__link">Main page</a>
-				<a href="#" class="breadcrumbs__link">PVP</a>
+				<a href="products.html" class="breadcrumbs__link">PVP</a>
 				<a href="#" class="breadcrumbs__link">Arena rating</a>
 			</div>
 		</div>
 	</section>
 
 	<section class="product">
-		<div class="container">
-			<div class="product__inner">
-				<div class="product__img">
-					<img
-						src="./images/dist/product.jpg"
-						decoding="async"
-						width="100%"
-						height="100%"
-						alt=""
-					/>
-				</div>
-				<div class="product__info">
-					<h1 class="product__title">TWISTING CORRIDORS</h1>
-
-					<div class="product__info_block">
-						<span class="product__info_text">Your order:</span>
-						<span class="product__price">$9.95</span>
-					</div>
-
-					<div class="product__info_block">
-						<span class="product__info_text"
-							>Twisted corridors boost run options:</span
-						>
-						<div
-							class="products__select product__select"
-							:class="isOptionsOpen ? 'active' : ''"
-						>
-							<!-- Default Value in :value below -->
-							<input
-								@click.prevent="toggleOptions"
-								readonly
-								class="products__select_input"
-								name="options"
-								type="text"
-								:value="optionValue || '10/10 bosses boost run'"
-							/>
-							<!-- Default Tech Value Here (use for backend) -->
-							<input
-								type="hidden"
-								name="optionData"
-								:value="optionData || '10boss'"
-							/>
-							<div
-								@click.away="toggleOptions"
-								x-cloak
-								x-show.transition.opacity="isOptionsOpen === true"
-								class="products__select_popup"
-								@click.prevent="optionSelect(event.target)"
-							>
-								<button type="button"
-									class="products__select_item"
-									data-option="10boss"
-								>
-									10/10 bosses boost run
-								</button>
-								<button type="button"
-									class="products__select_item"
-									data-option="10boss"
-								>
-									10/10 bosses boost run
-								</button>
-								<button type="button"
-									class="products__select_item"
-									data-option="10boss"
-								>
-									10/10 bosses boost run
-								</button>
-								<button type="button"
-									class="products__select_item"
-									data-option="10boss"
-								>
-									10/10 bosses boost run
-								</button>
-							</div>
-						</div>
-					</div>
-
-					<div class="product__info_block">
-						<span class="product__info_text">Boosting method:</span>
-						<div
-							class="product__methods"
-							@click.prevent="methodSelect(event.target)"
-						>
-							<!-- Default Tech Value Here (use for backend) -->
-							<input
-								type="hidden"
-								name="method"
-								:value="methodData"
-							/>
-							<button type="button"
-								class="product__methods_item"
-								:class="methodData === 'piloted' ? 'active' : ''"
-								data-method="piloted"
-							>
-								PILOTED
-							</button>
-
-							<button type="button"
-								class="product__methods_item"
-								:class="methodData === 'self' ? 'active' : ''"
-								data-method="self"
-							>
-								SELF-PLAY
-							</button>
-						</div>
-					</div>
-
-					<div class="product__info_block">
-						<span class="product__info_text"
-							>Benefits over others:</span
-						>
-						<label for="benefits" class="info__label checkbox">
-							<input id="benefits" type="checkbox" name="benefits" />
-							<div class="info__label_name">
-								10/10 bosses boost run
-							</div>
-						</label>
-						<label for="benefits2" class="info__label checkbox">
-							<input id="benefits2" type="checkbox" name="benefits2" />
-							<div class="info__label_name">
-								10/10 bosses boost run
-							</div>
-						</label>
-						<label for="benefits3" class="info__label checkbox">
-							<input id="benefits3" type="checkbox" name="benefits3" />
-							<div class="info__label_name">
-								10/10 bosses boost run
-							</div>
-						</label>
-					</div>
-
-					<div class="product__info_block">
-						<span class="product__info_text">
-							Quantity:
-						</span>
-						<div class="product__quantity" @click.prevent="quantityChange(event.target)">
-							<button type="button" class="product__quantity_button" data-btn="minus">
-								<img src="./images/dist/minus.svg" alt="">
-							</button>
-
-							<input type="text" readonly class="product__quantity_input" :value="quantityValue">
-
-							<button type="button" class="product__quantity_button" data-btn="plus">
-								<img src="./images/dist/plus.svg" alt="">
-							</button>
-						</div>
-					</div>
-
-					<div class="product__info_block row">
-						<button type="button" class="product__button">BUY NOW</button>
-						<button type="button" class="product__button cart">ADD TO CART</button>
-					</div>
-				</div>
+	<div class="container">
+		<div class="product__inner">
+			<div class="product__img">
+				<img
+					src="./images/dist/product.jpg"
+					decoding="async"
+					width="100%"
+					height="100%"
+					alt=""
+				/>
 			</div>
+			<div class="product__info">
+				<h1 class="product__title">TWISTING CORRIDORS</h1>
 
-			<div class="product__selectors_wrapper">
-				<div
-					class="product__selectors"
-					@click.prevent="selectProductTab(event.target)"
-				>
-					<button type="button"
-						:class="productActiveTab === 'desc' ? 'active' : ''"
-						data-tab="desc"
-						class="product__selectors_item"
-					>
-						DESCRIPTION
-					</button>
-					<button type="button"
-						:class="productActiveTab === 'method' ? 'active' : ''"
-						data-tab="method"
-						class="product__selectors_item"
-					>
-						BOOST METHOD
-					</button>
-					<button type="button"
-						:class="productActiveTab === 'reqs' ? 'active' : ''"
-						data-tab="reqs"
-						class="product__selectors_item"
-					>
-						REQUIREMENTS
-					</button>
+				<div class="product__info_block">
+					<span class="product__info_text">Your order:</span>
+					<span class="product__price">$9.95</span>
 				</div>
 
-				<div
-					x-show="productActiveTab === 'desc'"
-					class="product__content"
-				>
-					<h4>Fast Delivery</h4>
-					<p>
-						Feats of Strength achievement Shadowlands Keystone
-						Master: Season One given for completing all 8
-						Shadowlands dungeons on Mythic+15 mode in timer. As
-						reward you will get a lot of gear, eachievements and
-						great Sintouched Deathwalker mount.
-					</p>
+				<div class="product__info_block">
+					<span class="product__info_text"
+						>Twisted corridors boost run options:</span
+					>
+					<div
+						class="products__select product__select"
+						:class="isOptionsOpen ? 'active' : ''"
+					>
+						<!-- Default Value in :value below -->
+						<input
+							@click.prevent="toggleOptions"
+							readonly
+							class="products__select_input"
+							name="options"
+							type="text"
+							:value="optionValue || '10/10 bosses boost run'"
+						/>
+						<!-- Default Tech Value Here (use for backend) -->
+						<input
+							type="hidden"
+							name="optionData"
+							:value="optionData || '10boss'"
+						/>
+						<div
+							@click.away="toggleOptions"
+							x-cloak
+							x-show.transition.opacity="isOptionsOpen === true"
+							class="products__select_popup"
+							@click.prevent="optionSelect(event.target)"
+						>
+							<button type="button"
+								class="products__select_item"
+								data-option="10boss"
+							>
+								10/10 bosses boost run
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="10boss"
+							>
+								10/10 bosses boost run
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="10boss"
+							>
+								10/10 bosses boost run
+							</button>
+							<button type="button"
+								class="products__select_item"
+								data-option="10boss"
+							>
+								10/10 bosses boost run
+							</button>
+						</div>
+					</div>
 				</div>
 
-				<div
-					x-cloak
-					x-show="productActiveTab === 'method'"
-					class="product__content"
-				>
-					<h4>Content 2</h4>
-					<p>
-						Feats of Strength achievement Shadowlands Keystone
-						Master: Season One given for completing all 8
-						Shadowlands dungeons on Mythic+15 mode in timer. As
-						reward you will get a lot of gear, eachievements and
-						great Sintouched Deathwalker mount.
-					</p>
+				<div class="product__info_block">
+					<span class="product__info_text">Boosting method:</span>
+					<div
+						class="product__methods"
+						@click.prevent="methodSelect(event.target)"
+					>
+						<!-- Default Tech Value Here (use for backend) -->
+						<input
+							type="hidden"
+							name="method"
+							:value="methodData"
+						/>
+						<button type="button"
+							class="product__methods_item"
+							:class="methodData === 'piloted' ? 'active' : ''"
+							data-method="piloted"
+						>
+							PILOTED
+						</button>
+
+						<button type="button"
+							class="product__methods_item"
+							:class="methodData === 'self' ? 'active' : ''"
+							data-method="self"
+						>
+							SELF-PLAY
+						</button>
+					</div>
 				</div>
 
-				<div
-					x-cloak
-					x-show="productActiveTab === 'reqs'"
-					class="product__content"
-				>
-					<h4>Content 3</h4>
-					<p>
-						Feats of Strength achievement Shadowlands Keystone
-						Master: Season One given for completing all 8
-						Shadowlands dungeons on Mythic+15 mode in timer. As
-						reward you will get a lot of gear, eachievements and
-						great Sintouched Deathwalker mount.
-					</p>
+				<div class="product__info_block">
+					<span class="product__info_text"
+						>Benefits over others:</span
+					>
+					<label for="benefits" class="info__label checkbox">
+						<input id="benefits" type="checkbox" name="benefits" />
+						<div class="info__label_name">
+							10/10 bosses boost run
+						</div>
+					</label>
+					<label for="benefits2" class="info__label checkbox">
+						<input id="benefits2" type="checkbox" name="benefits2" />
+						<div class="info__label_name">
+							10/10 bosses boost run
+						</div>
+					</label>
+					<label for="benefits3" class="info__label checkbox">
+						<input id="benefits3" type="checkbox" name="benefits3" />
+						<div class="info__label_name">
+							10/10 bosses boost run
+						</div>
+					</label>
+				</div>
+
+				<div class="product__info_block">
+					<span class="product__info_text">
+						Quantity:
+					</span>
+					<div class="product__quantity" @click.prevent="quantityChange(event.target)">
+						<button type="button" class="product__quantity_button" data-btn="minus">
+							<img src="./images/dist/minus.svg" alt="">
+						</button>
+
+						<input type="text" readonly class="product__quantity_input" :value="quantityValue">
+
+						<button type="button" class="product__quantity_button" data-btn="plus">
+							<img src="./images/dist/plus.svg" alt="">
+						</button>
+					</div>
+				</div>
+
+				<div class="product__info_block row">
+					<button type="button" class="product__button">BUY NOW</button>
+					<button type="button" class="product__button cart">ADD TO CART</button>
 				</div>
 			</div>
 		</div>
-	</section>
+
+		<div class="product__selectors_wrapper">
+			<div
+				class="product__selectors"
+				@click.prevent="selectProductTab(event.target)"
+			>
+				<button type="button"
+					:class="productActiveTab === 'desc' ? 'active' : ''"
+					data-tab="desc"
+					class="product__selectors_item"
+				>
+					DESCRIPTION
+				</button>
+				<button type="button"
+					:class="productActiveTab === 'method' ? 'active' : ''"
+					data-tab="method"
+					class="product__selectors_item"
+				>
+					BOOST METHOD
+				</button>
+				<button type="button"
+					:class="productActiveTab === 'reqs' ? 'active' : ''"
+					data-tab="reqs"
+					class="product__selectors_item"
+				>
+					REQUIREMENTS
+				</button>
+			</div>
+
+			<div
+				x-show="productActiveTab === 'desc'"
+				class="product__content"
+			>
+				<h4>Fast Delivery</h4>
+				<p>
+					Feats of Strength achievement Shadowlands Keystone
+					Master: Season One given for completing all 8
+					Shadowlands dungeons on Mythic+15 mode in timer. As
+					reward you will get a lot of gear, eachievements and
+					great Sintouched Deathwalker mount.
+				</p>
+			</div>
+
+			<div
+				x-cloak
+				x-show="productActiveTab === 'method'"
+				class="product__content"
+			>
+				<h4>Content 2</h4>
+				<p>
+					Feats of Strength achievement Shadowlands Keystone
+					Master: Season One given for completing all 8
+					Shadowlands dungeons on Mythic+15 mode in timer. As
+					reward you will get a lot of gear, eachievements and
+					great Sintouched Deathwalker mount.
+				</p>
+			</div>
+
+			<div
+				x-cloak
+				x-show="productActiveTab === 'reqs'"
+				class="product__content"
+			>
+				<h4>Content 3</h4>
+				<p>
+					Feats of Strength achievement Shadowlands Keystone
+					Master: Season One given for completing all 8
+					Shadowlands dungeons on Mythic+15 mode in timer. As
+					reward you will get a lot of gear, eachievements and
+					great Sintouched Deathwalker mount.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
 
 	<section class="popular">
-		<div class="container">
-			<div class="popular__inner">
-				<h2 class="popular__title center">Best Seller Boosts</h2>
+	<div class="container">
+		<div class="popular__inner">
+			<h2 class="popular__title">Best Seller Boosts</h2>
 
-				<div class="popular__items_wrapper">
-					<div class="swiper-container popular__items_container">
-						<div class="swiper-wrapper">
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
+			<div class="popular__items_wrapper">
+				<div class="swiper-container popular__items_container">
+					<div class="swiper-wrapper">
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 
-							<a href="#" class="swiper-slide popular__item">
-								<img
-									src="./images/dist/placeholder.jpg"
-									alt=""
-								/>
-								<div class="popular__item_info">
-									<h4 class="popular__item_title">
-										CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
-										AMET POR
-									</h4>
-									<span class="popular__item_price">
-										$9.95
-									</span>
-								</div>
-							</a>
-						</div>
+						<a href="product.html" class="swiper-slide popular__item">
+							<img
+								src="./images/dist/placeholder.jpg"
+								alt=""
+							/>
+							<div class="popular__item_info">
+								<h4 class="popular__item_title">
+									CASTLE NATHRIA NORMAL LOREM IPSUM DOLOR
+									AMET POR
+								</h4>
+								<span class="popular__item_price">
+									$9.95
+								</span>
+							</div>
+						</a>
 					</div>
-
-					<div class="swiper-button-prev slider-arrow"></div>
-					<div class="swiper-button-next slider-arrow"></div>
 				</div>
+
+				<div class="swiper-button-prev slider-arrow"></div>
+				<div class="swiper-button-next slider-arrow"></div>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
 
 	<section class="feedback">
-		<div class="container">
-			<div class="feedback__inner">
-				<h2 class="feedback__title center">Customer’s voice</h2>
-				<span class="feedback__total"
-					>Excellent 4.9 rating, 124 reviews</span
+	<div class="container">
+		<div class="feedback__inner">
+			<h2 class="feedback__title center">Customer’s voice</h2>
+			<span class="feedback__total"
+				>Excellent 4.9 rating, 124 reviews</span
+			>
+
+			<div class="feedback__wrapper">
+				<div
+					class="swiper-container feedback__container"
+					:class="isMoreActive ? 'more' : ''"
 				>
-
-				<div class="feedback__wrapper">
-					<div
-						class="swiper-container feedback__container"
-						:class="isMoreActive ? 'more' : ''"
-					>
-						<div class="swiper-wrapper">
-							<div class="swiper-slide feedback__item">
-								<div class="feedback__item_meta">
-									<h4 class="feedback__item_name">
-										Jared Quebek
-									</h4>
-									<time>1 day ago</time>
-								</div>
-								<div class="feedback__item_review">
-									<img
-										src="./images/dist/stars.svg"
-										alt="5 stars"
-									/>
-								</div>
-								<p class="feedback__item_desc">
-									We're no strangers to love. You know the
-									rules and so do I. A full commitment's what
-									I'm thinking of you wouldn't get this from
-									any other guy. I just wanna tell you how I'm
-									feeling.
-								</p>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide feedback__item">
+							<div class="feedback__item_meta">
+								<h4 class="feedback__item_name">
+									Jared Quebek
+								</h4>
+								<time>1 day ago</time>
 							</div>
-
-							<div class="swiper-slide feedback__item">
-								<div class="feedback__item_meta">
-									<h4 class="feedback__item_name">
-										Jared Quebek
-									</h4>
-									<time>1 day ago</time>
-								</div>
-								<div class="feedback__item_review">
-									<img
-										src="./images/dist/stars.svg"
-										alt="5 stars"
-									/>
-								</div>
-								<p class="feedback__item_desc">
-									We're no strangers to love. You know the
-									rules and so do I. A full commitment's what
-									I'm thinking of you wouldn't get this from
-									any other guy. I just wanna tell you how I'm
-									feeling.
-								</p>
+							<div class="feedback__item_review">
+								<img
+									src="./images/dist/stars.svg"
+									alt="5 stars"
+								/>
 							</div>
+							<p class="feedback__item_desc">
+								We're no strangers to love. You know the
+								rules and so do I. A full commitment's what
+								I'm thinking of you wouldn't get this from
+								any other guy. I just wanna tell you how I'm
+								feeling.
+							</p>
+						</div>
 
-							<div class="swiper-slide feedback__item">
-								<div class="feedback__item_meta">
-									<h4 class="feedback__item_name">
-										Jared Quebek
-									</h4>
-									<time>1 day ago</time>
-								</div>
-								<div class="feedback__item_review">
-									<img
-										src="./images/dist/stars.svg"
-										alt="5 stars"
-									/>
-								</div>
-								<p class="feedback__item_desc">
-									We're no strangers to love. You know the
-									rules and so do I. A full commitment's what
-									I'm thinking of you wouldn't get this from
-									any other guy. I just wanna tell you how I'm
-									feeling.
-								</p>
+						<div class="swiper-slide feedback__item">
+							<div class="feedback__item_meta">
+								<h4 class="feedback__item_name">
+									Jared Quebek
+								</h4>
+								<time>1 day ago</time>
 							</div>
+							<div class="feedback__item_review">
+								<img
+									src="./images/dist/stars.svg"
+									alt="5 stars"
+								/>
+							</div>
+							<p class="feedback__item_desc">
+								We're no strangers to love. You know the
+								rules and so do I. A full commitment's what
+								I'm thinking of you wouldn't get this from
+								any other guy. I just wanna tell you how I'm
+								feeling.
+							</p>
+						</div>
 
-							<div class="swiper-slide feedback__item">
-								<div class="feedback__item_meta">
-									<h4 class="feedback__item_name">
-										Jared Quebek
-									</h4>
-									<time>1 day ago</time>
-								</div>
-								<div class="feedback__item_review">
-									<img
-										src="./images/dist/stars.svg"
-										alt="5 stars"
-									/>
-								</div>
-								<p class="feedback__item_desc">
-									We're no strangers to love. You know the
-									rules and so do I. A full commitment's what
-									I'm thinking of you wouldn't get this from
-									any other guy. I just wanna tell you how I'm
-									feeling.
-								</p>
+						<div class="swiper-slide feedback__item">
+							<div class="feedback__item_meta">
+								<h4 class="feedback__item_name">
+									Jared Quebek
+								</h4>
+								<time>1 day ago</time>
 							</div>
+							<div class="feedback__item_review">
+								<img
+									src="./images/dist/stars.svg"
+									alt="5 stars"
+								/>
+							</div>
+							<p class="feedback__item_desc">
+								We're no strangers to love. You know the
+								rules and so do I. A full commitment's what
+								I'm thinking of you wouldn't get this from
+								any other guy. I just wanna tell you how I'm
+								feeling.
+							</p>
+						</div>
+
+						<div class="swiper-slide feedback__item">
+							<div class="feedback__item_meta">
+								<h4 class="feedback__item_name">
+									Jared Quebek
+								</h4>
+								<time>1 day ago</time>
+							</div>
+							<div class="feedback__item_review">
+								<img
+									src="./images/dist/stars.svg"
+									alt="5 stars"
+								/>
+							</div>
+							<p class="feedback__item_desc">
+								We're no strangers to love. You know the
+								rules and so do I. A full commitment's what
+								I'm thinking of you wouldn't get this from
+								any other guy. I just wanna tell you how I'm
+								feeling.
+							</p>
 						</div>
 					</div>
-					<div class="swiper-button-prev slider-arrow"></div>
-					<div class="swiper-button-next slider-arrow"></div>
 				</div>
+				<div class="swiper-button-prev slider-arrow"></div>
+				<div class="swiper-button-next slider-arrow"></div>
+			</div>
 
-				<button type="button" @click.prevent="showMore" class="feedback__button">
-					SHOW MORE
-				</button>
+			<button type="button" @click.prevent="showMore" class="feedback__button">
+				SHOW MORE
+			</button>
 
-				<div class="feedback__trust">
-					<a href="">
-						<img
-							class="feedback__trust_logo"
-							src="./images/dist/trustpilot.svg"
-							alt=""
-						/>
-						<img
-							class="feedback__trust_stars"
-							src="./images/dist/stars.svg"
-							alt=""
-						/>
-					</a>
-				</div>
+			<div class="feedback__trust">
+				<a href="">
+					<img
+						class="feedback__trust_logo"
+						src="./images/dist/trustpilot.svg"
+						alt=""
+					/>
+					<img
+						class="feedback__trust_stars"
+						src="./images/dist/stars.svg"
+						alt=""
+					/>
+				</a>
 			</div>
 		</div>
-	</section>
+	</div>
+</section>
+
+
 </main>
 
 <footer class="footer">
@@ -1042,7 +1044,7 @@
 		<div class="container">
 			<div class="footer__content_inner">
 				<div class="footer__content_left">
-					<a href="#" class="footer__content_logo">
+					<a href="index.html" class="footer__content_logo">
 						<img src="./images/dist/logo.svg" alt="Grizzly" width="106" height="106">
 					</a>
 					<p class="footer__content_text">
@@ -1062,10 +1064,10 @@
 				<div class="footer__content_right">
 					<div class="footer__links">
 						<a href="#" class="footer__link">ABOUT US</a>
-						<a href="#" class="footer__link">CONTACTS</a>
+						<a href="contacts.html" class="footer__link">CONTACTS</a>
 						<a href="#" class="footer__link">F.A.Q.</a>
 						<a href="#" class="footer__link">PRIVACY POLICY</a>
-						<a href="#" class="footer__link">TERMS & CONDITIONS</a>
+						<a href="terms.html" class="footer__link">TERMS & CONDITIONS</a>
 						<a href="#" class="footer__link">REFUND POLICY</a>
 					</div>
 
