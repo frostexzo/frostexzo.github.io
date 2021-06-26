@@ -40,7 +40,7 @@ $gutter: $grid-gutter-width;
 }
 
 ::selection {
-	background-color: $accent;
+	background-color: lightblue;
 	color: #fff;
 }
 
@@ -76,10 +76,6 @@ textarea:required:valid {
 
 .lk::before {
 	width: 300px;
-}
-
-.nohome.lk .content {
-	margin-left: 300px;
 }
 
 .btn-lk {
@@ -282,15 +278,37 @@ body::before {
 	}
 }
 
-.content {
-	margin-left: 60px;
+.main {
 	height: calc(100vh - 120px);
 	overflow: hidden;
 	position: relative;
+	display: flex;
 
 	&.fullscreen {
-		margin-left: 0;
+		height: 100%;
 	}
+}
+
+.content {
+	width: 100%;
+}
+
+.home .filter {
+	width: 60px;
+	padding-top: 25px;
+}
+
+.filter {
+	height: 100%;
+	background-color: #1d7693;
+}
+
+.home .filter-mnu {
+	position: initial;
+}
+
+.home .content {
+	overflow: hidden;
 }
 
 .content-close {

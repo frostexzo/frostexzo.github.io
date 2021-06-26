@@ -40,23 +40,36 @@ document.addEventListener("DOMContentLoaded", () => {
 	$(".fullscreen-btn").on("click", function (e) {
 		e.preventDefault();
 		$(".header, .footer, .filter").hide();
-		$(".content").addClass("fullscreen");
+		$(".main").addClass("fullscreen");
 		$(".content-close").show();
 	});
 
 	$(".content-button--close").on("click", function (e) {
 		e.preventDefault();
 		$(".header, .footer, .filter").show();
-		$(".content").removeClass("fullscreen");
+		$(".main").removeClass("fullscreen");
 		$(".content-close").hide();
 	});
 
 	$(".filter-selected").on("click", function () {
-		$(this).toggleClass('active');
+		$(this).toggleClass("active");
 		$(this).closest(".filter-select").find(".filter-fields").slideToggle();
-	})
+	});
 
 	$(".filter-field").on("click", function () {
-		$(this).closest(".filter-select").find(".filter-selected span").text($(this).text());
-	})
+		$(this)
+			.closest(".filter-select")
+			.find(".filter-selected span")
+			.text($(this).text());
+	});
+
+	$(".filter-toggle").on("click", function () {
+		$(".filter").toggleClass("opened");
+		$(".content-overlay").fadeToggle();
+	});
+
+	$(".content-overlay").on("click", function () {
+		$(this).fadeOut();
+		$(".filter").toggleClass("opened");
+	});
 });
