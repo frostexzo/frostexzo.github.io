@@ -110,7 +110,7 @@ body {
 }
 
 .map {
-	height: inherit;
+	height: 100%;
 }
 
 body::before {
@@ -294,7 +294,9 @@ body::before {
 }
 
 .home .filter {
-	width: 60px;
+	min-width: 60px;
+	position: relative;
+	z-index: 3;
 	padding-top: 25px;
 }
 
@@ -416,6 +418,7 @@ body::before {
 .map img {
 	height: 100%;
 	width: 100%;
+	object-fit: cover;
 	position: relative;
 	z-index: -1;
 }
