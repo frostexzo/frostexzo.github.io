@@ -40,7 +40,7 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()" x-init="checkCookie">
+	<body x-data="app()" x-init="{...checkCookie(), ...checkRegion()}">
 		<header class="header">
 			<div
 				class="background-part"
@@ -61,8 +61,8 @@
 							<a href="index.html" class="header-logo">
 								<img
 									src="./images/dist/logo.svg"
-									width="46"
-									height="46"
+									width="54"
+									height="54"
 									alt="Grizzly"
 								/>
 							</a>

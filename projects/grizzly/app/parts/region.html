@@ -1,0 +1,23 @@
+<div
+	x-cloak
+	x-show.transition.opacity="isRegionSelected === false"
+	class="region"
+>
+	<div class="region__inner">
+		<span class="support__title">Choose Your Region</span>
+		<div class="region__buttons">
+			<button @click.prevent="selectRegion('EU')" class="region__button">
+				<img src="./images/dist/europe.svg" alt="Europe" />
+				<span class="region__name">EU</span>
+			</button>
+
+			<button @click.prevent="selectRegion('USA')" class="region__button">
+				<img src="./images/dist/usa.svg" alt="Usa" />
+				<span class="region__name">USA</span>
+			</button>
+		</div>
+		<p class="region__text">
+			Before entering the site, you need to select a region. Services and prices depend on the region.
+		</p>
+	</div>
+</div>

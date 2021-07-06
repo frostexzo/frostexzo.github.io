@@ -19,13 +19,15 @@
 		}
 
 		&_left > *:not(:last-child) {
-			margin-right: $m-right;
+			margin-right: 22px;
 		}
 	}
 
 	&-logo {
+		display: flex;
+
 		& img {
-			max-width: 46px;
+			max-width: 54px;
 		}
 	}
 }
@@ -51,7 +53,11 @@
 	}
 
 	&.lang {
-		margin-left: -26px;
+		left: 0;
+		padding: 12px 14px;
+		margin-top: 2px;
+		border: 0;
+		box-shadow: 0 0 0 1px $border-color;
 	}
 
 	&.wide {
@@ -161,16 +167,22 @@
 
 	&__input {
 		color: $dark-font-color;
-		opacity: 0.5;
 		max-width: 220px;
 		width: 100%;
 		font-size: 14px;
 		margin-right: 10px;
 		outline: none;
-		transition: opacity 0.1s ease;
+		transition: color 0.1s ease;
 
 		&:focus {
-			opacity: 1;
+			color: $main-font-color;
+
+			&::placeholder {
+				opacity: 0;
+			}
+			&::-webkit-input-placeholder {
+				opacity: 0;
+			}
 		}
 	}
 }
@@ -199,6 +211,13 @@
 				transform: scale(-1);
 			}
 		}
+	}
+}
+
+@media screen and (min-width: 901px) {
+	.header-lang {
+		padding: 8.5px 14px;
+		border: 2px solid $border-color;
 	}
 }
 

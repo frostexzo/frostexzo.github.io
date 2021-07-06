@@ -40,7 +40,7 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()" x-init="checkCookie">
+	<body x-data="app()" x-init="{...checkCookie(), ...checkRegion()}">
 		<header class="header">
 			<div
 				class="background-part"
@@ -61,8 +61,8 @@
 							<a href="index.html" class="header-logo">
 								<img
 									src="./images/dist/logo.svg"
-									width="46"
-									height="46"
+									width="54"
+									height="54"
 									alt="Grizzly"
 								/>
 							</a>
@@ -1030,6 +1030,7 @@
 						src="./images/dist/stars.svg"
 						alt=""
 					/>
+					<span class="feedback__trust_count">4.9</span>
 				</a>
 			</div>
 		</div>
@@ -1048,7 +1049,7 @@
 						<img src="./images/dist/logo.svg" alt="Grizzly" width="106" height="106">
 					</a>
 					<p class="footer__content_text">
-						Grizzlyboost.com - Ingame boosting services 2020-2021Ⓒ
+						Grizzlyboost.com - Ingame boosting services 2020-2021<span style="font-size: 13px">Ⓒ</span>
 					</p>
 
 					<div class="footer__content_payment">
@@ -1092,11 +1093,12 @@
 							<span>grizzlyboost1.com@gmail.com</span>
 						</a>
 
-						<a href="#" class="footer__socials_link fb">
-							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15.0912C30 6.75721 23.2836 0 15 0C6.71637 0 0 6.75721 0 15.0912C0 22.623 5.48451 28.8666 12.6565 30V19.4546H8.84685V15.0912H12.6565V11.7656C12.6565 7.98379 14.8967 5.89338 18.3223 5.89338C19.9634 5.89338 21.6805 6.18836 21.6805 6.18836V9.90233H19.7883C17.9258 9.90233 17.3435 11.0653 17.3435 12.2601V15.0911H21.5032L20.8387 19.4544H17.3434V29.9999C24.5154 28.8686 29.9999 22.625 29.9999 15.0911L30 15.0912Z" fill="white"/>
-							</svg>				
-								
+						<a href="#" class="footer__socials_link mail">
+										
+							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M27.6153 3.34961L16.1335 14.8314C15.5451 15.4197 14.7727 15.7137 14 15.7137C13.2273 15.7137 12.4549 15.4197 11.8668 14.8314L0.384735 3.34961C0.14035 3.7854 0 4.2872 0 4.82147V23.2732C0 24.9366 1.3533 26.2902 3.017 26.2902H24.9832C26.6467 26.2902 28 24.9366 28 23.2732V4.82147C28 4.2872 27.8596 3.7854 27.6153 3.34961Z" fill="white"/>
+								<path d="M14.9733 13.6714L26.4551 2.18942C26.0193 1.94482 25.5173 1.80469 24.9832 1.80469H3.017C2.48273 1.80469 1.98071 1.94482 1.54492 2.18942L13.0267 13.6714C13.5636 14.2081 14.4366 14.2081 14.9733 13.6714Z" fill="white"/>
+							</svg>
 							<span>grizzlyboost.com@gmail.com</span>
 						</a>
 
@@ -1120,12 +1122,10 @@
 							<span>@Grizzlyboost</span>
 						</a>
 
-						<a href="#" class="footer__socials_link mail">
-							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M27.6153 3.34961L16.1335 14.8314C15.5451 15.4197 14.7727 15.7137 14 15.7137C13.2273 15.7137 12.4549 15.4197 11.8668 14.8314L0.384735 3.34961C0.14035 3.7854 0 4.2872 0 4.82147V23.2732C0 24.9366 1.3533 26.2902 3.017 26.2902H24.9832C26.6467 26.2902 28 24.9366 28 23.2732V4.82147C28 4.2872 27.8596 3.7854 27.6153 3.34961Z" fill="white"/>
-								<path d="M14.9733 13.6714L26.4551 2.18942C26.0193 1.94482 25.5173 1.80469 24.9832 1.80469H3.017C2.48273 1.80469 1.98071 1.94482 1.54492 2.18942L13.0267 13.6714C13.5636 14.2081 14.4366 14.2081 14.9733 13.6714Z" fill="white"/>
+						<a href="#" class="footer__socials_link fb">
+							<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M30 15.0912C30 6.75721 23.2836 0 15 0C6.71637 0 0 6.75721 0 15.0912C0 22.623 5.48451 28.8666 12.6565 30V19.4546H8.84685V15.0912H12.6565V11.7656C12.6565 7.98379 14.8967 5.89338 18.3223 5.89338C19.9634 5.89338 21.6805 6.18836 21.6805 6.18836V9.90233H19.7883C17.9258 9.90233 17.3435 11.0653 17.3435 12.2601V15.0911H21.5032L20.8387 19.4544H17.3434V29.9999C24.5154 28.8686 29.9999 22.625 29.9999 15.0911L30 15.0912Z" fill="white"/>
 							</svg>
-								
 											
 							<span>@Grizzlyboostcom</span>
 						</a>
@@ -1193,7 +1193,7 @@
 			height="35"
 			alt=""
 		/>
-		<span class="support__title">Live support</span>
+		<span class="support__title">Live Support</span>
 
 		<div class="support__links">
 			<div class="support__link">
@@ -1257,7 +1257,7 @@
 						/>
 					</svg>
 
-					<span>@Grizzlyboostcom</span>
+					<span>grizzlyboost.com@gmail.com</span>
 				</a>
 			</div>
 		</div>
@@ -1269,6 +1269,30 @@
 		<a href="#" class="support__link-orange"
 			>How to add friend in Discord?</a
 		>
+	</div>
+</div>
+
+<div
+	x-cloak
+	x-show.transition.opacity="isRegionSelected === false"
+	class="region"
+>
+	<div class="region__inner">
+		<span class="support__title">Choose Your Region</span>
+		<div class="region__buttons">
+			<button @click.prevent="selectRegion('EU')" class="region__button">
+				<img src="./images/dist/europe.svg" alt="Europe" />
+				<span class="region__name">EU</span>
+			</button>
+
+			<button @click.prevent="selectRegion('USA')" class="region__button">
+				<img src="./images/dist/usa.svg" alt="Usa" />
+				<span class="region__name">USA</span>
+			</button>
+		</div>
+		<p class="region__text">
+			Before entering the site, you need to select a region. Services and prices depend on the region.
+		</p>
 	</div>
 </div>
 

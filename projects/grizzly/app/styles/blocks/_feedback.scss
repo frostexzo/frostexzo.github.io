@@ -79,6 +79,13 @@
 		&_stars {
 			width: 133px;
 		}
+
+		&_count {
+			display: block;
+			margin-left: 8px;
+			font-size: 18px;
+			font-weight: 600;
+		}
 	}
 }
 
@@ -131,6 +138,10 @@
 
 			&_stars {
 				max-width: 90px;
+			}
+
+			&_count {
+				font-size: 16px;
 			}
 		}
 	}

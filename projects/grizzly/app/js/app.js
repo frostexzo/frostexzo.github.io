@@ -12,11 +12,12 @@ const app = () => {
 		optionData: null,
 
 		productActiveTab: "desc",
-		methodData: null,
+		methodData: "piloted",
 		quantityValue: 1,
 
 		isCookieAccepted: null,
 		isSupportOpen: false,
+		isRegionSelected: null,
 		bgPart: false,
 		bgFull: false,
 
@@ -37,7 +38,7 @@ const app = () => {
 		},
 
 		showMore() {
-			this.isMoreActive = true;
+			this.isMoreActive = !this.isMoreActive;
 		},
 
 		toggleOptions() {
@@ -85,6 +86,19 @@ const app = () => {
 			return (this.isCookieAccepted = false);
 		},
 
+		selectRegion(region) {
+			localStorage.setItem("selectedRegion", region);
+			this.isRegionSelected = true;
+			this.bgFull = false;
+		},
+
+		checkRegion() {
+			if (localStorage.getItem("selectedRegion")) {
+				return (this.isRegionSelected = true);
+			}
+			return (this.isRegionSelected = false), (this.bgFull = true);
+		},
+
 		toggleSupport() {
 			this.isSupportOpen = !this.isSupportOpen;
 			this.bgFull = !this.bgFull;
@@ -96,8 +110,11 @@ const app = () => {
 			this.isSearchActive = false;
 			this.isSupportOpen = false;
 			this.bgPart = false;
-			this.bgFull = false;
 			html.classList.remove("overflow");
+
+			if (this.isRegionSelected) {
+				this.bgFull = false;
+			}
 		},
 	};
 };
