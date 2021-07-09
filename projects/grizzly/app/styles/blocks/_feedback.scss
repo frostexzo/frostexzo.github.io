@@ -14,6 +14,7 @@
 		display: block;
 		text-align: center;
 		font-weight: 700;
+		font-size: 24px;
 		margin-bottom: 20px;
 		color: $orange;
 	}
@@ -83,8 +84,9 @@
 		&_count {
 			display: block;
 			margin-left: 8px;
-			font-size: 18px;
+			font-size: 22px;
 			font-weight: 600;
+			line-height: 1;
 		}
 	}
 }
@@ -125,6 +127,10 @@
 			margin-bottom: 20px;
 			width: 100%;
 			font-weight: 700;
+		}
+
+		&__total {
+			font-size: 18px;
 		}
 
 		&__wrapper {

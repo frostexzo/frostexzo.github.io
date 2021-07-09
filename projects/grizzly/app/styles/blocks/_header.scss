@@ -27,7 +27,7 @@
 		display: flex;
 
 		& img {
-			max-width: 54px;
+			max-width: 56px;
 		}
 	}
 }
@@ -89,6 +89,10 @@
 		display: flex;
 		align-items: center;
 		margin-bottom: 3px;
+
+		&_img {
+			max-width: 78px;
+		}
 
 		& img:last-child {
 			margin-left: 8px;
@@ -214,7 +218,7 @@
 	}
 }
 
-@media screen and (min-width: 901px) {
+@media screen and (min-width: 935px) {
 	.header-lang {
 		padding: 8.5px 14px;
 		border: 2px solid $border-color;
@@ -353,7 +357,7 @@
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 935px) {
 	.header {
 		&__panel,
 		&__categories {

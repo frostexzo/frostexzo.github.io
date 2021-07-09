@@ -1,10 +1,10 @@
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 935px) {
 	.header-mobile {
 		display: none !important;
 	}
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 935px) {
 	.header-mobile {
 		&__bottom_main {
 			display: flex;
