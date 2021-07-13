@@ -27,7 +27,7 @@
 		<header class="header">
 			<div class="header-logo">
 				<a href="/"
-					><img src="images/dist/logo.svg" alt="Трекинг судов"
+					><img src="images/dist/logo.svg" width="44" height="41" alt="Трекинг судов"
 				/></a>
 			</div>
 			<div class="header-mnu">
@@ -67,7 +67,61 @@
 				</div>
 			</div>
 			<div class="header-burger">
-				<img src="images/dist/burger.svg" alt="">
+				<img src="images/dist/burger.svg" width="40" height="26" alt="">
+			</div>
+
+			<div class="header-menu">
+				<div class="header-menu__inner">
+					<div class="header-menu-close">
+						<img src="images/dist/icons/close.svg" alt="">
+					</div>
+					
+					<div class="filter-mnu menu">
+						<ul>
+							<li class="filter-btn" data-modal="flot" title="Флоты">
+								<img src="images/dist/icons/star-mobile.svg" alt="">
+							</li>
+							<li class="filter-btn" data-modal="filter" title="Фильтры">
+								<img src="images/dist/icons/settings-mobile.svg" alt="">
+							</li>
+							<li class="fullscreen-btn" title="Полноэкранный режим">
+								<img src="images/dist/icons/fullscreen-mobile.svg" alt="">
+							</li>
+							<li title="Обновить">
+								<img src="images/dist/icons/reload-mobile.svg" alt="">
+							</li>
+						</ul>
+					</div>
+
+					<div class="header-links menu">
+						<div class="header-links--item vac">
+							<a href="#">Работа в море</a>
+							<span>1</span>
+						</div>
+
+						<div class="header-links__wrapper">
+								<div class="header-links--item login">
+									<a href="/lk.html"><img src="images/dist/icons/gr.svg" width="32" height="32" alt=""></a>
+								</div>
+								<div class="header-links--item gr">
+									<a href="#"><img src="images/dist/icons/login.svg" width="32" height="32" alt=""></a>
+								</div>
+								<div class="header-links--item lang">
+									<a href="#"><img src="images/dist/icons/lang.svg" width="50" height="30" alt=""></a>
+								</div>
+						</div>
+					</div>
+
+					<div class="header-mnu menu">
+						<ul>
+							<li><a href="index.html">Карта</a></li>
+							<li><a href="dbsud.html">Суда</a></li>
+							<li><a href="photosud.html">Фото судов</a></li>
+							<li><a href="dbports.html">Порты</a></li>
+							<li><a href="#">Больше</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</header>
 	</body>
@@ -116,6 +170,30 @@
 					суда, около каждого из портов также видны на карте.
 				</p>
 			</div>
+
+			<div class="sorting">
+				<div class="sorting__selector">
+					<span>Сортировать по:</span>
+					<select class="sorting__select" name="" id="">
+						<option value="price">Цена</option>
+						<option value="price">Длина</option>
+					</select>
+				</div>
+
+				<div class="sorting__amount">
+					<span>Показывать:</span>
+					<div class="sorting__amount_buttons">
+						<button class="sorting__button" type="button">5</button>
+						<button class="sorting__button" type="button">
+							10
+						</button>
+						<button class="sorting__button" type="button">
+							20
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="content-pagination">
 				<span>1600 портов</span>
 				<ul>
@@ -342,6 +420,8 @@
 					</div>
 				</div>
 			</div>
+
+			<button type="button" class="button-more">Показать еще</button>
 		</div>
 	</section>
 </main>

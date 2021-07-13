@@ -41,6 +41,30 @@
 				<h1 class="h1">Фото судов</h1>
 				<p>AIS Информация судна / позиция</p>
 			</div>
+			
+			<div class="sorting">
+				<div class="sorting__selector">
+					<span>Сортировать по:</span>
+					<select class="sorting__select" name="" id="">
+						<option value="price">Цена</option>
+						<option value="price">Длина</option>
+					</select>
+				</div>
+
+				<div class="sorting__amount">
+					<span>Показывать:</span>
+					<div class="sorting__amount_buttons">
+						<button class="sorting__button" type="button">5</button>
+						<button class="sorting__button" type="button">
+							10
+						</button>
+						<button class="sorting__button" type="button">
+							20
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="content-pagination between">
 				<div class="content-pagination--filters">
 					<span>Сортировать по: </span>
@@ -133,6 +157,10 @@
 					/>
 				</div>
 			</div>
+
+			<button type="button" class="button-more">
+				Показать еще
+			</button>
 		</div>
 	</section>
 </main>

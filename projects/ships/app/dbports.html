@@ -44,6 +44,30 @@
 					суда, около каждого из портов также видны на карте.
 				</p>
 			</div>
+
+			<div class="sorting">
+				<div class="sorting__selector">
+					<span>Сортировать по:</span>
+					<select class="sorting__select" name="" id="">
+						<option value="price">Цена</option>
+						<option value="price">Длина</option>
+					</select>
+				</div>
+
+				<div class="sorting__amount">
+					<span>Показывать:</span>
+					<div class="sorting__amount_buttons">
+						<button class="sorting__button" type="button">5</button>
+						<button class="sorting__button" type="button">
+							10
+						</button>
+						<button class="sorting__button" type="button">
+							20
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="content-pagination">
 				<span>1600 портов</span>
 				<ul>
@@ -270,6 +294,8 @@
 					</div>
 				</div>
 			</div>
+
+			<button type="button" class="button-more">Показать еще</button>
 		</div>
 	</section>
 </main>

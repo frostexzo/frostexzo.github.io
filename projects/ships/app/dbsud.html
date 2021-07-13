@@ -4,7 +4,12 @@
 
 <main class="main">
 	<div class="filter-toggle">
-		<img src="images/dist/filter-toggle.svg" width="16" height="16" alt="Search">
+		<img
+			src="images/dist/filter-toggle.svg"
+			width="16"
+			height="16"
+			alt="Search"
+		/>
 		<div>CLICK TO SEARCH</div>
 	</div>
 
@@ -115,6 +120,29 @@
 				<h1 class="h1">База данных судов</h1>
 				<p>AIS Информация судна / позиция</p>
 			</div>
+			<div class="sorting">
+				<div class="sorting__selector">
+					<span>Сортировать по:</span>
+					<select class="sorting__select" name="" id="">
+						<option value="price">Цена</option>
+						<option value="price">Длина</option>
+					</select>
+				</div>
+
+				<div class="sorting__amount">
+					<span>Показывать:</span>
+					<div class="sorting__amount_buttons">
+						<button class="sorting__button" type="button">5</button>
+						<button class="sorting__button" type="button">
+							10
+						</button>
+						<button class="sorting__button" type="button">
+							20
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<div class="content-pagination between">
 				<div class="content-pagination--filters">
 					<span>Сортировать по: </span>

@@ -72,4 +72,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		$(this).fadeOut();
 		$(".filter").toggleClass("opened");
 	});
+
+	$(".header-burger").on("click", function () {
+		$(".header-menu").fadeIn();
+	});
+
+	$(".header-menu-close").on("click", function () {
+		$(".header-menu").fadeOut();
+	});
+
+	$(".button-more").on("click", function () {
+		$(".images-item, .content-item").addClass("full");
+		$(this).remove();
+	})
 });
