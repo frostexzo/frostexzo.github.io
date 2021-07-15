@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Бюро ЭТР</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="stylesheet" href="css/main.min.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+	</head>
+
+	<body x-data="app()">
+		<header class="header">
+			<div class="container container-wide">
+				<div class="header__inner">
+					<a href="#" class="header-logo">
+						<img
+							src="images/dist/logo.svg"
+							width="126"
+							height="93"
+							alt="БЮРО ЭКР"
+						/>
+					</a>
+
+					<span class="header-slogan">
+						Бюро<br />электротехнических<br />решений
+					</span>
+
+					<nav class="header-nav">
+						<a href="#" class="header-nav__link">
+							Электромонтажные<br />работы
+						</a>
+						<a href="#" class="header-nav__link">
+							Электролаборатория
+						</a>
+						<a href="#" class="header-nav__link">
+							Оборудование<br>оптом
+						</a>
+						<a href="#" class="header-nav__link">Контакты</a>
+					</nav>
+
+					<div class="header-phones">
+						<a href="tel:+77003402777">+7 700 340 27 77</a>
+						<a href="tel:+77473402777">+7 747 340 27 77</a>
+					</div>
+
+					<div class="header-button">
+						<button type="button" class="btn-primary">Оставить заявку</button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+
+<main class="main">
+	<section class="hero">
+	<div class="container container-md">
+		<div class="hero__inner">
+			<h1 class="hero__title">
+				Электротехнические работы с применением современного
+				оборудования и гарантией до 3-х лет
+			</h1>
+
+			<div class="hero__features">
+				<span class="hero__features_item"
+					>Работаем в Алматы и Алматинской области</span
+				>
+				<span class="hero__features_item"
+					>Собственная передвижная электролаборатория</span
+				>
+				<span class="hero__features_item"
+					>Оборудование напрямую от производителей</span
+				>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="services">
+	<div class="container container-md">
+		<form action="" method="POST" class="form form-calc">
+	<div class="form__inner">
+		<h3 class="form__title">
+			Получите бесплатный расчет стоимости работ в течение 30 минут
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs">
+				<input
+					class="form__input"
+					type="text"
+					name="fullname"
+					required
+					placeholder="Имя*"
+				/>
+				<input
+					class="form__input"
+					type="tel"
+					name="tel"
+					required
+					placeholder="Телефон*"
+				/>
+				<input
+					class="form__input"
+					type="email"
+					name="email"
+					required
+					placeholder="E-mail*"
+				/>
+				<label class="form__attach" for="attach">
+					<input type="file" id="attach" name="file" />
+					<img
+						src="./images/dist/attach.svg"
+						width="30"
+						height="40"
+						alt=""
+					/>
+					<span>Прикрепите тех.документы<br />(если имеются)</span>
+				</label>
+			</div>
+			<label for="privacy" class="form__checkbox">
+				<input type="checkbox" id="privacy" name="privacy" required checked />
+				<span
+					>даю согласие на сбор и обработку персональных данных</span
+				>
+			</label>
+			<div class="form__submit">
+				<button type="submit" class="btn-white">
+					Оставить заявку
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+		<div class="services__inner">
+			<h2 class="services__title">
+				Предоставляем широкий спектр услуг под ключ
+			</h2>
+
+			<div class="services__items">
+				<div class="services__item">
+					<div class="services__item_img">
+						<img src="../images/dist/services1.jpg" alt="" />
+
+						<div class="services__item_button">
+							<button type="button" class="btn-primary">
+								Оставить заявку
+							</button>
+						</div>
+					</div>
+
+					<div class="services__item_info">
+						<h3 class="services__item_title">
+							Электромонтажные работы
+						</h3>
+
+						<ul class="services__item_features">
+							<li>
+								Монтаж трансформаторных подстанций 0,4-10 кВ
+							</li>
+							<li>
+								Прокладка новых и реконструкция старых кабельных
+								линий 0,4-10 кВ
+							</li>
+							<li>Сборка и установка КЯ, ВРУ, ГРЩ</li>
+							<li>Установка электроосветительных приборов</li>
+							<li>
+								Пуско-наладочные работы шкафов управления и
+								насосного оборудования
+							</li>
+							<li>Монтаж контуров заземления и молниезащит</li>
+							<li>
+								Изготовление мобильного центра обработки данных
+								на базе морского контейнера (Майнинг ферма)
+							</li>
+							<li>
+								Монтаж систем обогрева водостоков, желобов,
+								водяных труб и канализаций
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="services__item">
+					<div class="services__item_img">
+						<img src="../images/dist/services2.jpg" alt="" />
+
+						<div class="services__item_button">
+							<button type="button" class="btn-primary">
+								Оставить заявку
+							</button>
+						</div>
+					</div>
+
+					<div class="services__item_info">
+						<h3 class="services__item_title">
+							Электроремонтные работы
+						</h3>
+
+						<ul class="services__item_features">
+							<li>
+								Устранение повреждений на кабельных линиях
+								0,4-35 кВ
+							</li>
+							<li>
+								Замена поврежденных участков кабельных линий
+							</li>
+							<li>
+								Проведение регламентных работ в ТП, РП, ГРЩ, ВРУ
+							</li>
+							<li>
+								Производим обслуживание трансформаторных
+								подстанций до 10 кВ
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="services__item">
+					<div class="services__item_img">
+						<img src="../images/dist/services3.jpg" alt="" />
+
+						<div class="services__item_button">
+							<button type="button" class="btn-primary">
+								Оставить заявку
+							</button>
+						</div>
+					</div>
+
+					<div class="services__item_info">
+						<h3 class="services__item_title">
+							Аренда спец техники
+						</h3>
+
+						<ul class="services__item_features">
+							<li>Экскаватор-погрузчик</li>
+							<li>Гусеничный экскаватор</li>
+							<li>Манипулятор повышенной проходимости</li>
+							<li>Самосвал повышенной проходимости</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="features">
+	<div class="container container-md">
+		<div class="features__inner">
+			<h2 class="features__title">
+				Почему Вам стоит остановить свой выбор на <span>Бюро ЭТР?</span>
+			</h2>
+
+			<div class="features__items">
+				<div class="features__item">
+					<div class="features__item_info">
+						<div class="features__item_title">
+							<img
+								src="./images/dist/features1.svg"
+								width="69"
+								height="57"
+								alt=""
+							/>
+							<h3>Собственное современное оборудование</h3>
+						</div>
+						<p class="features__item_desc">
+							В нашем арсенале большое количество единиц
+							спецтехники, оборудования и собственная лаборатория,
+							позволяющие реализовывать работы любой сложности
+						</p>
+					</div>
+
+					<div class="features__item_img">
+						<img src="./images/dist/features1.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="features__item">
+					<div class="features__item_info">
+						<div class="features__item_title">
+							<img
+								src="./images/dist/features2.svg"
+								width="66"
+								height="63"
+								alt=""
+							/>
+							<h3>Выполнение работ под ключ</h3>
+						</div>
+						<p class="features__item_desc">
+							Выполняем работы комплексно: от составления и
+							утверждения технической документации, до
+							проектирования и монтажа
+						</p>
+					</div>
+
+					<div class="features__item_img">
+						<img src="./images/dist/features2.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="features__item">
+					<div class="features__item_info">
+						<div class="features__item_title">
+							<img
+								src="./images/dist/features3.svg"
+								width="61"
+								height="75"
+								alt=""
+							/>
+							<h3>Оптимальные цены</h3>
+						</div>
+						<p class="features__item_desc">
+							Благодаря прямому сотрудничеству с производителями
+							мы получаем оборудование и расходные материалы на
+							выгодных условиях
+						</p>
+					</div>
+
+					<div class="features__item_img">
+						<img src="./images/dist/features3.jpg" alt="" />
+					</div>
+				</div>
+
+				<div class="features__item">
+					<div class="features__item_info">
+						<div class="features__item_title">
+							<img
+								src="./images/dist/features4.svg"
+								width="75"
+								height="55"
+								alt=""
+							/>
+							<h3>
+								Гарантия качества работ и соответствие
+								требованям
+							</h3>
+						</div>
+						<p class="features__item_desc">
+							Имеем все необходимые лицензии, аккредитации,
+							необходимые для выполнения работ. Предоставляем
+							гарантию от 1 до 3 лет.
+						</p>
+					</div>
+
+					<div class="features__item_img">
+						<img src="./images/dist/features4.png" alt="" />
+					</div>
+				</div>
+			</div>
+
+			<h3 class="features__subtitle">
+				Обращаясь в Бюро ЭТР Вы можете быть уверенны в получении услуг в
+				полном объеме и согласно утвержденным срокам реализации
+			</h3>
+		</div>
+	</div>
+</section>
+
+	<section class="lab">
+	<div class="container">
+		<div class="lab__inner">
+			<h2 class="lab__title">Услуги электротехнической лаборатории</h2>
+			<div class="lab__services_wrapper">
+				<div class="lab__services">
+					<h4 class="lab__desc">
+						Услуги нашей передвижной лаборатории позволяют провести
+						испытания Ваших электроустановок и электрооборудования.
+						При заказе услуги вы получаете:
+					</h4>
+					<div class="lab__items">
+						<div class="lab__item">
+							<img src="./images/dist/lab-icon1.svg" alt="" />
+							<p class="lab__item_desc">
+								Выполнение испытаний и измерений согласно объему
+								требований ПУЭ и НТД РК
+							</p>
+						</div>
+						<div class="lab__item">
+							<img src="./images/dist/lab-icon2.svg" alt="" />
+							<p class="lab__item_desc">
+								Оформленные протокола по результатам проведенных
+								работ
+							</p>
+						</div>
+						<div class="lab__item">
+							<img src="./images/dist/lab-icon3.svg" alt="" />
+							<p class="lab__item_desc">
+								Проведение работ в удобное для Вас время
+							</p>
+						</div>
+						<div class="lab__item">
+							<img src="./images/dist/lab-icon4.svg" alt="" />
+							<p class="lab__item_desc">
+								Достоверные результаты испытаний, выполненные
+								квалифицированным персоналом на современном
+								оборудовании
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="lab__img">
+					<img src="./images/dist/lab1.jpg" alt="" />
+					<p class="lab__img_desc">
+						4х4 Оборудование смонтировано на полноприводном
+						автомобиле повышенной проходимости
+					</p>
+				</div>
+			</div>
+
+			<div class="lab__wrapper">
+				<div class="services__item">
+					<div class="services__item_img">
+						<h3 class="lab__wrapper_title">
+							В услугу лабораторных испытаний входит:
+						</h3>
+
+						<img src="../images/dist/lab2.jpg" alt="" />
+					</div>
+
+					<div class="services__item_info">
+						<ul class="services__item_features">
+							<li>Испытания линий электропередач 0,4-35 кВ</li>
+							<li>
+								Испытание распределительных устройств 0,4-35 кВ
+								и силовых трансформаторов 6-35 кВ
+							</li>
+							<li>
+								Проверка полного сопротивления Петли-фазы-нуль
+							</li>
+							<li>Испытание молниезащит и контуров заземления</li>
+							<li>
+								Проверка наличия металлической связи между
+								заземлителем и заземляемым устройством
+							</li>
+							<li>
+								Поиск повреждения на кабельных линиях 0,4-35 кВ
+								Испытание СИЗ (средства индивидуальной защиты)
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="feedback">
+	<div class="container container-sm">
+		<div class="feedback__inner">
+			<h2 class="feedback__title">
+				Оставьте заявку для получения полной консультации по услугам
+				электротехнической лаборатории
+			</h2>
+
+			<form action="" method="POST" class="feedback__form">
+				<div class="feedback__form_inputs">
+					<input
+						type="text"
+						class="form__input"
+						required
+						name="fullname"
+						placeholder="Имя*"
+					/>
+					<input
+						type="tel"
+						class="form__input"
+						required
+						name="phone"
+						placeholder="Телефон*"
+					/>
+					<button type="submit" class="btn-white">
+						Оставить заявку
+					</button>
+				</div>
+				<label for="privacyFeedback" class="form__checkbox">
+					<input
+						type="checkbox"
+						id="privacyFeedback"
+						name="privacyFeedback"
+						required
+						checked
+					/>
+					<span
+						>даю согласие на сбор и обработку персональных
+						данных</span
+					>
+				</label>
+			</form>
+		</div>
+	</div>
+</section>
+
+	<section class="catalog">
+	<div class="container">
+		<div class="catalog__inner">
+			<h2 class="catalog__title">Электротехническая продукция</h2>
+			<p class="catalog__desc">
+				Мы являемся официальным диллером производителей
+				электротехничсеким товарам и готовы предложить вам качественную
+				продукцию по оптовым ценам. Мы поставляем:
+			</p>
+
+			<div class="catalog__slider">
+				<h4 class="catalog__slider_title">Кабели и провода</h4>
+				<div
+					id="cable-slider"
+					class="swiper-container catalog__slider_container"
+				>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel1.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабели силовые с ПВХ изоляцией
+							</h4>
+							<p class="catalog__item_desc">
+								ВВГ, АВВГ, ВБбШв, АВБбШв (нг, нг-LS,FRLS)
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel2.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабели контрольные
+							</h4>
+							<p class="catalog__item_desc">
+								КВВГ, АКВВГ, КВБбШв, АКВБбШв (нг, нг-LS,FRLS)
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel3.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабели силовые с бумажной пропитанной изоляцией
+							</h4>
+							<p class="catalog__item_desc">
+								Кабели силовые с бумажной пропитанной изоляцией
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel4.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Провода самонесущие изолированные для воздушных
+								линий передач
+							</h4>
+							<p class="catalog__item_desc">
+								СИП-1, СИП-2, СИП-3, СИП-4
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel5.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабели для нестационарной прокладки
+							</h4>
+							<p class="catalog__item_desc">
+								КГ, КГ-ХЛ, КГН, КГтп
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel6.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабели силовые с изоляцией из сшитого
+								полиэтилена 6...35 кВ
+							</h4>
+							<p class="catalog__item_desc">
+								АПвБВ, ПвБВ, АПВПуг, АПВПу2г (нг, нг-LS,FRLS)
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel7.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">Провода силовые</h4>
+							<p class="catalog__item_desc">
+								ПВ-1, ПВ-2, ПВ-3, ПВ-4, ПуВ, ПуГВ, ПВС
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/cabel8.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Кабельные системы обогрева
+							</h4>
+							<p class="catalog__item_desc">
+								Для обогрева кровли, резервуаров труб, теплого
+								пола
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="slider-arrow slider-arrow-left">
+					<img src="./images/dist/arr-left.svg" alt="" />
+				</div>
+				<div class="slider-arrow slider-arrow-right">
+					<img src="./images/dist/arr-right.svg" alt="" />
+				</div>
+			</div>
+
+			<div class="catalog__slider">
+				<h4 class="catalog__slider_title">Муфты</h4>
+				<div
+					id="mufta-slider"
+					class="swiper-container catalog__slider_container"
+				>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/mufta1.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Муфты внутренней и наружней установки для кабеля
+								до 1 кВ
+							</h4>
+							<p class="catalog__item_desc">
+								4ПКВНтп-в, 4ПКВНтпБ-в, 4ПСт-в, 4ПСтБ-в,
+								5ПКВНтпБ-в, 5ПСтБ-в
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/mufta2.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Муфты 6-10 кВ для кабелей с бумажной изоляцией
+							</h4>
+							<p class="catalog__item_desc">
+								КНтп-10, КВтп-10, Стп-10, СПтП-10,
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/mufta3.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Муфты до 10 кВ для кабеля из сшитого полиэтилена
+							</h4>
+							<p class="catalog__item_desc">
+								3ПКНтп10, 3ПКНтпБ10, 3ПСт10 3ПСтБ10, 1ПКВт10,
+								1ПКНт10, 1ПСт10,
+							</p>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="catalog__slider">
+				<h4 class="catalog__slider_title">Коммутационная Аппаратура</h4>
+				<div
+					id="commut-slider"
+					class="swiper-container catalog__slider_container"
+				>
+					<div class="swiper-wrapper">
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut1.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Автоматические выключатели модульные
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut2.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Автоматические выключатели дифференциального
+								тока и УЗО
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut3.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Устройство защиты от импульсного перенапряжения
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut4.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Автоматические выключатели воздушные
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut5.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Контакторы, пускатели, реле и аксессуары к ним
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut6.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Автоматизация и управление (частотники,
+								контроллеры, АВР, релейная автоматика, КРМ)
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut7.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">
+								Выключатели нагрузки, рубильники, разъединители
+							</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+
+						<div class="swiper-slide catalog__item">
+							<div class="catalog__item_img">
+								<img src="./images/dist/commut8.jpg" alt="" />
+							</div>
+							<h4 class="catalog__item_title">Терморегуляторы</h4>
+							<button type="button" class="btn-primary">
+								Узнать цены
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="slider-arrow slider-arrow-left">
+					<img src="./images/dist/arr-left.svg" alt="" />
+				</div>
+				<div class="slider-arrow slider-arrow-right">
+					<img src="./images/dist/arr-right.svg" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="cert">
+	<div class="container container-sm">
+		<div class="cert__inner">
+			<h2 class="cert__title">Сертификаты диллерства</h2>
+
+			<div class="cert__slider">
+				<div id="cert-slider" class="swiper-container cert__slider_container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert1.jpg" alt="" />
+						</div>
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert2.jpg" alt="" />
+						</div>
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert3.jpg" alt="" />
+						</div>
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert4.jpg" alt="" />
+						</div>
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert5.jpg" alt="" />
+						</div>
+						<div class="swiper-slide cert__item">
+							<img src="./images/dist/cert6.jpg" alt="" />
+						</div>
+					</div>
+				</div>
+				<div class="slider-arrow slider-arrow-left">
+					<img src="./images/dist/arr-left-sm.svg" alt="" />
+				</div>
+				<div class="slider-arrow slider-arrow-right">
+					<img src="./images/dist/arr-right-sm.svg" alt="" />
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+</main>
+
+
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

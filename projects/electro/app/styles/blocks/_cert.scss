@@ -1,0 +1,48 @@
+.cert {
+	background-color: #DBDBDB;
+	background-image: url("../../images/dist/cert-bg.png");
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom;
+
+	&__inner {
+		padding-top: 80px;
+		padding-bottom: 190px;
+	}
+
+	&__title {
+		font-size: 36px;
+		color: #231F20;
+		margin-bottom: 65px;
+		text-align: center;
+	}
+
+	&__slider {
+		position: relative;
+		max-width: 700px;
+		margin: 0 auto;
+
+		& .slider-arrow {
+			top: 50%;
+			transform: translateY(-50%);
+
+			&-left {
+				left: -40px;
+			}
+
+			&-right {
+				right: -40px;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		height: auto;
+		
+		& img {
+			width: 100%;
+		}
+	}
+}

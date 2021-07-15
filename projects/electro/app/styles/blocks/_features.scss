@@ -1,0 +1,102 @@
+.features {
+	background: url('../../images/dist/features-bg.png') no-repeat;
+	background-color: $gray;
+	background-position: left bottom;
+
+	&__inner {
+		padding-top: 85px;
+		padding-bottom: 120px;
+	}
+
+	&__subtitle {
+		color: $green;
+		font-size: 22px;
+		text-align: center;
+		max-width: 750px;
+		margin: 0 auto;
+
+	}
+
+	&__title {
+		font-size: 38px;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 90px;
+
+		& span {
+			color: $green;
+			font-size: inherit;
+		}
+	}
+
+	&__items {
+		margin-bottom: 75px;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&:nth-child(2n) {
+			flex-direction: row-reverse;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 90px;
+		}
+
+		&_info {
+			max-width: 420px;
+		}
+
+		&_title {
+			display: flex;
+			align-items: center;
+			color: $green;
+			text-transform: uppercase;
+			margin-bottom: 40px;
+
+			& img {
+				margin-right: 22px;
+			}
+		}
+
+		&_desc {
+			padding: 18px 22px;
+			color: #fff;
+			position: relative;
+
+			&:before,
+			&:after {
+				position: absolute;
+				content: "";
+				width: 92px;
+				height: 41px;
+			}
+
+			&:before {
+				top: 0;
+				left: 0;
+				background: url("../../images/dist/features-line-left.svg")
+					no-repeat;
+			}
+
+			&:after {
+				bottom: 0;
+				right: 0;
+				background: url("../../images/dist/features-line-right.svg")
+					no-repeat;
+			}
+		}
+
+		&_img {
+			max-width: 460px;
+			width: 100%;
+
+			& img {
+				width: 100%;
+			}
+		}
+	}
+}

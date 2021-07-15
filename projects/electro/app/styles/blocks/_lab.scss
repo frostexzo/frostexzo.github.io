@@ -1,0 +1,97 @@
+.lab {
+	background: url("../../images/dist/lab-bg.svg") no-repeat;
+	background-size: cover;
+
+	&__inner {
+		padding-top: 80px;
+		padding-bottom: 120px;
+	}
+
+	&__title {
+		font-size: 50px;
+		color: #231F20;
+		max-width: 950px;
+		margin: 0 auto;
+		margin-bottom: 95px;
+		text-align: center;
+	}
+
+
+	&__services {
+		display: flex;
+		flex-direction: column;
+		margin-right: 40px;
+
+		&_wrapper {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 35px;
+		font-family: "Futura New", sans-serif;
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 0.85fr 1fr;
+		grid-gap: 75px 45px;
+	}
+}
+
+.lab__img {
+	max-width: 365px;
+	width: 100%;
+
+	& img {
+		width: 100%;
+	}
+
+	&_desc {
+		margin-bottom: 30px;
+		font-family: "Futura New", sans-serif;
+		font-size: 17px;
+		font-weight: 700;
+		padding: 10px;
+		background-color: $green;
+		margin-top: 20px;
+		border-radius: 2px;
+	}
+}
+
+.lab__item {
+	display: flex;
+	align-items: flex-start;
+
+	& img {
+		margin-right: 30px;
+	}
+
+	&_desc {
+		font-weight: 400;
+		font-family: "Futura New", sans-serif;
+		padding-top: 10px;
+		border-top: 1px solid #525252;
+	}
+}
+
+.lab__wrapper {
+	& .services__item_img {
+		max-width: 460px;
+	}
+
+	& .services__item_info {
+		margin: 0;
+		margin-top: 100px;
+	}
+
+	&_title {
+		font-size: 36px;
+		color: #231F20;
+		margin-bottom: 30px;
+	}
+}

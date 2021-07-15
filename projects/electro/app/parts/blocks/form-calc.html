@@ -1,0 +1,53 @@
+<form action="" method="POST" class="form form-calc">
+	<div class="form__inner">
+		<h3 class="form__title">
+			Получите бесплатный расчет стоимости работ в течение 30 минут
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs">
+				<input
+					class="form__input"
+					type="text"
+					name="fullname"
+					required
+					placeholder="Имя*"
+				/>
+				<input
+					class="form__input"
+					type="tel"
+					name="tel"
+					required
+					placeholder="Телефон*"
+				/>
+				<input
+					class="form__input"
+					type="email"
+					name="email"
+					required
+					placeholder="E-mail*"
+				/>
+				<label class="form__attach" for="attach">
+					<input type="file" id="attach" name="file" />
+					<img
+						src="./images/dist/attach.svg"
+						width="30"
+						height="40"
+						alt=""
+					/>
+					<span>Прикрепите тех.документы<br />(если имеются)</span>
+				</label>
+			</div>
+			<label for="privacy" class="form__checkbox">
+				<input type="checkbox" id="privacy" name="privacy" required checked />
+				<span
+					>даю согласие на сбор и обработку персональных данных</span
+				>
+			</label>
+			<div class="form__submit">
+				<button type="submit" class="btn-white">
+					Оставить заявку
+				</button>
+			</div>
+		</div>
+	</div>
+</form>

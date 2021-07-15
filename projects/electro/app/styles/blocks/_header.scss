@@ -1,0 +1,61 @@
+.header {
+	background-color: $gray;
+
+	&__inner {
+		padding: 24px 0;
+		display: flex;
+		align-items: center;
+		color: #fff;
+	}
+
+	&-logo {
+		display: flex;
+		margin-right: 34px;
+	}
+}
+
+.header-nav {
+	margin-left: auto;
+	display: flex;
+	margin-right: 30px;
+
+	&__link:not(:last-child) {
+		margin-right: 50px;
+	}
+
+	&__link {
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: #525252;
+			text-decoration-thickness: 3px;
+			text-decoration-width: 3px;
+			text-decoration-skip-ink: none;
+		}
+	}
+}
+
+.header-phones {
+	display: flex;
+	flex-direction: column;
+	padding-left: 16px;
+	margin-right: 50px;
+	border-left: 3px solid $green;
+
+	& a {
+		font-family: 'Futura New';
+		font-weight: 400;
+		font-size: 20px;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-color: #525252;
+			text-decoration-thickness: 3px;
+			text-decoration-width: 3px;
+			text-decoration-skip-ink: none;
+		}
+
+		&:first-child {
+			margin-bottom: 4px;
+		}
+	}
+}
