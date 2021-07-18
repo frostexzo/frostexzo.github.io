@@ -1,5 +1,5 @@
 .lab {
-	background: url("../../images/dist/lab-bg.svg") no-repeat;
+	background: url("../images/dist/lab-bg.svg") no-repeat;
 	background-size: cover;
 
 	&__inner {
@@ -93,5 +93,97 @@
 		font-size: 36px;
 		color: #231F20;
 		margin-bottom: 30px;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.lab {
+		&__img {
+			display: none;
+		}
+
+		&__services {
+			margin-right: 0;
+		}
+
+		&__desc {
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.lab__wrapper {
+		& .services__item_info {
+			margin-top: 0;
+		}
+
+		& .services__item {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		& .services__item_img img {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.lab {
+		&__title {
+			font-size: 35px;
+			margin-bottom: 50px;
+		}
+
+		&__inner {
+			padding-top: 50px;
+			padding-bottom: 60px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.lab {
+		&__title {
+			font-size: 28px;
+		}
+
+		&__wrapper_title {
+			font-size: 24px;
+		}
+
+		&__items {
+			grid-gap: 20px;
+		}
+
+		&__item {
+			& img {
+				margin-right: 15px;
+				max-width: 65px;
+				height: auto;
+			}
+
+			&_desc {
+				font-size: 16px;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width: 550px) {
+
+	.lab {
+		&__items {
+			grid-template-columns: 1fr;
+			grid-gap: 30px;
+		}
+
+		&__item {
+			&_desc {
+				width: 100%;
+			}
+		}
 	}
 }

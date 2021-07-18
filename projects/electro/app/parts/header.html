@@ -16,7 +16,7 @@
 		<link rel="icon" href="images/favicon.png" />
 	</head>
 
-	<body x-data="app()">
+	<body x-data="app()" x-init="stationAdaptive()">
 		<header class="header">
 			<div class="container container-wide">
 				<div class="header__inner">
@@ -41,7 +41,7 @@
 							Электролаборатория
 						</a>
 						<a href="#" class="header-nav__link">
-							Оборудование<br>оптом
+							Оборудование<br />оптом
 						</a>
 						<a href="#" class="header-nav__link">Контакты</a>
 					</nav>
@@ -52,7 +52,53 @@
 					</div>
 
 					<div class="header-button">
-						<button type="button" class="btn-primary">Оставить заявку</button>
+						<button type="button" class="btn-primary">
+							Оставить заявку
+						</button>
+					</div>
+
+					<button @click.prevent="isMenuOpen = true" type="button" class="header-burger">
+						<img
+							src="images/dist/burger.svg"
+							width="40"
+							height="26"
+							alt=""
+						/>
+					</button>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isMenuOpen === true" class="header-menu">
+					<div class="header-menu__inner">
+						<a href="#" class="header-logo">
+							<img
+								src="images/dist/logo.svg"
+								width="126"
+								height="93"
+								alt="БЮРО ЭКР"
+							/>
+						</a>
+
+						<button @click.prevent="isMenuOpen = false" type="button" class="header-menu-close">
+							<img src="images/dist/close-menu.svg" alt="" />
+						</button>
+
+						<nav class="header-nav">
+							<a href="#" class="header-nav__link">
+								Электромонтажные<br />работы
+							</a>
+							<a href="#" class="header-nav__link">
+								Электролаборатория
+							</a>
+							<a href="#" class="header-nav__link">
+								Оборудование<br />оптом
+							</a>
+							<a href="#" class="header-nav__link">Контакты</a>
+						</nav>
+
+						<div class="header-phones">
+							<a href="tel:+77003402777">+7 700 340 27 77</a>
+							<a href="tel:+77473402777">+7 747 340 27 77</a>
+						</div>
 					</div>
 				</div>
 			</div>

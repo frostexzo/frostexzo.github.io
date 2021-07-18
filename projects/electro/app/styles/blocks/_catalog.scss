@@ -90,3 +90,61 @@
 		right: -60px;
 	}
 }
+
+@media screen and (max-width: 1300px) {
+	.slider-arrow {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.catalog {
+		&__title {
+			font-size: 35px;
+		}
+
+		&__desc {
+			font-size: 24px;
+			margin-bottom: 40px;
+		}
+
+		&__inner {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&__slider {
+			&:not(:last-child) {
+				margin-bottom: 40px;
+			}
+
+			&_title {
+				font-size: 24px;
+			}
+		}
+
+		&__item {
+			&_title {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.catalog {
+		&__title {
+			font-size: 28px;
+		}
+
+		&__desc {
+			font-size: 22px;
+		}
+
+		&__item {
+			&_img img {
+				max-height: 280px;
+			}
+		}
+	}
+}

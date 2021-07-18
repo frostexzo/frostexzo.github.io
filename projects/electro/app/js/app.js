@@ -1,7 +1,28 @@
 const html = document.documentElement;
 
 const app = () => {
-	return {};
+	return {
+		isMenuOpen: false,
+		isStationSelected: null,
+		station: "st1",
+
+		selectStation(e) {
+			this.station = e.dataset.id;
+
+			if (window.innerWidth <= 1200) {
+				this.isStationSelected = true;
+			}
+		},
+
+		stationAdaptive() {
+			if (window.innerWidth >= 1200) {
+				this.isStationSelected = true;
+			} else {
+				this.isStationSelected = false;
+				this.station = null;
+			}
+		},
+	};
 };
 
 const cableSliderEl = document.getElementById("cable-slider");
@@ -21,7 +42,7 @@ if (cableSliderEl) {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			450: {
+			400: {
 				slidesPerView: 2,
 				spaceBetween: 15,
 			},
@@ -35,7 +56,7 @@ if (cableSliderEl) {
 
 const muftaSliderEl = document.getElementById("mufta-slider");
 if (muftaSliderEl) {
-	const cableSlider = new Swiper(muftaSliderEl, {
+	const muftaSlider = new Swiper(muftaSliderEl, {
 		spaceBetween: 20,
 		resistanceRatio: 0,
 		breakpoints: {
@@ -46,7 +67,7 @@ if (muftaSliderEl) {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			450: {
+			400: {
 				slidesPerView: 2,
 				spaceBetween: 15,
 			},
@@ -60,7 +81,7 @@ if (muftaSliderEl) {
 
 const commutSliderEl = document.getElementById("commut-slider");
 if (commutSliderEl) {
-	const cableSlider = new Swiper(commutSliderEl, {
+	const commutSlider = new Swiper(commutSliderEl, {
 		spaceBetween: 20,
 		resistanceRatio: 0,
 		navigation: {
@@ -75,7 +96,7 @@ if (commutSliderEl) {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
-			450: {
+			400: {
 				slidesPerView: 2,
 				spaceBetween: 15,
 			},
@@ -101,9 +122,9 @@ if (certificatesSliderEl) {
 				slidesPerView: 3,
 				spaceBetween: 25,
 			},
-			450: {
+			360: {
 				slidesPerView: 2,
-				spaceBetween: 20,
+				spaceBetween: 15,
 			},
 			320: {
 				slidesPerView: 1,

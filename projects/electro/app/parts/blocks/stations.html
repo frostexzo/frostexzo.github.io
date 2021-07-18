@@ -1,0 +1,103 @@
+<section class="stations">
+	<div class="container container-lg no-pd">
+		<div class="stations__inner">
+			<div x-cloak x-show.transition.opacity="isStationSelected === true" class="stations__info_wrapper">
+				<div class="stations__info">
+					<button type="button" @click.prevent="isStationSelected = false" class="stations-close">
+						<img src="./images/dist/close.svg" alt="">
+					</button>
+					<p x-show="station === 'st1'" class="stations__info_block">
+						ТОО «Chimbulak development»
+						<br />
+						<br />
+						Базовая станция <br />
+						Работы: Прокладка кабельных линий для насосного
+						оборудования систем оснежения.
+						<br />
+						<br />
+						Плановые профилактические работы <br />
+						трансформаторных подстанций 6915,
+						6910,6911,6907,6908,6909.
+						<br />
+						<br />
+						Перевал <br />
+						Замена одно трансформаторной подстанции 1000 кВа на двух
+						трансформаторную 1000 кВа.
+					</p>
+					<p x-cloak x-show="station === 'st2'" class="stations__info_block">
+						ТОО «Chimbulak development»123
+						<br />
+						<br />
+						Базовая станция <br />
+						Работы: Прокладка кабельных линий для насосного
+						оборудования систем оснежения.
+						<br />
+						<br />
+						Плановые профилактические работы <br />
+						трансформаторных подстанций 6915,
+						6910,6911,6907,6908,6909.
+						<br />
+						<br />
+						Перевал <br />
+						Замена одно трансформаторной подстанции 1000 кВа на двух
+						трансформаторную 1000 кВа.
+					</p>
+				</div>
+				<div class="stations__info_img">
+					<img
+						src="./images/dist/stations-phone.png"
+						width="825"
+						height="575"
+						alt=""
+					/>
+				</div>
+			</div>
+			<div class="stations__marks">
+				<div data-id="st1" @click="selectStation(event.target)" :class="station === 'st1' ? 'active' : ''" class="stations__mark st1">
+					<img src="./images/dist/station1.png" alt="" />
+					<span>Экоотель «Tenir»</span>
+				</div>
+				<div data-id="st2" @click="selectStation(event.target)" :class="station === 'st2' ? 'active' : ''" class="stations__mark st2">
+					<img src="./images/dist/station2.png" alt="" />
+					<span>Chimbulak Development</span>
+				</div>
+				<div data-id="st3" @click="selectStation(event.target)" :class="station === 'st3' ? 'active' : ''" class="stations__mark st3">
+					<img src="./images/dist/station3.png" alt="" />
+					<span>Miras International School</span>
+				</div>
+				<div data-id="st4" @click="selectStation(event.target)" :class="station === 'st4' ? 'active' : ''" class="stations__mark st4">
+					<img src="./images/dist/station4.png" alt="" />
+					<span>AO Forte Bank</span>
+				</div>
+				<div data-id="st5" @click="selectStation(event.target)" :class="station === 'st5' ? 'active' : ''" class="stations__mark st5">
+					<img src="./images/dist/station5.png" alt="" />
+					<span>Rakhat Fitness</span>
+				</div>
+				<div data-id="st6" @click="selectStation(event.target)" :class="station === 'st6' ? 'active' : ''" class="stations__mark st6">
+					<img src="./images/dist/station6.png" alt="" />
+					<span>Центральный государственный архив</span>
+				</div>
+				<div data-id="st7" @click="selectStation(event.target)" :class="station === 'st7' ? 'active' : ''" class="stations__mark st7">
+					<img src="./images/dist/station7.png" alt="" />
+					<span>БЦ Сатори</span>
+				</div>
+				<div data-id="st8" @click="selectStation(event.target)" :class="station === 'st8' ? 'active' : ''" class="stations__mark st8">
+					<img src="./images/dist/station8.png" alt="" />
+					<span>Porsce Center Almaty</span>
+				</div>
+				<div data-id="st9" @click="selectStation(event.target)" :class="station === 'st9' ? 'active' : ''" class="stations__mark st9">
+					<img src="./images/dist/station9.png" alt="" />
+					<span>ТОО КазФерроСталь</span>
+				</div>
+				<div data-id="st10" @click="selectStation(event.target)" :class="station === 'st10' ? 'active' : ''" class="stations__mark st10">
+					<img src="./images/dist/station10.png" alt="" />
+					<span>ТОО Ralmbek - Agro</span>
+				</div>
+				<div data-id="st11" @click="selectStation(event.target)" :class="station === 'st11' ? 'active' : ''" class="stations__mark st11">
+					<img src="./images/dist/station11.png" alt="" />
+					<span>Асфальтно-бетонный завод БАКАД</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

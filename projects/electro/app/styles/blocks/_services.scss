@@ -1,7 +1,7 @@
 .services {
 	margin-top: -230px;
 
-	background: url('../../images/dist/services-bg.jpg') no-repeat;
+	background: url("../../images/dist/services-bg.jpg") no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 
@@ -54,7 +54,7 @@
 
 		&_features {
 			list-style: none;
-			color: #231F20;
+			color: #231f20;
 			font-size: 18px;
 
 			& li {
@@ -76,6 +76,67 @@
 					top: 7px;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.services {
+		&__item {
+			flex-direction: column-reverse;
+
+			&_img {
+				margin: 0;
+			}
+
+			&_info {
+				margin-bottom: 35px;
+			}
+
+			&_title {
+				text-align: center;
+			}
+
+			&_img {
+				max-width: 650px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.services {
+		&__title {
+			font-size: 35px;
+			margin-bottom: 50px;
+		}
+
+		&__inner {
+			padding-bottom: 250px;
+		}
+
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.services {
+		&__title {
+			font-size: 28px;
+		}
+
+		&__item {
+			&_title {
+				font-size: 22px;
+			}
+		}
+
+		&__inner {
+			padding-bottom: 120px;
 		}
 	}
 }

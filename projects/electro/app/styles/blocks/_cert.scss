@@ -1,6 +1,6 @@
 .cert {
-	background-color: #DBDBDB;
-	background-image: url("../../images/dist/cert-bg.png");
+	background-color: #dbdbdb;
+	background-image: url("../images/dist/cert-bg.png");
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
@@ -12,7 +12,7 @@
 
 	&__title {
 		font-size: 36px;
-		color: #231F20;
+		color: #231f20;
 		margin-bottom: 65px;
 		text-align: center;
 	}
@@ -40,9 +40,35 @@
 		display: flex;
 		align-items: center;
 		height: auto;
-		
+
 		& img {
 			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.cert {
+		background-size: cover;
+		background-position: left;
+
+		&__inner {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+
+		&__title {
+			font-size: 35px;
+			margin-bottom: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.cert {
+		&__title {
+			font-size: 28px;
+			margin-bottom: 40px;
 		}
 	}
 }

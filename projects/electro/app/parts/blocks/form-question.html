@@ -1,0 +1,73 @@
+<form action="" method="POST" class="form form-question">
+	<div class="form__inner">
+		<h3 class="form__title">
+			Есть вопросы или предложения? Заполните форму
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs_wrapper">
+				<div class="form__inputs">
+					<input
+						class="form__input"
+						type="text"
+						name="fullname"
+						required
+						placeholder="Имя*"
+					/>
+					<input
+						class="form__input"
+						type="tel"
+						name="tel"
+						required
+						placeholder="Телефон*"
+					/>
+					<input
+						class="form__input"
+						type="email"
+						name="email"
+						required
+						placeholder="E-mail*"
+					/>
+				</div>
+				<div class="form__inputs">
+					<textarea
+						class="form__input"
+						name="message"
+						placeholder="Введите сообщение"
+					></textarea>
+					<label class="form__attach" for="attach">
+						<input type="file" id="attach" name="file" />
+						<img
+							src="./images/dist/attach.svg"
+							width="30"
+							height="40"
+							alt=""
+						/>
+						<span
+							>Прикрепите тех.документы<br />(если имеются)</span
+						>
+					</label>
+				</div>
+			</div>
+			<div class="form__buttons_wrapper">
+				<label for="privacyQuestion" class="form__checkbox">
+					<input
+						type="checkbox"
+						id="privacyQuestion"
+						name="privacy"
+						required
+						checked
+					/>
+					<span
+						>даю согласие на сбор и обработку персональных
+						данных</span
+					>
+				</label>
+				<div class="form__submit">
+					<button type="submit" class="btn-white">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>

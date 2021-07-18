@@ -24,3 +24,18 @@
 		}
 	}
 }
+
+@media screen and (max-width: 600px) {
+	.feedback {
+		&__form {
+			&_inputs {
+				grid-template-columns: 1fr;
+
+				& button {
+					max-width: 222px;
+					margin: 0 auto;
+				}
+			}
+		}
+	}
+}

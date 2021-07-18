@@ -1,4 +1,5 @@
 $green: #8cc63f;
+$btn-green: #BFDF93;
 $green-op: rgba(140, 198, 63, 0.6);
 $black: #000;
 $white: #fff;
@@ -74,14 +75,17 @@ button {
 }
 
 input,
-button {
+button,
+textarea {
 	background-color: transparent;
 	border: 0;
 	font-family: inherit;
 	outline: none;
+	resize: none;
 }
 
-input {
+input,
+textarea {
 	font-size: 16px;
 }
 
@@ -153,6 +157,10 @@ input[type="checkbox"] {
 	max-width: 1600px;
 }
 
+.container-lg {
+	max-width: 1500px;
+}
+
 .btn-primary {
 	background-color: $green;
 	color: $black;
@@ -185,6 +193,29 @@ input[type="checkbox"] {
 
 	&:hover,
 	&:active {
-		background-color: rgba(255,255,255,.44)
+		background-color: $btn-green;
+	}
+
+	&.green {
+		background-color: $green;
+
+		&:hover,
+		&:active {
+			background-color: lighten($green, 10%);
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.btn-primary {
+		font-size: 18px;
+		padding: 8px 12px;
+		padding-bottom: 10px;
+	}
+
+	.btn-white {
+		font-size: 18px;
+		padding: 10px 40px;
+		padding-bottom: 12px;
 	}
 }
