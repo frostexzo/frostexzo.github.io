@@ -34,16 +34,16 @@
 					</span>
 
 					<nav class="header-nav">
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('services')" class="header-nav__link">
 							Электромонтажные<br />работы
 						</a>
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('lab')" class="header-nav__link">
 							Электролаборатория
 						</a>
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('catalog')" class="header-nav__link">
 							Оборудование<br />оптом
 						</a>
-						<a href="#" class="header-nav__link">Контакты</a>
+						<a href="#" @click.prevent="navTo('contacts')" class="header-nav__link">Контакты</a>
 					</nav>
 
 					<div class="header-phones">
@@ -52,7 +52,7 @@
 					</div>
 
 					<div class="header-button">
-						<button type="button" class="btn-primary">
+						<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 							Оставить заявку
 						</button>
 					</div>
@@ -135,6 +135,9 @@
 	<div class="container container-md">
 		<form action="" method="POST" class="form form-calc">
 	<div class="form__inner">
+		<button type="button" class="popup-close" @click.prevent="closePopup('calc')">
+			<img src="./images/dist/close.svg" alt="">
+		</button>
 		<h3 class="form__title">
 			Получите бесплатный расчет стоимости работ в течение 30 минут
 		</h3>
@@ -188,7 +191,7 @@
 </form>
 
 
-		<div class="services__inner">
+		<div id="services" class="services__inner">
 			<h2 class="services__title">
 				Предоставляем широкий спектр услуг под ключ
 			</h2>
@@ -199,7 +202,7 @@
 						<img src="./images/dist/services1.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>
@@ -242,7 +245,7 @@
 						<img src="./images/dist/services2.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>
@@ -277,7 +280,7 @@
 						<img src="./images/dist/services3.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>
@@ -413,7 +416,7 @@
 	</div>
 </section>
 
-	<section class="lab">
+	<section id="lab" class="lab">
 	<div class="container">
 		<div class="lab__inner">
 			<h2 class="lab__title">Услуги электротехнической лаборатории</h2>
@@ -548,7 +551,7 @@
 	</div>
 </section>
 
-	<section class="catalog">
+	<section id="catalog" class="catalog">
 	<div class="container">
 		<div class="catalog__inner">
 			<h2 class="catalog__title">Электротехническая продукция</h2>
@@ -575,7 +578,7 @@
 							<p class="catalog__item_desc">
 								ВВГ, АВВГ, ВБбШв, АВБбШв (нг, нг-LS,FRLS)
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -590,7 +593,7 @@
 							<p class="catalog__item_desc">
 								КВВГ, АКВВГ, КВБбШв, АКВБбШв (нг, нг-LS,FRLS)
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -605,7 +608,7 @@
 							<p class="catalog__item_desc">
 								Кабели силовые с бумажной пропитанной изоляцией
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -621,7 +624,7 @@
 							<p class="catalog__item_desc">
 								СИП-1, СИП-2, СИП-3, СИП-4
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -636,7 +639,7 @@
 							<p class="catalog__item_desc">
 								КГ, КГ-ХЛ, КГН, КГтп
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -652,7 +655,7 @@
 							<p class="catalog__item_desc">
 								АПвБВ, ПвБВ, АПВПуг, АПВПу2г (нг, нг-LS,FRLS)
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -665,7 +668,7 @@
 							<p class="catalog__item_desc">
 								ПВ-1, ПВ-2, ПВ-3, ПВ-4, ПуВ, ПуГВ, ПВС
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -681,7 +684,7 @@
 								Для обогрева кровли, резервуаров труб, теплого
 								пола
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -714,7 +717,7 @@
 								4ПКВНтп-в, 4ПКВНтпБ-в, 4ПСт-в, 4ПСтБ-в,
 								5ПКВНтпБ-в, 5ПСтБ-в
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -729,7 +732,7 @@
 							<p class="catalog__item_desc">
 								КНтп-10, КВтп-10, Стп-10, СПтП-10,
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -745,7 +748,7 @@
 								3ПКНтп10, 3ПКНтпБ10, 3ПСт10 3ПСтБ10, 1ПКВт10,
 								1ПКНт10, 1ПСт10,
 							</p>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -767,7 +770,7 @@
 							<h4 class="catalog__item_title">
 								Автоматические выключатели модульные
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -780,7 +783,7 @@
 								Автоматические выключатели дифференциального
 								тока и УЗО
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -792,7 +795,7 @@
 							<h4 class="catalog__item_title">
 								Устройство защиты от импульсного перенапряжения
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -804,7 +807,7 @@
 							<h4 class="catalog__item_title">
 								Автоматические выключатели воздушные
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -816,7 +819,7 @@
 							<h4 class="catalog__item_title">
 								Контакторы, пускатели, реле и аксессуары к ним
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -829,7 +832,7 @@
 								Автоматизация и управление (частотники,
 								контроллеры, АВР, релейная автоматика, КРМ)
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -841,7 +844,7 @@
 							<h4 class="catalog__item_title">
 								Выключатели нагрузки, рубильники, разъединители
 							</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -851,7 +854,7 @@
 								<img src="./images/dist/commut8.jpg" alt="" />
 							</div>
 							<h4 class="catalog__item_title">Терморегуляторы</h4>
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Узнать цены
 							</button>
 						</div>
@@ -912,7 +915,7 @@
 		<div class="stations__inner">
 			<div x-cloak x-show.transition.opacity="isStationSelected === true" class="stations__info_wrapper">
 				<div class="stations__info">
-					<button type="button" @click.prevent="isStationSelected = false" class="stations-close">
+					<button type="button" @click.prevent="closeStation" class="stations-close">
 						<img src="./images/dist/close.svg" alt="">
 					</button>
 					<p x-show="station === 'st1'" class="stations__info_block">
@@ -1011,7 +1014,7 @@
 	</div>
 </section>
 
-	<section class="contacts">
+	<section id="contacts" class="contacts">
 	<div class="container">
 		<div class="contacts__inner">
 			<div class="contacts__wrapper">
@@ -1042,6 +1045,13 @@
 
 			<form action="" method="POST" class="form form-question">
 	<div class="form__inner">
+		<button
+			type="button"
+			class="popup-close"
+			@click.prevent="closePopup('question')"
+		>
+			<img src="./images/dist/close.svg" alt="" />
+		</button>
 		<h3 class="form__title">
 			Есть вопросы или предложения? Заполните форму
 		</h3>
@@ -1120,52 +1130,262 @@
 
 </main>
 
-<footer class="footer">
-	<div class="container">
-		<div class="footer__inner">
-			<a href="#" class="header-logo">
-				<img
-					src="images/dist/logo.svg"
-					width="126"
-					height="93"
-					alt="БЮРО ЭКР"
+
+				<div x-cloak x-show.transition.opacity="isPrivacyShow === true" class="privacy">
+				<div class="privacy__inner">
+				<button type="button" @click.prevent="showPrivacy" class="privacy-close">
+				<img src="images/dist/close-green.svg" alt="">
+				</button>
+				<h4 class="privacy__title">Политика конфиденциальности</h4>
+				<div class="container container-md">
+				<div class="privacy__content">
+				<p>
+				Соблюдение Вашей конфиденциальности важно для нашей компании. Поэтому мы разработали Политику Конфиденциальности, которая описывает, как используется и хранится Ваша информация. Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо вопросы.
+
+				</p>
+
+				<strong>Сбор и использование персональной информации
+				</strong>
+
+				<p>Под персональной информацией понимаются данные, которые могут быть использованы для идентификации определенного лица либо связи с ним. От Вас может быть запрошено предоставление персональной информации в любой момент, когда Вы связываетесь с нами.
+				</p>
+
+				<p>
+				Какую персональную информацию мы собираем
+				Когда Вы оставляете заявку на сайте, мы можем собирать различную информацию, включая Ваше имя, номер телефона, адрес электронной почты и т.д.
+
+				</p>
+
+				<strong>
+				Как мы используем Вашу персональную информацию
+
+				</strong>
+
+				<p>
+				Персональная информация позволяет нам сообщать об уникальных предложениях, акциях и других мероприятиях и ближайших событиях. Время от времени мы можем использовать Вашу персональную информацию для отправки важных уведомлений и сообщений. Мы также можем использовать персональную информацию для внутренних целей: проведения аудита, анализа данных и различных исследований в целях улучшения услуг. Если Вы принимаете участие в розыгрыше призов или конкурсе, мы можем использовать информацию для управления такими программами.
+
+				</p>
+
+				<strong>
+
+				Раскрытие информации третьим лицам
+
+				</strong>
+
+				<p>
+				Мы не раскрываем полученную от Вас информацию третьим лицам.
+
+				</p>
+
+				<strong>
+				Исключения
+
+				</strong>
+
+				<p>В соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории РК. Мы также можем раскрывать информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях безопасности, поддержания правопорядка или иных общественно важных случаях. В случае реорганизации, слияния или продажи мы можем передать собираемую нами персональную информацию соответствующему третьему лицу – правопреемнику.
+				</p>
+
+				<strong>Защита персональной информации
+				</strong>
+
+				<p>Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей </p>
+				</div>
+			</div>
+				</div>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isBackgroundShow === true" class="background"></div>
+
+				<div x-cloak x-show.transition.opacity="isCalcPopupShow === true" class="popup">
+					<form action="" method="POST" class="form form-calc">
+	<div class="form__inner">
+		<button type="button" class="popup-close" @click.prevent="closePopup('calc')">
+			<img src="./images/dist/close.svg" alt="">
+		</button>
+		<h3 class="form__title">
+			Получите бесплатный расчет стоимости работ в течение 30 минут
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs">
+				<input
+					class="form__input"
+					type="text"
+					name="fullname"
+					required
+					placeholder="Имя*"
 				/>
-			</a>
-
-			<div class="footer-info">
-				<p>© ТОО “Бюро Электротехнических решений” Все права защищены 2021</p>
-
-				<a href="#">Политика конфиденциальности</a>
+				<input
+					class="form__input"
+					type="tel"
+					name="tel"
+					required
+					placeholder="Телефон*"
+				/>
+				<input
+					class="form__input"
+					type="email"
+					name="email"
+					required
+					placeholder="E-mail*"
+				/>
+				<label class="form__attach" for="attach">
+					<input type="file" id="attach" name="file" />
+					<img
+						src="./images/dist/attach.svg"
+						width="30"
+						height="40"
+						alt=""
+					/>
+					<span>Прикрепите тех.документы<br />(если имеются)</span>
+				</label>
 			</div>
-
-			<div class="footer-buttons">
-				<button class="btn-white">Отправить ТЗ</button>
-				<button class="btn-white green">Запросить оптовый прайс</button>
+			<label for="privacyCalc" class="form__checkbox">
+				<input type="checkbox" id="privacyCalc" name="privacy" required checked />
+				<span
+					>даю согласие на сбор и обработку персональных данных</span
+				>
+			</label>
+			<div class="form__submit">
+				<button type="submit" class="btn-white">
+					Оставить заявку
+				</button>
 			</div>
+		</div>
+	</div>
+</form>
 
-			<div class="footer-links">
-				<div class="footer-links__block">
-				<a href="#">
-					<img src="images/dist/inst.svg" width="27" height="27" alt="">
-				</a>
 				</div>
 
-				<div class="footer-links__block">
-					<a href="tel:+77003402777">+7 700 340 27 77</a>
-					<a href="tel:+77473402777">+7 747 340 27 77</a>
+				<div x-cloak x-show.transition.opacity="isQuestionPopupShow === true" class="popup">
+					<form action="" method="POST" class="form form-question">
+	<div class="form__inner">
+		<button
+			type="button"
+			class="popup-close"
+			@click.prevent="closePopup('question')"
+		>
+			<img src="./images/dist/close.svg" alt="" />
+		</button>
+		<h3 class="form__title">
+			Есть вопросы или предложения? Заполните форму
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs_wrapper">
+				<div class="form__inputs">
+					<input
+						class="form__input"
+						type="text"
+						name="fullname"
+						required
+						placeholder="Имя*"
+					/>
+					<input
+						class="form__input"
+						type="tel"
+						name="tel"
+						required
+						placeholder="Телефон*"
+					/>
+					<input
+						class="form__input"
+						type="email"
+						name="email"
+						required
+						placeholder="E-mail*"
+					/>
 				</div>
-
-				<div class="footer-links__block">
-					<a href="mailto:info@domen.kz">info@domen.kz</a>
+				<div class="form__inputs">
+					<textarea
+						class="form__input"
+						name="message"
+						placeholder="Введите сообщение"
+					></textarea>
+					<label class="form__attach" for="attach">
+						<input type="file" id="attach" name="file" />
+						<img
+							src="./images/dist/attach.svg"
+							width="30"
+							height="40"
+							alt=""
+						/>
+						<span
+							>Прикрепите тех.документы<br />(если имеются)</span
+						>
+					</label>
+				</div>
+			</div>
+			<div class="form__buttons_wrapper">
+				<label for="privacyQuestion" class="form__checkbox">
+					<input
+						type="checkbox"
+						id="privacyQuestion"
+						name="privacy"
+						required
+						checked
+					/>
+					<span
+						>даю согласие на сбор и обработку персональных
+						данных</span
+					>
+				</label>
+				<div class="form__submit">
+					<button type="submit" class="btn-white">
+						Оставить заявку
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
-</footer>
+</form>
 
-<script src="js/alpine.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/app.js"></script>
+				</div>
 
-</body>
-</html>
+				<footer class="footer">
+				<div class="container">
+				<div class="footer__inner">
+				<a href="#" class="header-logo">
+				<img
+				src="images/dist/logo.svg"
+				width="126"
+				height="93"
+				alt="БЮРО ЭКР"
+				/>
+				</a>
+
+				<div class="footer-info">
+				<p>© ТОО “Бюро Электротехнических решений” Все права защищены 2021</p>
+
+				<a href="#" @click.prevent="showPrivacy">Политика конфиденциальности</a>
+				</div>
+
+				<div class="footer-buttons">
+				<button type="button" @click.prevent="showPopup('calc')" class="btn-white">Отправить ТЗ</button>
+				<button type="button" @click.prevent="showPopup('question')" class="btn-white green">Запросить оптовый прайс</button>
+				</div>
+
+				<div class="footer-links">
+				<div class="footer-links__block">
+				<a href="#">
+				<img src="images/dist/inst.svg" width="27" height="27" alt="">
+				</a>
+				</div>
+
+				<div class="footer-links__block">
+				<a href="tel:+77003402777">+7 700 340 27 77</a>
+				<a href="tel:+77473402777">+7 747 340 27 77</a>
+				</div>
+
+				<div class="footer-links__block">
+				<a href="mailto:info@domen.kz">info@domen.kz</a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</footer>
+
+				<script src="js/alpine.js"></script>
+				<script src="js/swiper.js"></script>
+				<script src="js/app.js"></script>
+
+				</body>
+				</html>

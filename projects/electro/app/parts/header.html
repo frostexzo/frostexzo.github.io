@@ -34,16 +34,16 @@
 					</span>
 
 					<nav class="header-nav">
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('services')" class="header-nav__link">
 							Электромонтажные<br />работы
 						</a>
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('lab')" class="header-nav__link">
 							Электролаборатория
 						</a>
-						<a href="#" class="header-nav__link">
+						<a href="#" @click.prevent="navTo('catalog')" class="header-nav__link">
 							Оборудование<br />оптом
 						</a>
-						<a href="#" class="header-nav__link">Контакты</a>
+						<a href="#" @click.prevent="navTo('contacts')" class="header-nav__link">Контакты</a>
 					</nav>
 
 					<div class="header-phones">
@@ -52,7 +52,7 @@
 					</div>
 
 					<div class="header-button">
-						<button type="button" class="btn-primary">
+						<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 							Оставить заявку
 						</button>
 					</div>

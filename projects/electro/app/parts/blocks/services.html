@@ -2,7 +2,7 @@
 	<div class="container container-md">
 		<!--#include virtual="/parts/blocks/form-calc.html" -->
 
-		<div class="services__inner">
+		<div id="services" class="services__inner">
 			<h2 class="services__title">
 				Предоставляем широкий спектр услуг под ключ
 			</h2>
@@ -13,7 +13,7 @@
 						<img src="./images/dist/services1.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>
@@ -56,7 +56,7 @@
 						<img src="./images/dist/services2.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>
@@ -91,7 +91,7 @@
 						<img src="./images/dist/services3.jpg" alt="" />
 
 						<div class="services__item_button">
-							<button type="button" class="btn-primary">
+							<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
 								Оставить заявку
 							</button>
 						</div>

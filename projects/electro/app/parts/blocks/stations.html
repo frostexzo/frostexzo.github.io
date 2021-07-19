@@ -3,7 +3,7 @@
 		<div class="stations__inner">
 			<div x-cloak x-show.transition.opacity="isStationSelected === true" class="stations__info_wrapper">
 				<div class="stations__info">
-					<button type="button" @click.prevent="isStationSelected = false" class="stations-close">
+					<button type="button" @click.prevent="closeStation" class="stations-close">
 						<img src="./images/dist/close.svg" alt="">
 					</button>
 					<p x-show="station === 'st1'" class="stations__info_block">

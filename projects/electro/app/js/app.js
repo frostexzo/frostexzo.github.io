@@ -3,15 +3,26 @@ const html = document.documentElement;
 const app = () => {
 	return {
 		isMenuOpen: false,
-		isStationSelected: null,
+		isStationSelected: false,
 		station: "st1",
+		isBackgroundShow: false,
+		isPrivacyShow: false,
+		isCalcPopupShow: false,
+		isQuestionPopupShow: false,
 
 		selectStation(e) {
 			this.station = e.dataset.id;
 
 			if (window.innerWidth <= 1200) {
 				this.isStationSelected = true;
+				this.isBackgroundShow = true;
 			}
+		},
+
+		closeStation() {
+			this.isStationSelected = false;
+			this.station = null;
+			this.isBackgroundShow = false;
 		},
 
 		stationAdaptive() {
@@ -21,6 +32,58 @@ const app = () => {
 				this.isStationSelected = false;
 				this.station = null;
 			}
+		},
+
+		showPrivacy() {
+			this.isPrivacyShow = !this.isPrivacyShow;
+			this.isBackgroundShow = !this.isBackgroundShow;
+		},
+
+		closePopup(id) {
+			this.isBackgroundShow = false;
+			switch (id) {
+				case "calc": {
+					this.isCalcPopupShow = false;
+					break;
+				}
+				case "question": {
+					this.isQuestionPopupShow = false;
+					break;
+				}
+			}
+		},
+
+		showPopup(id) {
+			this.isBackgroundShow = true;
+			switch (id) {
+				case "calc": {
+					this.isCalcPopupShow = true;
+					break;
+				}
+				case "question": {
+					this.isQuestionPopupShow = true;
+					break;
+				}
+			}
+		},
+
+		bgClick() {
+			this.isBackgroundShow = false;
+			this.isPrivacyShow = false;
+			this.isStationSelected = false;
+			this.isCalcPopupShow = false;
+			this.isQuestionPopupShow = false;
+		},
+
+		navTo(id) {
+			const element = document.getElementById(id);
+			if (element == null) {
+				window.location.href = "./";
+			}
+			const position = Math.round(element.getBoundingClientRect().top + window.pageYOffset + 5);
+			window.scrollTo({
+				top: position
+			});
 		},
 	};
 };

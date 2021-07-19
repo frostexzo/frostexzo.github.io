@@ -1,49 +1,123 @@
-<footer class="footer">
-	<div class="container">
-		<div class="footer__inner">
-			<a href="#" class="header-logo">
-				<img
-					src="images/dist/logo.svg"
-					width="126"
-					height="93"
-					alt="БЮРО ЭКР"
-				/>
-			</a>
 
-			<div class="footer-info">
+				<div x-cloak x-show.transition.opacity="isPrivacyShow === true" class="privacy">
+				<div class="privacy__inner">
+				<button type="button" @click.prevent="showPrivacy" class="privacy-close">
+				<img src="images/dist/close-green.svg" alt="">
+				</button>
+				<h4 class="privacy__title">Политика конфиденциальности</h4>
+				<div class="container container-md">
+				<div class="privacy__content">
+				<p>
+				Соблюдение Вашей конфиденциальности важно для нашей компании. Поэтому мы разработали Политику Конфиденциальности, которая описывает, как используется и хранится Ваша информация. Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо вопросы.
+
+				</p>
+
+				<strong>Сбор и использование персональной информации
+				</strong>
+
+				<p>Под персональной информацией понимаются данные, которые могут быть использованы для идентификации определенного лица либо связи с ним. От Вас может быть запрошено предоставление персональной информации в любой момент, когда Вы связываетесь с нами.
+				</p>
+
+				<p>
+				Какую персональную информацию мы собираем
+				Когда Вы оставляете заявку на сайте, мы можем собирать различную информацию, включая Ваше имя, номер телефона, адрес электронной почты и т.д.
+
+				</p>
+
+				<strong>
+				Как мы используем Вашу персональную информацию
+
+				</strong>
+
+				<p>
+				Персональная информация позволяет нам сообщать об уникальных предложениях, акциях и других мероприятиях и ближайших событиях. Время от времени мы можем использовать Вашу персональную информацию для отправки важных уведомлений и сообщений. Мы также можем использовать персональную информацию для внутренних целей: проведения аудита, анализа данных и различных исследований в целях улучшения услуг. Если Вы принимаете участие в розыгрыше призов или конкурсе, мы можем использовать информацию для управления такими программами.
+
+				</p>
+
+				<strong>
+
+				Раскрытие информации третьим лицам
+
+				</strong>
+
+				<p>
+				Мы не раскрываем полученную от Вас информацию третьим лицам.
+
+				</p>
+
+				<strong>
+				Исключения
+
+				</strong>
+
+				<p>В соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории РК. Мы также можем раскрывать информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях безопасности, поддержания правопорядка или иных общественно важных случаях. В случае реорганизации, слияния или продажи мы можем передать собираемую нами персональную информацию соответствующему третьему лицу – правопреемнику.
+				</p>
+
+				<strong>Защита персональной информации
+				</strong>
+
+				<p>Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей </p>
+				</div>
+			</div>
+				</div>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isBackgroundShow === true" class="background"></div>
+
+				<div x-cloak x-show.transition.opacity="isCalcPopupShow === true" class="popup">
+					<!--#include virtual="/parts/blocks/form-calc.html" -->
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isQuestionPopupShow === true" class="popup">
+					<!--#include virtual="/parts/blocks/form-question.html" -->
+				</div>
+
+				<footer class="footer">
+				<div class="container">
+				<div class="footer__inner">
+				<a href="#" class="header-logo">
+				<img
+				src="images/dist/logo.svg"
+				width="126"
+				height="93"
+				alt="БЮРО ЭКР"
+				/>
+				</a>
+
+				<div class="footer-info">
 				<p>© ТОО “Бюро Электротехнических решений” Все права защищены 2021</p>
 
-				<a href="#">Политика конфиденциальности</a>
-			</div>
+				<a href="#" @click.prevent="showPrivacy">Политика конфиденциальности</a>
+				</div>
 
-			<div class="footer-buttons">
-				<button class="btn-white">Отправить ТЗ</button>
-				<button class="btn-white green">Запросить оптовый прайс</button>
-			</div>
+				<div class="footer-buttons">
+				<button type="button" @click.prevent="showPopup('calc')" class="btn-white">Отправить ТЗ</button>
+				<button type="button" @click.prevent="showPopup('question')" class="btn-white green">Запросить оптовый прайс</button>
+				</div>
 
-			<div class="footer-links">
+				<div class="footer-links">
 				<div class="footer-links__block">
 				<a href="#">
-					<img src="images/dist/inst.svg" width="27" height="27" alt="">
+				<img src="images/dist/inst.svg" width="27" height="27" alt="">
 				</a>
 				</div>
 
 				<div class="footer-links__block">
-					<a href="tel:+77003402777">+7 700 340 27 77</a>
-					<a href="tel:+77473402777">+7 747 340 27 77</a>
+				<a href="tel:+77003402777">+7 700 340 27 77</a>
+				<a href="tel:+77473402777">+7 747 340 27 77</a>
 				</div>
 
 				<div class="footer-links__block">
-					<a href="mailto:info@domen.kz">info@domen.kz</a>
+				<a href="mailto:info@domen.kz">info@domen.kz</a>
 				</div>
-			</div>
-		</div>
-	</div>
-</footer>
+				</div>
+				</div>
+				</div>
+				</footer>
 
-<script src="js/alpine.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/app.js"></script>
+				<script src="js/alpine.js"></script>
+				<script src="js/swiper.js"></script>
+				<script src="js/app.js"></script>
 
-</body>
-</html>
+				</body>
+				</html>

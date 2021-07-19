@@ -1,0 +1,75 @@
+.page-additional {
+	height: 530px;
+	background-image: url("../images/dist/page-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-position: center top;
+	font-family: "Futura New", sans-serif;
+
+	&__inner {
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		flex-direction: column;
+		max-width: 700px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+	}
+
+	&__desc {
+		font-size: 24px;
+		margin: 55px 0;
+
+		&.notfound {
+			margin: 40px 0;
+		}
+	}
+}
+
+.thanks {
+	&__title {
+		color: $green;
+		font-size: 36px;
+	}
+}
+
+.notfound {
+	&__title {
+		color: $black;
+		font-size: 36px;
+	}
+
+	&__img {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.page-additional {
+		height: 420px;
+
+		&__inner {
+			margin-bottom: 0;
+		}
+		&__desc {
+			font-size: 20px;
+			margin: 40px 0;
+		}
+	}
+
+	.notfound {
+		&__img {
+			display: none;
+		}
+
+		&__title {
+			font-size: 30px;
+		}
+	}
+}
