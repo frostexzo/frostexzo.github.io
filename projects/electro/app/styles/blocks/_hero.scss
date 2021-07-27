@@ -73,17 +73,16 @@
 
 		&__title {
 			font-size: 25px;
-			margin-bottom: 30px;
 		}
 	}
 }
 
 @media screen and (max-width: 430px) {
 	.hero {
-		min-height: 650px;
+		min-height: 680px;
 
 		&__title {
-			font-size: 22px;
+			font-size: 24px;
 		}
 
 		&__features {

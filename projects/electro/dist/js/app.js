@@ -9,6 +9,8 @@ const app = () => {
 		isPrivacyShow: false,
 		isCalcPopupShow: false,
 		isQuestionPopupShow: false,
+		isCertSelected: false,
+		certImage: null,
 
 		selectStation(e) {
 			this.station = e.dataset.id;
@@ -73,6 +75,7 @@ const app = () => {
 			this.isStationSelected = false;
 			this.isCalcPopupShow = false;
 			this.isQuestionPopupShow = false;
+			this.isCertSelected = false;
 		},
 
 		navTo(id) {
@@ -80,11 +83,25 @@ const app = () => {
 			if (element == null) {
 				window.location.href = "./";
 			}
-			const position = Math.round(element.getBoundingClientRect().top + window.pageYOffset + 5);
+			const position = Math.round(
+				element.getBoundingClientRect().top + window.pageYOffset + 5,
+			);
 			window.scrollTo({
-				top: position
+				top: position,
 			});
 		},
+
+		showCert(el) {
+			if (el == null) return;
+			this.certImage = el.src;
+			this.isCertSelected = true;
+			this.isBackgroundShow = true;
+		},
+
+		closeCert() {
+			this.isCertSelected = false;
+			this.isBackgroundShow = false;
+		}
 	};
 };
 
@@ -179,6 +196,11 @@ if (certificatesSliderEl) {
 		navigation: {
 			prevEl: "#cert-slider ~ .slider-arrow-left",
 			nextEl: "#cert-slider ~ .slider-arrow-right",
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			type: "bullets",
+			clickable: true,
 		},
 		breakpoints: {
 			700: {

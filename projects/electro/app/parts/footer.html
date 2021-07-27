@@ -2,7 +2,7 @@
 				<div x-cloak x-show.transition.opacity="isPrivacyShow === true" class="privacy">
 				<div class="privacy__inner">
 				<button type="button" @click.prevent="showPrivacy" class="privacy-close">
-				<img src="images/dist/close-green.svg" alt="">
+				<img src="../../wp-content/themes/electro/assets/images/dist/close-green.svg" alt="">
 				</button>
 				<h4 class="privacy__title">Политика конфиденциальности</h4>
 				<div class="container container-md">
@@ -72,12 +72,21 @@
 					<!--#include virtual="/parts/blocks/form-question.html" -->
 				</div>
 
+				<div x-cloak x-show.transition="isCertSelected === true" class="popup">
+				<div class="cert-popup">
+					<button type="button" @click.prevent="closeCert" class="privacy-close">
+						<img src="../../wp-content/themes/electro/assets/images/dist/close-green.svg" alt="">
+						</button>
+						<img :src="certImage" alt="">
+					</div>
+				</div>
+
 				<footer class="footer">
 				<div class="container">
 				<div class="footer__inner">
 				<a href="#" class="header-logo">
 				<img
-				src="images/dist/logo.svg"
+				src="../../wp-content/themes/electro/assets/images/dist/logo.svg"
 				width="126"
 				height="93"
 				alt="БЮРО ЭКР"
@@ -97,8 +106,8 @@
 
 				<div class="footer-links">
 				<div class="footer-links__block">
-				<a href="#">
-				<img src="images/dist/inst.svg" width="27" height="27" alt="">
+				<a href="https://instagram.com/buro_etr_etl" target="_blank" rel="noopener noreferrer">
+				<img src="../../wp-content/themes/electro/assets/images/dist/inst.svg" width="27" height="27" alt="">
 				</a>
 				</div>
 
@@ -108,7 +117,7 @@
 				</div>
 
 				<div class="footer-links__block">
-				<a href="mailto:info@domen.kz">info@domen.kz</a>
+				<a href="mailto:info@betr.kz">info@betr.kz</a>
 				</div>
 				</div>
 				</div>

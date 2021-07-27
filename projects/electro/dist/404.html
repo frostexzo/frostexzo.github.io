@@ -335,6 +335,15 @@
 
 				</div>
 
+				<div x-cloak x-show.transition="isCertSelected === true" class="popup">
+				<div class="cert-popup">
+					<button type="button" @click.prevent="closeCert" class="privacy-close">
+						<img src="images/dist/close-green.svg" alt="">
+						</button>
+						<img :src="certImage" alt="">
+					</div>
+				</div>
+
 				<footer class="footer">
 				<div class="container">
 				<div class="footer__inner">
@@ -360,7 +369,7 @@
 
 				<div class="footer-links">
 				<div class="footer-links__block">
-				<a href="#">
+				<a href="https://instagram.com/buro_etr_etl" target="_blank" rel="noopener noreferrer">
 				<img src="images/dist/inst.svg" width="27" height="27" alt="">
 				</a>
 				</div>
@@ -371,7 +380,7 @@
 				</div>
 
 				<div class="footer-links__block">
-				<a href="mailto:info@domen.kz">info@domen.kz</a>
+				<a href="mailto:info@betr.kz">info@betr.kz</a>
 				</div>
 				</div>
 				</div>

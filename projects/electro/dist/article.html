@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Бюро ЭТР</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="stylesheet" href="css/main.min.css" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+	</head>
+
+	<body x-data="app()" x-init="stationAdaptive()">
+		<header class="header">
+			<div class="container container-wide">
+				<div class="header__inner">
+					<a href="#" class="header-logo">
+						<img
+							src="images/dist/logo.svg"
+							width="126"
+							height="93"
+							alt="БЮРО ЭКР"
+						/>
+					</a>
+
+					<span class="header-slogan">
+						Бюро<br />электротехнических<br />решений
+					</span>
+
+					<nav class="header-nav">
+						<a href="#" @click.prevent="navTo('services')" class="header-nav__link">
+							Электромонтажные<br />работы
+						</a>
+						<a href="#" @click.prevent="navTo('lab')" class="header-nav__link">
+							Электролаборатория
+						</a>
+						<a href="#" @click.prevent="navTo('catalog')" class="header-nav__link">
+							Оборудование<br />оптом
+						</a>
+						<a href="#" @click.prevent="navTo('contacts')" class="header-nav__link">Контакты</a>
+					</nav>
+
+					<div class="header-phones">
+						<a href="tel:+77003402777">+7 700 340 27 77</a>
+						<a href="tel:+77473402777">+7 747 340 27 77</a>
+					</div>
+
+					<div class="header-button">
+						<button type="button" @click.prevent="showPopup('calc')" class="btn-primary">
+							Оставить заявку
+						</button>
+					</div>
+
+					<button @click.prevent="isMenuOpen = true" type="button" class="header-burger">
+						<img
+							src="images/dist/burger.svg"
+							width="40"
+							height="26"
+							alt=""
+						/>
+					</button>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isMenuOpen === true" class="header-menu">
+					<div class="header-menu__inner">
+						<a href="#" class="header-logo">
+							<img
+								src="images/dist/logo.svg"
+								width="126"
+								height="93"
+								alt="БЮРО ЭКР"
+							/>
+						</a>
+
+						<button @click.prevent="isMenuOpen = false" type="button" class="header-menu-close">
+							<img src="images/dist/close-menu.svg" alt="" />
+						</button>
+
+						<nav class="header-nav">
+							<a href="#" class="header-nav__link">
+								Электромонтажные<br />работы
+							</a>
+							<a href="#" class="header-nav__link">
+								Электролаборатория
+							</a>
+							<a href="#" class="header-nav__link">
+								Оборудование<br />оптом
+							</a>
+							<a href="#" class="header-nav__link">Контакты</a>
+						</nav>
+
+						<div class="header-phones">
+							<a href="tel:+77003402777">+7 700 340 27 77</a>
+							<a href="tel:+77473402777">+7 747 340 27 77</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+
+<main class="">
+	<section class="news">
+		<div class="container container-sm">
+			<div class="article__inner">
+				<img class="article__img" src="./images/dist/services1.jpg" alt="">
+				<time class="article__date">20.07.21</time>
+				<h1 class="article__title">Заголовок новости</h1>
+				<div class="article__content">
+			
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+
+				<div x-cloak x-show.transition.opacity="isPrivacyShow === true" class="privacy">
+				<div class="privacy__inner">
+				<button type="button" @click.prevent="showPrivacy" class="privacy-close">
+				<img src="images/dist/close-green.svg" alt="">
+				</button>
+				<h4 class="privacy__title">Политика конфиденциальности</h4>
+				<div class="container container-md">
+				<div class="privacy__content">
+				<p>
+				Соблюдение Вашей конфиденциальности важно для нашей компании. Поэтому мы разработали Политику Конфиденциальности, которая описывает, как используется и хранится Ваша информация. Пожалуйста, ознакомьтесь и сообщите нам, если у Вас возникнут какие-либо вопросы.
+
+				</p>
+
+				<strong>Сбор и использование персональной информации
+				</strong>
+
+				<p>Под персональной информацией понимаются данные, которые могут быть использованы для идентификации определенного лица либо связи с ним. От Вас может быть запрошено предоставление персональной информации в любой момент, когда Вы связываетесь с нами.
+				</p>
+
+				<p>
+				Какую персональную информацию мы собираем
+				Когда Вы оставляете заявку на сайте, мы можем собирать различную информацию, включая Ваше имя, номер телефона, адрес электронной почты и т.д.
+
+				</p>
+
+				<strong>
+				Как мы используем Вашу персональную информацию
+
+				</strong>
+
+				<p>
+				Персональная информация позволяет нам сообщать об уникальных предложениях, акциях и других мероприятиях и ближайших событиях. Время от времени мы можем использовать Вашу персональную информацию для отправки важных уведомлений и сообщений. Мы также можем использовать персональную информацию для внутренних целей: проведения аудита, анализа данных и различных исследований в целях улучшения услуг. Если Вы принимаете участие в розыгрыше призов или конкурсе, мы можем использовать информацию для управления такими программами.
+
+				</p>
+
+				<strong>
+
+				Раскрытие информации третьим лицам
+
+				</strong>
+
+				<p>
+				Мы не раскрываем полученную от Вас информацию третьим лицам.
+
+				</p>
+
+				<strong>
+				Исключения
+
+				</strong>
+
+				<p>В соответствии с законом, судебным порядком, в судебном разбирательстве и/или на основании публичных запросов или запросов от государственных органов на территории РК. Мы также можем раскрывать информацию о Вас, если мы определим, что такое раскрытие необходимо или уместно в целях безопасности, поддержания правопорядка или иных общественно важных случаях. В случае реорганизации, слияния или продажи мы можем передать собираемую нами персональную информацию соответствующему третьему лицу – правопреемнику.
+				</p>
+
+				<strong>Защита персональной информации
+				</strong>
+
+				<p>Мы предпринимаем меры предосторожности, включая административные, технические и физические для защиты Вашей </p>
+				</div>
+			</div>
+				</div>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isBackgroundShow === true" class="background"></div>
+
+				<div x-cloak x-show.transition.opacity="isCalcPopupShow === true" class="popup">
+					<form action="" method="POST" class="form form-calc">
+	<div class="form__inner">
+		<button type="button" class="popup-close" @click.prevent="closePopup('calc')">
+			<img src="./images/dist/close.svg" alt="">
+		</button>
+		<h3 class="form__title">
+			Получите бесплатный расчет стоимости работ в течение 30 минут
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs">
+				<input
+					class="form__input"
+					type="text"
+					name="fullname"
+					required
+					placeholder="Имя*"
+				/>
+				<input
+					class="form__input"
+					type="tel"
+					name="tel"
+					required
+					placeholder="Телефон*"
+				/>
+				<input
+					class="form__input"
+					type="email"
+					name="email"
+					required
+					placeholder="E-mail*"
+				/>
+				<label class="form__attach" for="attach">
+					<input type="file" id="attach" name="file" />
+					<img
+						src="./images/dist/attach.svg"
+						width="30"
+						height="40"
+						alt=""
+					/>
+					<span>Прикрепите тех.документы<br />(если имеются)</span>
+				</label>
+			</div>
+			<label for="privacyCalc" class="form__checkbox">
+				<input type="checkbox" id="privacyCalc" name="privacy" required checked />
+				<span
+					>даю согласие на сбор и обработку персональных данных</span
+				>
+			</label>
+			<div class="form__submit">
+				<button type="submit" class="btn-white">
+					Оставить заявку
+				</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+				</div>
+
+				<div x-cloak x-show.transition.opacity="isQuestionPopupShow === true" class="popup">
+					<form action="" method="POST" class="form form-question">
+	<div class="form__inner">
+		<button
+			type="button"
+			class="popup-close"
+			@click.prevent="closePopup('question')"
+		>
+			<img src="./images/dist/close.svg" alt="" />
+		</button>
+		<h3 class="form__title">
+			Есть вопросы или предложения? Заполните форму
+		</h3>
+		<div class="form__body">
+			<div class="form__inputs_wrapper">
+				<div class="form__inputs">
+					<input
+						class="form__input"
+						type="text"
+						name="fullname"
+						required
+						placeholder="Имя*"
+					/>
+					<input
+						class="form__input"
+						type="tel"
+						name="tel"
+						required
+						placeholder="Телефон*"
+					/>
+					<input
+						class="form__input"
+						type="email"
+						name="email"
+						required
+						placeholder="E-mail*"
+					/>
+				</div>
+				<div class="form__inputs">
+					<textarea
+						class="form__input"
+						name="message"
+						placeholder="Введите сообщение"
+					></textarea>
+					<label class="form__attach" for="attach">
+						<input type="file" id="attach" name="file" />
+						<img
+							src="./images/dist/attach.svg"
+							width="30"
+							height="40"
+							alt=""
+						/>
+						<span
+							>Прикрепите тех.документы<br />(если имеются)</span
+						>
+					</label>
+				</div>
+			</div>
+			<div class="form__buttons_wrapper">
+				<label for="privacyQuestion" class="form__checkbox">
+					<input
+						type="checkbox"
+						id="privacyQuestion"
+						name="privacy"
+						required
+						checked
+					/>
+					<span
+						>даю согласие на сбор и обработку персональных
+						данных</span
+					>
+				</label>
+				<div class="form__submit">
+					<button type="submit" class="btn-white">
+						Оставить заявку
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
+
+				</div>
+
+				<div x-cloak x-show.transition="isCertSelected === true" class="popup">
+				<div class="cert-popup">
+					<button type="button" @click.prevent="closeCert" class="privacy-close">
+						<img src="images/dist/close-green.svg" alt="">
+						</button>
+						<img :src="certImage" alt="">
+					</div>
+				</div>
+
+				<footer class="footer">
+				<div class="container">
+				<div class="footer__inner">
+				<a href="#" class="header-logo">
+				<img
+				src="images/dist/logo.svg"
+				width="126"
+				height="93"
+				alt="БЮРО ЭКР"
+				/>
+				</a>
+
+				<div class="footer-info">
+				<p>© ТОО “Бюро Электротехнических решений” Все права защищены 2021</p>
+
+				<a href="#" @click.prevent="showPrivacy">Политика конфиденциальности</a>
+				</div>
+
+				<div class="footer-buttons">
+				<button type="button" @click.prevent="showPopup('calc')" class="btn-white">Отправить ТЗ</button>
+				<button type="button" @click.prevent="showPopup('question')" class="btn-white green">Запросить оптовый прайс</button>
+				</div>
+
+				<div class="footer-links">
+				<div class="footer-links__block">
+				<a href="https://instagram.com/buro_etr_etl" target="_blank" rel="noopener noreferrer">
+				<img src="images/dist/inst.svg" width="27" height="27" alt="">
+				</a>
+				</div>
+
+				<div class="footer-links__block">
+				<a href="tel:+77003402777">+7 700 340 27 77</a>
+				<a href="tel:+77473402777">+7 747 340 27 77</a>
+				</div>
+
+				<div class="footer-links__block">
+				<a href="mailto:info@betr.kz">info@betr.kz</a>
+				</div>
+				</div>
+				</div>
+				</div>
+				</footer>
+
+				<script src="js/alpine.js"></script>
+				<script src="js/swiper.js"></script>
+				<script src="js/app.js"></script>
+
+				</body>
+				</html>

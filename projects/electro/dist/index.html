@@ -213,6 +213,10 @@
 							Электромонтажные работы
 						</h3>
 
+						<div class="services__item_img mobile">
+							<img src="./images/dist/services1.jpg" alt="" />
+						</div>
+
 						<ul class="services__item_features">
 							<li>
 								Монтаж трансформаторных подстанций 0,4-10 кВ
@@ -256,6 +260,10 @@
 							Электроремонтные работы
 						</h3>
 
+						<div class="services__item_img mobile">
+							<img src="./images/dist/services2.jpg" alt="" />
+						</div>
+
 						<ul class="services__item_features">
 							<li>
 								Устранение повреждений на кабельных линиях
@@ -290,6 +298,10 @@
 						<h3 class="services__item_title">
 							Аренда спец техники
 						</h3>
+
+						<div class="services__item_img mobile">
+							<img src="./images/dist/services1.jpg" alt="" />
+						</div>
 
 						<ul class="services__item_features">
 							<li>Экскаватор-погрузчик</li>
@@ -877,28 +889,32 @@
 			<h2 class="cert__title">Сертификаты диллерства</h2>
 
 			<div class="cert__slider">
-				<div id="cert-slider" class="swiper-container cert__slider_container">
+				<div
+					id="cert-slider"
+					class="swiper-container cert__slider_container"
+				>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert1.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert1.jpg" alt="" />
 						</div>
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert2.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert2.jpg" alt="" />
 						</div>
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert3.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert3.jpg" alt="" />
 						</div>
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert4.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert4.jpg" alt="" />
 						</div>
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert5.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert5.jpg" alt="" />
 						</div>
 						<div class="swiper-slide cert__item">
-							<img src="./images/dist/cert6.jpg" alt="" />
+							<img @click="showCert(event.target)" src="./images/dist/cert6.jpg" alt="" />
 						</div>
 					</div>
 				</div>
+				<div class="swiper-pagination"></div>
 				<div class="slider-arrow slider-arrow-left">
 					<img src="./images/dist/arr-left-sm.svg" alt="" />
 				</div>
@@ -1034,7 +1050,7 @@
 
 					<div class="contacts__info_block">
 						<span class="contacts__subtitle"> E-MAIL: </span>
-						<a href="mailto:info@domen.kz">info@domen.kz</a>
+						<a href="mailto:info@domen.kz">info@betr.kz</a>
 					</div>
 				</div>
 
@@ -1340,6 +1356,15 @@
 
 				</div>
 
+				<div x-cloak x-show.transition="isCertSelected === true" class="popup">
+				<div class="cert-popup">
+					<button type="button" @click.prevent="closeCert" class="privacy-close">
+						<img src="images/dist/close-green.svg" alt="">
+						</button>
+						<img :src="certImage" alt="">
+					</div>
+				</div>
+
 				<footer class="footer">
 				<div class="container">
 				<div class="footer__inner">
@@ -1365,7 +1390,7 @@
 
 				<div class="footer-links">
 				<div class="footer-links__block">
-				<a href="#">
+				<a href="https://instagram.com/buro_etr_etl" target="_blank" rel="noopener noreferrer">
 				<img src="images/dist/inst.svg" width="27" height="27" alt="">
 				</a>
 				</div>
@@ -1376,7 +1401,7 @@
 				</div>
 
 				<div class="footer-links__block">
-				<a href="mailto:info@domen.kz">info@domen.kz</a>
+				<a href="mailto:info@betr.kz">info@betr.kz</a>
 				</div>
 				</div>
 				</div>

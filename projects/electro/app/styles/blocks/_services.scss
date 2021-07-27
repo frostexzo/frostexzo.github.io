@@ -1,7 +1,7 @@
 .services {
 	margin-top: -230px;
 
-	background: url("../../images/dist/services-bg.jpg") no-repeat;
+	background: url("../images/dist/services-bg.jpg") no-repeat;
 	background-size: 100% auto;
 	background-position: bottom;
 
@@ -30,6 +30,10 @@
 			margin-right: 60px;
 			max-width: 388px;
 			width: 100%;
+
+			&.mobile {
+				display: none;
+			}
 
 			& img {
 				width: 100%;
@@ -85,8 +89,25 @@
 		&__item {
 			flex-direction: column-reverse;
 
+			&_button {
+				margin-top: 0;
+			}
+
 			&_img {
 				margin: 0;
+
+				& img {
+					display: none;
+				}
+
+				&.mobile {
+					display: flex;
+					margin-bottom: 25px;
+
+					& img {
+						display: block;
+					}
+				}
 			}
 
 			&_info {
