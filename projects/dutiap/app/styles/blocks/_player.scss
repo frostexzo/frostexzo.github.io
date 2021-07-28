@@ -73,6 +73,35 @@
 		}
 	}
 
+	&__download {
+		display: none;
+		position: absolute;
+		right: -100px;
+		color: $wh;
+		padding: 6px 12px;
+		background-color: lighten($bg, 12%);
+		border-radius: 6px;
+		transition: background-color .1s ease;
+
+		@keyframes showAnim {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		&.active {
+			display: flex;
+			animation: showAnim .2s forwards;
+		}
+
+		&:hover {
+			background-color: lighten($bg, 16%);
+		}
+	}
+
 	&__play {
 		display: flex;
 		align-items: center;
@@ -122,6 +151,15 @@
 				transition: transform 0.05s linear;
 				transform: scale(0.92);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.playlist {
+		&__download {
+			right: 5px;
+			top: -15px;
 		}
 	}
 }
@@ -228,6 +266,11 @@
 				width: 16px;
 				height: 16px;
 			}
+		}
+
+		&__download {
+			right: 0;
+			font-size: 12px;
 		}
 	}
 }
