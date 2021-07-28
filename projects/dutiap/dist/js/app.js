@@ -10,7 +10,7 @@ if (menuBtn) {
 	menuBtn.addEventListener("click", () => {
 		menu.classList.add("active");
 	});
-	
+
 	menuCloseBtn.addEventListener("click", () => {
 		menu.classList.remove("active");
 	});
