@@ -73,35 +73,6 @@
 		}
 	}
 
-	&__download {
-		display: none;
-		position: absolute;
-		right: -100px;
-		color: $wh;
-		padding: 6px 12px;
-		background-color: lighten($bg, 12%);
-		border-radius: 6px;
-		transition: background-color .1s ease;
-
-		@keyframes showAnim {
-			0% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-
-		&.active {
-			display: flex;
-			animation: showAnim .2s forwards;
-		}
-
-		&:hover {
-			background-color: lighten($bg, 16%);
-		}
-	}
-
 	&__play {
 		display: flex;
 		align-items: center;
@@ -145,6 +116,7 @@
 	&__more {
 		display: flex;
 		margin-left: 32px;
+		position: relative;
 
 		&:active {
 			& img {
@@ -152,14 +124,17 @@
 				transform: scale(0.92);
 			}
 		}
-	}
-}
 
-@media screen and (max-width: 1200px) {
-	.playlist {
-		&__download {
-			right: 5px;
-			top: -15px;
+		& select {
+			cursor: pointer;
+			width: 24px;
+			height: 24px;
+			top: 0;
+			left: 0;
+			position: absolute;
+			opacity: 0;
+			font-family: "Noto Sans", sans-serif;
+
 		}
 	}
 }
@@ -212,7 +187,7 @@
 	.player {
 		&__info {
 			&_title {
-				font-size: 20px;
+				font-size: 7vw;
 			}
 
 			&_author {
@@ -250,9 +225,9 @@
 		}
 
 		&__title {
-			font-size: 12px;
 			margin-left: 12px;
 			max-width: 120px;
+			font-size: 12px;
 		}
 
 		&__lasts {
@@ -266,11 +241,6 @@
 				width: 16px;
 				height: 16px;
 			}
-		}
-
-		&__download {
-			right: 0;
-			font-size: 12px;
 		}
 	}
 }

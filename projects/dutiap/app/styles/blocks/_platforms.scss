@@ -54,7 +54,6 @@
 
 		&__list {
 			margin-right: -16px;
-			justify-content: flex-start;
 		}
 	}
 }
@@ -82,7 +81,7 @@
 	}
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 415px) {
 	.platforms {
 		&__link:first-child {
 			order: -1;
