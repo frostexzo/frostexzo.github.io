@@ -1,0 +1,133 @@
+$black: #2d3436;
+$blue: #6c5ce7;
+$yellow: #ffe70e;
+$white: #fff;
+$white-op: rgba(255, 255, 255, 0.7);
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		font-display: swap;
+		src: url($furl) format("woff2");
+	}
+}
+
+@include font("Acrom", normal, 400, "../fonts/Acrom-Regular.woff2");
+@include font("Acrom", normal, 700, "../fonts/Acrom-Bold.woff2");
+
+[x-cloak] {
+	display: none !important;
+}
+
+html.overflow {
+	overflow-x: hidden !important;
+	overflow-y: scroll !important;
+	height: 100%;
+
+	& body {
+		overflow: hidden !important;
+		height: 100%;
+	}
+}
+
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+::placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+::-webkit-input-placeholder {
+	color: #000;
+	opacity: 1;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "Acrom", sans-serif;
+}
+
+.container {
+	max-width: 1570px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+img,
+a,
+button {
+	user-select: none;
+	text-decoration: none;
+}
+
+input,
+button {
+	background-color: transparent;
+	border: 0;
+	font-family: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	appearance: none;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	min-width: 15px;
+	position: relative;
+	border: 2.5px solid #000;
+	background-color: transparent;
+	box-shadow: 0 0 0 1px #000;
+	transition: box-shadow 0.1s ease, background-color 0.1s ease;
+
+	&:hover {
+		box-shadow: 0 0 0 2px #000;
+	}
+
+	&:checked {
+		background-color: #000;
+		box-shadow: 0 0 0 1px #000;
+
+		&:hover {
+			box-shadow: 0 0 0 2px #000;
+		}
+	}
+}
+
+input[type="checkbox"] {
+	border-radius: 0;
+
+	&:before {
+		border-radius: 0;
+	}
+}
+
+.button-round {
+	background-color: #8c3da8;
+	border-radius: 40px;
+	padding: 20px 35px;
+	font-size: 18px;
+	letter-spacing: 0.25px;
+	font-weight: 700;
+	color: $white;
+	transition: background-color .1s ease;
+
+	&:hover, &:active {
+		background-color: $yellow;
+	}
+}

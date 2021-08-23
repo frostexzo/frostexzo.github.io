@@ -1,0 +1,75 @@
+.header {
+	background-color: $white;
+
+	&__inner {
+		padding: 22px 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&-logo {
+		max-width: 185px;
+		height: auto;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+
+	&-link {
+		color: $blue;
+		display: block;
+		font-size: 18px;
+		font-weight: 400;
+		transition: color 0.1s ease, font-weight 0.1s ease;
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 70px;
+
+			&:before {
+				position: absolute;
+				content: '';
+				right: -35px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 5px;
+				height: 5px;
+				background-color: #FDCB6E;
+				border-radius: 100%;
+			}
+		}
+
+		&:hover, &:active {
+			color: $black;
+			font-weight: 700;
+		}
+	}
+}
+
+.header-btns {
+	display: flex;
+	align-items: center;
+}
+
+.header-phones {
+	margin-right: 20px;
+
+	&__link {
+		display: block;
+		color: $black;
+		font-size: 18px;
+		transition: color .1s ease;
+
+		&:hover {
+			color: $blue;
+		}
+
+		&:last-child {
+			margin-top: 5px;
+		}
+	}
+}
+

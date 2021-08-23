@@ -39,11 +39,15 @@ if (playlist.length > 0) {
 				audio.src = audioSrc;
 				audio.play();
 
-				audio.addEventListener("loadedmetadata", () => {
-					const mins = Math.floor(audio.duration / 60);
-					const seconds = Math.floor(audio.duration % 60);
-					audioLasts.textContent = `${pad(mins)}:${pad(seconds)}`;
-				}, {once: true});
+				audio.addEventListener(
+					"loadedmetadata",
+					() => {
+						const mins = Math.floor(audio.duration / 60);
+						const seconds = Math.floor(audio.duration % 60);
+						audioLasts.textContent = `${pad(mins)}:${pad(seconds)}`;
+					},
+					{ once: true },
+				);
 			} else {
 				audioItem.removeAttribute("playing");
 				audioItem.setAttribute("paused", true);

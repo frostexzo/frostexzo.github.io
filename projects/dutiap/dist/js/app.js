@@ -1,7 +1,7 @@
 const moreBtns = document.querySelectorAll(".playlist__more");
 const playBtns = document.querySelectorAll(".playlist__play");
 const playlist = document.querySelectorAll(".playlist__item");
-let audio = new Audio();
+const audio = new Audio();
 
 if (playlist.length > 0) {
 	playBtns.forEach((btn) => {
@@ -13,14 +13,14 @@ if (playlist.length > 0) {
 
 			audio.addEventListener("ended", () => {
 				audioItem.removeAttribute("playing");
-				audioIcon.src = "./img/play-icon.svg";
+				audioIcon.src = src("../img/play-icon.svg");
 				audio.pause();
 			});
 
 			if (!audioItem.getAttribute("playing")) {
 				if (audioItem.getAttribute("paused")) {
 					audio.play();
-					audioIcon.src = "./images/dist/pause.svg";
+					audioIcon.src = src("../img/pause.svg");
 					audioItem.setAttribute("playing", true);
 					return;
 				}
@@ -31,23 +31,27 @@ if (playlist.length > 0) {
 					currentItem.removeAttribute("paused");
 					const currentIcon =
 						currentItem.querySelector(".playlist__icon");
-					currentIcon.src = "./img/play-icon.svg";
+					currentIcon.src = src("../img/play-icon.svg");
 				}
 
 				audioItem.setAttribute("playing", true);
-				audioIcon.src = "./img/pause.svg";
+				audioIcon.src = src("../img/pause.svg");
 				audio.src = audioSrc;
 				audio.play();
 
-				audio.addEventListener("loadedmetadata", () => {
-					const mins = Math.floor(audio.duration / 60);
-					const seconds = Math.floor(audio.duration % 60);
-					audioLasts.textContent = `${pad(mins)}:${pad(seconds)}`;
-				});
+				audio.addEventListener(
+					"loadedmetadata",
+					() => {
+						const mins = Math.floor(audio.duration / 60);
+						const seconds = Math.floor(audio.duration % 60);
+						audioLasts.textContent = `${pad(mins)}:${pad(seconds)}`;
+					},
+					{ once: true },
+				);
 			} else {
 				audioItem.removeAttribute("playing");
 				audioItem.setAttribute("paused", true);
-				audioIcon.src = "./img/play-icon.svg";
+				audioIcon.src = src("../img/play-icon.svg");
 				audio.pause();
 			}
 		});
@@ -59,5 +63,13 @@ const pad = (value) => {
 		return `0${value}`;
 	} else {
 		return value;
+	}
+};
+
+const src = (src) => {
+	if (location.pathname.includes("ru")) {
+		return src;
+	} else {
+		return src.replace(".", "");
 	}
 };
