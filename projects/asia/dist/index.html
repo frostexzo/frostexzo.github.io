@@ -124,7 +124,7 @@
 </html>
 
 <main class="main">
-	<section class="hero">
+	<section class="hero lazyload" style="background-image: url("../images/dist/bg-hero.png");">
 	<div class="container">
 		<div class="hero__inner">
 			<div class="hero__inner_wrapper">
@@ -236,7 +236,7 @@
 </section>
 
 	<section class="packets">
-	<img decoding="async" src="./images/dist/bg-packets.png" alt="" class="packets__bg">
+	<img decoding="async" src="./images/dist/bg-packets.png" alt="" class="packets__bg lazyload">
 	<div class="container">
 		<div class="packets__inner">
 			<h2 class="packets__title">
@@ -718,7 +718,7 @@
 	<div class="container">
 		<div class="promo__inner">
 			<div class="promo__img">
-				<img decoding="async" src="./images/dist/astro.png" alt="" />
+				<img decoding="async" class="lazyload" src="./images/dist/astro.png" alt="" />
 			</div>
 
 			<div class="promo__info">
@@ -850,6 +850,7 @@
 
 <script src="js/alpine.js"></script>
 <script src="js/swiper.js"></script>
+<script src="js/lazyload.js"></script>
 <script src="js/app.js"></script>
 
 </body>
