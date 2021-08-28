@@ -1,0 +1,15 @@
+.partners {
+	&__item {
+		width: auto;
+	}
+
+	&__inner {
+		padding-bottom: 40px;
+		padding-top: 0;
+	}
+
+	& .swiper-wrapper {
+		align-items: center;
+		transition-timing-function: linear !important;
+	}
+}

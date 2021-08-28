@@ -117,10 +117,81 @@
 		letter-spacing: 0.25px;
 		font-weight: 700;
 		text-align: center;
-		transition: background-color .1s ease;
+		transition: background-color 0.1s ease;
 
-		&:hover, &:active {
+		&:hover,
+		&:active {
 			background-color: $white;
+		}
+	}
+}
+
+@media screen and (max-width: 1650px) {
+	.portfolio {
+		&__inner {
+			padding-top: 70px;
+		}
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.portfolio {
+		&__inner {
+			padding-top: 0;
+
+			&::before {
+				left: -25px;
+				top: -90px;
+			}
+		}
+
+		&__title {
+			font-size: 36px;
+		}
+
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.portfolio {
+		&__title {
+			font-size: 32px;
+		}
+
+		&__button {
+			font-size: 16px;
+			max-width: 250px;
+
+			&_wrapper {
+				margin-top: 50px;
+			}
+		}
+
+		&__inner {
+			padding-bottom: 220px;
+		}
+
+		&__item {
+			&_info {
+				&-title {
+					font-size: 20px;
+				}
+
+				&-desc {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.portfolio {
+		&__items {
+			grid-template-columns: 1fr;
 		}
 	}
 }

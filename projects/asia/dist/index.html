@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Asia Media</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="images/dist/bg-hero.png" as="image" />
+		<link rel="preload" href="images/dist/bg-packets.png" as="image" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<button
+						@click.prevent="isMenuOpen = !isMenuOpen"
+						type="button"
+						class="header-burger"
+					>
+						<img
+							src="images/dist/burger.svg"
+							width="40"
+							height="40"
+							alt="Menu"
+						/>
+					</button>
+					<a href="#" class="header-logo">
+						<img
+							src="images/dist/logo.png"
+							width="185"
+							height="102"
+							alt="Asia Media"
+						/>
+					</a>
+
+					<nav class="nav">
+						<a href="#" class="nav-link"> Агентство </a>
+						<a href="#" class="nav-link"> Услуги </a>
+						<a href="#" class="nav-link"> Портфолио </a>
+						<a href="#" class="nav-link"> Контакты </a>
+					</nav>
+
+					<div class="header-btns">
+						<div class="header-phones">
+							<a
+								href="tel:+77776408228"
+								class="header-phones__link"
+								>+7 777 640 8228</a
+							>
+							<a
+								href="tel:+77272341846"
+								class="header-phones__link"
+								>+7 727 234 1846</a
+							>
+						</div>
+						<button
+							type="button"
+							class="header-button button-round"
+						>
+							Заказать звонок
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show.transition="isMenuOpen === true"
+				class="header-menu"
+			>
+				<div class="header-menu__inner">
+					<div class="header-menu__close">
+						<button @click.prevent="isMenuOpen = false" type="button">
+							<img
+								src="images/dist/close.svg"
+								width="24"
+								height="24"
+								alt="Close"
+							/>
+						</button>
+					</div>
+
+					<div class="header-menu__nav">
+						<a href="#" class="nav-link"> Агентство </a>
+						<a href="#" class="nav-link"> Услуги </a>
+						<a href="#" class="nav-link"> Портфолио </a>
+						<a href="#" class="nav-link"> Контакты </a>
+					</div>
+
+					<div class="header-menu__btns">
+						<div class="header-phones">
+							<a
+								href="tel:+77776408228"
+								class="header-phones__link"
+								>+7 777 640 8228</a
+							>
+							<a
+								href="tel:+77272341846"
+								class="header-phones__link"
+								>+7 727 234 1846</a
+							>
+						</div>
+						<button
+							type="button"
+							class="header-button button-round"
+						>
+							Заказать звонок
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+<main class="main">
+	<section class="hero">
+	<div class="container">
+		<div class="hero__inner">
+			<div class="hero__inner_wrapper">
+				<div class="hero__titles">
+					<h1 class="hero__title">
+						Разрабатываем сайты для перевода бизнеса в онлайн
+					</h1>
+					<span class="hero__text">
+						Получите мощный инструмент для привлечения клиентов
+					</span>
+				</div>
+
+				<div class="hero__form_wrapper">
+					<form action="" class="hero__form">
+						<label for="" class="hero__label">
+							<span class="hero__label_text">Тел:</span>
+							<input type="tel" class="hero__input" />
+						</label>
+						<button type="submit" class="hero__submit button-round">
+							<img
+								src="./images/dist/tel.svg"
+								width="43"
+								height="39"
+								alt=""
+							/>
+							Обсудить проект
+						</button>
+					</form>
+				</div>
+			</div>
+			<div class="hero__tags">
+				<a href="#" class="hero__tag">#LandingPage</a>
+				<a href="#" class="hero__tag">#Интернет-магазины</a>
+				<a href="#" class="hero__tag">#КорпоративныеСайты</a>
+				<a href="#" class="hero__tag">#Маркетплейсы</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="features">
+	<div class="container">
+		<div class="features__inner">
+			<h2 class="features__title">
+				Заказывая разработку сайта в <strong>Asia Media</strong> вы
+				получаете
+			</h2>
+
+			<div class="features__items">
+				<div class="features__item">
+					<img
+						class="features__item_img"
+						src="./images/dist/f1.svg"
+						width="121"
+						height="121"
+						alt=""
+					/>
+					<h4 class="features__item_title">Стратегический<br>подход</h4>
+					<span class="features__item_desc">
+						Мы подходим к вопросу комплексно и рассматриваем сайт
+						как элемент воронки привлечения клиентов.
+					</span>
+				</div>
+				<div class="features__item">
+					<img
+						class="features__item_img"
+						src="./images/dist/f2.svg"
+						width="121"
+						height="121"
+						alt=""
+					/>
+					<h4 class="features__item_title">Креативность и <br>творчество</h4>
+					<span class="features__item_desc">
+						Мы подходим к вопросу комплексно и рассматриваем сайт
+						как элемент воронки привлечения клиентов.
+					</span>
+				</div>
+				<div class="features__item">
+					<img
+						class="features__item_img"
+						src="./images/dist/f3.svg"
+						width="121"
+						height="121"
+						alt=""
+					/>
+					<h4 class="features__item_title">Технологичность</h4>
+					<span class="features__item_desc">
+						Мы подходим к вопросу комплексно и рассматриваем сайт
+						как элемент воронки привлечения клиентов.
+					</span>
+				</div>
+				<div class="features__item">
+					<img
+						class="features__item_img"
+						src="./images/dist/f4.svg"
+						width="121"
+						height="121"
+						alt=""
+					/>
+					<h4 class="features__item_title">Cтремление <br> к идеалу</h4>
+					<span class="features__item_desc">
+						Мы подходим к вопросу комплексно и рассматриваем сайт
+						как элемент воронки привлечения клиентов.
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="packets">
+	<img decoding="async" src="./images/dist/bg-packets.png" alt="" class="packets__bg">
+	<div class="container">
+		<div class="packets__inner">
+			<h2 class="packets__title">
+				Пакетные предложения по созданию сайтов
+			</h2>
+
+			<div class="packets__items">
+				<div class="packets__item">
+					<div class="packets__item_title">Landing Page</div>
+					<div class="packets__item_block">
+						<ul class="packets__item_list">
+							<li>
+								Анализ Целевой аудитории и сайтов конкурентов
+							</li>
+							<li>
+								Прототип с продающей структурой Landing Page
+							</li>
+							<li>Уникальный дизайн</li>
+							<li>
+								Адаптивная верстка на чистом коде / в тильде
+							</li>
+							<li>Настройка уведомлений при получении заявок</li>
+							<li>Установка и настройка Яндекс. Метрики</li>
+							<li>Интеграция utm-меток</li>
+							<li>Домен и хостинг на 1 год</li>
+						</ul>
+
+						<div class="packets__button_wrapper">
+							<button type="button" class="packets__button">
+								Получить предложение
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="packets__item">
+					<div class="packets__item_title">Интернет-магазин</div>
+					<div class="packets__item_block">
+						<ul class="packets__item_list">
+							<li>Прототип с нуля</li>
+							<li>Уникальный дизайн</li>
+							<li>Адаптивная верстка</li>
+							<li>Интеграция с CMS (админ-панелью)</li>
+							<li>Частичное наполнение товарами</li>
+							<li>Схематичная инструкция к админ-панели</li>
+							<li>
+								Настройка e-mail уведомлений на почту при
+								получении заявок
+							</li>
+							<li>
+								Установка и настройка Яндекс. Метрики и
+								вебвизора / GoogleAnalytics
+							</li>
+							<li>Интеграция utm-меток</li>
+							<li>Домен и хостинг на 1 год</li>
+						</ul>
+
+						<div class="packets__button_wrapper">
+							<button type="button" class="packets__button">
+								Получить предложение
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="packets__item">
+					<div class="packets__item_title">Корпоративный сайт</div>
+					<div class="packets__item_block">
+						<ul class="packets__item_list">
+							<li>Прототип с нуля</li>
+							<li>Уникальный дизайн страниц</li>
+							<li>Адаптивная верстка</li>
+							<li>Интеграция с CMS (админ-панелью)</li>
+							<li>Частичное наполнение контентом</li>
+							<li>Схематичная инструкция к админ-панели</li>
+							<li>
+								Настройка e-mail уведомлений на почту при
+								получении заявок
+							</li>
+							<li>
+								Установка и настройка Яндекс. Метрики и
+								вебвизора / GoogleAnalytics
+							</li>
+							<li>Интеграция utm-меток</li>
+							<li>Домен и хостинг на 1 год</li>
+						</ul>
+
+						<div class="packets__button_wrapper">
+							<button type="button" class="packets__button">
+								Получить предложение
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="portfolio">
+	<img
+		decoding="async"
+		src="./images/dist/bg-portfolio.svg"
+		alt=""
+		class="portfolio__bg"
+	/>
+	<div class="container">
+		<div class="portfolio__inner">
+			<h2 class="portfolio__title">Одни из последних работ</h2>
+
+			<div class="portfolio__items">
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+				<a href="#" class="portfolio__item">
+					<img
+						class="portfolio__item_img"
+						src="./images/dist/work1.jpg"
+						alt=""
+					/>
+
+					<div class="portfolio__item_info">
+						<span class="portfolio__item_info-title">WEBSITE</span>
+						<span class="portfolio__item_info-desc"
+							>Lorem ipsum dolor sit amet consectetur adipisicing
+							elit. Laborum, temporibus?</span
+						>
+					</div>
+				</a>
+			</div>
+
+			<div class="portfolio__button_wrapper">
+				<a href="#" class="portfolio__button">Показать все</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="stages">
+	<img decoding="async" src="./images/dist/wave.svg" alt="" class="stages__wave">
+	<img decoding="async" src="./images/dist/planet-lg.png" alt="" class="stages__bg">
+	<div class="container">
+		<div class="stages__inner">
+			<div class="stages__info">
+				<div class="stages__info_img">
+					<img src="./images/dist/person.png" alt="" />
+				</div>
+
+				<div class="stages__info_text">
+					<h2 class="stages__title">
+						Вы получаете не просто разработку сайта
+					</h2>
+					<span class="stages__desc">
+						Процесс разработки у нас не ограничивается в работе
+						одного программиста и включает 8 важнейших этапов
+					</span>
+				</div>
+			</div>
+
+			<div class="stages__grid">
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">1.0</span>
+					<h5 class="stages__grid_title">
+						Заполнение брифа и формирование ТЗ
+					</h5>
+					<span class="stages__grid_desc"
+						>Для того, чтобы создать эффективный сайт, необходимо
+						грамотно передать всю суть вашей деятельности и раскрыть
+						преимущества. <br /><br />
+						Идеальным способом передачи информации является
+						заполнение брифа.
+						<br /><br />
+						Закрепить адекватность восприятия обеими сторонами сути
+						задачи позволит формирование Техничекого задания.</span
+					>
+
+					<a href="" class="stages__grid_link">
+						<span>Скачать бриф</span>
+					</a>
+				</div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">2.0</span>
+					<h5 class="stages__grid_title">
+						Анализ Целевой аудитории и конкурентов
+					</h5>
+					<span class="stages__grid_desc"
+						>Делаем все ради того, чтобы ваш потенциальный клиент
+						захотел с Вами связаться. Для этого мы изучаем Вашу
+						целевую аудиторию и отслеживаем все главные преимущества
+						и недостатки на сайтах ваших конкурентов.</span
+					>
+				</div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">3.0</span>
+					<h5 class="stages__grid_title">Прототипирование</h5>
+					<span class="stages__grid_desc"
+						>Сайт - это не только работа дизайнера и
+						программиста.<br />
+						В первую очередь вашему сайту нужна грамотная структура
+						и тексты, логически понятные любому посетителю.
+						<br /><br />
+						Прототип будет утверждаться совместно с Вами во
+						избежание недочетов и ошибок.</span
+					>
+				</div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">4.0</span>
+					<h5 class="stages__grid_title">Дизайн</h5>
+					<span class="stages__grid_desc"
+						>Дизайн создается с учетом всех современных тенденций
+						UX/UI. А это значит, что дизайн сайта будет
+						соответствовать тематике вашего бизнеса, акцентировать
+						внимание на важных элементах, не отвлекать взгляд
+						посетителя при изучении информации. <br /><br />
+						Дизайн также будет утверждаться до идеального
+						варианта.</span
+					>
+				</div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">5.0</span>
+					<h5 class="stages__grid_title">Программинг</h5>
+					<span class="stages__grid_desc"
+						>В случае необходимости, подвязываем готовый сайт к CMS
+						системе для управления сайтом; создаем и настраиваем
+						почту для приема заявок; прописываем базовое сео,
+						подключаем системы аналитики.
+					</span>
+				</div>
+
+				<div class="stages__grid_item empty"></div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">6.0</span>
+					<h5 class="stages__grid_title">Тестирование</h5>
+					<span class="stages__grid_desc"
+						>По завершению сайт тестируется на различных
+						устройствах, проверяется корректность передачи данных,
+						анализируется восприятие пользователями. Все для того,
+						чтобы быть уверенным в конечном результате.
+					</span>
+				</div>
+
+				<div class="stages__grid_item">
+					<span class="stages__grid_number">7.0</span>
+					<h5 class="stages__grid_title">Обучение и рефлексия</h5>
+					<span class="stages__grid_desc"
+						>Показываем все возможности для редактирования сайта. Вы
+						получите дополнительно схематичную инструкцию к
+						админ-панели. В течение месяца после запуска рекламы -
+						анализируем поведение пользователей на сайте и, в случае
+						необходимости, вносим корректировки.
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="techs">
+	<div class="container">
+		<div class="techs__inner">
+			<h2 class="techs__title">Делаем сайты с применением</h2>
+
+			<div class="techs__block">
+				<div class="techs__imgs">
+					<div class="techs__imgs_top">
+						<img src="./images/dist/tech1.png" alt="" />
+						<img src="./images/dist/tech2.png" alt="" />
+					</div>
+					<div class="techs__imgs_bottom">
+						<img src="./images/dist/tech3.png" alt="" />
+						<img src="./images/dist/tech4.png" alt="" />
+						<img src="./images/dist/tech5.png" alt="" />
+						<img src="./images/dist/tech6.png" alt="" />
+						<img src="./images/dist/tech7.png" alt="" />
+					</div>
+				</div>
+
+				<div class="techs__form_wrapper">
+					<form action="" class="techs__form">
+						<span class="techs__form_text">
+							Оставьте заявку и подберем подходящее Вам решение
+						</span>
+						<input type="tel" required class="techs__form_input" placeholder="телефон*">
+
+						<button type="submit" class="techs__form_button">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="team">
+	<div class="container">
+		<div class="team__inner">
+			<h2 class="team__title">
+				Наша команда
+			</h2>
+
+			<div id="team" class="team__slider">
+				<div class="swiper-container team__container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team1.png" alt="">
+							<span class="team__item_name">
+								Валерия Черепанова
+							</span>
+							<div class="team__item_desc">
+								Гуру по открытым вопросам
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team2.png" alt="">
+							<span class="team__item_name">
+								Ася Мкрдумян
+
+							</span>
+							<div class="team__item_desc">
+								Мастер убеждения
+								Директор отдела продаж
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team3.png" alt="">
+							<span class="team__item_name">
+								Адиля Юсимова
+
+							</span>
+							<div class="team__item_desc">
+								Вице-президент по креативу
+								Арт-директор
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team4.png" alt="">
+							<span class="team__item_name">
+								Тахмина Одинаева 
+							</span>
+							<div class="team__item_desc">
+								Генерал на поле боя
+								Креативный директор.
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team5.png" alt="">
+							<span class="team__item_name">
+								Валерия Черепанова
+							</span>
+							<div class="team__item_desc">
+								Гуру по открытым вопросам
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team6.png" alt="">
+							<span class="team__item_name">
+								Валерия Черепанова
+							</span>
+							<div class="team__item_desc">
+								Гуру по открытым вопросам
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team7.png" alt="">
+							<span class="team__item_name">
+								Валерия Черепанова
+							</span>
+							<div class="team__item_desc">
+								Гуру по открытым вопросам
+							</div>
+						</div>
+
+						<div class="swiper-slide team__slider_item">
+							<img class="team__item_img" src="./images/dist/team8.png" alt="">
+							<span class="team__item_name">
+								Валерия Черепанова
+							</span>
+							<div class="team__item_desc">
+								Гуру по открытым вопросам
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team__slider_pagination">
+					<div class="team__slider_pagination-prev">
+						<img src="./images/dist/arr-left.svg" alt="">
+					</div>
+					<div class="team__slider_pagination-next">
+						<img src="./images/dist/arr-right.svg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<section class="promo">
+	<div class="container">
+		<div class="promo__inner">
+			<div class="promo__img">
+				<img decoding="async" src="./images/dist/astro.png" alt="" />
+			</div>
+
+			<div class="promo__info">
+				<h2 class="promo__title">
+					Маркетинговые инструменты работают в комплексе
+				</h2>
+
+				<span class="promo__desc">
+					Запросите у нас составление комплекскного предложения
+				</span>
+
+				<div class="promo__form_wrapper">
+					<form action="#" class="promo__form">
+						<input type="tel" required class="techs__form_input" placeholder="телефон*">
+						<button type="submit" class="techs__form_button">Оставить заявку</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="partners" class="partners">
+	<div class="partners__inner">
+		<div class="swiper-container partners__container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p1.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p2.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p3.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p4.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p5.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p6.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p7.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p8.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p9.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p10.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p11.svg" alt="">
+				</div>
+
+				<div class="swiper-slide partners__item">
+					<img src="./images/dist/p12.svg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+	<div class="contacts">
+	<div class="contacts__map">
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A355e23c6fdd95ec4076be6d4632d9d1b6efac9029ec40e1550d96cfa826fb604&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+	</div>
+	<div class="container">
+		<div class="contacts__inner">
+			<div class="contacts__info">
+				<h2 class="contacts__title">
+					Связаться
+				</h2>
+				<div class="contacts__block">
+					<img src="./images/dist/phone.svg" width="50" height="50" alt="">
+					<div class="contacts__block_info">
+						<a href="+77776408228">+7 777 640 8228</a>
+						<a href="+77272341846">+7 727 234 1846</a>
+					</div>
+				</div>
+				<div class="contacts__block">
+					<img src="./images/dist/geo.svg" width="50" height="50" alt="">
+					<div class="contacts__block_info">
+						<span>г. Алматы,<br>ул.Муратбаева, 61.<br> Офис 1.</span>
+					</div>
+				</div>
+				<div class="contacts__block">
+					<img src="./images/dist/email.svg" width="50" height="50" alt="">
+					<div class="contacts__block_info">
+						<a href="mailto:info@asiamedia.kz">info@asiamedia.kz</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</main>
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<a href="#" class="footer-logo">
+				<img decoding="async" src="images/dist/logo.png" width="185" height="102" alt="Asia Media">
+			</a>
+			<a href="#" class="footer-privacy">
+				Политика конфиденциальности
+			</a>
+			<div class="footer-copyright">
+				<span>Asia Media</span>
+				<span>Все права защищены 1997-2021</span>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
