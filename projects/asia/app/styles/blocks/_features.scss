@@ -1,29 +1,30 @@
 .features {
 	background-color: #fff;
+	
 	&__inner {
 		position: relative;
 		z-index: 3;
 		padding-top: 50px;
 		padding-bottom: 40px;
+	}
 
-		&:before, &:after {
-			position: absolute;
-			content: '';
-			top: 0;
-			left: 0;
-			z-index: -1;
-			border-radius: 100%;
-			background-color: #E544FF;
-		}
+	&__icon {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		z-index: -1;
+		border-radius: 100%;
+		background-color: #e544ff;
 
-		&:before {
+		&.icon-1 {
 			width: 273px;
 			height: 273px;
 			top: -60px;
 			left: -30px;
 		}
 
-		&:after {
+		&.icon-2 {
 			width: 76px;
 			top: -40px;
 			left: 250px;

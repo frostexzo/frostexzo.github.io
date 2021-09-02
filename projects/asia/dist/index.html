@@ -127,6 +127,7 @@
 	<section class="hero lazyload" data-bg="images/dist/bg-hero.png">
 	<div class="container">
 		<div class="hero__inner">
+			<div class="hero__icon anim" data-dir="top" data-value="30"></div>
 			<div class="hero__inner_wrapper">
 				<div class="hero__titles">
 					<h1 class="hero__title">
@@ -168,6 +169,8 @@
 	<section class="features">
 	<div class="container">
 		<div class="features__inner">
+			<div class="features__icon icon-1 anim" data-dir="right" data-value="20"></div>
+			<div class="features__icon icon-2 anim" data-dir="top" data-value="60"></div>
 			<h2 class="features__title">
 				Заказывая разработку сайта в <strong>Asia Media</strong> вы
 				получаете
@@ -236,9 +239,36 @@
 </section>
 
 	<section class="packets">
-	<img decoding="async" data-src="./images/dist/bg-packets.png" alt="" class="packets__bg lazyload">
+	<img
+		decoding="async"
+		data-src="./images/dist/bg-packets.png"
+		alt=""
+		class="packets__bg lazyload"
+	/>
 	<div class="container">
 		<div class="packets__inner">
+			<img
+				decoding="async"
+				data-src="./images/dist/planet.png"
+				alt=""
+				class="packets__icon icon-1 lazyload anim"
+				data-dir="top" data-value="20"
+			/>
+			<div class="packets__icon icon-2 anim" data-dir="top" data-value="50"></div>
+			<img
+				decoding="async"
+				data-src="./images/dist/rocket.svg"
+				alt=""
+				class="packets__icon icon-3 lazyload anim"
+				data-dir="right" data-value="20"
+			/>
+			<img
+				decoding="async"
+				data-src="./images/dist/lamp.svg"
+				alt=""
+				class="packets__icon icon-4 lazyload anim"
+				data-dir="left" data-value="20"
+			/>
 			<h2 class="packets__title">
 				Пакетные предложения по созданию сайтов
 			</h2>
@@ -345,6 +375,12 @@
 	/>
 	<div class="container">
 		<div class="portfolio__inner">
+			<img data-src="./images/dist/planet.png" data-dir="top" data-value="30" alt="" class="portfolio__icon icon-1 lazyload anim">
+			<div class="portfolio__icon icon-2 anim" data-dir="left" data-value="30"></div>
+			<img src="./images/dist/stars.svg" data-dir="right" data-value="50" alt="" class="portfolio__icon icon-3 anim">
+			<img src="./images/dist/airplane.svg" data-dir="bottom" data-value="70" alt="" class="portfolio__icon icon-4 anim">
+			<img src="./images/dist/hand.svg" data-dir="right" data-value="20" alt="" class="portfolio__icon icon-5 anim">
+
 			<h2 class="portfolio__title">Одни из последних работ</h2>
 
 			<div class="portfolio__items">
@@ -718,7 +754,7 @@
 	<div class="container">
 		<div class="promo__inner">
 			<div class="promo__img">
-				<img decoding="async" class="lazyload" data-src="./images/dist/astro.png" alt="" />
+				<img decoding="async" class="lazyload anim" data-dir="bottom" data-value="10" data-src="./images/dist/astro.png" alt="" />
 			</div>
 
 			<div class="promo__info">

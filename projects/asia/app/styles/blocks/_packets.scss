@@ -1,11 +1,45 @@
 .packets {
 	background-color: $white;
-	background-image: linear-gradient(#fff 50%, #DB51FE 50%);
+	background-image: linear-gradient(#fff 50%, #db51fe 50%);
 	position: relative;
-	
+
+	&__icon {
+		position: absolute;
+		content: "";
+		width: 150px;
+		height: 150px;
+		right: 0;
+		top: 0;
+		z-index: 2;
+
+		&.icon-1 {
+			right: 8%;
+			top: 100px;
+		}
+
+		&.icon-2 {
+			background-color: #4478ff;
+			border-radius: 100%;
+			right: 0;
+			top: 0;
+			width: 130px;
+			height: 130px;
+		}
+
+		&.icon-3 {
+			left: -50px;
+			top: 12%;
+		}
+
+		&.icon-4 {
+			top: 18%;
+			right: -50px;
+		}
+	}
+
 	&__bg {
 		position: absolute;
-		content: '';
+		content: "";
 		width: 100%;
 		object-fit: cover;
 		object-position: top;
@@ -114,9 +148,10 @@
 	letter-spacing: 0.25px;
 	color: #000;
 	font-weight: 700;
-	transition: background-color .1s ease;
+	transition: background-color 0.1s ease;
 
-	&:hover, &:active {
+	&:hover,
+	&:active {
 		background-color: $blue;
 	}
 }
@@ -127,6 +162,13 @@
 			height: 100%;
 		}
 
+		&__icon {
+			&.icon-3,
+			&.icon-4 {
+				display: none;
+			}
+		}
+
 		&__inner {
 			padding-top: 150px;
 		}
@@ -135,6 +177,17 @@
 			&_block {
 				max-height: none;
 				height: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.packets {
+		&__icon {
+			&.icon-1,
+			&.icon-2 {
+				display: none;
 			}
 		}
 	}
@@ -170,7 +223,7 @@
 
 @media screen and (max-width: 950px) {
 	.packets {
-		background-image: linear-gradient(#050C1E 70%, #db51fe);
+		background-image: linear-gradient(#050c1e 70%, #db51fe);
 
 		&__bg {
 			display: none;

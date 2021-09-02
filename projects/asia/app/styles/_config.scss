@@ -57,6 +57,7 @@ html {
 
 body {
 	font-family: "Acrom", sans-serif;
+	overflow-x: hidden;
 }
 
 .container {
@@ -131,4 +132,8 @@ input[type="checkbox"] {
 	&:hover, &:active {
 		background-color: $yellow;
 	}
+}
+
+.anim {
+	transition: transform 5s ease;
 }
