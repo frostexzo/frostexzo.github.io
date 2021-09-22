@@ -1,4 +1,4 @@
-<section class="packets">
+<section id="services" class="packets">
 	<img
 		decoding="async"
 		data-src="./images/dist/bg-packets.png"
@@ -55,7 +55,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>
@@ -85,7 +85,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>
@@ -115,7 +115,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>

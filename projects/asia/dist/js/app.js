@@ -3,6 +3,8 @@ const html = document.documentElement;
 const app = () => {
 	return {
 		isMenuOpen: false,
+		isCallPopupOpen: false,
+		isServicesPopupOpen: false
 	};
 };
 
@@ -73,7 +75,7 @@ if (animOnscroll.length > 0) {
 			var animItem = animOnscroll[i];
 			var animItemHeight = animItem.offsetHeight;
 			var animItemOffset = offset(animItem).top;
-			var animStart = 4;
+			var animStart = 5;
 
 			var animItemPoint = window.innerHeight - animItemHeight / animStart;
 			if (animItemHeight > window.innerHeight) {

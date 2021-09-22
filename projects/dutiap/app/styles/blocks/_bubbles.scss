@@ -4,6 +4,7 @@
 	&__item {
 		position: absolute;
 		z-index: -1;
+		transition: transform 1s ease-out;
 
 		&.one {
 			left: 14%;
@@ -24,11 +25,5 @@
 			top: 12%;
 			right: 12%;
 		}
-	}
-}
-
-@media screen and (max-width: 700px) {
-	.bubbles {
-		display: none;
 	}
 }

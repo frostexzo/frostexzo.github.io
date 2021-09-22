@@ -16,6 +16,51 @@
 </footer>
 
 
+<div x-cloak x-show.transition.opacity="isCallPopupOpen === true" class="popup">
+	<div class="popup__inner">
+		<button type="button" @click.prevent="isCallPopupOpen = false" class="popup__close">
+			<img src="images/dist/close-b.svg" width="32" height="32" alt="Close">
+		</button>
+
+		<span class="popup__title">
+			Оставьте заявку<br>
+			Мы вам перезвоним
+		</span>
+
+		<form action="mail.php" method="POST" class="popup__form">
+			<input type="text" class="popup__form_input" name="name" placeholder="Имя*" required>
+			<input type="tel" class="popup__form_input" name="phone" placeholder="Телефон*" required>
+
+			<button type="submit" class="button-round">
+				Оставить заявку
+			</button>
+		</form>
+	</div>
+</div>
+
+<div x-cloak x-show.transition.opacity="isServicesPopupOpen === true" class="popup">
+	<div class="popup__inner">
+		<button type="button" @click.prevent="isServicesPopupOpen = false" class="popup__close">
+			<img src="images/dist/close-b.svg" width="32" height="32" alt="Close">
+		</button>
+
+		<span class="popup__title">
+			Оставьте заявку<br>
+			Мы вам перезвоним
+		</span>
+
+		<form action="mail.php" method="POST" class="popup__form">
+			<input type="text" class="popup__form_input" name="name" placeholder="Имя*" required>
+			<input type="tel" class="popup__form_input" name="phone" placeholder="Телефон*" required>
+
+			<button type="submit" class="button-round">
+				Оставить заявку
+			</button>
+		</form>
+	</div>
+</div>
+
+
 <script src="js/alpine.js"></script>
 <script src="js/swiper.js"></script>
 <script src="js/lazyload.js"></script>

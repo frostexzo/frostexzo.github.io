@@ -44,10 +44,10 @@
 					</a>
 
 					<nav class="nav">
-						<a href="#" class="nav-link"> Агентство </a>
-						<a href="#" class="nav-link"> Услуги </a>
-						<a href="#" class="nav-link"> Портфолио </a>
-						<a href="#" class="nav-link"> Контакты </a>
+						<a href="#agency" class="nav-link"> Агентство </a>
+						<a href="#services" class="nav-link"> Услуги </a>
+						<a href="#portfolio" class="nav-link"> Портфолио </a>
+						<a href="#contacts" class="nav-link"> Контакты </a>
 					</nav>
 
 					<div class="header-btns">
@@ -66,6 +66,7 @@
 						<button
 							type="button"
 							class="header-button button-round"
+							@click.prevent="isCallPopupOpen = !isCallPopupOpen"
 						>
 							Заказать звонок
 						</button>
@@ -91,10 +92,10 @@
 					</div>
 
 					<div class="header-menu__nav">
-						<a href="#" class="nav-link"> Агентство </a>
-						<a href="#" class="nav-link"> Услуги </a>
-						<a href="#" class="nav-link"> Портфолио </a>
-						<a href="#" class="nav-link"> Контакты </a>
+						<a href="#agency" class="nav-link"> Агентство </a>
+						<a href="#services" class="nav-link"> Услуги </a>
+						<a href="#portfolio" class="nav-link"> Портфолио </a>
+						<a href="#contacts" class="nav-link"> Контакты </a>
 					</div>
 
 					<div class="header-menu__btns">
@@ -113,6 +114,7 @@
 						<button
 							type="button"
 							class="header-button button-round"
+							@click.prevent="isCallPopupOpen = !isCallPopupOpen; isMenuOpen = false"
 						>
 							Заказать звонок
 						</button>
@@ -139,10 +141,10 @@
 				</div>
 
 				<div class="hero__form_wrapper">
-					<form action="" class="hero__form">
+					<form action="mail.php" method="POST" class="hero__form">
 						<label for="" class="hero__label">
 							<span class="hero__label_text">Тел:</span>
-							<input type="tel" class="hero__input" />
+							<input type="tel" name="phone" required class="hero__input" />
 						</label>
 						<button type="submit" class="hero__submit button-round">
 							<img
@@ -166,7 +168,7 @@
 	</div>
 </section>
 
-	<section class="features">
+	<section id="agency" class="features">
 	<div class="container">
 		<div class="features__inner">
 			<div class="features__icon icon-1 anim" data-dir="right" data-value="20"></div>
@@ -238,7 +240,7 @@
 	</div>
 </section>
 
-	<section class="packets">
+	<section id="services" class="packets">
 	<img
 		decoding="async"
 		data-src="./images/dist/bg-packets.png"
@@ -295,7 +297,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>
@@ -325,7 +327,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>
@@ -355,7 +357,7 @@
 						</ul>
 
 						<div class="packets__button_wrapper">
-							<button type="button" class="packets__button">
+							<button type="button" @click.prevent="isServicesPopupOpen = !isServicesPopupOpen" class="packets__button">
 								Получить предложение
 							</button>
 						</div>
@@ -366,7 +368,7 @@
 	</div>
 </section>
 
-	<section class="portfolio">
+	<section id="portfolio" class="portfolio">
 	<img
 		decoding="async"
 		src="./images/dist/bg-portfolio.svg"
@@ -384,7 +386,7 @@
 			<h2 class="portfolio__title">Одни из последних работ</h2>
 
 			<div class="portfolio__items">
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
 						src="./images/dist/work1.jpg"
@@ -399,10 +401,10 @@
 						>
 					</div>
 				</a>
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
-						src="./images/dist/work1.jpg"
+						src="./images/dist/work2.jpg"
 						alt=""
 					/>
 
@@ -414,10 +416,10 @@
 						>
 					</div>
 				</a>
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
-						src="./images/dist/work1.jpg"
+						src="./images/dist/work3.jpg"
 						alt=""
 					/>
 
@@ -429,10 +431,10 @@
 						>
 					</div>
 				</a>
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
-						src="./images/dist/work1.jpg"
+						src="./images/dist/work4.jpg"
 						alt=""
 					/>
 
@@ -444,10 +446,10 @@
 						>
 					</div>
 				</a>
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
-						src="./images/dist/work1.jpg"
+						src="./images/dist/work5.jpg"
 						alt=""
 					/>
 
@@ -459,10 +461,10 @@
 						>
 					</div>
 				</a>
-				<a href="#" class="portfolio__item">
+				<a href="#" target="_blank" rel="noopener nofollow noreferrer" class="portfolio__item">
 					<img
 						class="portfolio__item_img"
-						src="./images/dist/work1.jpg"
+						src="./images/dist/work6.jpg"
 						alt=""
 					/>
 
@@ -628,11 +630,11 @@
 				</div>
 
 				<div class="techs__form_wrapper">
-					<form action="" class="techs__form">
+					<form action="mail.php" method="POST" class="techs__form">
 						<span class="techs__form_text">
 							Оставьте заявку и подберем подходящее Вам решение
 						</span>
-						<input type="tel" required class="techs__form_input" placeholder="телефон*">
+						<input type="tel" name="phone" required class="techs__form_input" placeholder="телефон*">
 
 						<button type="submit" class="techs__form_button">Оставить заявку</button>
 					</form>
@@ -767,8 +769,8 @@
 				</span>
 
 				<div class="promo__form_wrapper">
-					<form action="#" class="promo__form">
-						<input type="tel" required class="techs__form_input" placeholder="телефон*">
+					<form action="mail.php" method="POST" class="promo__form">
+						<input type="tel" name="phone" required class="techs__form_input" placeholder="телефон*">
 						<button type="submit" class="techs__form_button">Оставить заявку</button>
 					</form>
 				</div>
@@ -832,7 +834,7 @@
 		</div>
 	</div>
 </section>
-	<div class="contacts">
+	<section id="contacts" class="contacts">
 	<div class="contacts__map">
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A355e23c6fdd95ec4076be6d4632d9d1b6efac9029ec40e1550d96cfa826fb604&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
 	</div>
@@ -864,7 +866,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 </main>
 <footer class="footer">
 	<div class="container">
@@ -882,6 +884,51 @@
 		</div>
 	</div>
 </footer>
+
+
+<div x-cloak x-show.transition.opacity="isCallPopupOpen === true" class="popup">
+	<div class="popup__inner">
+		<button type="button" @click.prevent="isCallPopupOpen = false" class="popup__close">
+			<img src="images/dist/close-b.svg" width="32" height="32" alt="Close">
+		</button>
+
+		<span class="popup__title">
+			Оставьте заявку<br>
+			Мы вам перезвоним
+		</span>
+
+		<form action="mail.php" method="POST" class="popup__form">
+			<input type="text" class="popup__form_input" name="name" placeholder="Имя*" required>
+			<input type="tel" class="popup__form_input" name="phone" placeholder="Телефон*" required>
+
+			<button type="submit" class="button-round">
+				Оставить заявку
+			</button>
+		</form>
+	</div>
+</div>
+
+<div x-cloak x-show.transition.opacity="isServicesPopupOpen === true" class="popup">
+	<div class="popup__inner">
+		<button type="button" @click.prevent="isServicesPopupOpen = false" class="popup__close">
+			<img src="images/dist/close-b.svg" width="32" height="32" alt="Close">
+		</button>
+
+		<span class="popup__title">
+			Оставьте заявку<br>
+			Мы вам перезвоним
+		</span>
+
+		<form action="mail.php" method="POST" class="popup__form">
+			<input type="text" class="popup__form_input" name="name" placeholder="Имя*" required>
+			<input type="tel" class="popup__form_input" name="phone" placeholder="Телефон*" required>
+
+			<button type="submit" class="button-round">
+				Оставить заявку
+			</button>
+		</form>
+	</div>
+</div>
 
 
 <script src="js/alpine.js"></script>
