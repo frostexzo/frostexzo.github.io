@@ -1,0 +1,44 @@
+.hero {
+	padding-bottom: 300px;
+	margin-bottom: 250px;
+	position: relative;
+	z-index: 5;
+
+	&__inner {
+		padding-left: 90px;
+		display: flex;
+	}
+
+	&__logo {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		&_img {
+			max-width: 356px;
+			height: auto;
+		}
+	}
+
+	&__title {
+		&-hidden {
+			text-indent: -10000px;
+			height: 0;
+			overflow: hidden;
+		}
+
+		font-weight: 900;
+		color: $gray;
+		font-size: 39px;
+		text-transform: uppercase;
+
+	}
+
+	&__more {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 2;
+		bottom: -10%;
+	}
+}

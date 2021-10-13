@@ -1,0 +1,49 @@
+.header {
+	position: relative;
+	z-index: 5;
+
+	&__inner {
+		position: relative;
+		z-index: 5;
+		padding-top: 25px;
+		padding-bottom: 50px;
+	}
+
+	&__panel {
+		display: flex;
+		align-items: center;
+	}
+
+	&__bg {
+		position: absolute;
+		right: 0;
+		top: -250px;
+		z-index: 1;
+		max-width: 52vw;
+		min-width: 700px;
+		pointer-events: none;
+	}
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	margin-left: 70px;
+
+	&__link {
+		font-weight: 900;
+		font-size: 19px;
+		color: $gray;
+		text-transform: uppercase;
+		transition: color 0.1s ease;
+
+		&:hover:not(:last-child),
+		&:active:not(:last-child) {
+			color: $orange;
+		}
+
+		&:not(:last-child) {
+			margin-right: 70px;
+		}
+	}
+}

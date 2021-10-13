@@ -1,0 +1,59 @@
+.contacts {
+	margin-bottom: 250px;
+	position: relative;
+	z-index: 5;
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__titles {
+		display: flex;
+		flex-direction: column;
+		font-size: 16px;
+		font-weight: 700;
+		text-align: center;
+		max-width: 415px;
+		margin-bottom: 15px;
+
+		&_top {
+			color: $dark;
+		}
+
+		&_bottom {
+			color: $light;
+		}
+	}
+
+	&__buttons {
+		max-width: 700px;
+		margin: 0 auto;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		padding-bottom: 180px;
+	}
+
+	&__link {
+		position: absolute;
+
+		&.mail {
+			left: -40px;
+			bottom: 25px;
+		}
+
+		&.inst {
+			left: 48%;
+			transform: translateX(-50%);
+			bottom: 0;
+		}
+
+		&.vk {
+			right: -40px;
+			bottom: 25px;
+		}
+
+	}
+}
