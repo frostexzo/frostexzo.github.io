@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>BarsikBox</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="images/dist/header-bg.png" as="image" />
+		<link rel="preload" href="images/dist/boxes.png" as="image" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="header">
+			<img src="images/dist/header-bg.png" class="header__bg" alt="" />
+			<img
+				src="images/dist/header-chicken.png"
+				class="anim anim-1"
+				alt=""
+			/>
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__panel">
+						<a href="#" class="header__logo">
+							<img
+								src="images/dist/logo.svg"
+								alt=""
+								class="header__logo_img"
+								width="170"
+								height="68"
+							/>
+						</a>
+
+						<nav class="nav">
+							<a href="#feedback" class="nav__link">Отзывы</a>
+							<a href="#faq" class="nav__link">Вопросы</a>
+							<a href="#contacts" class="nav__link">Контакты</a>
+						</nav>
+
+						<button
+							type="button"
+							@click.prevent="menu = !menu"
+							class="header__burger"
+						>
+							<img
+								src="images/dist/burger.svg"
+								width="40"
+								height="40"
+								alt=""
+							/>
+						</button>
+					</div>
+				</div>
+
+				<div x-cloak x-show.transition.opacity="menu === true" class="header__menu">
+					<div class="header__menu_inner">
+						<button @click.prevent="menu = !menu" class="header__menu_close" type="button">
+							<img
+								src="images/dist/close.svg"
+								width="40"
+								height="40"
+								alt=""
+							/>
+						</button>
+
+						<nav class="nav">
+							<a href="#feedback" class="nav__link">Отзывы</a>
+							<a href="#faq" class="nav__link">Вопросы</a>
+							<a href="#contacts" class="nav__link">Контакты</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+
+<main>
+	<section class="hero">
+	<img src="./images/dist/paw.svg" class="anim-2" alt="" />
+	<img src="./images/dist/leaf1.svg" class="anim anim-3" alt="" />
+	<img src="./images/dist/leaf1.svg" class="anim anim-4" alt="" />
+	<img src="./images/dist/leaf2.svg" class="anim anim-5" alt="" />
+	<img
+		src="./images/dist/chicken-sm.png"
+		width="240"
+		class="anim anim-6"
+		alt=""
+	/>
+	<img
+		src="./images/dist/airpods.png"
+		width="70"
+		class="anim anim-7"
+		alt=""
+	/>
+
+	<a href="#box" class="hero__more"
+		><img src="./images/dist/arrow.svg" alt=""
+	/></a>
+	<div class="container">
+		<div class="hero__inner">
+			<div class="hero__logo">
+				<img
+					src="./images/dist/logo-hero.svg"
+					class="hero__logo_img"
+					width="356"
+					height="265"
+					alt=""
+				/>
+				<h1 class="hero__title-hidden">БарсикБокс</h1>
+				<h2 class="hero__title">Собран для тебя</h2>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="box" class="product">
+	<div class="container">
+		<div class="product__inner">
+			<div class="product__image_wrapper">
+				<div class="product__image">
+					<img
+						src="./images/dist/boxes.png"
+						class="product__image_img"
+						width="850"
+						height="601"
+						alt=""
+					/>
+				</div>
+				<div class="product__price">
+					<span class="product__price_old">1550</span>
+					<span class="product__price_new">1299 ₽</span>
+					<span class="product__price_info">
+						Оформи заказ и БАРСИК лично позвонит, чтобы уточнить
+						детали.
+					</span>
+				</div>
+			</div>
+
+			<div class="product__desc">
+				<div class="product__titles">
+					<h2 class="product__titles_top">Классический</h2>
+					<h2 class="product__titles_bottom">БАРСИК BOX</h2>
+				</div>
+
+				<p class="product__desc_info">
+					ЗаМУРчательный подарок для любопытных натур Бомбический
+					«Барсик Бокс» – три слагаемых истинного сюрприза –
+					удивление, восхищение, польза! Эксклюзивная шкатулка с
+					неожиданными компонентами – это сокровищница уникальных
+					подарков, которые не оставят равнодушным никого. Удиви себя
+					или друзей – шквал эмоций гарантирован!
+				</p>
+
+				<p class="product__desc_info">
+					Окунуться в детство – бесценно! У Барсика есть всё – от
+					вкусняшек до прикольных наборов пранкера. Что ждёт именно
+					тебя? Спеши узнать! Близкие по душе вещицы растопят сердце
+					любого скептика. Каждая 10 коробочка – с бонусом, а это
+					значит: Больше боксов – выше шанс для супер приза
+				</p>
+
+				<div class="product__interactive">
+					<div class="product__price mobile">
+						<span class="product__price_old">1550</span>
+						<span class="product__price_new">1299 ₽</span>
+						<span class="product__price_info">
+							Оформи заказ и БАРСИК лично позвонит, чтобы уточнить
+							детали.
+						</span>
+					</div>
+
+					<div class="product__buttons">
+						<button type="button" @click.prevent="purchaseMenu = true" class="product__button">
+							Сделать заказ
+						</button>
+
+						<a href="#contacts" type="button" class="product__button small">
+							У меня есть вопросы
+						</a>
+
+						<img
+							src="./images/dist/cat.png"
+							class="product__buttons_img"
+							alt=""
+						/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section class="contacts">
+	<img
+		src="./images/dist/chicken-sm.png"
+		width="370"
+		class="anim anim-8"
+		alt=""
+	/>
+	<img
+		src="./images/dist/chicken-sm.png"
+		width="150"
+		class="anim anim-9"
+		alt=""
+	/>
+	<img
+		src="./images/dist/chicken-sm.png"
+		width="200"
+		class="anim anim-10"
+		alt=""
+	/>
+	<img src="./images/dist/leaf1.svg" class="anim anim-11" alt="" />
+	<img src="./images/dist/leaf2.svg" class="anim anim-12" alt="" />
+	<div id="faq" class="container">
+		<div class="faq__inner">
+			<div class="faq__item">
+				<h3 class="faq__item_header">
+					<span>Что будет лежать в моём боксе?</span
+					><span class="faq__item_icon">+</span>
+				</h3>
+				<p class="faq__item_answer">
+					В каждом Классическом боксе 14 мест для компонентов, которые
+					включают в себя: мягкую игрушку, журнал с заданиями,
+					настольную игру, коллекционную фигурку Funko POP/большой
+					коврик под клавиатуру и мышь, резиновую курицу или свинку,
+					полный набор пранкера + инструкция и много других
+					наикрутейших вещей к этому списку.
+				</p>
+			</div>
+			<div class="faq__item">
+				<h3 class="faq__item_header">
+					<span>Какие супер призы в каждом десятом боксе?</span
+					><span class="faq__item_icon">+</span>
+				</h3>
+				<p class="faq__item_answer">
+					В каждом десятом боксе находится мини дрон (квадракоптер)
+					вместе с другими всеми компонентами. В каждом 50-ом боксе
+					оригинальные наушники Apple AirPods в зарядном футляре
+				</p>
+			</div>
+			<div class="faq__item">
+				<h3 class="faq__item_header">
+					<span>Доставка по всему миру?</span
+					><span class="faq__item_icon">+</span>
+				</h3>
+				<p class="faq__item_answer">
+					Да, но только стоимость доставки указана по регионам России.
+					В другие страны доставка выходит не существенно дороже. Об
+					этом вас предупредят по телефону и мы всегда сможем решить
+					этот вопрос, чтобы вы получили Барсик Бокс не в зависимости
+					от вашего места жительства.
+				</p>
+			</div>
+			<div class="faq__item">
+				<h3 class="faq__item_header">
+					<span>Какой срок доставки?</span
+					><span class="faq__item_icon">+</span>
+				</h3>
+				<p class="faq__item_answer">
+					Барсик Бокс отправляется ценной бандеролью по Почте России
+					из Северной части региона. Если вы живёте рядом или в этих
+					регионах, можете примерно рассчитать срок доставки своего
+					Бокса. Московская область: 7-9 дней, Пермская область: 5-7
+					дней, Новосибирская область: 4-6 дней, Иркутская область:
+					2-4 дня, Владивосток(Дальний Восток): 4-6 дней. В другие
+					страны от 8 до 14 дней.
+				</p>
+			</div>
+			<div class="faq__item">
+				<h3 class="faq__item_header">
+					<span
+						>Я хочу заказать Бокс в подарок, могу ли попросить
+						открытку или положить кучу конфет по моей просьбе?</span
+					><span class="faq__item_icon">+</span>
+				</h3>
+				<p class="faq__item_answer">
+					Так как все боксы запечатаны в фирменную обтягивающую
+					плёнку, что-то положить своё вы вряд ли сможете, ибо будущий
+					владелец не сможет насладиться разрыванием столь приятной
+					шуршащей плёнки 🙂 Но это возможно! Выскажите свои пожелания
+					по телефону и вам с нуля соберут новенький Бокс с нужными
+					компонентами.
+				</p>
+			</div>
+		</div>
+
+		<div id="contacts" class="contacts__inner">
+			<div class="contacts__titles">
+				<h2 class="contacts__titles_top">
+					МОЖЕШЬ ЗАДАТЬ МНЕ ВОПРОС, ГДЕ ТЕБЕ УДОБНО.
+				</h2>
+				<h2 class="contacts__titles_bottom">
+					ОТВЕЧУ, СРАЗУ ПОСЛЕ ТОГО, КАК ЗАКОНЧУ СВОИ КОШАЧЬИ ДЕЛА.
+				</h2>
+			</div>
+
+			<div class="contacts__buttons">
+				<img
+					class="contacts__buttons_img"
+					src="./images/dist/cat-socials.svg"
+					width="560"
+					height="217"
+					alt=""
+				/>
+
+				<a href="" class="contacts__link mail">
+					<img src="./images/dist/mail.svg" alt="" />
+				</a>
+
+				<a href="" class="contacts__link inst">
+					<img src="./images/dist/inst.svg" alt="" />
+				</a>
+
+				<a href="" class="contacts__link vk">
+					<img src="./images/dist/vk.svg" alt="" />
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+	<section id="feedback" class="feedback">
+		<div class="feedback__inner">
+			<div class="feedback__slider_wrapper">
+				<div id="slider" class="swiper-container feedback__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide feedback__item">
+							<img
+								class="feedback__item_img"
+								src="./images/dist/placeholder.png"
+								width="170"
+								height="170"
+								alt="Person"
+							/>
+							<span class="feedback__item_name">
+								Дмитрий Невер
+							</span>
+							<p class="feedback__item_desc">
+								Заказал бокс 5 марта, пришло очень быстро.От
+								содержимого просто в восторге, все клево
+								упаковано. Дефектов никаких не нашел.
+								Рекомендую, и не дорого совсем
+							</p>
+						</div>
+
+						<div class="swiper-slide feedback__item">
+							<img
+								class="feedback__item_img"
+								src="./images/dist/placeholder.png"
+								width="170"
+								height="170"
+								alt="Person"
+							/>
+							<span class="feedback__item_name">
+								Дмитрий Невер
+							</span>
+							<p class="feedback__item_desc">
+								Заказал бокс 5 марта, пришло очень быстро.От
+								содержимого просто в восторге, все клево
+								упаковано. Дефектов никаких не нашел.
+								Рекомендую, и не дорого совсем
+							</p>
+						</div>
+
+						<div class="swiper-slide feedback__item">
+							<img
+								class="feedback__item_img"
+								src="./images/dist/placeholder.png"
+								width="170"
+								height="170"
+								alt="Person"
+							/>
+							<span class="feedback__item_name">
+								Дмитрий Невер
+							</span>
+							<p class="feedback__item_desc">
+								Заказал бокс 5 марта, пришло очень быстро.От
+								содержимого просто в восторге, все клево
+								упаковано. Дефектов никаких не нашел.
+								Рекомендую, и не дорого совсем
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="feedback__pagination">
+					<img class="feedback__pagination_left" src="./images/dist/arrow-left.svg" width="40" height="46" alt="">
+					<div class="feedback__pagination_bullets swiper-pagination"></div>
+					<img class="feedback__pagination_right" src="./images/dist/arrow-right.svg" width="40" height="46" alt="">
+				</div>
+
+				<div class="feedback__button_wrapper">
+					<button @click.prevent="reviewMenu = true" class="feedback__button" type="button">Оставить отзыв</button>
+				</div>
+			</div>
+		</div>
+</section>
+
+</main>
+
+<footer>
+<div x-cloak x-show.transition.opacity="purchaseMenu === true" class="popup">
+	<div class="popup__inner purchase">
+		<img src="images/dist/popup-box.png" alt="" class="purchase__img">
+		<img src="images/dist/leaf1.svg" class="purchase__leaf_top" alt="">
+		<img src="images/dist/leaf2.svg" class="purchase__leaf_bottom" alt="">
+
+		<button
+			type="button"
+			@click.prevent="purchaseMenu = !purchaseMenu"
+			class="popup__close"
+		>
+			<img src="images/dist/close.svg" width="40" height="40" alt="" />
+		</button>
+
+		<img src="images/dist/popup-logo.svg" width="60" alt="" />
+
+		<h3 class="popup__title">Классический Барсик BOX</h3>
+
+		<form
+			id="yaMoney"
+			class="popup__form"
+			method="POST"
+			target="_blank"
+			action="https://money.yandex.ru/quickpay/confirm.xml"
+		>
+			<input
+				type="hidden"
+				name="receiver"
+				value="410017361875238"
+			/><input type="hidden" name="quickpay-form" value="small" /><input
+				type="hidden"
+				name="targets"
+				value="КЛАССИЧЕСКИЙ БАРСИК BOX (1 шт)"
+			/><input type="hidden" name="sum" value="1589" /><input
+				type="hidden"
+				name="paymentType"
+				value="AC"
+			/><input
+				type="hidden"
+				name="successURL"
+				value="https://barsikbox.ru/"
+			/><input type="hidden" name="need-fio" value="true" /><input
+				type="hidden"
+				name="need-email"
+				value="true"
+			/><input type="hidden" name="need-phone" value="true" /><input
+				type="hidden"
+				name="need-address"
+				value="true"
+			/>
+
+			<div class="purchase__buttons_wrapper">
+				<button
+					id="minusBtn"
+					type="button"
+					class="purchase__button left"
+				>
+					-
+				</button>
+				<input
+					id="itemCount"
+					autocomplete="off"
+					class="purchase__amount"
+					readonly=""
+					min="1"
+					max="10"
+					type="number"
+					value="1"
+				/>
+				<button
+					id="plusBtn"
+					type="button"
+					class="purchase__button right"
+				>
+					+
+				</button>
+			</div>
+
+			<div class="purchase__sums">
+				<span>Стоимость - <span id="itemsCost">1299</span> рублей</span>
+				<span
+					>Доставка - <span id="deliveryCost">290 рублей</span></span
+				>
+				<span>Итого - <span id="totalCost">1589</span> рублей</span>
+			</div>
+
+			<div class="purchase__submit_wrapper">
+				<button class="purchase__submit" type="submit">
+					<svg width="32" height="32" viewBox="0 0 24 24">
+						<g fill="#ffffff" fill-rule="evenodd">
+							<path
+								d="M15.948 7l-1.94-3.358a1.997 1.997 0 0 0-2.72-.73l-9.54 5.509a1.993 1.993 0 0 0-.73 2.72l3.508 6.077c.154.266.36.483.6.646A2.998 2.998 0 0 1 5 17.001V10A2.994 2.994 0 0 1 8 7h7.948z"
+							></path>
+							<path
+								d="M6 9.992C6 8.892 6.893 8 7.992 8h11.016C20.108 8 21 8.9 21 9.992v7.016c0 1.1-.893 1.992-1.992 1.992H7.992C6.892 19 6 18.1 6 17.008V9.992zm1 .006C7 9.447 7.447 9 7.999 9H19c.552 0 .999.446.999.998v7.004c0 .551-.447.998-.999.998H8A.998.998 0 0 1 7 17.002V9.998zM7 11h13v2H7v-2z"
+							></path>
+						</g>
+					</svg>
+					<span>Заполнить данные</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+<div x-cloak x-show.transition.opacity="reviewMenu === true" class="popup">
+	<div class="popup__inner review">
+		<img src="images/dist/leaf1.svg" class="purchase__leaf_top" alt="" />
+		<img src="images/dist/leaf2.svg" class="purchase__leaf_bottom" alt="" />
+
+		<button
+			type="button"
+			@click.prevent="reviewMenu = !reviewMenu"
+			class="popup__close"
+		>
+			<img src="images/dist/close.svg" width="40" height="40" alt="" />
+		</button>
+
+		<img src="images/dist/popup-logo.svg" width="60" alt="" />
+
+		<form action="" class="review__form">
+			<input type="text" required placeholder="ИМЯ" name="name" class="review__input">
+			<label for="avatar" class="review__form_file">
+				<span>ФОТО (необязательно)</span>
+				<input type="file" accept="image/*" id="avatar" name="avatar">
+			</label>
+			<textarea required name="body" class="review__textarea" placeholder="ОТЗЫВ"></textarea>
+
+			<div class="purchase__submit_wrapper">
+				<button type="submit" class="purchase__submit">Оставить отзыв</button>
+			</div>
+		</form>
+	</div>
+</div>
+
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

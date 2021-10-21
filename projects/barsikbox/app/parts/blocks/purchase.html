@@ -1,0 +1,104 @@
+<div x-cloak x-show.transition.opacity="purchaseMenu === true" class="popup">
+	<div class="popup__inner purchase">
+		<img src="images/dist/popup-box.png" alt="" class="purchase__img">
+		<img src="images/dist/leaf1.svg" class="purchase__leaf_top" alt="">
+		<img src="images/dist/leaf2.svg" class="purchase__leaf_bottom" alt="">
+
+		<button
+			type="button"
+			@click.prevent="purchaseMenu = !purchaseMenu"
+			class="popup__close"
+		>
+			<img src="images/dist/close.svg" width="40" height="40" alt="" />
+		</button>
+
+		<img src="images/dist/popup-logo.svg" width="60" alt="" />
+
+		<h3 class="popup__title">Классический Барсик BOX</h3>
+
+		<form
+			id="yaMoney"
+			class="popup__form"
+			method="POST"
+			target="_blank"
+			action="https://money.yandex.ru/quickpay/confirm.xml"
+		>
+			<input
+				type="hidden"
+				name="receiver"
+				value="410017361875238"
+			/><input type="hidden" name="quickpay-form" value="small" /><input
+				type="hidden"
+				name="targets"
+				value="КЛАССИЧЕСКИЙ БАРСИК BOX (1 шт)"
+			/><input type="hidden" name="sum" value="1589" /><input
+				type="hidden"
+				name="paymentType"
+				value="AC"
+			/><input
+				type="hidden"
+				name="successURL"
+				value="https://barsikbox.ru/"
+			/><input type="hidden" name="need-fio" value="true" /><input
+				type="hidden"
+				name="need-email"
+				value="true"
+			/><input type="hidden" name="need-phone" value="true" /><input
+				type="hidden"
+				name="need-address"
+				value="true"
+			/>
+
+			<div class="purchase__buttons_wrapper">
+				<button
+					id="minusBtn"
+					type="button"
+					class="purchase__button left"
+				>
+					-
+				</button>
+				<input
+					id="itemCount"
+					autocomplete="off"
+					class="purchase__amount"
+					readonly=""
+					min="1"
+					max="10"
+					type="number"
+					value="1"
+				/>
+				<button
+					id="plusBtn"
+					type="button"
+					class="purchase__button right"
+				>
+					+
+				</button>
+			</div>
+
+			<div class="purchase__sums">
+				<span>Стоимость - <span id="itemsCost">1299</span> рублей</span>
+				<span
+					>Доставка - <span id="deliveryCost">290 рублей</span></span
+				>
+				<span>Итого - <span id="totalCost">1589</span> рублей</span>
+			</div>
+
+			<div class="purchase__submit_wrapper">
+				<button class="purchase__submit" type="submit">
+					<svg width="32" height="32" viewBox="0 0 24 24">
+						<g fill="#ffffff" fill-rule="evenodd">
+							<path
+								d="M15.948 7l-1.94-3.358a1.997 1.997 0 0 0-2.72-.73l-9.54 5.509a1.993 1.993 0 0 0-.73 2.72l3.508 6.077c.154.266.36.483.6.646A2.998 2.998 0 0 1 5 17.001V10A2.994 2.994 0 0 1 8 7h7.948z"
+							></path>
+							<path
+								d="M6 9.992C6 8.892 6.893 8 7.992 8h11.016C20.108 8 21 8.9 21 9.992v7.016c0 1.1-.893 1.992-1.992 1.992H7.992C6.892 19 6 18.1 6 17.008V9.992zm1 .006C7 9.447 7.447 9 7.999 9H19c.552 0 .999.446.999.998v7.004c0 .551-.447.998-.999.998H8A.998.998 0 0 1 7 17.002V9.998zM7 11h13v2H7v-2z"
+							></path>
+						</g>
+					</svg>
+					<span>Заполнить данные</span>
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

@@ -1,12 +1,18 @@
-<section class="product">
+<section id="box" class="product">
 	<div class="container">
 		<div class="product__inner">
 			<div class="product__image_wrapper">
 				<div class="product__image">
-					<img src="./images/dist/boxes.png" decoding="async" class="product__image_img" width="850" height="601" alt="" />
+					<img
+						src="./images/dist/boxes.png"
+						class="product__image_img"
+						width="850"
+						height="601"
+						alt=""
+					/>
 				</div>
 				<div class="product__price">
-					<span class="product__price_old">1499</span>
+					<span class="product__price_old">1550</span>
 					<span class="product__price_new">1299 ₽</span>
 					<span class="product__price_info">
 						Оформи заказ и БАРСИК лично позвонит, чтобы уточнить
@@ -22,30 +28,47 @@
 				</div>
 
 				<p class="product__desc_info">
-					Порадует не только зрителя Барсика, а так же любого ребёнка,
-					подростка, девушку и даже взрослого мужчину. В классическом
-					боксе находится целый набор весёлых товаров для розыгрышей и
-					пранков, а так же другие товары.
+					ЗаМУРчательный подарок для любопытных натур Бомбический
+					«Барсик Бокс» – три слагаемых истинного сюрприза –
+					удивление, восхищение, польза! Эксклюзивная шкатулка с
+					неожиданными компонентами – это сокровищница уникальных
+					подарков, которые не оставят равнодушным никого. Удиви себя
+					или друзей – шквал эмоций гарантирован!
 				</p>
 
 				<p class="product__desc_info">
-					Ударь друга током замаскированным шокером, напугай свою
-					подругу съев жвачку с искусственной кровью или взорви
-					бомбочку с запахом какашек прям на уроке математики. Эти и
-					ещё более 12 товаров ожидают тебя в самой весёлой коробке
-					БАРСИК BOX.
+					Окунуться в детство – бесценно! У Барсика есть всё – от
+					вкусняшек до прикольных наборов пранкера. Что ждёт именно
+					тебя? Спеши узнать! Близкие по душе вещицы растопят сердце
+					любого скептика. Каждая 10 коробочка – с бонусом, а это
+					значит: Больше боксов – выше шанс для супер приза
 				</p>
 
-				<div class="product__buttons">
-					<button type="button" class="product__button">
-						Сделать заказ
-					</button>
+				<div class="product__interactive">
+					<div class="product__price mobile">
+						<span class="product__price_old">1550</span>
+						<span class="product__price_new">1299 ₽</span>
+						<span class="product__price_info">
+							Оформи заказ и БАРСИК лично позвонит, чтобы уточнить
+							детали.
+						</span>
+					</div>
 
-					<button type="button" class="product__button small">
-						У меня есть вопросы
-					</button>
+					<div class="product__buttons">
+						<button type="button" @click.prevent="purchaseMenu = true" class="product__button">
+							Сделать заказ
+						</button>
 
-					<img src="./images/dist/cat.png" class="product__buttons_img" alt="">
+						<a href="#contacts" type="button" class="product__button small">
+							У меня есть вопросы
+						</a>
+
+						<img
+							src="./images/dist/cat.png"
+							class="product__buttons_img"
+							alt=""
+						/>
+					</div>
 				</div>
 			</div>
 		</div>

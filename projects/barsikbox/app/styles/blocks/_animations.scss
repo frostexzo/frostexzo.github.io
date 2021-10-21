@@ -1,6 +1,8 @@
 .anim {
 	position: absolute;
 	pointer-events: none;
+	will-change: transform;
+	transition: transform .1s ease;
 
 	&-1 {
 		right: 18%;
@@ -68,5 +70,122 @@
 	&-12 {
 		right: 20%;
 		top: 10%;
+	}
+}
+
+@media screen and (max-width: 1600px) {
+	.anim {
+		&-8 {
+			left: 0;
+			right: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.anim {
+		&-1 {
+			max-width: 100px;
+			top: -50px;
+			right: 10%;
+		}
+
+		&-2 {
+			max-width: 50%;
+			top: 300px;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.anim {
+		&-1 {
+			display: none;
+		}
+
+		&-2 {
+			top: 0;
+			left: 0;
+		}
+
+		&-6 {
+			display: none;
+		}
+
+		&-4 {
+			right: 5%;
+			top: 0;
+			left: auto;
+		}
+
+		&-5 {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.anim {
+		&-2 {
+			top: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.anim {
+		&-2 {
+			display: none;
+		}
+
+		&-3 {
+			bottom: -25%;
+		}
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.anim {
+		&-8 {
+			max-width: 200px;
+			left: auto;
+			right: 0;
+			top: -250px;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.anim {
+		&-8 {
+			display: none;
+		}
+		&-12 {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.anim {
+		&-9 {
+			left: 10px;
+			top: -100px;
+			max-width: 130px;
+		}
+
+		&-12 {
+			right: 10px;
+		}
+
+		&-10 {
+			right: 30px;
+			max-width: 180px;
+			left: auto;
+		}
+
+		&-11 {
+			bottom: -25%;
+		}
 	}
 }

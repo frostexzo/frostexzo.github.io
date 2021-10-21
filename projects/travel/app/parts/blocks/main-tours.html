@@ -1,0 +1,101 @@
+<section class="search-tours">
+	<div class="container">
+		<div class="search-tours__inner">
+			<h1 class="title">
+				Поиск туров с вылетом из
+				<div class="search-tours__city">
+					<span
+						@click="cityPopup = !cityPopup"
+						class="search-tours__city_selected"
+						x-text="selectedCityName || 'Минска'"
+						>Минска</span
+					>
+					<input
+						type="hidden"
+						name="city"
+						:value="selectedCityId || 'minsk'"
+					/>
+					<!--minsk стандартное значение-->
+
+					<div
+						x-cloak
+						@click.away="cityPopup = false"
+						@click="selectCity(event.target)"
+						x-show.transition="cityPopup === true"
+						class="search-tours__city_popup"
+					>
+						<button
+							type="button"
+							class="search-tours__city_button"
+							data-id="minsk"
+						>
+							Минска
+						</button>
+						<button
+							type="button"
+							class="search-tours__city_button"
+							data-id="moscow"
+						>
+							Москвы
+						</button>
+					</div>
+				</div>
+			</h1>
+			<span class="subtitle">Найдите подходящий для себя тур</span>
+
+			<form action="" method="POST" class="search-tours__main">
+				<div class="search-tours__fields">
+					<div class="search-tours__field">
+						<div class="search-tours__field-button">
+							<img src="/images/dist/field-city.svg" alt="" />
+							<span>Страна или курорт</span>
+							<input type="hidden" />
+						</div>
+					</div>
+
+					<div class="search-tours__field">
+						<div class="search-tours__field-button">
+							<img src="/images/dist/field-city.svg" alt="" />
+							<span>Страна или курорт</span>
+							<input type="hidden" />
+						</div>
+					</div>
+
+					<div class="search-tours__field">
+						<div class="search-tours__field-button">
+							<img src="/images/dist/field-city.svg" alt="" />
+							<span>Страна или курорт</span>
+							<input type="hidden" />
+						</div>
+					</div>
+
+					<div class="search-tours__field">
+						<div class="search-tours__field-button">
+							<img src="/images/dist/field-city.svg" alt="" />
+							<span>Страна или курорт</span>
+							<input type="hidden" />
+						</div>
+					</div>
+
+					<div class="search-tours__field">
+						<div class="search-tours__field-button">
+							<img src="/images/dist/field-city.svg" alt="" />
+							<span>Страна или курорт</span>
+							<input type="hidden" />
+						</div>
+					</div>
+
+					<div class="search-tours__submit">
+						<button
+							type="submit"
+							class="search-tours__field-button"
+						>
+							<img src="/images/dist/field-search.svg" alt="" />
+							<span>Найти туры</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

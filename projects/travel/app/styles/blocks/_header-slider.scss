@@ -1,0 +1,159 @@
+.header__slider {
+	position: relative;
+
+	&_container {
+		height: 100vh;
+		min-height: 800px;
+		pointer-events: all;
+	}
+}
+
+.header__slide {
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 270px;
+
+	&_inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&_info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&_title {
+		font-size: 64px;
+		line-height: 1;
+		font-weight: 400;
+		max-width: 550px;
+	}
+
+	&_subtitle {
+		font-size: 24px;
+		font-weight: 400;
+		margin-top: 10px;
+	}
+
+	&_socials {
+		margin-top: 180px;
+
+		& a:not(:last-child) {
+			margin-right: 5px;
+		}
+	}
+
+	&_hotels {
+		height: inherit;
+		display: flex;
+		align-items: flex-end;
+	}
+}
+
+.header__hotels {
+
+	&_slide {
+		max-width: 210px;
+		min-width: 210px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: $white;
+		background-color: $blue-op;
+		padding: 20px 30px;
+		padding-top: 15px;
+		border-radius: 10px;
+		pointer-events: all !important;
+
+		& img {
+			width: 100%;
+		}
+
+		&:first-child {
+			background-color: $blue-op;
+		}
+
+		&:nth-child(2) {
+			background-color: $orange-op;
+		}
+
+		&:last-child {
+			background-color: $green-op;
+		}
+	}
+
+	&_label {
+		font-size: 13px;
+		display: block;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+
+	&_title {
+		text-align: center;
+		margin-top: 15px;
+	}
+
+	&_price {
+		margin-top: 10px;
+		text-align: center;
+	}
+}
+
+.header__navigation {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	transform: translateY(-50%);
+
+	& .swiper-button-prev, & .swiper-button-next {
+		border-radius: 100%;
+		padding: 10px;
+		border: 1px solid $white;
+		color: $white;
+		width: 55px;
+		height: 55px;
+
+		&:after {
+			font-weight: 700;
+			font-size: 1.75rem;
+		}
+	}
+
+	& .swiper-button-prev {
+		left: -60px;
+	}
+	& .swiper-button-next {
+		right: -40px;
+	}
+}
+
+.header__pagination {
+	position: absolute;
+	bottom: 60px;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+
+	& .swiper-pagination {
+		position: initial;
+	}
+
+	& .swiper-pagination-bullet {
+		width: 18px;
+		height: 18px;
+		background-color: $white;
+		border: 2px solid $white;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+
+	& .swiper-pagination-bullet-active {
+		background-color: transparent;
+	}
+}

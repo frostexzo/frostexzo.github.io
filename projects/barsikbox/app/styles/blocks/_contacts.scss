@@ -38,6 +38,11 @@
 
 	&__link {
 		position: absolute;
+		transition: opacity .1s ease;
+
+		&:hover, &:active {
+			opacity: .8;
+		}
 
 		&.mail {
 			left: -40px;
@@ -54,6 +59,63 @@
 			right: -40px;
 			bottom: 25px;
 		}
+	}
+}
 
+@media screen and (max-width: 850px) {
+	.contacts__buttons {
+		max-width: none;
+
+		&_img {
+			max-width: 80vw;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.contacts__link {
+		&.mail {
+			left: 0;
+		}
+
+		&.vk {
+			right: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.contacts {
+		margin-bottom: 180px;
+
+		&__link img {
+			max-width: 100px;
+			height: auto;
+		}
+
+		&__buttons {
+			padding-bottom: 140px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.contacts {
+		&__titles {
+			font-size: 14px;
+		}
+
+		&__buttons {
+			padding-bottom: 110px;
+		}
+
+		&__link img {
+			max-width: 70px;
+		}
+
+		&__link.inst {
+			left: 50%;
+			bottom: 10px;
+		}
 	}
 }

@@ -2,8 +2,8 @@ $gray: #4d4d4d;
 $white: #fff;
 $bg: #f3f3f3;
 $orange: #faab2c;
-$dark: #2F2F2F;
-$light: #AFB2B2;
+$dark: #2f2f2f;
+$light: #afb2b2;
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
 	@font-face {
@@ -43,18 +43,19 @@ html.overflow {
 }
 
 ::placeholder {
-	color: #000;
+	color: $gray;
 	opacity: 1;
 }
 
 ::-webkit-input-placeholder {
-	color: #000;
+	color: $gray;
 	opacity: 1;
 }
 
 html {
 	font-size: 16px;
 	background-color: $bg;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -89,7 +90,6 @@ button {
 	z-index: 5;
 }
 
-
 input[type="radio"],
 input[type="checkbox"] {
 	appearance: none;
@@ -104,7 +104,7 @@ input[type="checkbox"] {
 	transition: box-shadow 0.1s ease, background-color 0.1s ease;
 
 	&:hover {
-		box-shadow: 0 0 0 2px #000
+		box-shadow: 0 0 0 2px #000;
 	}
 
 	&:checked {
@@ -122,5 +122,21 @@ input[type="checkbox"] {
 
 	&:before {
 		border-radius: 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.anim {
+		max-width: 30%;
+		max-height: 22%;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.anim {
+		max-width: 32%;
+		max-height: 18%;
+		width: auto;
 	}
 }

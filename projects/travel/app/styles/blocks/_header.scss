@@ -1,0 +1,180 @@
+.header {
+	background-color: $blue;
+	color: $white;
+	position: relative;
+
+	&__panel {
+		position: absolute;
+		z-index: 10;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+
+		&_inner {
+			display: flex;
+			align-items: center;
+			padding: 15px 0;
+		}
+	}
+}
+
+.nav {
+	display: flex;
+	margin-left: auto;
+	align-items: center;
+
+	&__link {
+		color: $white;
+		position: relative;
+		cursor: pointer;
+
+		& span {
+			transition: color 0.1s ease;
+			position: relative;
+			z-index: 5;
+		}
+
+		&:hover, &:active {
+			& span {
+				color: $orange;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 60px;
+		}
+
+		&.popup {
+			& span {
+				padding-right: 22px;
+			}
+
+			& span:before {
+				position: absolute;
+				content: "";
+				top: 0;
+				right: 0;
+				width: 15px;
+				height: 15px;
+				background-image: url("/images/dist/arrow-hover.svg");
+				background-repeat: no-repeat;
+				transition: transform 0.1s ease;
+				background-size: contain;
+				z-index: 5;
+				display: block;
+			}
+
+			&:hover, &:active {
+				& span:before {
+					transform: rotate(90deg);
+					background-image: url("/images/dist/arrow-hover-active.svg");
+				}
+
+				& .nav__link_popup {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
+
+	&__link_popup {
+		opacity: 0;
+		visibility: collapse;
+		transition: opacity 0.1s ease, visibility 0.1s ease;
+		border-radius: 10px;
+		background-color: $white;
+		position: absolute;
+		top: -10px;
+		left: -20px;
+		padding: 40px 20px;
+		padding-bottom: 20px;
+		min-width: 125px;
+	}
+
+	&__sublink {
+		display: flex;
+		align-items: center;
+		color: $gray;
+		transition: color 0.1s ease;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		& img {
+			margin-right: 10px;
+			width: 24px;
+			height: 24px;
+		}
+
+		&:hover, &:active {
+			text-decoration: underline;
+			color: $black;
+
+			& img {
+				filter: brightness(0) saturate(100%);
+			}
+		}
+	}
+}
+
+
+.header__search {
+	position: relative;
+	margin-left: 45px;
+	z-index: 6;
+
+
+	&_form {
+		position: absolute;
+		background-color: $white;
+		padding: 7px 10px;
+		display: flex;
+		border-radius: 10px;
+		align-items: center;
+		justify-content: space-between;
+		top: 0;
+		right: 0;
+
+		& input {
+			width: 150px;
+			outline: none;
+			margin-right: 15px;
+			font-size: 16px;
+			color: $gray;
+			padding-bottom: 5px;
+			border-bottom: 1px solid $orange;
+		}
+	}
+}
+
+.header__fulltime {
+	margin-left: 45px;
+}
+
+.header__phones {
+	display: flex;
+	align-items: center;
+	margin-left: 45px;
+	
+	&_links {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin-left: 5px;
+
+		& a {
+			color: $white;
+			transition: color .1s ease;
+
+			&:hover, &:active {
+				color: $orange;
+			}
+		}
+	}
+}
+
+.header__user {
+	margin-left: 60px;
+}

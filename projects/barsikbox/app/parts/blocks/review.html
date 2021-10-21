@@ -1,0 +1,29 @@
+<div x-cloak x-show.transition.opacity="reviewMenu === true" class="popup">
+	<div class="popup__inner review">
+		<img src="images/dist/leaf1.svg" class="purchase__leaf_top" alt="" />
+		<img src="images/dist/leaf2.svg" class="purchase__leaf_bottom" alt="" />
+
+		<button
+			type="button"
+			@click.prevent="reviewMenu = !reviewMenu"
+			class="popup__close"
+		>
+			<img src="images/dist/close.svg" width="40" height="40" alt="" />
+		</button>
+
+		<img src="images/dist/popup-logo.svg" width="60" alt="" />
+
+		<form action="" class="review__form">
+			<input type="text" required placeholder="ИМЯ" name="name" class="review__input">
+			<label for="avatar" class="review__form_file">
+				<span>ФОТО (необязательно)</span>
+				<input type="file" accept="image/*" id="avatar" name="avatar">
+			</label>
+			<textarea required name="body" class="review__textarea" placeholder="ОТЗЫВ"></textarea>
+
+			<div class="purchase__submit_wrapper">
+				<button type="submit" class="purchase__submit">Оставить отзыв</button>
+			</div>
+		</form>
+	</div>
+</div>

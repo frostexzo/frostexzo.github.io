@@ -42,3 +42,38 @@
 		bottom: -10%;
 	}
 }
+
+@media screen and (max-width: 900px) {
+	.hero {
+		margin-bottom: 150px;
+		padding-bottom: 0;
+
+		&__logo {
+			margin-top: 50px;
+		}
+
+		&__inner {
+			padding-left: 0;
+			justify-content: center;
+		}
+
+		&__more {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.hero {
+		&__logo {
+			&_img {
+				width: 100%;
+			}
+		}
+
+		&__title {
+			font-size: 34px;
+			margin-top: 15px;
+		}
+	}
+}
