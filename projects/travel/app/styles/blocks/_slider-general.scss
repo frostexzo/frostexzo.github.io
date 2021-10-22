@@ -1,0 +1,41 @@
+.slider {
+	&__interactive {
+		display: flex;
+		align-items: center;
+	}
+
+	&__navigation {
+		display: flex;
+		align-items: center;
+		margin-right: 150px;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			width: 100px;
+			height: 1px;
+			background-color: $blue;
+			right: -125px;
+		}
+
+		& .swiper-button-prev {
+			margin-right: 25px;
+		}
+
+		& .swiper-button-prev, & .swiper-button-next {
+			position: initial;
+			font-weight: 700;
+			color: $blue;
+			width: 60px;
+			height: 60px;
+			border-radius: 100%;
+			border: 1px solid $blue;
+			margin-top: 0;
+
+			&:after {
+				font-size: 32px;
+			}
+		}
+	}
+}
