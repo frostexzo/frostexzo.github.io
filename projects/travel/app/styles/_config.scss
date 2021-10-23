@@ -8,6 +8,7 @@ $green-op-2: rgba(55, 219, 75, 0.66);
 $gray: #606060;
 $black: #000;
 $dgray: #424242;
+$dblue: #01565E;
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
 	@font-face {

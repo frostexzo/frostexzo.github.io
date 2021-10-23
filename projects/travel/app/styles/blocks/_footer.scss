@@ -1,0 +1,221 @@
+.footer {
+	background-color: $dblue;
+
+	&__inner {
+		padding: 45px 0;
+		display: flex;
+		justify-content: space-between;
+		color: $white;
+	}
+
+	&__block {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__text,
+	&__link {
+		color: $white;
+		font-size: 14px;
+	}
+
+	&__link {
+		transition: color 0.1s ease;
+
+		&:hover,
+		&:active {
+			color: $orange;
+		}
+
+		&.privacy {
+			text-decoration: underline;
+
+			&:hover,
+			&:active {
+				color: $white;
+				text-decoration: none;
+			}
+		}
+
+		&.nav {
+			margin-left: 0;
+			display: flex !important;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	&__text {
+		&.address {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		margin-bottom: 10px;
+
+		& img {
+			margin-right: 15px;
+		}
+
+		& .footer__text {
+			max-width: 200px;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		margin-bottom: 15px;
+
+		&_phones {
+			margin-right: 15px;
+		}
+	}
+
+	&__call {
+		&_input,
+		&_button {
+			width: 100% !important;
+			border-radius: 5px;
+			height: 48px !important;
+			max-width: 200px;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+
+		&_input {
+			margin-bottom: 15px;
+
+			&::before {
+				width: 20px !important;
+				height: 20px !important;
+				background-image: url("/images/dist/phone-orange.svg") !important;
+			}
+
+			& input {
+				border-radius: 5px;
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1250px) {
+	.footer {
+		&__inner {
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+
+		&__logo {
+			align-items: flex-start;
+		}
+
+		&__block {
+			flex-basis: 23%;
+
+			&:first-child {
+				margin-right: 30px;
+			}
+
+			&:nth-child(5) {
+				margin-right: 30px;
+			}
+
+			&:nth-child(5), &:nth-child(6) {
+				margin-top: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1130px) {
+	.footer {
+		&__block {
+			flex-basis: 30%;
+			margin-bottom: 30px;
+
+			&:first-child {
+				margin-right: 0;
+			}
+
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+
+			&:nth-child(5), &:nth-child(6) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			&:nth-child(6) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.footer {
+		&__block {
+			flex-basis: 35%;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.footer {
+		&__block {
+			flex-basis: 45%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 730px) {
+	.footer {
+		&__block {
+			flex-basis: 49%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 650px) {
+	.footer {
+		&__inner {
+			justify-content: space-between;
+		}
+
+		&__block {
+			flex-basis: 100%;
+			align-items: center;
+
+			&.navigation-block {
+				flex-basis: 45%;
+				align-items: flex-start;
+				order: 2;
+			}
+
+			&.main-block {
+				order: 10;
+				margin-bottom: 0;
+				align-items: flex-start;
+			}
+
+			&.contacts-block {
+				order: -1;
+				margin-bottom: 30px;
+			}
+
+			&.call-block {
+				order: 0;
+				margin-top: 0;
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
