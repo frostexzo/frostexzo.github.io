@@ -67,7 +67,7 @@
 				right: 0;
 				width: 15px;
 				height: 15px;
-				background-image: url("/images/dist/arrow-hover.svg");
+				background-image: url("images/dist/arrow-hover.svg");
 				background-repeat: no-repeat;
 				transition: transform 0.1s ease;
 				background-size: contain;
@@ -79,7 +79,7 @@
 			&:active {
 				& span:before {
 					transform: rotate(90deg);
-					background-image: url("/images/dist/arrow-hover-active.svg");
+					background-image: url("images/dist/arrow-hover-active.svg");
 				}
 
 				& .nav__link_popup {
