@@ -89,6 +89,10 @@
 		}
 	}
 
+	&__hidden {
+		display: none;
+	}
+
 	&__popup {
 		opacity: 0;
 		visibility: collapse;
@@ -101,7 +105,7 @@
 		align-items: flex-start;
 		max-height: 195px;
 		overflow-y: auto;
-		transition: opacity .1s ease, visibility .1s ease;
+		transition: opacity 0.1s ease, visibility 0.1s ease;
 		height: 0;
 
 		&.active {
@@ -114,10 +118,52 @@
 			padding: 8px 15px;
 			width: 100%;
 			text-align: left;
-			transition: background-color .1s ease;
+			display: flex;
+			align-items: center;
+			transition: background-color 0.1s ease, border-color 0.1s ease,
+				color 0.1s ease;
 
-			&:hover, &:active {
+			& input {
+				pointer-events: none;
+				margin-right: 10px;
+			}
+
+			& span {
+				pointer-events: none;
+			}
+
+			&:hover,
+			&:active {
 				background-color: lighten($green-op, 40%);
+			}
+		}
+
+		&.period-popup {
+			min-width: 230%;
+			width: auto;
+			display: grid;
+			grid-template-columns: repeat(8, 1fr);
+			justify-items: center;
+			position: relative;
+			z-index: 5;
+
+			&.active {
+				padding: 10px;
+			}
+
+			& .search-tours__popup_item {
+				border-radius: 100%;
+				color: $black;
+				border: 1px solid #b3b3b3;
+				width: 30px;
+				height: 30px;
+				justify-content: center;
+
+				&.selected {
+					background-color: $orange;
+					border-color: $orange;
+					color: $white;
+				}
 			}
 		}
 	}
@@ -126,6 +172,7 @@
 		font-weight: 400;
 		font-size: 13px;
 		position: relative;
+		max-width: 190px;
 
 		&:first-child &-button {
 			border-top-left-radius: 5px;
@@ -135,6 +182,7 @@
 		&-button {
 			background-color: $white;
 			display: flex;
+			user-select: none;
 			align-items: center;
 			cursor: pointer;
 			width: 100%;
@@ -153,6 +201,82 @@
 
 		& img {
 			margin-right: 10px;
+			pointer-events: none;
+		}
+
+		& span {
+			pointer-events: none;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.search-tours {
+		padding-top: 130px;
+		padding-bottom: 80px;
+
+		&__main {
+			padding: 30px;
+			margin-top: 50px;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.search-tours {
+		&__fields {
+			grid-template-columns: 1fr;
+		}
+
+		&__main {
+			padding: 45px;
+		}
+
+		&__popup {
+			max-height: 300px;
+
+			&.period-popup {
+				min-width: 100%;
+			}
+		}
+
+		&__field {
+			max-width: none;
+
+			&:first-child {
+				& .search-tours__field-button {
+					border-radius: 0;
+					border-top-left-radius: 5px;
+					border-top-right-radius: 5px;
+				}
+			}
+		}
+
+		&__submit {
+			& .search-tours__field-button {
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+				font-size: 16px;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.search-tours {
+		&__city_selected {
+			&::before {
+				top: 6px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.search-tours {
+		&__main {
+			padding: 20px;
 		}
 	}
 }

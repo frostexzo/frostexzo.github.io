@@ -111,26 +111,26 @@ button {
 input[type="radio"],
 input[type="checkbox"] {
 	appearance: none;
-	border-radius: 50%;
+	border-radius: 100%;
 	width: 15px;
 	height: 15px;
 	min-width: 15px;
 	position: relative;
-	border: 2.5px solid #000;
+	border: 2.5px solid $orange;
 	background-color: transparent;
-	box-shadow: 0 0 0 1px #000;
+	box-shadow: 0 0 0 1px $orange;
 	transition: box-shadow 0.1s ease, background-color 0.1s ease;
 
 	&:hover {
-		box-shadow: 0 0 0 2px #000
+		box-shadow: 0 0 0 2px $orange;
 	}
 
 	&:checked {
-		background-color: #000;
-		box-shadow: 0 0 0 1px #000;
+		background-color: $orange;
+		box-shadow: 0 0 0 1px $orange;
 
 		&:hover {
-			box-shadow: 0 0 0 2px #000;
+			box-shadow: 0 0 0 2px $orange;
 		}
 	}
 }
