@@ -67,7 +67,7 @@
 				right: 0;
 				width: 15px;
 				height: 15px;
-				background-image: url("images/dist/arrow-hover.svg");
+				background-image: url("../images/dist/arrow-hover.svg");
 				background-repeat: no-repeat;
 				transition: transform 0.1s ease;
 				background-size: contain;
@@ -79,7 +79,7 @@
 			&:active {
 				& span:before {
 					transform: rotate(90deg);
-					background-image: url("images/dist/arrow-hover-active.svg");
+					background-image: url("../images/dist/arrow-hover-active.svg");
 				}
 
 				& .nav__link_popup {
@@ -206,10 +206,10 @@
 	}
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1600px) {
 	.header {
 		&__navigation {
-			left: 15px;
+			left: 30px;
 		}
 	}
 }
@@ -248,7 +248,7 @@
 
 		&__navigation {
 			top: 27%;
-			right: 60px;
+			right: 70px;
 			left: auto;
 		}
 	}
@@ -377,7 +377,7 @@
 
 			&_hotels {
 				margin-top: 120px;
-				width: calc(100% + 30px);
+				width: calc(100% + 45px);
 				margin-left: -15px;
 			}
 		}
@@ -390,12 +390,12 @@
 
 		&__navigation {
 			top: 42%;
-			left: 15px;
+			left: 30px;
 			right: auto;
 			width: 100%;
 
 			& .swiper-button-next {
-				right: 30px;
+				right: 60px;
 			}
 		}
 	}

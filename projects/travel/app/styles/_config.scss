@@ -107,6 +107,16 @@ button {
 	}
 }
 
+@media screen and (max-width: 1600px) {
+	.container {
+		padding: 0 30px;
+
+		&-alt {
+			padding-right: 0;
+		}
+	}
+}
+
 
 input[type="radio"],
 input[type="checkbox"] {

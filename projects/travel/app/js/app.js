@@ -124,6 +124,12 @@ const app = () => {
 const searchFields = document.querySelectorAll(".search-tours__field");
 searchFields.forEach((field) => {
 	field.addEventListener("click", (e) => {
+		const popups = document.querySelectorAll(".search-tours__popup");
+
+		for (let i = 0; i < popups.length; i++) {
+			popups[i].classList.remove("active");
+		}
+
 		const popup = field.querySelector(".search-tours__popup");
 		if (e.target.classList.contains("search-tours__field-button")) {
 			popup.classList.toggle("active");
