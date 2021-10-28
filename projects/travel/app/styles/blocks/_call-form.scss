@@ -1,0 +1,145 @@
+.call-form {
+	padding-top: 130px;
+	padding-bottom: 110px;
+	background-image: url("../images/dist/call-bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+	}
+
+	&__body {
+		background-color: $orange-op;
+		padding: 60px;
+		padding-right: 90px;
+		padding-left: 100px;
+		padding-bottom: 70px;
+		border-radius: 10px;
+		color: $white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		color: $white;
+	}
+
+	&__img {
+		margin-bottom: -100px;
+		position: absolute;
+		left: 100px;
+		bottom: -15px;
+
+		& img {
+			max-width: 350px;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 36px;
+		margin-bottom: 40px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	&__text {
+		text-align: center;
+		display: block;
+		font-size: 24px;
+		max-width: 600px;
+		margin: 0 auto;
+		margin-bottom: 45px;
+	}
+
+	&__form {
+		display: flex;
+
+		& > *:not(:last-child) {
+			margin-right: 45px;
+		}
+
+		& .footer__call_button {
+			background: linear-gradient(90deg, #33b8c5 0%, #058591 90.88%);
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	.call-form {
+		&__img {
+			display: none;
+		}
+
+		&__body {
+			padding: 70px;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.call-form {
+		padding-top: 60px;
+		padding-bottom: 60px;
+
+		&__body {
+			padding: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.call-form {
+		&__title {
+			font-size: 28px;
+			margin-bottom: 30px;
+		}
+
+		&__text {
+			font-size: 20px;
+		}
+
+		&__body {
+			padding: 30px;
+		}
+
+		&__form {
+			& > *:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.call-form {
+		&__body {
+			padding-bottom: 40px;
+		}
+
+		&__form {
+			flex-direction: column;
+
+			& > *:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.call-form {
+		&__title {
+			font-size: 24px;
+		}
+
+		&__text {
+			font-size: 16px;
+		}
+	}
+}

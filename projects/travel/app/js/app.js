@@ -10,6 +10,7 @@ const app = () => {
 		selectedCityName: null,
 
 		id: {
+			home: null,
 			country: null,
 			date: null,
 			period: null,
@@ -19,6 +20,7 @@ const app = () => {
 		},
 
 		name: {
+			home: "Откуда",
 			country: "Страна или курорт",
 			period: "Период",
 			rating: "Рейтинг",
@@ -36,6 +38,12 @@ const app = () => {
 			if (!e.classList.contains("search-tours__popup_item")) return;
 			this.id.country = e.dataset.id;
 			this.name.country = e.innerText;
+		},
+
+		selectHome(e) {
+			if (!e.classList.contains("search-tours__popup_item")) return;
+			this.id.home = e.dataset.id;
+			this.name.home = e.innerText;
 		},
 
 		selectRating(e) {

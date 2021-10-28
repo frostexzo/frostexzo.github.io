@@ -1,0 +1,58 @@
+.search-tours.maldives {
+	padding-bottom: 80px;
+	
+	& .search-tours__main {
+		max-width: 1390px;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: -240px;
+			right: 0;
+			background-image: url("../images/dist/maldives-search.svg");
+			background-repeat: no-repeat;
+			width: 400px;
+			height: 234px;
+			background-size: contain;
+		}
+	}
+
+	& .search-tours__fields {
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.search-tours.maldives {
+		& .search-tours__main {
+			&::before {
+				width: 200px;
+				height: 120px;
+				top: -125px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.search-tours.maldives {
+		& .search-tours__main {
+			&::before {
+				content: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.search-tours.maldives {
+		& .search-tours__fields {
+			grid-template-columns: 1fr;
+		}
+
+		& .search-tours__field {
+			max-width: none;
+		}
+	}
+}

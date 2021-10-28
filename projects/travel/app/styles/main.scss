@@ -22,6 +22,10 @@
 	& span {
 		color: $orange;
 	}
+
+	&.uppercase {
+		text-transform: uppercase;
+	}
 }
 
 .subtitle {

@@ -95,13 +95,18 @@
 				background-image: url("../images/dist/phone-orange.svg") !important;
 			}
 
+			&.name {
+				&::before {
+					background-image: url("../images/dist/person-orange.svg") !important;
+				}
+			}
+
 			& input {
 				border-radius: 5px;
 			}
 		}
 	}
 }
-
 
 @media screen and (max-width: 1250px) {
 	.footer {
@@ -125,7 +130,8 @@
 				margin-right: 30px;
 			}
 
-			&:nth-child(5), &:nth-child(6) {
+			&:nth-child(5),
+			&:nth-child(6) {
 				margin-top: 35px;
 			}
 		}
@@ -146,7 +152,8 @@
 				margin-right: 0;
 			}
 
-			&:nth-child(5), &:nth-child(6) {
+			&:nth-child(5),
+			&:nth-child(6) {
 				margin-top: 0;
 				margin-bottom: 0;
 			}
@@ -174,7 +181,6 @@
 	}
 }
 
-
 @media screen and (max-width: 730px) {
 	.footer {
 		&__block {
@@ -182,7 +188,6 @@
 		}
 	}
 }
-
 
 @media screen and (max-width: 650px) {
 	.footer {

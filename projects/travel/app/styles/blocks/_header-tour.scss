@@ -1,0 +1,242 @@
+.header {
+	&__main {
+		position: relative;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-color: $blue;
+
+		&_container {
+			min-height: 570px;
+			padding-top: 170px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_title {
+			color: $white;
+			text-transform: uppercase;
+			position: relative;
+			font-size: 72px;
+			font-weight: 400;
+			margin-top: 50px;
+
+			&::before {
+				position: absolute;
+				content: "MALDIVES";
+				font-family: "Roboto", sans-serif;
+				top: -70px;
+				color: rgba(255, 255, 255, 0.27);
+				left: -70px;
+				font-size: 100px;
+			}
+		}
+
+		&_wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&_nav {
+			margin-top: auto;
+			margin-left: auto;
+			display: grid;
+			grid-template-columns: repeat(4, 170px);
+			border-radius: 5px;
+			overflow: hidden;
+
+			&-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: inherit;
+				flex-direction: column;
+				padding: 25px 15px;
+				background-color: rgba(255, 255, 255, 0.8);
+				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+				backdrop-filter: blur(4px);
+				transition: background-color 0.1s ease;
+
+				&:hover,
+				&:active {
+					background-color: $white;
+				}
+
+				&.active {
+					background-color: $white;
+
+					& img {
+						filter: brightness(0) saturate(100%) invert(63%)
+							sepia(40%) saturate(6149%) hue-rotate(354deg)
+							brightness(101%) contrast(98%);
+					}
+
+					& span {
+						color: $orange;
+					}
+				}
+
+				& img {
+					transition: filter 0.1s ease;
+					margin-bottom: 12px;
+				}
+
+				& span {
+					color: $gray;
+					text-transform: uppercase;
+					font-size: 18px;
+					transition: color 0.1s ease;
+				}
+			}
+		}
+	}
+
+	&__breadcrumbs {
+		&_link {
+			color: $white;
+			font-size: 18px;
+			font-family: "Roboto", sans-serif;
+			font-weight: 500;
+			text-transform: uppercase;
+			position: relative;
+			transition: color 0.1s ease;
+
+			&:hover,
+			&:active {
+				color: $orange;
+			}
+
+			&:last-child {
+				opacity: 0.65;
+			}
+
+			&:not(:last-child) {
+				padding-right: 40px;
+
+				&:before {
+					position: absolute;
+					content: "";
+					width: 20px;
+					height: 20px;
+					right: 8px;
+					top: 0;
+					background-size: contain;
+					background-image: url("../images/dist/arrow-right-w.svg");
+					background-repeat: no-repeat;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1700px) {
+	.header {
+		&__main {
+			&_title {
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.header {
+		&__main {
+			&_wrapper {
+				flex-direction: column-reverse;
+			}
+		}
+
+		&__breadcrumbs {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.header {
+		&__main {
+			&_nav {
+				margin-left: 0;
+				grid-template-columns: repeat(4, 1fr);
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.header {
+		&__main {
+			&_container {
+				padding-top: 140px;
+				min-height: 500px;
+			}
+
+			&_nav {
+				grid-template-columns: repeat(2, 1fr);
+
+				&-item {
+					padding: 15px;
+				}
+			}
+
+			&_title {
+				margin-top: 40px;
+				margin-bottom: 25px;
+				font-size: 54px;
+
+				&::before {
+					font-size: 70px;
+					left: -25px;
+					top: -50px;
+				}
+			}
+		}
+
+		&__breadcrumbs {
+			&_link {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.header {
+		&__main {
+			&_container {
+				min-height: auto;
+			}
+
+			&_title {
+				margin-top: 30px;
+				font-size: 40px;
+
+				&::before {
+					font-size: 60px;
+					top: -40px;
+				}
+			}
+		}
+
+		&__breadcrumbs {
+			&_link {
+				font-size: 14px;
+
+				&:not(:last-child) {
+					padding-right: 30px;
+
+					&::before {
+						width: 15px;
+						right: 5px;
+						height: 15px;
+					}
+				}
+			}
+		}
+	}
+}
