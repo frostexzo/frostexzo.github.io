@@ -1,0 +1,32 @@
+.tour-reviews {
+	padding-top: 160px;
+	padding-bottom: 140px;
+
+	&__content {
+		width: 60%;
+		margin-top: 45px;
+
+		& > * {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.tour-reviews {
+		padding-top: 110px;
+		padding-bottom: 60px;
+
+		&__content {
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.tour-reviews {
+		&__content {
+			width: 100%;
+		}
+	}
+}

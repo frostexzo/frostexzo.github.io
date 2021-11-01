@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Vogue Travel</title>
+		<meta name="description" content="description123" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="js/datepicker.js" as="script" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="header small">
+			<div class="header__panel">
+				<div class="container w100">
+					<div class="header__panel_inner">
+						<a href="" class="header__logo">
+							<img
+								src="images/dist/logo.svg"
+								width="84"
+								height="84"
+								alt=""
+							/>
+						</a>
+
+						<nav class="nav">
+							<div class="nav__link popup">
+								<span>Страны</span>
+								<div class="nav__link_popup">
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/maldives-icon.svg"
+											alt=""
+										/>
+										Мальдивы
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/oae-icon.svg"
+											alt=""
+										/>
+										ОАЭ
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/seish-icon.svg"
+											alt=""
+										/>
+										Сейшелы
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/mexica-icon.svg"
+											alt=""
+										/>
+										Сейшелы
+									</a>
+								</div>
+							</div>
+							<a href="" class="nav__link"
+								><span>Горящие туры</span></a
+							>
+							<div class="nav__link popup">
+								<span>О нас</span>
+								<div class="nav__link_popup">
+									<a href="" class="nav__sublink"> О нас </a>
+								</div>
+							</div>
+							<a href="" class="nav__link"
+								><span>Агенствам</span></a
+							>
+							<a href="" class="nav__link"
+								><span>Контакты</span></a
+							>
+						</nav>
+
+						<div class="header__search">
+							<button
+								@click.prevent="searchPopup = !searchPopup"
+								type="button"
+								class="header__search_icon"
+							>
+								<img
+									src="images/dist/search.svg"
+									width="32"
+									height="32"
+									alt=""
+								/>
+							</button>
+
+							<form
+								x-cloak
+								x-show.transition.opacity="searchPopup === true"
+								@click.away="searchPopup = false"
+								action=""
+								method="POST"
+								class="header__search_form"
+							>
+								<input
+									required
+									type="text"
+									name="search"
+									placeholder="Введите запрос"
+								/>
+								<button type="submit">
+									<img
+										src="images/dist/search-black.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+								</button>
+							</form>
+						</div>
+
+						<div class="header__fulltime">
+							<img
+								src="images/dist/24.svg"
+								width="45"
+								height="45"
+								alt=""
+							/>
+						</div>
+
+						<div class="header__phones">
+							<img
+								src="images/dist/phone.svg"
+								width="30"
+								height="30"
+								alt=""
+							/>
+							<div class="header__phones_links">
+								<a href="tel:+375291887788">+375291887788</a>
+								<a href="tel:+375291887788">+375291887788</a>
+							</div>
+						</div>
+
+						<a href="" class="header__user">
+							<img
+								src="images/dist/person.svg"
+								width="32"
+								height="32"
+								alt=""
+							/>
+						</a>
+
+						<button
+							@click.prevent="mobilePopup = true"
+							class="header__burger"
+							type="button"
+						>
+							<img
+								src="images/dist/burger.svg"
+								width="40"
+								height="38"
+								alt=""
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show.transition.opacity="mobilePopup === true"
+				class="header__menu"
+			>
+				<div class="header__menu_inner">
+					<button
+						@click.prevent="mobilePopup = false"
+						type="button"
+						class="header__menu_close"
+					>
+						<img src="images/dist/close-sm.svg" alt="" />
+					</button>
+
+					<div class="nav mobile">
+						<div class="nav__link popup">
+							<span>Страны</span>
+							<div class="nav__link_popup">
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/maldives-icon.svg"
+										alt=""
+									/>
+									Мальдивы
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/oae-icon.svg"
+										alt=""
+									/>
+									ОАЭ
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/seish-icon.svg"
+										alt=""
+									/>
+									Сейшелы
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/mexica-icon.svg"
+										alt=""
+									/>
+									Сейшелы
+								</a>
+							</div>
+						</div>
+						<a href="" class="nav__link"
+							><span>Горящие туры</span></a
+						>
+						<div class="nav__link popup">
+							<span>О нас</span>
+							<div class="nav__link_popup">
+								<a href="" class="nav__sublink"> О нас </a>
+							</div>
+						</div>
+						<a href="" class="nav__link"><span>Агенствам</span></a>
+						<a href="" class="nav__link"><span>Контакты</span></a>
+					</div>
+
+					<div class="header__phones mobile">
+						<img
+							src="images/dist/phone.svg"
+							width="30"
+							height="30"
+							alt=""
+						/>
+						<div class="header__phones_links">
+							<a href="tel:+375291887788">+375291887788</a>
+							<a href="tel:+375291887788">+375291887788</a>
+						</div>
+					</div>
+
+					<div class="header__search mobile">
+						<button
+							@click.prevent="searchPopup = !searchPopup"
+							type="button"
+							class="header__search_icon"
+						>
+							<img
+								src="images/dist/search.svg"
+								width="32"
+								height="32"
+								alt=""
+							/>
+
+							<span>Поиск</span>
+						</button>
+
+						<form
+							x-cloak
+							x-show.transition.opacity="searchPopup === true"
+							@click.away="searchPopup = false"
+							action=""
+							method="POST"
+							class="header__search_form"
+						>
+							<input
+								required
+								type="text"
+								name="search"
+								placeholder="Введите запрос"
+							/>
+							<button type="submit">
+								<img
+									src="images/dist/search-black.svg"
+									width="24"
+									height="24"
+									alt=""
+								/>
+							</button>
+						</form>
+					</div>
+
+					<a href="" class="header__user mobile">
+						<img
+							src="images/dist/person.svg"
+							width="32"
+							height="32"
+							alt=""
+						/>
+						<span>Личный кабинет</span>
+					</a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>

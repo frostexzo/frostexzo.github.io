@@ -1,0 +1,44 @@
+<section class="country-main">
+	<div class="container">
+		<div class="country-main__inner">
+			<h2 class="title uppercase">О <span>Мальдивах</span></h2>
+
+			<div class="country-main__content">
+				<div class="country-main__img">
+					<img src="images/dist/country-placeholder.jpg" alt="" />
+				</div>
+
+				<div class="country-main__text_wrapper">
+					<p class="country-main__text">
+						Мальди́вы — государство в Южной Азии, располагающееся на
+						группе атоллов в Аравийском море Индийского океана,
+						находящихся к югу от Индии. Крупнейшее в мире
+						«коралловое» государство. Столица — город Мале.
+					</p>
+
+					<p class="country-main__text">
+						Население — 402 071 человек, в том числе 338 434
+						гражданина и 63 637 неграждан (итоги переписи 20
+						сентября 2014). Государственная религия — ислам.
+					</p>
+				</div>
+			</div>
+
+			<div class="country-main__tabs">
+				<button :class="{ 'active' : countryTab === 'geo' }" @click.prevent="countryTab = 'geo'" type="button" class="country-main__tab active">
+					География и климат
+				</button>
+				<button :class="{ 'active' : countryTab === 'lang' }" @click.prevent="countryTab = 'lang'" type="button" class="country-main__tab">
+					Язык, время и валюта
+				</button>
+				<button :class="{ 'active' : countryTab === 'transport' }" @click.prevent="countryTab = 'transport'" type="button" class="country-main__tab">
+					Транспорт и связь
+				</button>
+				<button :class="{ 'active' : countryTab === 'culture' }" @click.prevent="countryTab = 'culture'" type="button" class="country-main__tab">
+					Культура
+				</button>
+				<button :class="{ 'active' : countryTab === 'other' }" @click.prevent="countryTab = 'other'" type="button" class="country-main__tab">Другое</button>
+			</div>
+		</div>
+	</div>
+</section>

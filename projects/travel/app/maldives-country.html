@@ -1,0 +1,377 @@
+<!--#include virtual="/parts/header-tour.html" -->
+
+<main class="main">
+	<!--
+	<section class="search-tours maldives">
+		<div class="container">
+			<div class="search-tours__inner">
+				<h2 class="title uppercase">Туры на <span>Мальдивы</span></h2>
+
+				<form action="" method="POST" class="search-tours__main">
+					<div class="search-tours__fields">
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img src="images/dist/field-from.svg" alt="" />
+								<span x-text="name.home">Откуда</span>
+								<input
+									required
+									type="text"
+									class="search-tours__hidden"
+									:value="id.home"
+								/>
+							</div>
+
+							<div
+								class="search-tours__popup"
+								@click="selectHome(event.target)"
+							>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="minsk"
+								>
+									Минск
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="moscow"
+								>
+									Москва
+								</button>
+							</div>
+						</div>
+
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img src="images/dist/field-city.svg" alt="" />
+								<span x-text="name.country"
+									>Страна или курорт</span
+								>
+								<input
+									required
+									type="text"
+									class="search-tours__hidden"
+									:value="id.country"
+								/>
+							</div>
+
+							<div
+								class="search-tours__popup"
+								@click="selectCountry(event.target)"
+							>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="minsk"
+								>
+									Минск
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="moscow"
+								>
+									Москва
+								</button>
+							</div>
+						</div>
+
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img
+									src="images/dist/field-calendar.svg"
+									alt=""
+								/>
+								<span id="dateText">Дата поездки</span>
+							</div>
+							<div class="search-tours__popup">
+								<input
+									id="datepicker"
+									class="search-tours__hidden"
+									required
+									type="text"
+								/>
+							</div>
+						</div>
+
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img
+									src="images/dist/field-period.svg"
+									alt=""
+								/>
+								<span x-text="name.period">Период</span>
+								<input
+									required
+									type="text"
+									class="search-tours__hidden"
+									:value="id.period"
+								/>
+							</div>
+
+							<div
+								class="search-tours__popup period-popup"
+								@click="selectPeriod(event.target)"
+							>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="7"
+								>
+									7
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="8"
+								>
+									8
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="9"
+								>
+									9
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="10"
+								>
+									10
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="11"
+								>
+									11
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="12"
+								>
+									12
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="13"
+								>
+									13
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="14"
+								>
+									14
+								</button>
+							</div>
+						</div>
+
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img
+									src="images/dist/field-rating.svg"
+									alt=""
+								/>
+								<span x-text="name.rating">Рейтинг</span>
+								<input
+									type="text"
+									required
+									class="search-tours__hidden"
+									:value="id.rating"
+								/>
+							</div>
+
+							<div
+								class="search-tours__popup"
+								@click="selectRating(event.target)"
+							>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="any"
+								>
+									Любой
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="1"
+								>
+									1
+								</button>
+								<button
+									type="button"
+									class="search-tours__popup_item"
+									data-id="2"
+								>
+									2
+								</button>
+							</div>
+						</div>
+
+						<div class="search-tours__field">
+							<div class="search-tours__field-button">
+								<img
+									src="images/dist/field-person.svg"
+									alt=""
+								/>
+								<span x-text="personsAmount()"
+									>Кол-во человек</span
+								>
+								<input
+									type="text"
+									required
+									class="search-tours__hidden"
+									:value="id.personsAdult + '-' + id.personsChildren"
+								/>
+							</div>
+							<div
+								class="search-tours__popup"
+								@click="selectPersons(event.target)"
+							>
+								<label
+									for="adult1"
+									class="search-tours__popup_item"
+									data-id="adult1"
+								>
+									<input
+										autocomplete="off"
+										id="adult1"
+										type="radio"
+										name="adult"
+									/>
+									<span>1 взр.</span>
+								</label>
+								<label
+									for="adult2"
+									class="search-tours__popup_item"
+									data-id="adult2"
+								>
+									<input
+										autocomplete="off"
+										id="adult2"
+										type="radio"
+										name="adult"
+									/>
+									<span>2 взр.</span>
+								</label>
+								<label
+									for="adult3"
+									class="search-tours__popup_item"
+									data-id="adult3"
+								>
+									<input
+										autocomplete="off"
+										id="adult3"
+										type="radio"
+										name="adult"
+									/>
+									<span>3 взр.</span>
+								</label>
+								<label
+									for="child1"
+									class="search-tours__popup_item"
+									data-id="child1"
+								>
+									<input
+										autocomplete="off"
+										id="child1"
+										type="radio"
+										name="children"
+									/>
+									<span>1 дет.</span>
+								</label>
+								<label
+									for="child2"
+									class="search-tours__popup_item"
+									data-id="child2"
+								>
+									<input
+										autocomplete="off"
+										id="child2"
+										type="radio"
+										name="children"
+									/>
+									<span>2 дет.</span>
+								</label>
+								<label
+									for="child3"
+									class="search-tours__popup_item"
+									data-id="child3"
+								>
+									<input
+										autocomplete="off"
+										id="child3"
+										type="radio"
+										name="children"
+									/>
+									<span>3 дет.</span>
+								</label>
+							</div>
+						</div>
+
+						<div class="search-tours__submit">
+							<button
+								type="submit"
+								class="search-tours__field-button"
+							>
+								<img
+									src="images/dist/field-search.svg"
+									alt=""
+								/>
+								<span>Найти туры</span>
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+    -->
+
+	<!--#include virtual="/parts/blocks/country-main.html" -->
+	<!--#include virtual="/parts/blocks/country-sub.html" -->
+	<!--#include virtual="/parts/blocks/main-tours-country.html" -->
+	<!--#include virtual="/parts/blocks/best-tours.html" -->
+	<!--#include virtual="/parts/blocks/call-form.html" -->
+
+	<section class="subscribe-block maldives">
+		<div class="container">
+			<div class="hot__subscribe">
+				<form action="" method="POST" class="hot__subscribe_form">
+					<span class="hot__subscribe_text">
+						Подпишитесь на рассылку, чтобы узнавать первыми обо всех
+						уникальных предложениях!
+					</span>
+
+					<div class="hot__subscribe_fields">
+						<div class="hot__subscribe_input">
+							<input type="text" required placeholder="Email*" />
+						</div>
+
+						<button type="submit" class="hot__subscribe_button">
+							<img
+								src="images/dist/switch-icon.svg"
+								width="31"
+								height="20"
+								alt=""
+							/>
+							<span>Подписаться</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<!--#include virtual="/parts/blocks/countries.html" -->
+</main>
+
+<!--#include virtual="/parts/footer.html" -->

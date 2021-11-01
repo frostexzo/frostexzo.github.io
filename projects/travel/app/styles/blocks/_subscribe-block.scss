@@ -1,7 +1,15 @@
 .subscribe-block {
 	padding: 150px 0;
 
-	& .hot__subscribe {
+	&.pt-0 {
+		padding-top: 0;
+
+		& .hot__subscribe {
+			margin-top: 0;
+		}
+	}
+
+	&.maldives .hot__subscribe {
 		margin-top: 0;
 		display: flex !important;
 		position: relative;

@@ -1,4 +1,9 @@
 .header {
+
+	&.small .header__panel {
+		position: initial;
+	}
+
 	&__main {
 		position: relative;
 		background-position: center;

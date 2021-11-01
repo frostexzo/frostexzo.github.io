@@ -3,6 +3,14 @@
 	padding-bottom: 150px;
 	background-color: rgba(91, 190, 200, 0.13);
 
+	&.white {
+		background-color: $white;
+	}
+
+	& .hotels__list_inner {
+		margin-top: 60px;
+	}
+
 	&__main {
 		margin-top: 60px;
 		display: grid;
@@ -32,7 +40,7 @@
 
 		&_info {
 			background-color: $orange-op;
-			transition: background-color .1s ease;
+			transition: background-color 0.1s ease;
 			padding: 25px 15px;
 			max-width: 70%;
 			width: 100%;
@@ -150,7 +158,7 @@
 
 @media screen and (max-width: 450px) {
 	.popular {
-		&__item  {
+		&__item {
 			& span {
 				font-size: 16px;
 			}

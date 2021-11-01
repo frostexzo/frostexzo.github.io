@@ -1,0 +1,87 @@
+<section class="tour-page">
+	<div class="container">
+		<div class="tour-page__inner">
+			<h2 class="title uppercase">Maldives Hotel <span>5*</span></h2>
+
+			<div class="hot__item_tags">
+				<div class="hot__item_tag">#СемейныйОтдых</div>
+				<div class="hot__item_tag">#ПляжныйОтдых</div>
+				<div class="hot__item_tag">#Экскурсии</div>
+				<div class="hot__item_tag">#ВсеВключено</div>
+				<div class="hot__item_tag">#ВылетНаПраздники</div>
+			</div>
+
+
+			<div class="tour-page__main">
+				<div class="tour-page__slider">
+					<div id="tour-slider" class="swiper-container tour-page__slider_container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide tour-page__slider_item">
+								<img src="images/dist/maldives-bg.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+
+				<div class="tour-page__info">
+					<h3 class="tour-page__info_title">
+						Maldives Hotel <span>5*</span>
+					</h3>
+
+					<div class="tour-page__info_features">
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-period.svg" width="30" height="30" alt="">
+							<span>29.09, 30.09<br>на 10 ночей</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-rating.svg" width="30" height="30" alt="">
+							<span>5 звезд</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-from.svg" width="30" height="27" alt="">
+							<span>из Минска</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-city.svg" width="30" height="37" alt="">
+							<span>Мальдивы</span>
+						</div>
+					</div>
+
+					<div class="tour-page__info_price">
+						<span class="hot__item_price-new"
+						>291 USD
+					</span>
+					<span class="hot__item_price-old"
+						>от 591 USD</span
+					>
+					</div>
+
+					<form action="" method="POST" class="tour-page__info_form">
+						<div class="hot__subscribe_input footer__call_input">
+							<input type="tel" required placeholder="Телефон*" />
+						</div>
+	
+						<button class="hot__subscribe_button footer__call_button">
+							Оставить заявку
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="tour-page__buttons">
+				<button :class="{ 'active' : tourPageTab === 'desc' }" @click.prevent="tourPageTab = 'desc'" type="button" class="country-main__tab">
+					Описание
+				</button>
+				<button :class="{ 'active' : tourPageTab === 'rooms' }" @click.prevent="tourPageTab = 'rooms'" type="button" class="country-main__tab">
+					Номера
+				</button>
+				<button :class="{ 'active' : tourPageTab === 'reviews' }" @click.prevent="tourPageTab = 'reviews'" type="button" class="country-main__tab">
+					Отзывы
+				</button>
+			</div>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,32 @@
+.breadcrumbs {
+	margin-top: 110px;
+
+	& .header__breadcrumbs {
+		justify-content: flex-end;
+		display: flex;
+	}
+
+	& .header__breadcrumbs_link {
+		color: $black;
+
+		&:not(:last-child) {
+			&::before {
+				background-image: url("../images/dist/arrow-right-b.svg");
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1300px) {
+	.breadcrumbs {
+		margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.breadcrumbs {
+		& .header__breadcrumbs {
+			justify-content: flex-start;
+		}
+	}
+}

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Vogue Travel</title>
+		<meta name="description" content="description123" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="js/datepicker.js" as="script" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="header small">
+			<div class="header__panel">
+				<div class="container w100">
+					<div class="header__panel_inner">
+						<a href="" class="header__logo">
+							<img
+								src="images/dist/logo.svg"
+								width="84"
+								height="84"
+								alt=""
+							/>
+						</a>
+
+						<nav class="nav">
+							<div class="nav__link popup">
+								<span>Страны</span>
+								<div class="nav__link_popup">
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/maldives-icon.svg"
+											alt=""
+										/>
+										Мальдивы
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/oae-icon.svg"
+											alt=""
+										/>
+										ОАЭ
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/seish-icon.svg"
+											alt=""
+										/>
+										Сейшелы
+									</a>
+									<a href="" class="nav__sublink">
+										<img
+											src="images/dist/mexica-icon.svg"
+											alt=""
+										/>
+										Сейшелы
+									</a>
+								</div>
+							</div>
+							<a href="" class="nav__link"
+								><span>Горящие туры</span></a
+							>
+							<div class="nav__link popup">
+								<span>О нас</span>
+								<div class="nav__link_popup">
+									<a href="" class="nav__sublink"> О нас </a>
+								</div>
+							</div>
+							<a href="" class="nav__link"
+								><span>Агенствам</span></a
+							>
+							<a href="" class="nav__link"
+								><span>Контакты</span></a
+							>
+						</nav>
+
+						<div class="header__search">
+							<button
+								@click.prevent="searchPopup = !searchPopup"
+								type="button"
+								class="header__search_icon"
+							>
+								<img
+									src="images/dist/search.svg"
+									width="32"
+									height="32"
+									alt=""
+								/>
+							</button>
+
+							<form
+								x-cloak
+								x-show.transition.opacity="searchPopup === true"
+								@click.away="searchPopup = false"
+								action=""
+								method="POST"
+								class="header__search_form"
+							>
+								<input
+									required
+									type="text"
+									name="search"
+									placeholder="Введите запрос"
+								/>
+								<button type="submit">
+									<img
+										src="images/dist/search-black.svg"
+										width="24"
+										height="24"
+										alt=""
+									/>
+								</button>
+							</form>
+						</div>
+
+						<div class="header__fulltime">
+							<img
+								src="images/dist/24.svg"
+								width="45"
+								height="45"
+								alt=""
+							/>
+						</div>
+
+						<div class="header__phones">
+							<img
+								src="images/dist/phone.svg"
+								width="30"
+								height="30"
+								alt=""
+							/>
+							<div class="header__phones_links">
+								<a href="tel:+375291887788">+375291887788</a>
+								<a href="tel:+375291887788">+375291887788</a>
+							</div>
+						</div>
+
+						<a href="" class="header__user">
+							<img
+								src="images/dist/person.svg"
+								width="32"
+								height="32"
+								alt=""
+							/>
+						</a>
+
+						<button
+							@click.prevent="mobilePopup = true"
+							class="header__burger"
+							type="button"
+						>
+							<img
+								src="images/dist/burger.svg"
+								width="40"
+								height="38"
+								alt=""
+							/>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div
+				x-cloak
+				x-show.transition.opacity="mobilePopup === true"
+				class="header__menu"
+			>
+				<div class="header__menu_inner">
+					<button
+						@click.prevent="mobilePopup = false"
+						type="button"
+						class="header__menu_close"
+					>
+						<img src="images/dist/close-sm.svg" alt="" />
+					</button>
+
+					<div class="nav mobile">
+						<div class="nav__link popup">
+							<span>Страны</span>
+							<div class="nav__link_popup">
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/maldives-icon.svg"
+										alt=""
+									/>
+									Мальдивы
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/oae-icon.svg"
+										alt=""
+									/>
+									ОАЭ
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/seish-icon.svg"
+										alt=""
+									/>
+									Сейшелы
+								</a>
+								<a href="" class="nav__sublink">
+									<img
+										src="images/dist/mexica-icon.svg"
+										alt=""
+									/>
+									Сейшелы
+								</a>
+							</div>
+						</div>
+						<a href="" class="nav__link"
+							><span>Горящие туры</span></a
+						>
+						<div class="nav__link popup">
+							<span>О нас</span>
+							<div class="nav__link_popup">
+								<a href="" class="nav__sublink"> О нас </a>
+							</div>
+						</div>
+						<a href="" class="nav__link"><span>Агенствам</span></a>
+						<a href="" class="nav__link"><span>Контакты</span></a>
+					</div>
+
+					<div class="header__phones mobile">
+						<img
+							src="images/dist/phone.svg"
+							width="30"
+							height="30"
+							alt=""
+						/>
+						<div class="header__phones_links">
+							<a href="tel:+375291887788">+375291887788</a>
+							<a href="tel:+375291887788">+375291887788</a>
+						</div>
+					</div>
+
+					<div class="header__search mobile">
+						<button
+							@click.prevent="searchPopup = !searchPopup"
+							type="button"
+							class="header__search_icon"
+						>
+							<img
+								src="images/dist/search.svg"
+								width="32"
+								height="32"
+								alt=""
+							/>
+
+							<span>Поиск</span>
+						</button>
+
+						<form
+							x-cloak
+							x-show.transition.opacity="searchPopup === true"
+							@click.away="searchPopup = false"
+							action=""
+							method="POST"
+							class="header__search_form"
+						>
+							<input
+								required
+								type="text"
+								name="search"
+								placeholder="Введите запрос"
+							/>
+							<button type="submit">
+								<img
+									src="images/dist/search-black.svg"
+									width="24"
+									height="24"
+									alt=""
+								/>
+							</button>
+						</form>
+					</div>
+
+					<a href="" class="header__user mobile">
+						<img
+							src="images/dist/person.svg"
+							width="32"
+							height="32"
+							alt=""
+						/>
+						<span>Личный кабинет</span>
+					</a>
+				</div>
+			</div>
+		</header>
+	</body>
+</html>
+
+
+<main class="main">
+<section class="breadcrumbs">
+	<div class="container">
+		<div class="header__breadcrumbs">
+			<a href="" class="header__breadcrumbs_link"
+				>Главная</a
+			>
+			<a href="" class="header__breadcrumbs_link"
+				>Мальдивы</a
+			>
+			<a href="" class="header__breadcrumbs_link"
+				>Туры</a
+			>
+		</div>
+	</div>
+</section>
+<section class="tour-page">
+	<div class="container">
+		<div class="tour-page__inner">
+			<h2 class="title uppercase">Maldives Hotel <span>5*</span></h2>
+
+			<div class="hot__item_tags">
+				<div class="hot__item_tag">#СемейныйОтдых</div>
+				<div class="hot__item_tag">#ПляжныйОтдых</div>
+				<div class="hot__item_tag">#Экскурсии</div>
+				<div class="hot__item_tag">#ВсеВключено</div>
+				<div class="hot__item_tag">#ВылетНаПраздники</div>
+			</div>
+
+
+			<div class="tour-page__main">
+				<div class="tour-page__slider">
+					<div id="tour-slider" class="swiper-container tour-page__slider_container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide tour-page__slider_item">
+								<img src="images/dist/maldives-bg.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+					</div>
+				</div>
+
+				<div class="tour-page__info">
+					<h3 class="tour-page__info_title">
+						Maldives Hotel <span>5*</span>
+					</h3>
+
+					<div class="tour-page__info_features">
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-period.svg" width="30" height="30" alt="">
+							<span>29.09, 30.09<br>на 10 ночей</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-rating.svg" width="30" height="30" alt="">
+							<span>5 звезд</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-from.svg" width="30" height="27" alt="">
+							<span>из Минска</span>
+						</div>
+						<div class="tour-page__info_features-item">
+							<img src="images/dist/field-city.svg" width="30" height="37" alt="">
+							<span>Мальдивы</span>
+						</div>
+					</div>
+
+					<div class="tour-page__info_price">
+						<span class="hot__item_price-new"
+						>291 USD
+					</span>
+					<span class="hot__item_price-old"
+						>от 591 USD</span
+					>
+					</div>
+
+					<form action="" method="POST" class="tour-page__info_form">
+						<div class="hot__subscribe_input footer__call_input">
+							<input type="tel" required placeholder="Телефон*" />
+						</div>
+	
+						<button class="hot__subscribe_button footer__call_button">
+							Оставить заявку
+						</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="tour-page__buttons">
+				<button :class="{ 'active' : tourPageTab === 'desc' }" @click.prevent="tourPageTab = 'desc'" type="button" class="country-main__tab">
+					Описание
+				</button>
+				<button :class="{ 'active' : tourPageTab === 'rooms' }" @click.prevent="tourPageTab = 'rooms'" type="button" class="country-main__tab">
+					Номера
+				</button>
+				<button :class="{ 'active' : tourPageTab === 'reviews' }" @click.prevent="tourPageTab = 'reviews'" type="button" class="country-main__tab">
+					Отзывы
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section x-show="tourPageTab === 'desc'" class="tour-desc">
+	<div class="container">
+		<div class="tour-desc__inner">
+			<h2 class="title">Описание <span>тура</span></h2>
+			<span class="subtitle">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			</span>
+
+			<div class="tour-desc__content">
+				<p class="tour-desc__text">
+					Suspendisse viverra magna ante, vitae elementum odio
+					sollicitudin id. Suspendisse varius lectus scelerisque,
+					fermentum risus id, viverra magna. Vivamus arcu arcu,
+					finibus vel aliquet interdum, semper at ante. Donec tellus
+					ipsum, commodo sit amet augue at, congue convallis justo.
+					Morbi sed enim a nibh dictum consectetur. Duis eget ante eu
+					dolor finibus commodo. In placerat nunc id libero molestie
+					viverra. Nam a iaculis ex. Ut at iaculis nulla. Praesent
+					scelerisque orci in pellentesque molestie. Suspendisse
+					potenti. Integer tristique nisl varius tortor venenatis
+					tincidunt. Etiam tristique, nunc ac dignissim rhoncus,
+					turpis nisi gravida augue, eget porttitor tellus mauris sit
+					amet quam. Curabitur quis lorem a odio molestie fermentum.
+					Donec maximus odio quam, quis vestibulum ex tempor in.
+					Aliquam tempor auctor sapien et fringilla.
+				</p>
+
+				<div class="tour-desc__images">
+					<img src="images/dist/maldives-bg.jpg" alt="" />
+					<img src="images/dist/maldives-bg.jpg" alt="" />
+				</div>
+
+				<p class="tour-desc__text">
+					Suspendisse viverra magna ante, vitae elementum odio
+					sollicitudin id. Suspendisse varius lectus scelerisque,
+					fermentum risus id, viverra magna. Vivamus arcu arcu,
+					finibus vel aliquet interdum, semper at ante. Donec tellus
+					ipsum, commodo sit amet augue at, congue convallis justo.
+					Morbi sed enim a nibh dictum consectetur. Duis eget ante eu
+					dolor finibus commodo. In placerat nunc id libero molestie
+					viverra. Nam a iaculis ex. Ut at iaculis nulla. Praesent
+					scelerisque orci in pellentesque molestie. Suspendisse
+					potenti. Integer tristique nisl varius tortor venenatis
+					tincidunt. Etiam tristique, nunc ac dignissim rhoncus,
+					turpis nisi gravida augue, eget porttitor tellus mauris sit
+					amet quam. Curabitur quis lorem a odio molestie fermentum.
+					Donec maximus odio quam, quis vestibulum ex tempor in.
+					Aliquam tempor auctor sapien et fringilla.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section x-cloak x-show="tourPageTab === 'rooms'" class="tour-rooms">
+	<div class="container">
+		<div class="tour-rooms__inner">
+			<h2 class="title">Виды <span>номеров</span></h2>
+
+			<div class="tour-rooms__items">
+				<div class="tour-rooms__item">
+					<div class="tour-rooms__item_heading">
+						<span>Standard</span>
+						<img
+							class="tour-rooms__item_heading-arrow"
+							src="images/dist/arrow-right-b.svg"
+							width="26"
+							height="26"
+							alt=""
+						/>
+					</div>
+
+					<div class="tour-rooms__item_body">
+						<span class="tour-rooms__item_desc">
+							70 номер, 20 м2, макс. 2 чел. | спальня
+							(двухспальная кровать/2 раздельные), душевая
+						</span>
+
+						<div class="tour-rooms__item_images">
+							<div class="tour-room-slider swiper-container">
+								<div class="swiper-wrapper">
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tour-rooms__item_features hot__item_tags">
+							<div class="hot__item_tag">Кондиционер</div>
+							<div class="hot__item_tag">Телевизор</div>
+							<div class="hot__item_tag">Фен</div>
+							<div class="hot__item_tag">Сейф</div>
+							<div class="hot__item_tag">Балкон</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tour-rooms__item">
+					<div class="tour-rooms__item_heading">
+						<span>Standard</span>
+						<img
+							class="tour-rooms__item_heading-arrow"
+							src="images/dist/arrow-right-b.svg"
+							width="26"
+							height="26"
+							alt=""
+						/>
+					</div>
+
+					<div class="tour-rooms__item_body">
+						<span class="tour-rooms__item_desc">
+							70 номер, 20 м2, макс. 2 чел. | спальня
+							(двухспальная кровать/2 раздельные), душевая
+						</span>
+
+						<div class="tour-rooms__item_images">
+							<div class="tour-room-slider swiper-container">
+								<div class="swiper-wrapper">
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+
+									<div
+										class="
+											swiper-slide
+											tour-rooms__item_slide
+										"
+									>
+										<img
+											src="images/dist/tour-room-placeholder.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="tour-rooms__item_features hot__item_tags">
+							<div class="hot__item_tag">Кондиционер</div>
+							<div class="hot__item_tag">Телевизор</div>
+							<div class="hot__item_tag">Фен</div>
+							<div class="hot__item_tag">Сейф</div>
+							<div class="hot__item_tag">Балкон</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section x-cloak x-show="tourPageTab === 'reviews'" class="tour-reviews">
+	<div class="container">
+		<div class="tour-reviews__inner">
+			<h2 class="title">Отзывы об <span>отеле</span></h2>
+
+			<div class="tour-reviews__content">
+				<img src="images/dist/reviews-iframe.jpg" alt="">
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="call-form">
+	<div class="container">
+		<div class="call-form__inner">
+			<div class="call-form__img">
+				<img src="images/dist/woman.png" alt="">
+			</div>
+
+			<div class="call-form__body">
+				<h2 class="call-form__title">Нет времени на поиск туров?</h2>
+				<span class="call-form__text">
+					Оставьте свой номер, наш менеджер перезвонит вам и поможет
+					подобрать подходящий тур!
+				</span>
+
+				<form action="" method="POST" class="call-form__form">
+					<div class="hot__subscribe_input footer__call_input name">
+						<input type="text" required placeholder="Имя*" />
+					</div>
+
+					<div class="hot__subscribe_input footer__call_input">
+						<input type="tel" required placeholder="Телефон*" />
+					</div>
+
+					<button class="hot__subscribe_button footer__call_button">
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="popular white">
+	<div class="container">
+		<h2 class="title">Похожие <span>туры</span></h2>
+
+		<div class="hotels__list_inner">
+			<div class="hot__item">
+				<a href="" class="hot__item_img">
+					<img src="images/dist/popular-placeholder.jpg" alt="" />
+				</a>
+
+				<a href="" class="hot__item_title">
+					<img
+						src="images/dist/hot-icon.svg"
+						width="30"
+						height="43"
+						alt=""
+					/>
+					<h3>MALDIVAS HOTEL 5*</h3>
+				</a>
+
+				<div class="hot__item_tags">
+					<div class="hot__item_tag">#СемейныйОтдых</div>
+					<div class="hot__item_tag">#ПляжныйОтдых</div>
+					<div class="hot__item_tag">#Экскурсии</div>
+					<div class="hot__item_tag">#ВсеВключено</div>
+					<div class="hot__item_tag">#ВылетНаПраздники</div>
+				</div>
+
+				<div class="hot__item_info">
+					<div class="hot__item_info-item">
+						<img src="images/dist/from-icon.svg" alt="" />
+						<span>29.09, 31.09 из Минска</span>
+					</div>
+
+					<div class="hot__item_info-item">
+						<img src="images/dist/duration-icon.svg" alt="" />
+						<span>7 дней 6 ночей</span>
+					</div>
+				</div>
+
+				<div class="hot__item_meta">
+					<div class="hot__item_price">
+						<span class="hot__item_price-new">от 291 USD </span>
+						<span class="hot__item_price-old">от 591 USD</span>
+					</div>
+
+					<a href="" class="hot__item_more">
+						<span>Подробнее</span>
+						<img
+							src="images/dist/arrow-hover-active.svg"
+							width="30"
+							height="28"
+							alt=""
+						/>
+					</a>
+				</div>
+			</div>
+
+			<div class="hot__item">
+				<a href="" class="hot__item_img">
+					<img src="images/dist/popular-placeholder.jpg" alt="" />
+				</a>
+
+				<a href="" class="hot__item_title">
+					<img
+						src="images/dist/hot-icon.svg"
+						width="30"
+						height="43"
+						alt=""
+					/>
+					<h3>MALDIVAS HOTEL 5*</h3>
+				</a>
+
+				<div class="hot__item_tags">
+					<div class="hot__item_tag">#СемейныйОтдых</div>
+					<div class="hot__item_tag">#ПляжныйОтдых</div>
+					<div class="hot__item_tag">#Экскурсии</div>
+					<div class="hot__item_tag">#ВсеВключено</div>
+					<div class="hot__item_tag">#ВылетНаПраздники</div>
+				</div>
+
+				<div class="hot__item_info">
+					<div class="hot__item_info-item">
+						<img src="images/dist/from-icon.svg" alt="" />
+						<span>29.09, 31.09 из Минска</span>
+					</div>
+
+					<div class="hot__item_info-item">
+						<img src="images/dist/duration-icon.svg" alt="" />
+						<span>7 дней 6 ночей</span>
+					</div>
+				</div>
+
+				<div class="hot__item_meta">
+					<div class="hot__item_price">
+						<span class="hot__item_price-new">от 291 USD </span>
+						<span class="hot__item_price-old">от 591 USD</span>
+					</div>
+
+					<a href="" class="hot__item_more">
+						<span>Подробнее</span>
+						<img
+							src="images/dist/arrow-hover-active.svg"
+							width="30"
+							height="28"
+							alt=""
+						/>
+					</a>
+				</div>
+			</div>
+
+			<div class="hot__item">
+				<a href="" class="hot__item_img">
+					<img src="images/dist/popular-placeholder.jpg" alt="" />
+				</a>
+
+				<a href="" class="hot__item_title">
+					<img
+						src="images/dist/hot-icon.svg"
+						width="30"
+						height="43"
+						alt=""
+					/>
+					<h3>MALDIVAS HOTEL 5*</h3>
+				</a>
+
+				<div class="hot__item_tags">
+					<div class="hot__item_tag">#СемейныйОтдых</div>
+					<div class="hot__item_tag">#ПляжныйОтдых</div>
+					<div class="hot__item_tag">#Экскурсии</div>
+					<div class="hot__item_tag">#ВсеВключено</div>
+					<div class="hot__item_tag">#ВылетНаПраздники</div>
+				</div>
+
+				<div class="hot__item_info">
+					<div class="hot__item_info-item">
+						<img src="images/dist/from-icon.svg" alt="" />
+						<span>29.09, 31.09 из Минска</span>
+					</div>
+
+					<div class="hot__item_info-item">
+						<img src="images/dist/duration-icon.svg" alt="" />
+						<span>7 дней 6 ночей</span>
+					</div>
+				</div>
+
+				<div class="hot__item_meta">
+					<div class="hot__item_price">
+						<span class="hot__item_price-new">от 291 USD </span>
+						<span class="hot__item_price-old">от 591 USD</span>
+					</div>
+
+					<a href="" class="hot__item_more">
+						<span>Подробнее</span>
+						<img
+							src="images/dist/arrow-hover-active.svg"
+							width="30"
+							height="28"
+							alt=""
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="subscribe-block pt-0">
+	<div class="container">
+		<div class="hot__subscribe">
+			<form action="" method="POST" class="hot__subscribe_form">
+				<span class="hot__subscribe_text">
+					Подпишитесь на рассылку, чтобы узнавать первыми обо всех
+					уникальных предложениях!
+				</span>
+
+				<div class="hot__subscribe_fields">
+					<div class="hot__subscribe_input">
+						<input type="text" required placeholder="Email*" />
+					</div>
+
+					<button type="submit" class="hot__subscribe_button">
+						<img
+							src="images/dist/switch-icon.svg"
+							width="31"
+							height="20"
+							alt=""
+						/>
+						<span>Подписаться</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<div class="footer__block main-block">
+				<div class="footer__logo">
+					<img
+						src="images/dist/logo.svg"
+						width="85"
+						height="85"
+						alt=""
+					/>
+					<span class="footer__text">
+						© Туристический Оператор "Студия Отдыха"<br /><br>
+						Все права защищены 2012-2021
+					</span>
+				</div>
+				<a href="" class="footer__link privacy"
+					>Политика конфиденциальности</a
+				>
+			</div>
+
+			<div class="footer__block navigation-block">
+				<a href="" class="footer__link nav">Туры на Мальдивы</a>
+				<a href="" class="footer__link nav">Туры в ОАЭ</a>
+				<a href="" class="footer__link nav">Туры в Мексику</a>
+				<a href="" class="footer__link nav">Туры на Сейшелы</a>
+			</div>
+
+			<div class="footer__block navigation-block">
+				<a href="" class="footer__link nav">Туры на Мальдивы</a>
+				<a href="" class="footer__link nav">Туры в ОАЭ</a>
+				<a href="" class="footer__link nav">Туры в Мексику</a>
+				<a href="" class="footer__link nav">Туры на Сейшелы</a>
+			</div>
+
+			<div class="footer__block navigation-block">
+				<a href="" class="footer__link nav">Туры на Мальдивы</a>
+				<a href="" class="footer__link nav">Туры в ОАЭ</a>
+				<a href="" class="footer__link nav">Туры в Мексику</a>
+				<a href="" class="footer__link nav">Туры на Сейшелы</a>
+			</div>
+
+			<div class="footer__block contacts-block">
+				<div class="footer__contacts">
+					<div class="footer__contacts_phones">
+						<a href="tel:+375291887788" class="footer__link nav">+375291887788</a>
+						<a href="tel:+375291627877" class="footer__link nav">+375291627877</a>
+					</div>
+					
+					<div class="footer__contacts_socials">
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="images/dist/instagram-w.svg" width="30" height="30" alt="">
+						</a>
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="images/dist/facebook-w.svg" width="30" height="30" alt="">
+						</a>
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="images/dist/whatsapp-w.svg" width="30" height="30" alt="">
+						</a>
+						<a href="" target="_blank" rel="noopener noreferrer">
+							<img src="images/dist/telegram-w.svg" width="30" height="30" alt="">
+						</a>
+					</div>
+				</div>
+					<span class="footer__text address">
+						Беларусь, Гродно, ул.Замковая, 7
+					</span>
+
+					<a href="" class="footer__link">konstantin@tobelarus.by</a>
+			</div>
+
+			<form action="" method="POST" class="footer__block call-block">
+				<div class="hot__subscribe_input footer__call_input">
+					<input type="tel" placeholder="Телефон*">
+				</div>
+				<button class="hot__subscribe_button footer__call_button">Заказать звонок</button>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script src="js/alpine.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/datepicker.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
