@@ -275,11 +275,14 @@ nav .search .icon {
     text-align: center;
     margin-top: 73px;
 }
-.products-offer .heading {
+.products-offer .heading, .page__title {
     font-weight: bold;
     font-size: 32px;
     line-height: 1.2;
     text-transform: uppercase;
+}
+.page__title {
+	margin-bottom: 55px;
 }
 .products-offer .sub {
     font-weight: bold;
@@ -381,12 +384,6 @@ nav .search .icon {
 -webkit-align-items: flex-end;
         align-items: flex-end;
     margin: 0 15px;
-}
-.discounts .item:first-child {
-    background-image: url('../img/discount1.jpg');
-}
-.discounts .item:last-child {
-    background-image: url('../img/discount2.jpg');
 }
 .discounts .item .content {
     max-width: 300px;
@@ -884,9 +881,12 @@ footer .contacts .soc img {
         bottom: auto;
         top: 0;
     }
-    .products-offer .heading, .cats-list .heading {
+    .products-offer .heading, .cats-list .heading, .page__title {
         font-size: 21px;
     }
+	.page__title {
+		margin-bottom: 30px;
+	}
     .products-offer {
         margin-top: 20px;
     }

@@ -1,0 +1,39 @@
+.page {
+	margin-top: 75px;
+
+	& .page__title {
+		margin-bottom: 70px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 1.5;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.page {
+		margin-top: 50px;
+		
+		& .page__title {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.page {
+		&__text {
+			font-size: 14px;
+			line-height: 1.4;
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
