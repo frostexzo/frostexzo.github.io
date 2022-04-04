@@ -101,11 +101,43 @@ $(document).ready(function () {
 		}
 	});
 
-	$(".filters-mobile").click(function() {
+	$(".filters-mobile").click(function () {
 		$(".filters").fadeIn(150);
+	});
+
+	$(".filters-mobile__close").click(function () {
+		$(".filters").fadeOut(100);
+	});
+
+	$(".cart__button_order").click(function () {
+		$(".order").slideDown(300);
+		$(this).addClass("active");
 	})
 
-	$(".filters-mobile__close").click(function() {
-		$(".filters").fadeOut(100);
-	})
+	$(".popup__close, .popup__shops_select").click(function () {
+		$(this).closest(".popup").removeClass("active");
+	});
+	
+	$(".cart__button_shop").click(function () {
+		$(".popup__shops").addClass("active");
+	});
+
+	$(".cart__button_addcart").click(function () {
+		$(".popup__addcart").addClass("active");
+	});
+
+	const qtyButtons = document.querySelectorAll(".cart__item_quantity");
+	qtyButtons.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			const input = e.target.closest(".cart__item").querySelector(".cart__item_quantity-input");
+			const inputValue = +input.value;
+			const button = e.target.dataset.btn;
+
+			if (button == "minus") {
+				inputValue > 1 ? (input.value = inputValue - 1) : null;
+			} else if (button == "plus") {
+				inputValue < 10 ? (input.value = inputValue + 1) : null;
+			}
+		});
+	});
 });

@@ -1,0 +1,154 @@
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(193,192,192,.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 50;
+	opacity: 0;
+	visibility: collapse;
+	transition: opacity .2s ease, visibility .2s ease;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__wrapper {
+		max-width: 600px;
+		width: 100%;
+		background-color: #fff;
+		position: relative;
+	}
+
+	&__inner {
+		padding: 35px 50px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 35px;
+	}
+
+	&__title {
+		font-size: 18px;
+		color: #9ad9d7;
+		font-weight: 700;
+	}
+
+	&__close {
+		text-decoration: underline;
+		font-family: inherit;
+		font-size: 12px;
+		background-color: transparent;
+		border: 0;
+		cursor: pointer;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		overflow-y: auto;
+		max-height: 60vh;
+	}
+}
+
+.popup__shops {
+	&_item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #F1F1F1;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	&_name {
+		font-size: 16px;
+		font-weight: 700;
+	}
+
+	&_address {
+		font-size: 12px;
+		max-width: 120px;
+		margin: 0 10px;
+	}
+
+	&_select {
+		margin-bottom: 0;
+		font-size: 14px;
+		padding: 10px 16px;
+	}
+}
+
+.popup__addcart {
+	&_links {
+		margin-top: 30px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0 20px;
+	}
+
+	&_link {
+		margin-bottom: 0;
+		font-size: 16px;
+
+		&:hover {
+			color: #fff !important;
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.popup__addcart {
+		&_links {
+			grid-template-columns: 1fr;
+			grid-gap: 15px 0;
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.popup {
+		&__inner {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+
+	.popup__shops {
+		&_item {
+			flex-wrap: wrap;
+		}
+
+		&_address {
+			margin: 0;
+		}
+
+		&_select {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
+}
