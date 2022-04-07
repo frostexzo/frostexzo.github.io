@@ -112,12 +112,12 @@ $(document).ready(function () {
 	$(".cart__button_order").click(function () {
 		$(".order").slideDown(300);
 		$(this).addClass("active");
-	})
+	});
 
 	$(".popup__close, .popup__shops_select").click(function () {
 		$(this).closest(".popup").removeClass("active");
 	});
-	
+
 	$(".cart__button_shop").click(function () {
 		$(".popup__shops").addClass("active");
 	});
@@ -140,4 +140,68 @@ $(document).ready(function () {
 			}
 		});
 	});
+
+	const colorSelectors = document.querySelectorAll(".product__colors_item");
+	const currentColor = document.getElementById("product-color");
+	colorSelectors.forEach((selector) => {
+		selector.addEventListener("click", (e) => {
+			currentColor.innerText = e.target.dataset.color;
+
+			for (let i = 0; i < colorSelectors.length; i++) {
+				colorSelectors[i].classList.remove("active");
+			}
+
+			e.target.classList.add("active");
+		});
+	});
+
+	const sizesSelectors = document.querySelectorAll(".product__sizes_item");
+	sizesSelectors.forEach((selector) => {
+		selector.addEventListener("click", (e) => {
+			const currentButton = e.target;
+			if (!currentButton.classList.contains("active")) {
+				currentButton.classList.add("active");
+			} else {
+				currentButton.classList.remove("active");
+			}
+		});
+	});
 });
+
+const mainProductSlider = document.querySelector(".product__main");
+
+if (mainProductSlider) {
+	const productsMain = new Swiper(mainProductSlider, {
+		slidesPerView: 1,
+		loop: true,
+		spaceBetween: 15,
+		loopAdditionalSlides: 5,
+	});
+
+	const productsThumbs = new Swiper(".product__thumbs", {
+		slideToClickedSlide: true,
+		spaceBetween: 15,
+		mousewheel: true,
+		loop: true,
+		slidesPerSlide: 1,
+		loopAdditionalSlides: 5,
+		navigation: {
+			nextEl: ".product__thumbs_next",
+			prevEl: ".product__thumbs_prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 3,
+			},
+			500: {
+				slidesPerView: 4,
+			},
+			768: {
+				slidesPerView: 5,
+			},
+		},
+	});
+
+	productsMain.controller.control = productsThumbs;
+	productsThumbs.controller.control = productsMain;
+}
