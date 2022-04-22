@@ -1,0 +1,171 @@
+.reviews {
+	padding-top: 60px;
+	padding-bottom: 180px;
+
+	& .title {
+		margin-bottom: 140px;
+	}
+
+	&__wrapper {
+		& .swiper-container {
+			overflow: unset;
+		}
+	}
+
+	&__item {
+		padding: 60px;
+		min-height: 450px;
+		padding-bottom: 80px;
+		max-width: 1070px;
+		width: 100%;
+		background-color: #fafafa;
+		border-radius: 20px;
+		position: relative;
+		
+
+		&::before,
+		&::after {
+			position: absolute;
+			content: '';
+			width: 50%;
+			height: 50%;
+			border: 1px solid transparent;
+			background: linear-gradient(to right, white, white), $gradient;
+			background-origin: padding-box, border-box;
+			background-clip: padding-box, border-box;
+			background-repeat: no-repeat;
+			z-index: -1;
+			border-radius: 20px;
+		}
+
+		&::before {
+			top: -60px;
+			left: -60px;
+		}
+
+		&::after {
+			bottom: -60px;
+			right: -60px;
+		}
+
+		&_meta {
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+
+		&_img {
+			& img {
+				width: 150px;
+				height: 150px;
+				border-radius: 6px;
+				box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+			}
+		}
+
+		&_about {
+			margin-left: 40px;
+			display: flex;
+			flex-direction: column;
+			letter-spacing: 0.04em;
+
+			&--date {
+				font-size: 16px;
+				color: #BDBDBD;
+				margin-bottom: 10px;
+			}
+
+			&--name {
+				color: $black;
+				font-size: 22px;
+				margin-bottom: 10px;
+			}
+
+			&--position {
+				font-size: 16px;
+				color: #BDBDBD;
+			}
+		}
+
+		&_desc {
+			margin-top: 50px;
+			font-size: 18px;
+			line-height: 1.5;
+			color: $black;
+		}
+
+		&_additional {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		&_socials {
+			display: flex;
+			align-items: center
+			;
+			& a {
+				&:not(:last-child) {
+					margin-right: 20px;
+				}
+			}
+
+			& img {
+				filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg) brightness(95%) contrast(99%);
+			}
+		}
+
+		&_doc {
+			display: flex;
+			justify-content: flex-end;
+			margin-top: 30px;
+
+			& img {
+				max-width: 48px;
+				width: 100%;
+			}
+		}
+	}
+
+	&__nav {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		padding: 0 11%;
+
+		&_arrow {
+			cursor: pointer;
+
+			& img {
+				transition: opacity .2s ease;
+				filter: brightness(0) saturate(100%) invert(92%) sepia(0%) saturate(1049%) hue-rotate(177deg) brightness(95%) contrast(99%);
+			}
+
+			&:hover {
+				& img {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: 1600px) {
+	.reviews {
+		&__nav {
+			padding: 0 5%;
+		}
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.reviews {
+		&__item {
+			max-width: 80%;
+		}
+	}
+}

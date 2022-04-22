@@ -1,0 +1,210 @@
+.exp {
+	&__inner {
+		padding: 60px 0;
+	}
+
+	&__wrapper {
+		counter-reset: number;
+	}
+
+	&__item {
+		display: flex;
+		counter-increment: number;
+
+		&:nth-child(even) {
+			flex-direction: row-reverse;
+
+			& .exp__item_meta {
+				text-align: right;
+			}
+		}
+
+		&:not(:first-child) {
+			& .exp__item_block {
+				background: linear-gradient(to left, white, white), $gradient;
+				background-origin: padding-box, border-box;
+				background-clip: padding-box, border-box;
+				background-repeat: no-repeat;
+				border-color: transparent;
+				color: $black;
+
+				& span,
+				& .exp__item_button {
+					background: $gradient;
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					background-clip: text;
+				}
+
+				& .exp__item_button::before {
+					background: $gradient;
+				}
+
+				& ul li::marker {
+					color: #7D6DFD;
+				}
+			}
+		}
+
+		&:last-child {
+			& .exp__item_counter {
+				&::after {
+					height: 135%;
+				}
+			}
+		}
+
+		&_block {
+			border: 1px solid $white;
+			z-index: 1;
+			flex-basis: 45%;
+			padding: 70px 55px;
+			background: $gradient;
+			border-radius: 20px;
+			color: $white;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			font-size: 18px;
+
+			& ul {
+				list-style-position: inside;
+			}
+		}
+
+		&_button {
+			color: $white;
+			margin-top: 20px;
+			position: relative;
+
+			&::before {
+				transition: width 0.2s ease;
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: -5px;
+				width: 0;
+				height: 2px;
+				background-color: $white;
+			}
+
+			&:hover {
+				&::before {
+					width: 100%;
+				}
+			}
+		}
+
+		&_counter {
+			flex-basis: 10%;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: counter(number);
+				width: 75px;
+				height: 75px;
+				border-radius: 50%;
+				background: $gradient;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $white;
+				font-size: 18px;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 2;
+			}
+
+			&::after {
+				position: absolute;
+				content: "";
+				height: 101%;
+				width: 2px;
+				background-color: #e0e0e0;
+				left: 49%;
+				transform: translateX(-50%);
+				z-index: 1;
+				top: 0;
+			}
+		}
+
+		&_meta {
+			flex-basis: 45%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			letter-spacing: 0.04em;
+
+			&--title {
+				color: $black;
+				margin-bottom: 8px;
+				font-size: 24px;
+			}
+
+			&--company {
+				font-size: 20px;
+				margin-bottom: 8px;
+			}
+
+			&--duration {
+				font-size: 20px;
+				color: #bdbdbd;
+			}
+		}
+	}
+
+	&__button {
+		margin-top: 150px;
+		text-align: center;
+	}
+}
+
+.single-page {
+	& .exp {
+		&__item:last-child {
+			& .exp__item_counter {
+				&::after {
+					height: 51%;
+				}
+			}
+		}
+
+		&__inner {
+			padding-bottom: 300px;
+			position: relative;
+			overflow: hidden;
+
+			&::before {
+				position: absolute;
+				content: 'И ДРУГИЕ';
+				font-size: 250px;
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				color: #FAFAFA;
+				bottom: -45px;
+				left: 50%;
+				transform: translateX(-50%);
+				line-height: 1;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.single-page {
+		& .exp {
+			&__inner {
+				padding-bottom: 250px;
+				
+				&::before {
+					font-size: 180px;
+					bottom: -20px;
+				}
+			}
+		}
+	}
+}
