@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Daniil Begma</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/alpine.js" as="script" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link rel="preload" href="./fonts/FuturaPT-Medium.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/FuturaPT-Demi.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/PlayfairDisplay-SemiBold.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/PlayfairDisplay-Bold.woff2" as="font" crossorigin="anonymous" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body x-data="app()">
+		<header class="m-header">
+			<div class="container">
+				<div class="m-header__inner">
+					<div class="m-header__logo">
+						<img src="images/dist/logo-footer.svg" width="130" height="14" alt="" />
+					</div>
+					<a href="" class="m-header__social">
+						<img src="images/dist/tg-icon.svg" width="18" height="15" alt="" />
+					</a>
+				</div>
+			</div>
+		</header>
+
+		<main class="mobile">
+			<section class="m-page">
+				<div class="container">
+					<div class="m-page__inner">
+						<div class="m-page__lang">
+							<div class="m-page__lang_item">
+								<a href="" class="m-page__lang_link">EN</a>
+								<a href="" class="m-page__lang_link active">RU</a>
+							</div>
+						</div>
+
+						<div class="m-page__hire">
+							<button type="button" class="button-default" @click="openPopup('contacts')">Нанять меня</button>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--#include virtual="/parts/blocks/popups.html" -->
+		</main>
+
+		<!--#include virtual="/parts/footer-empty.html" -->

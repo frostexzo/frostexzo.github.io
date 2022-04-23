@@ -20,7 +20,20 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()">
+	<body x-data="app()" x-init="preloader()">
+		<div class="preloader">
+			<div class="preloader__inner">
+				<div class="preloader__logo">
+					<video src="images/preloader.mp4" autoplay muted preload="auto"></video>
+				</div>
+
+				<div class="preloader__anim">
+					<img class="preloader__anim_top" src="images/dist/wave2.svg" alt="">
+					<img class="preloader__anim_bottom" src="images/dist/wave1.svg" alt="">
+					</div>
+			</div>
+		</div>
+
 		<header id="header" class="header">
 			<div class="container">
 				<div class="header__inner">
@@ -932,7 +945,7 @@
 
 	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec1'" class="popup">
 		<div class="popup__img">
-			<img decoding="async" src="images/card1.gif" alt="" />
+			<img decoding="async" loading="lazy" src="images/card1.gif" alt="" />
 		</div>
 
 		<div class="popup__info">
@@ -963,7 +976,7 @@
 
 	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec2'" class="popup">
 		<div class="popup__img">
-			<img decoding="async" src="images/card2.gif" alt="" />
+			<img decoding="async" loading="lazy" src="images/card2.gif" alt="" />
 		</div>
 
 		<div class="popup__info">
@@ -993,7 +1006,7 @@
 
 	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec3'" class="popup">
 		<div class="popup__img">
-			<img decoding="async" src="images/card3.gif" alt="" />
+			<img decoding="async" loading="lazy" src="images/card3.gif" alt="" />
 		</div>
 
 		<div class="popup__info">

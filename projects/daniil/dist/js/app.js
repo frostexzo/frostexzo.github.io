@@ -44,6 +44,24 @@ const app = () => {
 				behavior: "smooth",
 			});
 		},
+
+		preloader() {
+			const preloader = document.querySelector(".preloader");
+			const preloaderWaves = preloader.querySelector(".preloader__anim");
+			const logo = preloader.querySelector("video");
+			if (preloader) {
+				logo.addEventListener("ended", () => {
+					preloader.classList.add("active");
+					preloaderWaves.classList.add("active");
+					logo.remove();
+
+					setTimeout(() => {
+						preloader.remove();
+					}, 1200);
+				})
+
+			}
+		}
 	};
 };
 

@@ -20,7 +20,20 @@
 
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
-	<body x-data="app()">
+	<body x-data="app()" x-init="preloader()">
+		<div class="preloader">
+			<div class="preloader__inner">
+				<div class="preloader__logo">
+					<video src="images/preloader.mp4" autoplay muted preload="auto"></video>
+				</div>
+
+				<div class="preloader__anim">
+					<img class="preloader__anim_top" src="images/dist/wave2.svg" alt="">
+					<img class="preloader__anim_bottom" src="images/dist/wave1.svg" alt="">
+					</div>
+			</div>
+		</div>
+
 		<header id="header" class="header">
 			<div class="container">
 				<div class="header__inner">
