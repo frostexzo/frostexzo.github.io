@@ -25,10 +25,10 @@
 			<div class="container">
 				<div class="m-header__inner">
 					<div class="m-header__logo">
-						<img src="images/dist/logo-footer.svg" width="130" height="14" alt="" />
+						<img src="images/dist/logo-footer.svg" width="150" height="16" alt="" />
 					</div>
 					<a href="" class="m-header__social">
-						<img src="images/dist/tg-icon.svg" width="18" height="15" alt="" />
+						<img src="images/dist/tg-icon.svg" width="20" height="20" alt="" />
 					</a>
 				</div>
 			</div>
@@ -69,15 +69,15 @@
 					<span>Контакты</span>
 				</div>
 
-				<form action="" method="POST" class="popup-contacts__form">
+				<form @input.debounce="checkContactForm" action="" method="POST" class="popup-contacts__form">
 					<input
 						class="popup__input"
 						type="text"
-						placeholder="Представьтесь (ФИО / Название компании)"
+						placeholder="Представьтесь (ФИО / Компания)"
 						required
 					/>
 					<input class="popup__input" type="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
 				</form>
 			</div>

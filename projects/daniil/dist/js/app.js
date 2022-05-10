@@ -40,7 +40,7 @@ const app = () => {
 			const elemRect = elem.getBoundingClientRect().top;
 
 			window.scrollTo({
-				top: elemRect - docRect + 30,
+				top: elemRect - docRect - 70,
 				behavior: "smooth",
 			});
 		},
@@ -58,10 +58,37 @@ const app = () => {
 					setTimeout(() => {
 						preloader.remove();
 					}, 1200);
-				})
-
+				});
 			}
-		}
+		},
+
+		playVideo(elem) {
+			const item = elem.closest(".specs__item");
+			const video = item.querySelector("video");
+			video.play();
+		},
+
+		stopVideo(elem) {
+			const item = elem.closest(".specs__item");
+			const video = item.querySelector("video");
+			video.pause();
+		},
+
+		checkContactForm() {
+			const inputs = document.querySelectorAll(".popup-contacts input.popup__input");
+			const button = document.querySelector(".popup-contacts .popup__submit");
+			let filledFlag = false;
+
+			inputs.forEach((input) => {
+				input.value != "" ? (filledFlag = true) : (filledFlag = false);
+			});
+
+			if (filledFlag) {
+				button.classList.add("filled");
+			} else {
+				button.classList.remove("filled");
+			}
+		},
 	};
 };
 

@@ -24,7 +24,7 @@
 		<div class="preloader">
 			<div class="preloader__inner">
 				<div class="preloader__logo">
-					<video src="images/preloader.mp4" autoplay muted preload="auto"></video>
+					<video src="images/preloader.mp4" playsinline autoplay muted preload="auto"></video>
 				</div>
 
 				<div class="preloader__anim">
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 
-		<header id="header" class="header">
+		<header class="header">
 			<div class="container">
 				<div class="header__inner">
 					<button type="button" class="header__burger" @click="toggleNav">
@@ -124,7 +124,7 @@
 					</div>
 
 					<nav x-cloak x-show.transition.opacity="nav == true" class="header__nav">
-						<a href="" class="header__nav_link" @click.prevent="scrollToElem('header')">Главная</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>
@@ -138,7 +138,7 @@
 
 
 <main>
-<section class="hero">
+<section id="hero" class="hero">
 	<div class="container">
 		<div class="hero__inner">
 			<div class="hero__info">
@@ -185,6 +185,10 @@
 								</div>
 								<div class="swiper-slide hero__slider_item">
 									<img decoding="async" class="swiper-lazy" data-src="images/dist/slider4.jpg" alt="" />
+									<div class="swiper-lazy-preloader"></div>
+								</div>
+								<div class="swiper-slide hero__slider_item">
+									<img decoding="async" class="swiper-lazy" data-src="images/dist/slider5.jpg" alt="" />
 									<div class="swiper-lazy-preloader"></div>
 								</div>
 							</div>
@@ -505,27 +509,27 @@
 			</h2>
 
 			<div class="projects__wrapper">
-				<div class="projects__item" style="background-image: url(./images/dist/work1.jpg)">
+				<div @click="openPopup('rossbank')" class="projects__item" style="background-image: url(./images/dist/work1.jpg)">
 					<div class="projects__item_button-wrapper">
-						<button @click="openPopup('rossbank')" type="button" class="projects__item_button">Россельхозбанк</button>
+						<button type="button" class="projects__item_button">Россельхозбанк</button>
 					</div>
 				</div>
 
-				<div class="projects__item" style="background-image: url(./images/dist/work2.jpg)">
+				<div @click="openPopup('papajohns')" class="projects__item" style="background-image: url(./images/dist/work2.jpg)">
 					<div class="projects__item_button-wrapper">
-						<button @click="openPopup('papajohns')" type="button" class="projects__item_button">Папа Джонс</button>
+						<button type="button" class="projects__item_button">Папа Джонс</button>
 					</div>
 				</div>
 
-				<div class="projects__item" style="background-image: url(./images/dist/work3.jpg)">
+				<div @click="openPopup('psih')" class="projects__item" style="background-image: url(./images/dist/work3.jpg)">
 					<div class="projects__item_button-wrapper">
-						<button @click="openPopup('psih')" type="button" class="projects__item_button">Псих</button>
+						<button type="button" class="projects__item_button">Псих</button>
 					</div>
 				</div>
 
-				<div class="projects__item" style="background-image: url(./images/dist/work4.jpg)">
+				<div @click="openPopup('animedia')" class="projects__item" style="background-image: url(./images/dist/work4.jpg)">
 					<div class="projects__item_button-wrapper">
-						<button @click="openPopup('animedia')" type="button" class="projects__item_button">Animedia.TV</button>
+						<button type="button" class="projects__item_button">Animedia.TV</button>
 					</div>
 				</div>
 			</div>
@@ -601,9 +605,9 @@
 			</h2>
 
 			<div class="specs__wrapper">
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card1.gif" />
+						<video src="images/card1.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 					<div class="specs__item_info">
 						<h3 class="specs__item_title">Web-дизайн</h3>
@@ -626,9 +630,9 @@
 					</div>
 				</div>
 
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card2.gif" />
+						<video src="images/card2.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 					<div class="specs__item_info">
 						<h3 class="specs__item_title">UX/UI-дизайн</h3>
@@ -649,9 +653,9 @@
 					</div>
 				</div>
 
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card3.gif" />
+						<video src="images/card3.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 
 					<div class="specs__item_info">
@@ -928,15 +932,15 @@
 					<span>Контакты</span>
 				</div>
 
-				<form action="" method="POST" class="popup-contacts__form">
+				<form @input.debounce="checkContactForm" action="" method="POST" class="popup-contacts__form">
 					<input
 						class="popup__input"
 						type="text"
-						placeholder="Представьтесь (ФИО / Название компании)"
+						placeholder="Представьтесь (ФИО / Компания)"
 						required
 					/>
 					<input class="popup__input" type="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
 				</form>
 			</div>

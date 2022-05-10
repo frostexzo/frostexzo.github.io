@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="css/main.min.css" />
 	</head>
 	<body x-data="app()">
-		<header id="header" class="header header-center">
+		<header class="header header-center">
 			<div class="container">
 				<div class="header__inner">
 					<a href="" class="header__logo">
@@ -487,15 +487,15 @@
 					<span>Контакты</span>
 				</div>
 
-				<form action="" method="POST" class="popup-contacts__form">
+				<form @input.debounce="checkContactForm" action="" method="POST" class="popup-contacts__form">
 					<input
 						class="popup__input"
 						type="text"
-						placeholder="Представьтесь (ФИО / Название компании)"
+						placeholder="Представьтесь (ФИО / Компания)"
 						required
 					/>
 					<input class="popup__input" type="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
 				</form>
 			</div>
