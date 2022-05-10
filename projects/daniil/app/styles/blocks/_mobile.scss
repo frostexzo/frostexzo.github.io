@@ -61,7 +61,7 @@
 			color: $white;
 			font-size: 14px;
 			letter-spacing: .02em;
-			padding: 6px 14px;
+			padding: 7px 17px;
 
 			&.active {
 				border-radius: 20px;
@@ -90,6 +90,22 @@
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
 		max-width: none;
+
+		&__inner {
+			position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -12px;
+				left: 50%;
+				width: 70px;
+				height: 6px;
+				background-color: $white;
+				border-radius: 30px;
+				transform: translateX(-50%);
+			}
+		}
 
 		&__img {
 			display: none;
@@ -123,11 +139,16 @@
 
 	& .popup {
 		&__input {
-			font-size: 14px;
+			font-size: 16px;
+			padding: 18px;
 
 			&:not(:last-child) {
 				margin-bottom: 15px;
 			}
+		}
+
+		&__submit {
+			margin-top: 30px;
 		}
 	}
 }

@@ -17,8 +17,20 @@
 		height: 450px;
 		border-radius: 20px;
 		background-repeat: no-repeat;
-		background-size: cover;
+		background-size: auto 100%;
 		background-position: center;
+		transition: background-size .3s ease;
+
+		&:hover {
+			cursor: pointer;
+			background-size: auto 120%;
+
+			& .projects__item_button {
+				&::after {
+					opacity: 1;
+				}
+			}
+		}
 
 		&_button {
 			&-wrapper {
@@ -64,10 +76,6 @@
 				opacity: 0;
 				border-radius: inherit;
 			}
-
-			&:hover::after {
-				opacity: 1;
-			}
 		}
 	}
 
@@ -84,6 +92,7 @@
 		}
 
 		&__inner {
+			padding-top: 20px;
 			padding-bottom: 300px;
 			position: relative;
 			overflow: hidden;

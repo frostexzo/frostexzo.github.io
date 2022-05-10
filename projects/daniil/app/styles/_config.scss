@@ -124,10 +124,16 @@ input[type="checkbox"] {
 }
 
 .container {
-	max-width: 1730px;
+	max-width: 97%;
 	width: 100%;
 	padding: 0 15px;
 	margin: 0 auto;
+}
+
+@media screen and (min-width: 2200px) {
+	.container {
+		max-width: 1800px;
+	}
 }
 
 path,
@@ -230,6 +236,7 @@ stop {
 	color: $black;
 	text-align: center;
 	margin-bottom: 80px;
+	font-weight: 450;
 
 	&--white {
 		color: $white;

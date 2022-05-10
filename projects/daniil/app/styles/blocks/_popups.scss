@@ -62,9 +62,9 @@
 
 			& ul {
 				list-style-position: inside;
-				
+
 				& li::marker {
-					color: #7D6DFD;
+					color: #7d6dfd;
 				}
 			}
 		}
@@ -83,7 +83,7 @@
 		&__img {
 			border-top-left-radius: 20px;
 			border-top-right-radius: 20px;
-			height: 180px;
+			height: 220px;
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
@@ -139,6 +139,11 @@
 		resize: none;
 		font-family: inherit;
 
+		&:focus {
+			box-shadow: none;
+			outline: none;
+		}
+
 		&::-moz-placeholder {
 			color: #bdbdbd;
 		}
@@ -157,6 +162,23 @@
 		font-size: 18px;
 		position: relative;
 		z-index: 1;
+		pointer-events: none;
+
+		&.filled {
+			pointer-events: all;
+
+			& span {
+				color: $white;
+				background: transparent;
+				-webkit-background-clip: unset;
+				-webkit-text-fill-color: unset;
+				background-clip: unset;
+			}
+
+			&::before {
+				opacity: 1;
+			}
+		}
 
 		&::before {
 			position: absolute;
@@ -170,20 +192,6 @@
 			transition: opacity 0.2s ease;
 			opacity: 0;
 			border-radius: inherit;
-		}
-
-		&:hover {
-			& span {
-				color: $white;
-				background: transparent;
-				-webkit-background-clip: unset;
-				-webkit-text-fill-color: unset;
-				background-clip: unset;
-			}
-
-			&::before {
-				opacity: 1;
-			}
 		}
 	}
 }

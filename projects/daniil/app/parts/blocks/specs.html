@@ -6,9 +6,9 @@
 			</h2>
 
 			<div class="specs__wrapper">
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card1.gif" />
+						<video src="images/card1.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 					<div class="specs__item_info">
 						<h3 class="specs__item_title">Web-дизайн</h3>
@@ -31,9 +31,9 @@
 					</div>
 				</div>
 
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card2.gif" />
+						<video src="images/card2.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 					<div class="specs__item_info">
 						<h3 class="specs__item_title">UX/UI-дизайн</h3>
@@ -54,9 +54,9 @@
 					</div>
 				</div>
 
-				<div class="specs__item">
+				<div @mouseover="playVideo(event.target)" @mouseout="stopVideo(event.target)" class="specs__item">
 					<div class="specs__item_img">
-						<img decoding="async" loading="lazy" src="images/card3.gif" />
+						<video src="images/card3.mp4" playsinline muted loop preload="auto"></video>
 					</div>
 
 					<div class="specs__item_info">

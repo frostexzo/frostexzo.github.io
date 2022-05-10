@@ -24,7 +24,7 @@
 		<div class="preloader">
 			<div class="preloader__inner">
 				<div class="preloader__logo">
-					<video src="images/preloader.mp4" autoplay muted preload="auto"></video>
+					<video src="images/preloader.mp4" playsinline autoplay muted preload="auto"></video>
 				</div>
 
 				<div class="preloader__anim">
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 
-		<header id="header" class="header">
+		<header class="header">
 			<div class="container">
 				<div class="header__inner">
 					<button type="button" class="header__burger" @click="toggleNav">
@@ -124,7 +124,7 @@
 					</div>
 
 					<nav x-cloak x-show.transition.opacity="nav == true" class="header__nav">
-						<a href="" class="header__nav_link" @click.prevent="scrollToElem('header')">Главная</a>
+						<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>

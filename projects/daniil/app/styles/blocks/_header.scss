@@ -1,4 +1,15 @@
+main:not(.mobile) {
+	padding-top: 100px;
+}
+
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 4;
+	background-color: $white;
+
 	&__inner {
 		padding: 22px 0;
 		display: flex;
