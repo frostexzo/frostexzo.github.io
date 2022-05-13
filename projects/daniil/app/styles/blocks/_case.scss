@@ -23,6 +23,14 @@
 		color: $black;
 		letter-spacing: 0.04em;
 
+		&:hover {
+			& .button-default {
+				&::before {
+					opacity: 1;
+				}
+			}
+		}
+
 		&_img {
 			margin-bottom: 30px;
 

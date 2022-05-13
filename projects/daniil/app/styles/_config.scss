@@ -187,8 +187,15 @@ stop {
 		background-repeat: no-repeat;
 		color: $black;
 
+		&::before {
+			transition: opacity .2s ease, background .2s ease, border-color .2s ease;
+		}
+
 		&:hover {
 			color: $white;
+			background-clip: unset;
+			background-origin: unset;
+			background: #fff;
 		}
 	}
 

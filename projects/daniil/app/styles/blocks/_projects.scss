@@ -17,13 +17,13 @@
 		height: 450px;
 		border-radius: 20px;
 		background-repeat: no-repeat;
-		background-size: auto 100%;
+		background-size: 110%;
 		background-position: center;
 		transition: background-size .3s ease;
 
 		&:hover {
 			cursor: pointer;
-			background-size: auto 120%;
+			background-size: 120%;
 
 			& .projects__item_button {
 				&::after {

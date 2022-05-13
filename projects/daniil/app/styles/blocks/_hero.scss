@@ -204,6 +204,24 @@
 			align-items: center;
 			height: 25px;
 			cursor: pointer;
+
+			&.swiper-arrow-prev svg path {
+				fill: url("#left-slider-gradient");
+			}
+
+			&.swiper-arrow-next svg path {
+				fill: url("#right-slider-gradient");
+			}
+
+			&:hover svg defs stop {
+				&:first-child {
+					stop-color: #7776ff;
+				}
+
+				&:last-child {
+					stop-color: #ae2cf1;
+				}
+			}
 		}
 
 		&--counter {
@@ -282,7 +300,7 @@
 
 			&_link {
 				&:not(:last-child) {
-					margin-bottom: 40px;
+					margin-bottom: 50px;
 				}
 			}
 		}
@@ -318,7 +336,7 @@
 			&_slogan {
 				padding-left: 70px;
 			}
-			
+
 			&_text {
 				font-size: 16px;
 			}

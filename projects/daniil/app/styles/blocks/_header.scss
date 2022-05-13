@@ -8,7 +8,10 @@ main:not(.mobile) {
 	left: 0;
 	width: 100%;
 	z-index: 4;
-	background-color: $white;
+
+	&:not(.header-blur) {
+		background-color: $white;
+	}
 
 	&__inner {
 		padding: 22px 0;
@@ -258,7 +261,7 @@ main:not(.mobile) {
 @media screen and (max-width: 1550px) {
 	.header {
 		&__nav {
-			width: 101%;
+			width: 103%;
 			
 
 			&_link {

@@ -4,12 +4,12 @@
 	}
 
 	&__wrapper {
-		counter-reset: number;
+		counter-reset: reversed(number);
 	}
 
 	&__item {
 		display: flex;
-		counter-increment: number;
+		counter-increment: number -1;
 
 		&:nth-child(even) {
 			flex-direction: row-reverse;
