@@ -92,6 +92,37 @@ const app = () => {
 	};
 };
 
+document.addEventListener("DOMContentLoaded", () => {
+	const vh = window.innerHeight * 0.01;
+	document.documentElement.style.setProperty("--vh", `${vh}px`);
+	
+	window.addEventListener("resize", () => {
+		const vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty("--vh", `${vh}px`);
+	});
+})
+
+
+if (window.innerWidth > 1000) {
+	const header = document.querySelector(".header");
+
+	if (!header.classList.contains("header-center")) {
+		window.addEventListener(
+			"scroll",
+			() => {
+				if (window.pageYOffset > 1100) {
+					header.classList.add("scrolled");
+					header.classList.add("header-center");
+				} else {
+					header.classList.remove("scrolled");
+					header.classList.remove("header-center");
+				}
+			},
+			{ passive: true },
+		);
+	}
+}
+
 const mainSlider = document.querySelector(".hero-container");
 if (mainSlider) {
 	function updateSwiperPagination() {

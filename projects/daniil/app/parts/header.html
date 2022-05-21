@@ -37,44 +37,46 @@
 		<header class="header">
 			<div class="container">
 				<div class="header__inner">
-					<button type="button" class="header__burger" @click="toggleNav">
-						<svg
-							class="header-burger"
-							width="27"
-							height="18"
-							viewBox="0 0 27 18"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path d="M13.5 18H0V15H13.5V18ZM27 10.5H0V7.5H27V10.5ZM27 3H13.5V0H27V3Z" fill="#353535" />
-							<defs>
-								<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
-									<stop offset="0%" stop-color="#353535" />
-									<stop offset="100%" stop-color="#353535" />
-								</linearGradient>
-							</defs>
-						</svg>
+					<div class="header__burger_wrapper">
+						<button type="button" class="header__burger" @click="toggleNav">
+							<svg
+								class="header-burger"
+								width="27"
+								height="18"
+								viewBox="0 0 27 18"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path d="M13.5 18H0V15H13.5V18ZM27 10.5H0V7.5H27V10.5ZM27 3H13.5V0H27V3Z" fill="#353535" />
+								<defs>
+									<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#353535" />
+										<stop offset="100%" stop-color="#353535" />
+									</linearGradient>
+								</defs>
+							</svg>
 
-						<svg
-							class="header-close"
-							width="20"
-							height="20"
-							viewBox="0 0 20 20"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M20 2.47152L17.5285 0L10 7.52848L2.47152 0L0 2.47152L7.52848 10L0 17.5285L2.47152 20L10 12.4715L17.5285 20L20 17.5285L12.4715 10L20 2.47152Z"
-								fill="#353535"
-							/>
-							<defs>
-								<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
-									<stop offset="0%" stop-color="#353535" />
-									<stop offset="100%" stop-color="#353535" />
-								</linearGradient>
-							</defs>
-						</svg>
-					</button>
+							<svg
+								class="header-close"
+								width="20"
+								height="20"
+								viewBox="0 0 20 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M20 2.47152L17.5285 0L10 7.52848L2.47152 0L0 2.47152L7.52848 10L0 17.5285L2.47152 20L10 12.4715L17.5285 20L20 17.5285L12.4715 10L20 2.47152Z"
+									fill="#353535"
+								/>
+								<defs>
+									<linearGradient id="burger-gradient" gradientUnits="userSpaceOnUse">
+										<stop offset="0%" stop-color="#353535" />
+										<stop offset="100%" stop-color="#353535" />
+									</linearGradient>
+								</defs>
+							</svg>
+						</button>
+					</div>
 
 					<a href="" class="header__logo">
 						<svg width="190" height="20" viewBox="0 0 190 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,6 +129,7 @@
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('hero')">Главная</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('about')">Обо мне</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('projects')">Проекты</a>
+						<div class="header__nav_link empty"></div>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('companies')">Компании</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('specs')">Навыки</a>
 						<a href="" class="header__nav_link" @click.prevent="scrollToElem('experience')">Опыт</a>

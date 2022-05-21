@@ -2,15 +2,35 @@ main:not(.mobile) {
 	padding-top: 100px;
 }
 
+body {
+	position: relative;
+}
+
+@keyframes headerScroll {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
 .header {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
 	z-index: 4;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 	&:not(.header-blur) {
 		background-color: $white;
+	}
+
+	&.scrolled {
+		position: fixed;
+		animation: headerScroll 1s forwards;
+		box-shadow: 0px 10px 15px rgba(53, 53, 53, 0.15);
 	}
 
 	&__inner {
@@ -87,6 +107,19 @@ main:not(.mobile) {
 			top: 50%;
 			transform: translate(-50%, -50%);
 			z-index: 4;
+		}
+
+		& .header__nav_link.empty {
+			display: block;
+		}
+
+		& .header__nav_link {
+			&:last-child {
+				display: none;
+			}
+			&:nth-last-child(-n+2) {
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -188,6 +221,7 @@ main:not(.mobile) {
 		position: relative;
 
 		&.empty {
+			display: none;
 			width: 40px;
 		}
 
@@ -221,7 +255,8 @@ main:not(.mobile) {
 			background-clip: text;
 			-webkit-text-fill-color: transparent;
 
-			&::before, &::after {
+			&::before,
+			&::after {
 				width: 30px;
 			}
 		}
@@ -258,11 +293,10 @@ main:not(.mobile) {
 	}
 }
 
-@media screen and (max-width: 1550px) {
+@media screen and (max-width: 1500px) {
 	.header {
 		&__nav {
 			width: 103%;
-			
 
 			&_link {
 				&:not(:last-child) {

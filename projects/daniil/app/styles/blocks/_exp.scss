@@ -4,7 +4,7 @@
 	}
 
 	&__wrapper {
-		counter-reset: reversed(number);
+		counter-reset: number 10;
 	}
 
 	&__item {

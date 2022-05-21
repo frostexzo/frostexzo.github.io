@@ -5,7 +5,8 @@
 	background-image: url("../images/desktop-anim.gif");
 	background-position: center;
 	width: 100vw;
-	height: 100vh;
+	height: calc((var(--vh, 1vh) * 100));
+	max-height: calc((var(--vh, 1vh) * 100));
 	display: flex;
 
 	& .container {
