@@ -23,21 +23,25 @@
 		color: $black;
 		letter-spacing: 0.04em;
 
-		&:hover {
-			& .button-default {
-				&::before {
-					opacity: 1;
-				}
-			}
-		}
-
 		&_img {
+			display: flex;
 			margin-bottom: 30px;
+			overflow: hidden;
+			border-radius: 60px;
+			max-height: 365px;
+			box-shadow: 0 0 25px rgba(53,53,53,.3);
 
 			& img {
-				border-radius: 60px;
-				box-shadow: 0 0 25px rgba(53,53,53,.3);
 				width: 100%;
+				object-position: center;
+				object-fit: cover;
+				height: 100%;
+				transition: width .2s ease, height .2s ease;
+
+				&:hover {
+					width: 110%;
+					height: 110%;
+				}
 			}
 		}
 

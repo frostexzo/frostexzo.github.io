@@ -1,0 +1,24 @@
+.partners {
+	margin-top: 150px;
+
+	& .title {
+		margin-bottom: 30px;
+	}
+
+	&__items {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	&__item {
+		padding: 20px 15px;
+		background-color: $white;
+		border-radius: 4px;
+
+
+		& img {
+			width: 100%;
+		}
+	}
+}

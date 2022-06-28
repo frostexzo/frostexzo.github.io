@@ -1,0 +1,50 @@
+.targets {
+	margin-top: 95px;
+
+
+	&__items {
+		display: grid;
+		grid-template-columns: auto auto auto auto;
+		grid-gap: 60px 25px;
+		list-style: none;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		position: relative;
+
+		& img {
+			position: absolute;
+			left: 0;
+			top: -12px;
+		}
+
+		& span {
+			padding-left: 65px;
+			font-size: 18px;
+		}
+	}
+
+	&__info {
+		margin-top: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		&_tip {
+			color: $gray6;
+			line-height: 1.5;
+			max-width: 540px;
+
+			&--boxed {
+				max-width: 510px;
+				padding: 20px 100px;
+				border-radius: 20px;
+				background-color: rgba(94, 122, 170, 0.1);
+			}
+		}
+	}
+
+
+}

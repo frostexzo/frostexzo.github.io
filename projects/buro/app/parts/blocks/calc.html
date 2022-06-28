@@ -1,0 +1,116 @@
+<section class="calc">
+	<div class="container">
+		<div class="calc__inner">
+			<h2 class="title">Калькулятор кредита</h2>
+			<form class="calculator">
+				<div class="calculator__block1">
+					<div class="calculator__form">
+						<div class="calculator__input">
+							<span class="label">Объект залога:</span>
+							<select name="type" id="type" class="form-input"></select>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Срок/мес.</span>
+							<input type="text" name="term" class="form-input" />
+							<div id="term" class="term-slider"></div>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Нужная сумма</span>
+							<input type="text" name="sum" class="form-input" />
+							<div id="sum" class="term-slider"></div>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Ставка %</span>
+							<input type="text" name="stake" class="form-input" />
+							<div id="stake" class="term-slider"></div>
+						</div>
+					</div>
+				</div>
+				<div class="calculator__block2">
+					<div class="calculator__block2__top">
+						<div class="item">
+							<div class="calc__title">Ежемесячный платеж</div>
+							<div class="text">
+								<span id="payPerMonth"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="calc__title">Сумма к выплате</div>
+							<div class="text">
+								<span id="totalSum"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="calc__title">
+								Переплата <span class="desktop">процентов</span><span class="mobile">%</span>
+							</div>
+							<div class="text">
+								<span id="overpay"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+					</div>
+					<div class="calculator__block2__text mobile">
+						* платеж аннуитетный - проценты начисляются на остаток задолженности, сумма долга уменьшается с
+						каждым платежом
+					</div>
+					<div class="calculator__block2__bottom">
+						<input type="text" placeholder="Как к Вам обращаться" name="name" class="form-input" />
+						<input type="text" placeholder="Введите телефон" required name="phone" class="form-input" />
+						<button class="form-button" type="submit">Получить кредит</button>
+						<button type="button" class="form-button form-button--dark">График платежей</button>
+					</div>
+					<div class="calculator__block2__text">
+						<span class="desktop"
+							>* платеж аннуитетный - проценты начисляются на остаток задолженности, сумма долга
+							уменьшается с каждым платежом <br /></span
+						>Нажимая кнопку «Получить кредит», я даю свое согласие на обработку моих персональных данных.
+					</div>
+				</div>
+				<div class="layer">
+					<div class="close">
+						<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+								fill="#fff"
+							></path>
+						</svg>
+					</div>
+					<div class="calculator__popup">
+						<div class="calculator__block2__top">
+							<div class="item">
+								<div class="title">Сумма кредита</div>
+								<div class="text">
+									<span id="sum1"></span> <span class="cur desktop">руб</span
+									><span class="cur mobile">₽</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="title">Срок кредита</div>
+								<div class="text"><span id="term1"></span> <span class="cur">мес.</span></div>
+							</div>
+							<div class="item">
+								<div class="title">Ставка</div>
+								<div class="text"><span id="stake1"></span> <span class="cur">% годовых</span></div>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Дата платежа</th>
+									<th scope="col">Основной платеж</th>
+									<th scope="col">Проценты</th>
+									<th scope="col">Сумма платежа</th>
+									<th scope="col">Остаток кредита</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

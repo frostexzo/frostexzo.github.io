@@ -1,0 +1,85 @@
+.consult {
+	margin-top: 160px;
+
+	& .title {
+		color: $white;
+		font-weight: 600;
+		line-height: 1.1;
+		max-width: 550px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 22px;
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		list-style: none;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 12px 20px;
+		margin-bottom: 30px;
+
+		&_item {
+			font-size: 18px;
+			padding-left: 35px;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: '';
+				left: 0;
+				top: 0;
+				width: 26px;
+				height: 26px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-image: url("../images/dist/checkmark-green.svg");
+			}
+		}
+	}
+
+	&__inner {
+		background-color: $blue;
+		border-radius: 30px;
+		padding: 55px 60px;
+		padding-bottom: 30px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		margin-right: 55px;
+		color: $white;
+	}
+
+	&__img {
+		margin-top: -90px;
+	}
+
+	&__label {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 12px;
+	}
+
+	&__form {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 10px;
+
+		& .form-button {
+			margin-top: 0;
+			font-size: 12px;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+		& .form-input {
+			margin-bottom: 0;
+		}
+	}
+}

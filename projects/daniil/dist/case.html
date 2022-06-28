@@ -247,6 +247,300 @@
 	</div>
 </section>
 
+<section class="popups">
+	<div @click="closePopup" x-cloak x-show.transition.opacity.duration.300ms="popup != null" class="popups__bg"></div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'contacts'" class="popup popup-contacts">
+		<div class="popup-contacts__inner">
+			<div class="popup-contacts__img">
+				<div class="popup-contacts__socials">
+					<a href="" target="_blank"><img src="images/dist/vk-icon.svg" width="20" height="12" alt="" /></a>
+					<a href="" target="_blank"><img src="images/dist/inst-icon.svg" width="16" height="16" alt="" /></a>
+					<a href="" target="_blank"><img src="images/dist/tg-icon.svg" width="16" height="16" alt="" /></a>
+				</div>
+			</div>
+			<div class="popup-contacts__wrapper">
+				<div class="title">
+					<span>Контакты</span>
+				</div>
+
+				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
+					<input
+						class="popup__input"
+						type="text"
+						name="fio"
+						placeholder="Представьтесь (ФИО / Компания)"
+						required
+					/>
+					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
+					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
+					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec1'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card1.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Web-дизайн</span>
+
+			<div class="popup__info_desc">
+				<p>1) брифинг с заказчиком (в живую и удаленно);</p>
+				<br />
+				<p>2) ретушь/обтравка/цветокоррекция любой сложности;</p>
+				<p>3) отрисовка иконок;</p>
+				<br />
+				<p>4) редизайн сайтов;</p>
+				<p>5) адаптивный дизайн;</p>
+				<p>6) mobile first;</p>
+				<br />
+				<p>7) создание:</p>
+				<p>а) дизайн-концепций;</p>
+				<p>б) gif-анимаций;</p>
+				<p>в) баннеров;</p>
+				<p>г) логотипов/эмблем.</p>
+				<br />
+				<p>9) разработка презентаций проектов;</p>
+				<p>10) передача макета на верстку;</p>
+				<p>11) оформление UI-KIT.</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec2'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card2.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">UX/UI-дизайн</span>
+
+			<div class="popup__info_desc">
+				<span class="gradient-text">1) UX-исследование: </span>
+				<p>а) интервью (направленное и неориентированное);</p>
+				<p>б) аудит (дизайна, бизнеса (покупатель, продукт, компания, конкуренты);</p>
+				<p>в) стратегии и идеи;</p>
+				<p>г) аналитика (создание UP, CJM, UJM, EJM, Отчеты (Word, Excel)).</p>
+				<br />
+				<span class="gradient-text">2) UX-проектирование:</span>
+				<p>а) создание ментальных карт (например, сайта);</p>
+				<p>б) скетчинг дизайна сайтов;</p>
+				<p>в) проектирование дизайна сайтов.</p>
+				<br />
+				<span class="gradient-text"> 3) UX-тестирование: </span>
+				<p>а) А/В тестирование;</p>
+				<p>б) Юзабилити-тестирование.</p>
+				<br />
+				<span class="gradient-text">4) UI-визуализация: </span>
+				<p>а) p.s. навыки можно посмотреть в специализации "Web-дизайн".</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'spec3'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" loading="lazy" src="images/card3.gif" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Прочие специализации</span>
+
+			<div class="popup__info_desc">
+				<span class="gradient-text">1) UI-анимация</span>
+				<p>а) сайты;</p>
+				<p>б) иконки;</p>
+				<p>в) прелоадеры;</p>
+				<p>г) микровзаимодействия.</p>
+				<br />
+				<span class="gradient-text">2) 3D-моделирование:</span>
+				<p>а) Параметрическое;</p>
+				<p>б) Полигональное (Hard Surface).</p>
+				<br />
+				<span class="gradient-text"> 3) Графический-дизайн: </span>
+				<p>а) Инфографика;</p>
+				<p>б) Фирменный стиль и брендинг;</p>
+				<p>в) Рекламная графика.</p>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'rossbank'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work1.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Россельхозбанк</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и пользователей;
+					</li>
+					<li>проектирование информационных систем;</li>
+					<li>прототипирование с разным уровнем детализации;</li>
+					<li>анимирование интерфейса;</li>
+					<li>тестирование на пользовательской аудитории прототипа решения;</li>
+					<li>защита решений на всех этапах проектирования;</li>
+					<li>
+						сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами маркетинга,
+						аналитики, разработки);
+					</li>
+					<li>участие в создании общего UI-Kit;</li>
+					<li>инициирование переработки сценариев интерфейсов;</li>
+					<li>разработка концепций и интерфейсных решений;</li>
+					<li>помощь в развитии продуктов;</li>
+					<li>формирование гипотез на основе статистических данных;</li>
+					<li>изучение и анализ комментариев и отзывов пользователей по готовым IT-продуктам.</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал новое мобильное приложения для Бизнеса (Юр. лиц);</li>
+					<li>провел помощь в редизайне сайта;</li>
+					<li>сформировал дизайн систему.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'papajohns'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work2.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Папа Джонс</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						cоздание скетчей, макетов, интерактивных прототипов, с учетом целей бизнеса и пользователей;
+					</li>
+					<li>проектирование информационных систем;</li>
+					<li>прототипирование с разным уровнем детализации;</li>
+					<li>анимирование интерфейса;</li>
+					<li>тестирование на пользовательской аудитории прототипа решения;</li>
+					<li>участие в коллаборациях с компанией (Activision, Universal и др.);</li>
+					<li>
+						сопровождение полного цикла разработки продукта (плотное взаимодействие с отделами маркетинга,
+						аналитики, разработки);
+					</li>
+					<li>участие в создании общего UI-Kit;</li>
+					<li>инициирование переработки сценариев интерфейсов;</li>
+					<li>разработка концепций и интерфейсных решений;</li>
+					<li>помощь в развитии продуктов;</li>
+					<li>формирование гипотез на основе статистических данных;</li>
+					<li>изучение и анализ комментариев и отзывов пользователей по готовым IT-продуктам.</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал новое мобильное приложения с нуля (500 тыс. пользователей в месяц);</li>
+					<li>провел редизайн сайта (десктоп и адаптив, 1 млн пользователей в месяц);</li>
+					<li>создал с нуля дизайн CRM-системы компании;</li>
+					<li>сформировал дизайн систему для всех инструментов компании.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'psih'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work3.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Psih</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>
+						Ведение проекта, ответственность за разработку (подбор команды и точное соблюдение сроков
+						исполнения);
+					</li>
+					<li>Брифинг;</li>
+					<li>
+						Ux-исследование:<br />
+						а) дизайна, бизнеса (покупатель, продукт, компания, конкуренты);<br />
+						б) стратегии и идеи;
+					</li>
+					<li>
+						Ux-проектирование:<br />
+						а) создание ментальных карт (например, сайта);<br />
+						б) скетчинг дизайна сайтов;<br />
+						в) проектирование дизайна сайтов.
+					</li>
+					<li>
+						Визуализация макетов:<br />
+						а) сайта;<br />
+						б) адаптива;<br />
+						в) планшета.
+					</li>
+					<li>
+						Анимация:<br />
+						а) интро;<br />
+						б) bg-сайта;<br />
+						в) микровзаимодействий.
+					</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал сайт, адаптив и планшетную версии;</li>
+					<li>оформил визуальный стиль компании;</li>
+					<li>выделил магазин среди конкурентов;</li>
+					<li>повысил конверсию проекта.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div x-cloak x-show.transition.opacity.duration.400ms="popup == 'animedia'" class="popup">
+		<div class="popup__img">
+			<img decoding="async" src="images/dist/work4.jpg" alt="" />
+		</div>
+
+		<div class="popup__info">
+			<span class="popup__info_title">Animedia.TV</span>
+
+			<div class="popup__info_desc">
+				<ul>
+					<li>Брифинг;</li>
+					<li>
+						Ux-исследование:<br />
+						а) дизайна, бизнеса (покупатель, продукт, компания, конкуренты);<br />
+						б) стратегии и идеи;
+					</li>
+					<li>
+						Ux-проектирование:<br />
+						а) создание ментальных карт (например, сайта);<br />
+						в) проектирование дизайна сайтов.
+					</li>
+					<li>
+						Визуализация макетов:<br />
+						а) сайта;<br />
+						б) адаптива;<br />
+						в) планшета.
+					</li>
+				</ul>
+				<br />
+				<span class="gradient-text">Достижения:</span>
+				<ul>
+					<li>создал сайт, адаптив и планшетную версии;</li>
+					<li>оформил визуальный стиль компании;</li>
+					<li>выделил магазин среди конкурентов;</li>
+					<li>повысил конверсию проекта.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+
 </main>
 
 <footer class="footer">

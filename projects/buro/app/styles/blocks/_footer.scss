@@ -1,0 +1,120 @@
+.footer {
+	margin-top: 70px;
+	border-top: 1px solid rgba(176, 176, 176, 0.3);
+
+	&__inner {
+		padding-top: 40px;
+		padding-bottom: 60px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	&__copyright {
+		padding: 10px;
+		background: rgba(177, 177, 177, 0.05);
+		color: $gray7;
+		text-align: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		max-width: 315px;
+
+		&_info {
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+		}
+
+		&_name {
+			font-weight: 600;
+			margin-bottom: 8px;
+			display: block;
+		}
+
+		&_slogan {
+			font-size: 12px;
+			line-height: 1.4;
+		}
+	}
+
+	&__list {
+		&_wrapper {
+			max-width: 280px;
+		}
+
+		list-style: none;
+
+		&_title {
+			display: block;
+			font-size: 18px;
+			font-weight: 600;
+			margin-bottom: 20px;
+		}
+
+		&_item {
+			color: $gray7;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
+
+			& a {
+				color: $gray7;
+				transition: color .2s ease;
+
+				&:hover, &:focus {
+					color: $blue;
+				}
+			}
+		}
+	}
+
+	&__contacts {
+		&_list {
+			list-style: none;
+			margin-bottom: 35px;
+
+			&-item {
+				position: relative;
+				padding-left: 35px;
+
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+
+			&-text {
+				color: $gray7;
+
+				& strong {
+					font-weight: 600;
+					color: $black;
+					transition: color .2s ease;
+				}
+			}
+
+			&-text {
+				transition: color .2s ease;
+
+				&:hover, &:focus {
+					color: $blue;
+
+					& strong {
+						color: $blue;
+					}
+				}
+			}
+
+			&-img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+
+	}
+}

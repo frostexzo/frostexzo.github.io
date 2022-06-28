@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Buro Finance</title>
+		<meta name="description" content="description" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="preload" href="js/swiper.js" as="script" />
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link rel="preload" href="./fonts/OpenSans-Regular.woff" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="./fonts/Roboto-Bold.woff2" as="font" crossorigin="anonymous" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+
+		<link rel="stylesheet" href="css/main.min.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<a href="" class="header__logo">
+						<img src="images/dist/logo.svg" width="64" height="73" alt="Buro Finance" />
+						<span>Бюро Финанс</span>
+					</a>
+
+					<nav class="nav">
+						<div class="nav__item nav__item--active"><a href="" class="nav__item_label">Главная</a></div>
+						<div class="nav__item">
+							<span class="nav__item_label mark" aria-disabled>Кредиты под залог</span>
+							<ul class="nav__item_menu">
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+							</ul>
+						</div>
+						<div class="nav__item"><a href="" class="nav__item_label">Калькулятор</a></div>
+						<div class="nav__item">
+							<span class="nav__item_label mark" aria-disabled>Информация</span>
+							<ul class="nav__item_menu">
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item mark">
+									<span class="nav__item_menu-label mark">Полезная информация</span>
+									<div class="nav__item_menu-sub">
+										<a href="" class="nav__item_menu-label">Статьи</a>
+										<a href="" class="nav__item_menu-label">Новости</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="nav__item"><a href="" class="nav__item_label">Контакты</a></div>
+					</nav>
+
+					<div class="header__contacts">
+						<a href="tel:88005551368" class="header__contacts_tel">8-800-555-13-68</a>
+						<button type="button" class="header__contacts_btn">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+<section class="hero">
+	<div class="container">
+		<div class="hero__inner">
+			<div class="hero__content">
+				<h1 class="hero__title">
+					Получите кредит <span>за 24 часа</span> под залог любой недвижимости <span>со ставкой от 8%</span> до 25 лет
+				</h1>
+
+				<span class="hero__subtitle">
+					С любой кредитной историей, без скрытых платежей и комиссий
+				</span>
+
+				<ul class="hero__features">
+					<li class="hero__features_item"><span>До 90%</span> от рыночной стоимости недвижимости</li>
+					<li class="hero__features_item">Аванс <span>в день</span> обращения, после оценки</li>
+					<li class="hero__features_item">Недвижимость <span>остаётся</span> у вас</li>
+				</ul>
+			</div>
+
+			<div class="hero__form">
+				<span class="hero__form_title">Заявка на деньги</span>
+
+				<form action="" class="hero__form_fields">
+					<input type="text" class="form-input" name="name" placeholder="Как к Вам обращаться" required>
+					<input type="tel" class="form-input" name="phone" placeholder="Введите телефон" required>
+					<label class="form-input-custom calculator__form" for="">
+						<span>Нужная сумма</span>
+						<input type="text" class="form-input" name="sumHero" required>
+						<div id="sumHero" class="term-slider"></div>
+					</label>
+					<button type="submit" class="form-button">Получить деньги</button>
+				</form>
+				<p class="hero__form_subtext">
+					Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="targets">
+	<div class="container">
+		<div class="targets__inner">
+			<h2 class="title">Используйте кредит под залог недвижимости на любые цели</h2>
+
+			<ul class="targets__items">
+				<li class="targets__item">
+					<img src="images/dist/t-1.svg" width="50" height="50" alt="" />
+					<span>Развитие бизнеса</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-2.svg" width="50" height="50" alt="" />
+					<span>Консолидация кредитов</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-3.svg" width="50" height="50" alt="" />
+					<span>Покупка недвижимости</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-4.svg" width="50" height="50" alt="" />
+					<span>Обучение</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-5.svg" width="50" height="50" alt="" />
+					<span>Лечение</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-6.svg" width="50" height="50" alt="" />
+					<span>Покупка автомобиля</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-7.svg" width="50" height="50" alt="" />
+					<span>Ремонт/строительство</span>
+				</li>
+				<li class="targets__item">
+					<img src="images/dist/t-8.svg" width="50" height="50" alt="" />
+					<span>Путешествия и др.</span>
+				</li>
+			</ul>
+
+			<div class="targets__info">
+				<div class="targets__info_tip">
+					<p>Хотите рассчитать кредит под залог недвижимости в Москве?</p>
+					<p>Нужны деньги для реализации бизнес идеи?</p> 
+					<p>Планируете отпуск или улучшение жилищных условий?</p> 
+				</div>
+
+				<div class="targets__info_tip targets__info_tip--boxed">
+					<p>Если вы владелец недвижимости в столичном регионе, поможем найти выход и грамотное решение.</p> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="solutions">
+	<div class="container">
+		<div class="solutions__inner">
+			<h2 class="title">Поможем решить сложные случаи при оформлении залогового кредита</h2>
+
+			<ul class="solutions__items">
+				<li class="solutions__item">Наличие просрочек <br> по кредитам</li>
+				<li class="solutions__item">Одобрение низкой <br> суммы кредита</li>
+				<li class="solutions__item">Наличие обременения от <br> предыдущих кредиторов</li>
+				<li class="solutions__item">Высокая текущая <br> кредитная нагрузка</li>
+				<li class="solutions__item">Свежее гражданство <br> Российской Федерации</li>
+				<li class="solutions__item">Отказы со стороны банков, <br> инвесторов и МФО</li>
+				<li class="solutions__item">Незарегистрированные <br> перепланировки</li>
+				<li class="solutions__item">Отсутствие официального <br> подтверждения дохода</li>
+				<li class="solutions__item">Высокая ставка по <br> предложенному кредиту</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="suggestion">
+	<div class="container">
+		<div class="suggestion__inner">
+			<div class="suggestion__info">
+				<h2 class="title">Хотите выгодное персональное предложение?</h2>
+				<span class="suggestion__info_text">Заполните форму и мы подберем для Вас самые лучшие условия</span>
+				<form action="" class="suggestion__form">
+					<input type="tel" class="form-input" name="phone" placeholder="Введите телефон" required />
+					<button type="submit" class="form-button">Получить предложение</button>
+				</form>
+				<span class="suggestion__info_subtext">
+					Нажимая кнопку «Получить предложение», я даю свое полное согласие на обработку моих персональных
+					данных
+				</span>
+			</div>
+			<div class="suggestion__spec">
+				<div class="suggestion__spec_img">
+					<img src="images/dist/spec.png" width="193" height="193" alt="Специалист" />
+				</div>
+				<div class="suggestion__spec_info">
+					<span class="suggestion__spec_position">Кредитный специалист</span>
+					<span class="suggestion__spec_name">Гордиенкова Анна Сергеевна</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="approve">
+	<div class="container">
+		<div class="approve__inner">
+			<div class="approve__info">
+				<h2 class="title">Одобрим кредит под залог <span>недвижимости</span></h2>
+				<div class="approve__info_text">
+					<p>
+						Благодаря «Бюрофинанс» вы можете выгодно и без последствий взять финансовые средства под залог
+						любого ликвидного жилья. Многолетнее сотрудничество с проверенными, надежными банками и
+						инвесторами. Находим решения для каждого клиента, строим простое и открытое партнерство.
+					</p>
+					<p>
+						Долгосрочные контакты с нашими партнерами позволяют добиться результата даже в самых проблемных
+						и критичных ситуациях.
+					</p>
+				</div>
+			</div>
+			<ul class="approve__items">
+				<li class="approve__item">
+					<img src="images/dist/approve-1.png" width="97" height="97" alt="Квартиры" />
+					<span>Квартиры</span>
+				</li>
+				<li class="approve__item">
+					<img src="images/dist/approve-2.png" width="97" height="97" alt="Дома" />
+					<span>Дома</span>
+				</li>
+				<li class="approve__item">
+					<img
+						src="images/dist/approve-3.png"
+						width="97"
+						height="97"
+						alt="Комнаты 
+					и доли"
+					/>
+					<span>Комнаты и доли</span>
+				</li>
+				<li class="approve__item">
+					<img
+						src="images/dist/approve-4.png"
+						width="97"
+						height="97"
+						alt="Коммерческая
+					недвижимость"
+					/>
+					<span>Коммерческая недвижимость</span>
+				</li>
+				<li class="approve__item">
+					<img
+						src="images/dist/approve-5.png"
+						width="97"
+						height="97"
+						alt="Гаражи и
+					машиноместа"
+					/>
+					<span>Гаражи и машиноместа</span>
+				</li>
+				<li class="approve__item">
+					<img src="images/dist/approve-6.png" width="97" height="97" alt="Участки" />
+					<span>Участки</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="compare">
+	<div class="container">
+		<div class="compare__inner">
+			<h2 class="title">Особенности займа в банках и у частных инвесторов</h2>
+			<div class="compare__table">
+				<div class="compare__table_col">
+					<div class="compare__table_row">
+						<div>Сумма кредитования</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Ставка</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Доля кредита от оценочной <br />стоимости недвижимого имущества</div>
+					</div>
+					<div class="compare__table_row compare__table_row--double">
+						<div>Подтверждение <br />платежеспособности, справки</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Привлечение поручителей</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Кредитная история</div>
+					</div>
+					<div class="compare__table_row compare__table_row--double">
+						<div>Требования к заёмщикам</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Запрашиваемые документы</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Рассмотрение заявки</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Условия погашения</div>
+					</div>
+					<div class="compare__table_row">
+						<div>Аванс</div>
+					</div>
+				</div>
+				<div class="compare__table_subtable">
+					<div class="compare__table_subcol">
+						<div class="compare__table_row compare__table_row--header">
+							<div>БАНК</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до 150 млн. руб.</div>
+						</div>
+						<div class="compare__table_row">
+							<div>от 9%</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до 70%</div>
+						</div>
+						<div class="compare__table_row compare__table_row--double">
+							<div>необходимы</div>
+						</div>
+						<div class="compare__table_row">
+							<div>возможно</div>
+						</div>
+						<div class="compare__table_row">
+							<div>положительная</div>
+						</div>
+						<div class="compare__table_row compare__table_row--double">
+							<div>
+								трудовой стаж на последнем месте <br />работы от трех месяцев, возраст 21 – 60 лет
+							</div>
+						</div>
+						<div class="compare__table_row">
+							<div>от 9</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до двух дней</div>
+						</div>
+						<div class="compare__table_row">
+							<div>стандартные</div>
+						</div>
+						<div class="compare__table_row">
+							<div>отсутствует</div>
+						</div>
+						<div class="compare__table_row compare__table_row--button">
+							<button type="button" class="form-button" id="bank-btn">Получить деньги от банка</button>
+						</div>
+					</div>
+					<div class="compare__table_subcol">
+						<div class="compare__table_row compare__table_row--header">
+							<div>ЧАСТНЫЕ ИНВЕСТОРЫ</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до 150 млн. руб.</div>
+						</div>
+						<div class="compare__table_row">
+							<div>от 8%</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до 90%</div>
+						</div>
+						<div class="compare__table_row compare__table_row--double">
+							<div>не требуется</div>
+						</div>
+						<div class="compare__table_row">
+							<div>не требуется</div>
+						</div>
+						<div class="compare__table_row">
+							<div>любая</div>
+						</div>
+						<div class="compare__table_row compare__table_row--double">
+							<div>граждане РФ в возрасте от 18 до 75 лет</div>
+						</div>
+						<div class="compare__table_row">
+							<div>4 документа</div>
+						</div>
+						<div class="compare__table_row">
+							<div>15 мин – 1 час</div>
+						</div>
+						<div class="compare__table_row">
+							<div>индивидуальные</div>
+						</div>
+						<div class="compare__table_row">
+							<div>до 30 %</div>
+						</div>
+						<div class="compare__table_row compare__table_row--button">
+							<button type="button" class="form-button" id="invest-btn">Получить деньги от инвестора</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="compare__info">
+				<img src="images/dist/compare-icon.svg" width="51" height="51" alt="">
+				<p>Заём в Москве под залог ликвидной недвижимости (жилой или коммерческой) у частного инвестора - 
+					оптимальное решение, если у вас нет времени на ожидание одобрения и сбор всех документов.</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="calc">
+	<div class="container">
+		<div class="calc__inner">
+			<h2 class="title">Калькулятор кредита</h2>
+			<form class="calculator">
+				<div class="calculator__block1">
+					<div class="calculator__form">
+						<div class="calculator__input">
+							<span class="label">Объект залога:</span>
+							<select name="type" id="type" class="form-input"></select>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Срок/мес.</span>
+							<input type="text" name="term" class="form-input" />
+							<div id="term" class="term-slider"></div>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Нужная сумма</span>
+							<input type="text" name="sum" class="form-input" />
+							<div id="sum" class="term-slider"></div>
+						</div>
+						<div class="form-input-custom">
+							<span class="label">Ставка %</span>
+							<input type="text" name="stake" class="form-input" />
+							<div id="stake" class="term-slider"></div>
+						</div>
+					</div>
+				</div>
+				<div class="calculator__block2">
+					<div class="calculator__block2__top">
+						<div class="item">
+							<div class="calc__title">Ежемесячный платеж</div>
+							<div class="text">
+								<span id="payPerMonth"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="calc__title">Сумма к выплате</div>
+							<div class="text">
+								<span id="totalSum"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+						<div class="item">
+							<div class="calc__title">
+								Переплата <span class="desktop">процентов</span><span class="mobile">%</span>
+							</div>
+							<div class="text">
+								<span id="overpay"></span> <span class="cur desktop">руб</span
+								><span class="cur mobile">₽</span>
+							</div>
+						</div>
+					</div>
+					<div class="calculator__block2__text mobile">
+						* платеж аннуитетный - проценты начисляются на остаток задолженности, сумма долга уменьшается с
+						каждым платежом
+					</div>
+					<div class="calculator__block2__bottom">
+						<input type="text" placeholder="Как к Вам обращаться" name="name" class="form-input" />
+						<input type="text" placeholder="Введите телефон" required name="phone" class="form-input" />
+						<button class="form-button" type="submit">Получить кредит</button>
+						<button type="button" class="form-button form-button--dark">График платежей</button>
+					</div>
+					<div class="calculator__block2__text">
+						<span class="desktop"
+							>* платеж аннуитетный - проценты начисляются на остаток задолженности, сумма долга
+							уменьшается с каждым платежом <br /></span
+						>Нажимая кнопку «Получить кредит», я даю свое согласие на обработку моих персональных данных.
+					</div>
+				</div>
+				<div class="layer">
+					<div class="close">
+						<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+								fill="#fff"
+							></path>
+						</svg>
+					</div>
+					<div class="calculator__popup">
+						<div class="calculator__block2__top">
+							<div class="item">
+								<div class="title">Сумма кредита</div>
+								<div class="text">
+									<span id="sum1"></span> <span class="cur desktop">руб</span
+									><span class="cur mobile">₽</span>
+								</div>
+							</div>
+							<div class="item">
+								<div class="title">Срок кредита</div>
+								<div class="text"><span id="term1"></span> <span class="cur">мес.</span></div>
+							</div>
+							<div class="item">
+								<div class="title">Ставка</div>
+								<div class="text"><span id="stake1"></span> <span class="cur">% годовых</span></div>
+							</div>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th scope="col">Дата платежа</th>
+									<th scope="col">Основной платеж</th>
+									<th scope="col">Проценты</th>
+									<th scope="col">Сумма платежа</th>
+									<th scope="col">Остаток кредита</th>
+								</tr>
+							</thead>
+							<tbody></tbody>
+						</table>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="desc">
+	<div class="container">
+		<div class="desc__inner">
+			<div class="desc__tabs">
+				<button type="button" class="desc__tabs_item desc__tabs_item--active" data-btn="terms">Условия кредитования</button>
+				<button type="button" class="desc__tabs_item" data-btn="reqs">Требования</button>
+				<button type="button" class="desc__tabs_item" data-btn="docs">Необходимые документы</button>
+				<button type="button" class="desc__tabs_item" data-btn="payment">Погашения кредита</button>
+			</div>
+			<div class="desc__content_wrapper">
+				<div class="desc__content desc__content--active terms" data-content="terms">
+					<span class="desc__content_text">
+						«БюроФинанс» возьмёт на себя заботы по поиску кредитора, оформлению сделки и решению сложных
+						ситуаций.
+					</span>
+
+					<div class="desc__content_blocks padding-left">
+						<div class="desc__content_block">
+							<span class="desc__content_block-title">
+								Денежный заём предоставляется на следующих условиях:
+							</span>
+							<ul class="desc__content_list">
+								<li class="desc__content_list-item">Сумма кредита – от 300 тыс. до 150 млн. рублей.</li>
+								<li class="desc__content_list-item">Срок – до 30 лет.</li>
+								<li class="desc__content_list-item">
+									Размер - до 90 % от оценочной стоимости недвижимого имущества.
+								</li>
+								<li class="desc__content_list-item">Процентная ставка – от 15,1% в год.</li>
+							</ul>
+							<span class="desc__content_subtext">
+								Ставка устанавливается в индивидуальном порядке. В расчет принимается много факторов:
+								срок и сумма кредитования, предоставляемое имущество, характеристики заёмщика.
+							</span>
+						</div>
+
+						<div class="desc__content_block">
+							<span class="desc__content_block-title">
+								Денежный заём предоставляется на следующих условиях:
+							</span>
+							<ul class="desc__content_list">
+								<li class="desc__content_list-item small">
+									Принятие решений и подбор индивидуальных условий зависит от кредитора. Рассмотрение
+									заявки в банке составляет до двух рабочих дней. У частных инвесторов от пятнадцати
+									минут.
+								</li>
+								<li class="desc__content_list-item small">Оформляем договора займа и залога</li>
+								<li class="desc__content_list-item small">
+									Время получения кредитных средств у частных инвесторов и кредиторов составляет один
+									день, в банке он занимает около семи дней.
+								</li>
+								<li class="desc__content_list-item small">
+									Процедура выдачи займа осуществляется наличными средствами, либо переводом на счет.
+									В зависимости от пожеланий клиента.
+								</li>
+								<li class="desc__content_list-item small">
+									Порядок получения займа: вы можете получить денежные средства единой суммой или
+									двумя частями, а также предоставляется возможность авансовой выплаты
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="desc__content reqs" data-content="reqs">
+					<span class="desc__content_text desc__content_text--strong">
+						Минимальные требования к заемщикам, имеющим ликвидную недвижимость. Условия для заема:
+					</span>
+
+					<ul class="desc__content_list">
+						<li class="desc__content_list-item">возраст 18 - 75 лет;</li>
+						<li class="desc__content_list-item">регистрация в Москве или МО.</li>
+					</ul>
+
+					<span class="desc__content_text">
+						Сотрудничество с физическими лицами и представителями малого бизнеса
+					</span>
+
+					<div class="desc__content_block--wide">
+						<span class="desc__content_block-title"> Требования к залоговому имуществу: </span>
+						<ul class="desc__content_list">
+							<li class="desc__content_list-item">Износ строения составляет не более 70%</li>
+							<li class="desc__content_list-item">
+								Наличие инженерных коммуникаций: строение подключено к газо- и электроснабжению. Должны
+								присутствовать канализация, отопление, ГВС и ХВС.
+							</li>
+							<li class="desc__content_list-item">
+								Объект не должен находиться в очереди на капитальный ремонт, снос, реновацию или быть в
+								аварийном состоянии.
+							</li>
+							<li class="desc__content_list-item">
+								Квартира должна находиться в панельном , кирпичном или блочном доме, иметь не менее 5
+								этажей
+							</li>
+							<li class="desc__content_list-item">Материалы стен и перекрытий не должны быть из бруса</li>
+						</ul>
+					</div>
+
+					<div class="compare__info">
+						<img src="images/dist/compare-icon.svg" alt="" width="51" height="51" />
+						<p>
+							В зависимости от типа закладываемого имущества, будет принято решение по окончательным
+							требованиям
+						</p>
+					</div>
+				</div>
+				<div class="desc__content docs" data-content="docs">
+					<div class="desc__content_blocks">
+						<div class="desc__content_block">
+							<span class="desc__content_block-title"
+								>Минимум документов для получения денежных средств под залог в Москве:</span
+							>
+							<ul class="desc__content_list">
+								<li class="desc__content_list-item">
+									Паспорт РФ и любой другой документ удостоверяющий личность
+								</li>
+								<li class="desc__content_list-item">
+									Свидетельство о праве собственности на недвижимость
+								</li>
+								<li class="desc__content_list-item">Подтверждение оснований права собственности</li>
+							</ul>
+						</div>
+
+						<div class="desc__content_block-wrapper">
+							<div class="desc__content_block">
+								<span class="desc__content_block-title"
+									>В ряде случаев необходимы документы дополнительно:</span
+								>
+								<ul class="desc__content_list">
+									<li class="desc__content_list-item">Кадастровый паспорт</li>
+									<li class="desc__content_list-item">Согласие супруга (ги) и пр.</li>
+								</ul>
+							</div>
+
+							<div class="desc__content_subblock">
+								Важно: список документов для юридических и физических лиц отличается
+							</div>
+						</div>
+					</div>
+
+					<div class="desc__content_list-wrapper">
+						<span class="desc__content_block-title">Для юридических лиц:</span>
+						<ul class="desc__content_list">
+							<li class="desc__content_list-item">Учредительные документы организации</li>
+							<li class="desc__content_list-item">Подтверждение оплаты объекта по договору</li>
+							<li class="desc__content_list-item">Свидетельство собственности на недвижимость</li>
+							<li class="desc__content_list-item">Основание права собственности</li>
+						</ul>
+					</div>
+
+					<div class="compare__info">
+						<img src="images/dist/compare-icon.svg" alt="" width="51" height="51" />
+						<p>*Наш менеджер озвучит заявителю окончательный перечень документов</p>
+					</div>
+				</div>
+				<div class="desc__content payment" data-content="payment">
+					<span class="desc__content_text">
+						«Бюрофинанс» предлагает получить кредит на выгодных условиях, без траты ваших нервов и времени.
+						Наши кредитные специалисты помогут сформировать для вас удобный и реалистичный график погашения
+						займа.
+					</span>
+					<span class="desc__content_text">
+						График составляется в индивидуальном порядке с учетом возможностей и пожеланий заемщика. Он
+						указан в приложении к договору кредитования.
+					</span>
+
+					<div class="desc__content_blocks">
+						<div class="desc__content_block">
+							<div class="desc__content_list-wrapper">
+								<span class="desc__content_block-title">Оплата принимается:</span>
+								<ul class="desc__content_list">
+									<li class="desc__content_list-item">Платежные терминалы</li>
+									<li class="desc__content_list-item">Касса банка</li>
+									<li class="desc__content_list-item">Почта России</li>
+									<li class="desc__content_list-item">Интернет-банкинг</li>
+								</ul>
+							</div>
+							<img src="images/dist/money.png" alt="Деньги" />
+						</div>
+						<div class="desc__content_tip">
+							<p>
+								При наличии свободных средств, вы можете досрочно погасить кредит. Ограничений и штрафов
+								не предусмотрено.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="price">
+	<div class="container">
+		<form action="" class="price__inner">
+			<div class="price__info">
+				<h2 class="title">Узнайте стоимость своей недвижимости для залога за 1 минуту!</h2>
+
+				<div class="price__fields calculator__form">
+					<div class="calculator__input">
+						<span class="label">Объект залога:</span>
+						<select name="type-alt" id="type-alt" class="form-input"></select>
+					</div>
+					<div class="form-input-custom">
+						<span class="label">Площадь (м2)</span>
+						<input type="text" name="square" class="form-input" required />
+						<div id="square" class="term-slider"></div>
+					</div>
+					<div class="form-input-custom lite">
+						<span class="label">Населённый пункт, улица, дом</span>
+						<input type="text" name="loc" class="form-input" placeholder="Введите адрес" required />
+					</div>
+				</div>
+			</div>
+			<div class="default-form">
+				<span class="default-form__title">
+					Заполните форму и получите оценку
+				</span>
+				<div class="default-form__fields">
+					<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
+					<input type="tel" class="form-input" required placeholder="Введите телефон">
+					<button type="submit" class="form-button">Заказать оценку</button>
+				</div>
+				<span class="default-form__label">
+					Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				</span>
+			</div>
+		</form>
+	</div>
+</section>
+<section class="features">
+	<div class="container">
+		<div class="features__inner">
+			<h2 class="title">Преимущества для вас</h2>
+
+			<ul class="features__items">
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-1.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<span class="features__info_title">Большие суммы займов</span>
+						<p class="features__info_desc">
+							Возможность получить до 150 млн. рублей единым платежом и до 90% от реальной рыночной
+							стоимости недвижимости
+						</p>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-2.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<span class="features__info_title">Низкая ставка</span>
+						<p class="features__info_desc">
+							Ставка от 15,1% годовых даст вам возможность уменьшить ежемесячные платежи и объем переплат
+						</p>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-3.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<span class="features__info_title">Комфортный срок возврата</span>
+						<p class="features__info_desc">
+							Срок погашения займа до 30 лет. Это позволит снизить финансовую нагрузку даже при большой
+							сумме займа
+						</p>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-4.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<span class="features__info_title">Лояльность к кредитной истории</span>
+						<p class="features__info_desc">
+							Получение положительного ответа даже в сложных случаях от наших партнеров и частных
+							инвесторов
+						</p>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-5.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<span class="features__info_title">Удобство в оформлении</span>
+						<p class="features__info_desc">
+							Минимальное количество документов, возможность принятия решения онлайн, сопровождение на
+							всех этапах
+						</p>
+					</div>
+				</li>
+				<li class="features__item">
+					<div class="features__img">
+						<img src="images/dist/f-6.svg" alt="" />
+					</div>
+					<div class="features__info">
+						<p class="features__info_desc">
+							Сотрудничество с «Бюрофинанс» - это кредит под залог недвижимости в банке или у инвестора,
+							который поможет оперативно решить форс-мажорные обстоятельства
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="examples">
+	<div class="container">
+		<div class="examples__inner">
+			<h2 class="title">Последние примеры кредитов под залог</h2>
+
+			<div class="examples__slider">
+				<div class="swiper-container examples__slider_container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide examples__item">
+							<div class="examples__item_img">
+								<img
+									src="images/dist/screen-1.jpg"
+									alt="2-х комнатная квартира, 65 м2г. Ростов-на-Дону, ул. Пушкинская"
+								/>
+							</div>
+							<div class="examples__item_info">
+								<span class="examples__item_title">
+									2-х комнатная квартира, 65 м2г. Ростов-на-Дону, ул. Пушкинская
+								</span>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Проблема: </span>
+									<p class="examples__item_text-desc">
+										Клиент обратился с запросом получить денежные средства под залог квартиры.
+										Сложностью было: <strong>неофициальная работа</strong> и
+										<strong>свежий договор</strong> купли-продажи.
+									</p>
+								</div>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Решение: </span>
+									<p class="examples__item_text-desc">
+										Выдали кредит под залог квартиры без подтверждения дохода. Сумма кредита
+										<strong>2 млн.р.</strong>, под <strong>10% годовых</strong>.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide examples__item">
+							<div class="examples__item_img" style="background-color: #E8F7FE;">
+								<img
+									src="images/dist/screen-2.jpg"
+									alt="2-х этажный дом, 320 м2
+									МО, р-н Красногорский, д Козино"
+								/>
+							</div>
+							<div class="examples__item_info">
+								<span class="examples__item_title">
+									2-х этажный дом, 320 м2 МО, р-н Красногорский, д Козино
+								</span>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Проблема: </span>
+									<p class="examples__item_text-desc">
+										Дом был заложен у частного инвестора на сумму 2,5 млн.р под 39% годовых. Срочно
+										требовалось <strong>рефинансирование с увеличением суммы</strong> минимум
+										<strong>до 6 млн.р.</strong> и снижением ставки ниже 30% годовых.
+									</p>
+								</div>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Решение: </span>
+									<p class="examples__item_text-desc">
+										Погасили кредит у предыдущего инвестора. Выдали кредит без подтверждения дохода.
+										Итоговая сумма нового кредита <strong>6,5 млн.р.</strong>, под
+										<strong>13% годовых</strong>.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="swiper-slide examples__item">
+							<div class="examples__item_img" style="background-color: #FCEAEA;">
+								<img
+									src="images/dist/screen-3.jpg"
+									alt="1-х комнатная квартира, 45 м2
+									МО, Раменский р-он, ш. Донинское"
+								/>
+							</div>
+							<div class="examples__item_info">
+								<span class="examples__item_title">
+									1-х комнатная квартира, 45 м2 МО, Раменский р-он, ш. Донинское
+								</span>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Проблема: </span>
+									<p class="examples__item_text-desc">
+										Квартира заложена в КПК (Кредитно-Потребительском кооперативе), сумма займа 1,05
+										млн.р. под 35% годовых. Нужно было <strong>рефинансировать</strong> на банк под меньшую ставку.
+									</p>
+								</div>
+
+								<div class="examples__item_text">
+									<span class="examples__item_text-title"> Решение: </span>
+									<p class="examples__item_text-desc">
+										Закрыли долг перед КПК, помогли получить одобрение в банке. Итоговая сумма
+										нового кредита <strong>1,7 млн.р.</strong>, под <strong>,5% годовых</strong>.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="company">
+	<div class="container">
+		<div class="company__inner">
+			<h2 class="title">Преимущества компании</h2>
+			<span class="company__subtext">
+				Сотрудничество с «Бюрофинанс» - оптимальное и выгодное решение для оперативного решения любых ситуаций
+			</span>
+			<span class="company__subtext company__subtext--strong"
+				>«Бюрофинанс» - надежный финансовый партнер. У нас вы найдете:</span
+			>
+
+			<ul class="company__items">
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-1.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Безопасность</span>
+						<p class="company__info_desc">
+							Работаем в рамках ФЗ №102 - ФЗ «Об ипотеке (залоге недвижимости)», сотрудничаем только с
+							проверенными партнерами и организациями. <strong>Гарантируем надежность сделки</strong> и исключаем риски
+							быть обманутыми.
+						</p>
+					</div>
+				</li>
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-2.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Компетентное сопровождение</span>
+						<p class="company__info_desc">
+							Наш штат состоит из квалифицированных сотрудников. Работаем с 30 проверенными банками, 80
+							частными инвесторами и 2 инвестиционными компаниями. <strong>Минимум документов</strong> для отправки
+							запросов в несколько кредитных организаций.
+						</p>
+					</div>
+				</li>
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-3.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Экономия издержек</span>
+						<p class="company__info_desc">
+							Экономим ваше время и нервы на поиск кредиторов и бесполезные встречи. Работаем на
+							прозрачных условиях <strong>без скрытых комиссий и платежей</strong>.
+						</p>
+					</div>
+				</li>
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-4.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Выгодные условия</span>
+						<p class="company__info_desc">
+							Долгосрочные партнерские отношения с инвесторами позволяют предлагать низкие процентные
+							ставки, <strong>большие суммы займов и выгодные условия</strong>. Подберем оптимальное решение.
+						</p>
+					</div>
+				</li>
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-5.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Оперативное обслуживание</span>
+						<p class="company__info_desc">
+							Быстрое реагирование на обработку заявки и оперативное ее рассмотрение. <strong>Выдача</strong> денежных
+							средств <strong>в день одобрения</strong> у частного инвестора и в течение недели у банка.
+						</p>
+					</div>
+				</li>
+				<li class="company__item">
+					<div class="company__img">
+						<img src="images/dist/c-6.svg" alt="" />
+					</div>
+					<div class="company__info">
+						<span class="company__info_title">Индивидуальный подход</span>
+						<p class="company__info_desc">
+							Добиваемся <strong>одобрения в 95%</strong> случаев. Подберем достойный вариант под ваш индивидуальный
+							запрос. Помогаем клиентам с плохой КИ, и без официального дохода.
+						</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="saving">
+	<div class="container">
+		<div class="saving__inner">
+			<div class="saving__info">
+				<h2 class="title">Сэкономим до 1 200 000 р. на залоговом кредите</h2>
+				<ul class="saving__list">
+					<li class="saving__list_item">Возможность снизить кредитную ставку по партнерской программе</li>
+					<li class="saving__list_item">Снизим затраты на страхование и другие услуги банка</li>
+					<li class="saving__list_item">Выберем банк, который подходит под ваши кредитные параметры</li>
+					<li class="saving__list_item">
+						Подключим многочисленные полезные знакомства в среде банковских руководителей
+					</li>
+				</ul>
+			</div>
+
+			<form action="" class="default-form">
+				<span class="default-form__title">
+					Получите деньги под низкую процентную ставку
+				</span>
+				<div class="default-form__fields">
+					<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
+					<input type="tel" class="form-input" required placeholder="Введите телефон">
+					<button type="submit" class="form-button">Получить деньги</button>
+				</div>
+				<span class="default-form__label">
+					Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				</span>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="howto">
+	<div class="container">
+		<div class="howto__inner">
+			<h2 class="title">Как получить заем?</h2>
+			<span class="howto__subtext">
+				При содействии «Бюрофинанс» вы можете легко получить кредит в надежной финансовой организации или у
+				частного инвестора. Для этого существует 4 этапа:
+			</span>
+
+			<ul class="howto__items">
+				<li class="howto__item">
+					<span class="howto__item_title">Обращение за кредитом</span>
+					<p class="howto__item_desc">
+						Вам необходимо подать заявку на сайте burofinance.ru или по телефону с 09:00 до 18:00.
+						Достаточно сообщить имя, контактный номер телефона, сумму кредита и данные о залоговом объекте.
+					</p>
+				</li>
+				<li class="howto__item">
+					<span class="howto__item_title">Проверка и оценка</span>
+					<p class="howto__item_desc">
+						Индивидуальный подход к решению вашей ситуации: менеджеры проверят необходимые документы,
+						осуществят выезд с целью оценки недвижимости, озвучат принятое решение и условия
+					</p>
+				</li>
+				<li class="howto__item">
+					<span class="howto__item_title">Оформление сделки</span>
+					<p class="howto__item_desc">
+						Оформление договора происходит в соответствии с законодательством РФ и регистрацией в Росреестре
+					</p>
+				</li>
+				<li class="howto__item">
+					<span class="howto__item_title">Получение займа</span>
+					<p class="howto__item_desc">
+						Получение денежных средств производится наличными или переводом на расчетный счет. Возможна
+						авансовая выплата.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="consult">
+	<div class="container">
+		<div class="consult__inner">
+			<div class="consult__info">
+				<h2 class="title">Закажите <strong>бесплатную</strong> консультацию прямо сейчас!</h2>
+				<span class="consult__text"> Вам перезвонит кредитный специалист, который: </span>
+				<ul class="consult__list">
+					<li class="consult__list_item">Уточнит Ваши предпочтения по сумме</li>
+					<li class="consult__list_item">Расскажет об условиях займа</li>
+					<li class="consult__list_item">Предложит варианты процентной ставки и сроков погашения</li>
+					<li class="consult__list_item">Ответит на все ваши вопросы</li>
+				</ul>
+				<form action="" class="consult__form">
+					<input type="tel" class="form-input" name="phone" placeholder="Введите телефон" required>
+					<button type="submit" class="form-button">Получить консультацию</button>
+				</form>
+				<span class="consult__label">
+					Нажимая кнопку «Получить консультацию», я даю свое полное согласие на обработку моих персональных данных.
+				</span>
+			</div>
+			<div class="consult__img">
+				<img src="images/dist/manager.png" alt="Закажите бесплатную консультацию прямо сейчас!" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="partners">
+	<div class="container">
+		<div class="partners__inner">
+			<h2 class="title">Банки-партнеры</h2>
+
+		<div class="partners__items">
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+			<div class="partners__item">
+				<img src="images/dist/p-1.png" alt="Сбербанк">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="lic">
+	<div class="container">
+		<div class="lic__inner">
+			<h2 class="title">Сертификаты и лицензии</h2>
+
+			<div class="lic__items">
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+				<a href="" class="lic__item">
+					<img src="images/dist/lic-1.jpg" alt="Сертификат">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="questions">
+	<div class="container">
+		<div class="questions__inner">
+			<h2 class="title">Популярные вопросы</h2>
+
+			<div class="questions__items">
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title">Есть ли минусы у займа под залог?</span>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Популярность такого кредитования ежедневно возрастает. Из недостатков отметим только
+							наложение обременения на имущество. Заемщик остается собственником, может там проживать,
+							делать ремонт или сдавать в аренду.
+						</p>
+					</div>
+				</div>
+
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title"
+							>Хочу приобрести небольшую квартиру для дочери под залог собственного жилья в центре. Мне
+							необходимо оформить два кредита: ипотечный на новую и залоговый на имеющуюся
+							жилплощадь?</span
+						>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Нет, вам не нужно оформлять два кредитных договора. Под залог вашей квартиры вы можете
+							получить до 90% от ее стоимости. Вероятно, что этой суммы хватит для приобретения меньшей
+							площади и ипотека вам не потребуется.
+						</p>
+					</div>
+				</div>
+
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title"
+							>Могу ли я заложить квартиру, в которой не прописан? Квартира сейчас сдается.</span
+						>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Заложить квартиру может только собственник. Если вы являетесь собственником, то никаких
+							препятствий для оформления договора нет.
+						</p>
+					</div>
+				</div>
+
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title"
+							>Кто оценивает стоимость залоговой недвижимости? Что делать, если я не согласен с
+							оценкой?</span
+						>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Оценочные компании. Мы проверяем оценщиков, которые сотрудничают с нам на наличие документов
+							и компетенций. Вы можете сами вызвать специалистов, которые проведут оценку. Вам придется
+							самостоятельно проверять организацию на наличие должных документов и квалификации. Наши
+							эксперты будут учитывать все факторы, которые могут скорректировать итоговую стоимость.
+						</p>
+					</div>
+				</div>
+
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title"
+							>У меня изменились жизненные обстоятельства, и я пока не в состоянии выплачивать заем,
+							который я взял несколько лет назад под залог. Что мне делать?</span
+						>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Рекомендуем в ближайшее время обратиться к нам в офис, совместно найдем подходящий для вас
+							вариант решения данного вопроса. Примеры решения:<br /><br />
+							— предоставление отсрочки по платежам;<br> — увеличение срока кредитования;<br> — временное
+							уменьшение ежемесячных платежей;<br> — рефинансирование.<br /><br />
+							Вместе будем искать подходящий вариант, чтобы вы не потеряли недвижимость.
+						</p>
+					</div>
+				</div>
+
+				<div class="questions__item">
+					<div class="questions__item_header">
+						<span class="questions__item_title"
+							>Что представляют собой договор займа и договор залога?</span
+						>
+						<span class="questions__item_btn">+</span>
+					</div>
+
+					<div class="questions__item_content">
+						<p>
+							Договор займа – это соглашение, где одна сторона передает некую сумму денежных средств на
+							конкретных условиях. Заемщик обязуется вернуть эту сумму в определенный срок.<br /><br />
+							Иногда в качестве залога заемщик предоставляет свое имущество (кредит с обеспечением). В
+							таких случаях составляется договор залога, в котором подробно прописывается, какое имущество
+							и в каком состоянии выступает в качестве залога.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="popups">
+	<div class="popups__bg" aria-disabled="true"></div>
+
+	<div id="feedback" class="popup">
+		<form action="" class="default-form">
+			<span class="default-form__title">
+				Закажите обратный звонок
+			</span>
+			<div class="default-form__fields">
+				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<button type="submit" class="form-button">Заказать звонок</button>
+			</div>
+			<span class="default-form__label">
+				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+			</span>
+		</form>
+	</div>
+
+	<div id="bank" class="popup">
+		<form action="" class="default-form">
+			<span class="default-form__title">
+				Заявка на банковское кредитование
+			</span>
+			<div class="default-form__fields">
+				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<label class="form-input-custom calculator__form" for="">
+					<span>Нужная сумма</span>
+					<input type="text" class="form-input" name="sumBank" required>
+					<div id="sumBank" class="term-slider"></div>
+				</label>
+				<button type="submit" class="form-button">Получить деньги от банка</button>
+			</div>
+			<span class="default-form__label">
+				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+			</span>
+		</form>
+	</div>
+
+	<div id="investor" class="popup">
+		<form action="" class="default-form">
+			<span class="default-form__title">
+				Заявка на кредитование от инвестора
+			</span>
+			<div class="default-form__fields">
+				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<label class="form-input-custom calculator__form" for="">
+					<span>Нужная сумма</span>
+					<input type="text" class="form-input" name="sumInvest" required>
+					<div id="sumInvest" class="term-slider"></div>
+				</label>
+				<button type="submit" class="form-button">Получить деньги от инвестора</button>
+			</div>
+			<span class="default-form__label">
+				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+			</span>
+		</form>
+	</div>
+</section>
+
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+			<div class="footer__logo">
+				<a href="">
+					<img src="images/dist/logo.svg" width="105" height="120" alt="Бюро Финанс">
+				</a>
+				<div class="footer__logo_info">
+					<span class="footer__logo_name">Бюро Финанс</span>
+					<span class="footer__logo_slogan">
+						Сервис подбора выгодного кредита в Москве
+					</span>
+				</div>
+			</div>
+
+			<div class="footer__list_wrapper">
+				<span class="footer__list_title">Деньги под залог</span>
+				<ul class="footer__list">
+					<li class="footer__list_item"><a href="">Загородной недвижимости</a></li>
+					<li class="footer__list_item"><a href="">Коммерческой недвижимости</a></li>
+					<li class="footer__list_item"><a href="">Кредит под залог квартиры</a></li>
+					<li class="footer__list_item"><a href="">Кредит под залог комнаты</a></li>
+					<li class="footer__list_item"><a href="">Кредит под залог доли</a></li>
+					<li class="footer__list_item"><a href="">Кредит под  залог коттеджа</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__contacts">
+				<span class="footer__list_title">Контакты</span>
+
+				<ul class="footer__contacts_list">
+					<li class="footer__contacts_list-item">
+						<img src="images/dist/phone-icon.svg" class="footer__contacts_list-img" alt="+7 (499) 322-99-74">
+						<a href="" class="footer__contacts_list-text"><strong>+7 (499) 322-99-74</strong></a>
+					</li>
+					<li class="footer__contacts_list-item">
+						<img src="images/dist/mail-icon.svg" class="footer__contacts_list-img" alt="Burofinanse@yandex.ru">
+						<a href="" class="footer__contacts_list-text">Burofinanse@yandex.ru</a>
+					</li>
+					<li class="footer__contacts_list-item">
+						<img src="images/dist/loc-icon.svg" class="footer__contacts_list-img" alt="г. Москва, ул. Садовая-сухаревская дом 2/34 с1">
+						<span class="footer__contacts_list-text">г. Москва, ул. Садовая-сухаревская дом 2/34 с1</span>
+					</li>
+				</ul>
+
+				<div class="footer__contacts_button">
+					<button type="button" class="form-button">Обратный звонок</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer__copyright">
+		Copyright
+	</div>
+</footer>
+
+<script src="js/swiper.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.js" integrity="sha512-T5Bneq9hePRO8JR0S/0lQ7gdW+ceLThvC80UjwkMRz+8q+4DARVZ4dqKoyENC7FcYresjfJ6ubaOgIE35irf4w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8-beta.17/jquery.inputmask.min.js" integrity="sha512-zdfH1XdRONkxXKLQxCI2Ak3c9wNymTiPh5cU4OsUavFDATDbUzLR+SYWWz0RkhDmBDT0gNSUe4xrQXx8D89JIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="js/calculator.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

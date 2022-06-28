@@ -1,0 +1,60 @@
+.howto {
+	margin-top: 150px;
+
+	& .title {
+		margin-bottom: 20px;
+	}
+
+	&__subtext {
+		margin-bottom: 45px;
+		max-width: 800px;
+		font-size: 18px;
+		color: #656565;
+		display: block;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 50px 35px;
+		list-style: none;
+		counter-reset: howto-counter;
+	}
+
+	&__item {
+		padding-left: 50px;
+		position: relative;
+		counter-increment: howto-counter;
+
+		&::before {
+			position: absolute;
+			content: counter(howto-counter);
+			width: 35px;
+			height: 35px;
+			background-color: $blue;
+			font-weight: 700;
+			color: $white;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 100%;
+			left: 0;
+			top: -5px;
+			border: 3px solid $white;
+			box-shadow: 0 0 0 1px $blue;
+		}
+
+		&_title {
+			font-weight: 700;
+			font-size: 16px;
+			margin-bottom: 10px;
+			color: $blue;
+			display: block;
+		}
+
+		&_desc {
+			line-height: 1.5;
+			color: #656565;
+		}
+	}
+}

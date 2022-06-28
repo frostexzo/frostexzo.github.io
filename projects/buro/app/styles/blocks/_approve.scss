@@ -1,0 +1,50 @@
+.approve {
+	margin-top: 130px;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		max-width: 550px;
+		margin-right: 55px;
+
+		& .title {
+			margin-bottom: 40px;
+		}
+
+		&_text {
+			color: #656565;
+			line-height: 1.5;
+
+			& p {
+				&:not(:last-child) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		list-style: none;
+		grid-gap: 20px 27px;
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		padding: 7px;
+		background-color: $white;
+		box-shadow: 0px 10px 20px rgba(224, 224, 224, 0.29);
+		border-radius: 20px;
+
+		& span {
+			font-size: 18px;
+			margin-left: 20px;
+			line-height: 1.3;
+		}
+	}
+}

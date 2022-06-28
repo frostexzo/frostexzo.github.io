@@ -1,4 +1,4 @@
-main:not(.mobile) {
+main:not(.mobile):not(.single) {
 	padding-top: 100px;
 }
 

@@ -164,12 +164,13 @@
 						<a href="" class="header__nav_link">Компании</a>
 						<a href="" class="header__nav_link">Навыки</a>
 						<a href="" class="header__nav_link">Опыт</a>
+						<a href="" class="header__nav_link">Отзывы</a>
 					</nav>
 				</div>
 			</div>
 		</header>
 
-<main class="mobile">
+<main class="single">
 <section class="devpage">
 	<div class="container">
 		<h1 class="devpage__title">Кейс в разработке</h1>
@@ -193,15 +194,16 @@
 					<span>Контакты</span>
 				</div>
 
-				<form @input.debounce="checkContactForm" action="" method="POST" class="popup-contacts__form">
+				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
 					<input
 						class="popup__input"
 						type="text"
+						name="fio"
 						placeholder="Представьтесь (ФИО / Компания)"
 						required
 					/>
-					<input class="popup__input" type="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение"></textarea>
+					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
+					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
 				</form>
 			</div>

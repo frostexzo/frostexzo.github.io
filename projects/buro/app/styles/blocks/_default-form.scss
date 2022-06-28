@@ -1,0 +1,32 @@
+.default-form {
+	padding: 40px;
+	background-color: $blue;
+	box-shadow: 0px 0px 30px rgba(98, 98, 98, 0.11);
+	border-radius: 30px;
+	width: 100%;
+	max-width: 440px;
+
+	&__title {
+		color: $white;
+		margin-bottom: 20px;
+		line-height: 1.1;
+		font-size: 24px;
+		display: block;
+	}
+
+	&__fields {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 20px;
+
+		& .form-button {
+			margin-top: 0;
+		}
+	}
+
+	&__label {
+		color: rgba(255, 255, 255, 0.7);
+		font-size: 12px;
+		line-height: 1.6;
+	}
+}

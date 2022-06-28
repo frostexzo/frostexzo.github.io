@@ -137,6 +137,12 @@
 					</nav>
 				</div>
 			</div>
+
+			<div class="notifications" @click="hideNotification(event.target)">
+				<div class="notifications__item">Сообщение отправлено! Спасибо :3</div>
+				<div class="notifications__item">Скоро отвечу Вам 😇</div>
+				<div class="notifications__item">Хорошего дня)</div>
+			</div>
 		</header>
 
 
@@ -993,15 +999,16 @@
 					<span>Контакты</span>
 				</div>
 
-				<form @input.debounce="checkContactForm" action="" method="POST" class="popup-contacts__form">
+				<form @input.debounce="checkContactForm" @submit.prevent="formHandler(event.target)" action="" method="POST" class="popup-contacts__form">
 					<input
 						class="popup__input"
 						type="text"
+						name="fio"
 						placeholder="Представьтесь (ФИО / Компания)"
 						required
 					/>
-					<input class="popup__input" type="email" placeholder="Ваш e-mail для обратной связи" required />
-					<textarea class="popup__input" rows="5" placeholder="Введите ваше сообщение"></textarea>
+					<input class="popup__input" type="email" name="email" placeholder="Ваш e-mail для обратной связи" required />
+					<textarea class="popup__input" rows="5" name="message" placeholder="Введите ваше сообщение"></textarea>
 					<button type="submit" class="popup__submit"><span class="gradient-text">Нанять меня</span></button>
 				</form>
 			</div>

@@ -89,19 +89,47 @@ const app = () => {
 				button.classList.remove("filled");
 			}
 		},
+
+		hideNotification(elem) {
+			if (!elem.classList.contains("notifications__item")) return;
+			elem.classList.remove("active");
+		},
+
+		formHandler(elem) {
+			console.log(elem);
+			const request = new XMLHttpRequest();
+
+			request.onreadystatechange = () => {
+				if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+					this.popup = null;
+
+					const notifications = document.querySelectorAll(".notifications__item");
+					for (let i = 0; i < notifications.length; i++) {
+						setTimeout(() => {
+							notifications[i].classList.add("active");	
+						}, i * 1000);
+						
+					}
+				}
+			};
+
+			request.open("POST", elem.action, true);
+
+			const data = new FormData(elem);
+			request.send(data);
+		},
 	};
 };
 
 document.addEventListener("DOMContentLoaded", () => {
 	const vh = window.innerHeight * 0.01;
 	document.documentElement.style.setProperty("--vh", `${vh}px`);
-	
+
 	window.addEventListener("resize", () => {
 		const vh = window.innerHeight * 0.01;
 		document.documentElement.style.setProperty("--vh", `${vh}px`);
 	});
-})
-
+});
 
 if (window.innerWidth > 1000) {
 	const header = document.querySelector(".header");

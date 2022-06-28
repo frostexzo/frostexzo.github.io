@@ -1,0 +1,44 @@
+.features {
+	margin-top: 110px;
+
+	& .title {
+		margin-bottom: 40px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 20px 90px;
+		list-style: none;
+	}
+
+	&__img {
+		width: 77px;
+		height: 77px;
+		display: flex;
+		align-items: center;
+		padding: 20px;
+		justify-content: center;
+		background: $white;
+		border-radius: 100%;
+		box-shadow: 0 15px 20px rgba(17, 116, 157, 0.03);
+		margin-bottom: 15px;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+
+		&_title {
+			color: $blue;
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 15px;
+			display: block;
+		}
+
+		&_desc {
+			color: $gray7;
+		}
+	}
+}
