@@ -6,8 +6,14 @@
 		<meta name="description" content="description" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<link rel="preload" href="js/swiper.js" as="script" />
-		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet"/>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css" integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+		<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.1/nouislider.min.css"
+			integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<link rel="preload" href="./fonts/OpenSans-Regular.woff" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="./fonts/OpenSans-SemiBold.woff2" as="font" crossorigin="anonymous" />
 		<link rel="preload" href="./fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" />
@@ -35,19 +41,33 @@
 						<div class="nav__item">
 							<span class="nav__item_label mark" aria-disabled>Кредиты под залог</span>
 							<ul class="nav__item_menu">
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
 							</ul>
 						</div>
 						<div class="nav__item"><a href="" class="nav__item_label">Калькулятор</a></div>
 						<div class="nav__item">
 							<span class="nav__item_label mark" aria-disabled>Информация</span>
 							<ul class="nav__item_menu">
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
-								<li class="nav__item_menu-item"><a href="" class="nav__item_menu-label">Кредиты под залог</a></li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
+								<li class="nav__item_menu-item">
+									<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+								</li>
 								<li class="nav__item_menu-item mark">
 									<span class="nav__item_menu-label mark">Полезная информация</span>
 									<div class="nav__item_menu-sub">
@@ -62,13 +82,19 @@
 
 					<div class="header__contacts">
 						<a href="tel:88005551368" class="header__contacts_tel">8-800-555-13-68</a>
-						<button type="button" class="header__contacts_btn">Заказать звонок</button>
+					</div>
+
+					<div class="header__burger">
+						<button type="button">
+							<img src="./images/dist/burger.svg" width="30" height="30" alt="Меню" />
+						</button>
 					</div>
 				</div>
 			</div>
 		</header>
 
 
+<main>
 <section class="hero">
 	<div class="container">
 		<div class="hero__inner">
@@ -92,7 +118,7 @@
 				<span class="hero__form_title">Заявка на деньги</span>
 
 				<form action="" class="hero__form_fields">
-					<input type="text" class="form-input" name="name" placeholder="Как к Вам обращаться" required>
+					<input type="text" class="form-input" name="name" placeholder="Как к Вам обращаться">
 					<input type="tel" class="form-input" name="phone" placeholder="Введите телефон" required>
 					<label class="form-input-custom calculator__form" for="">
 						<span>Нужная сумма</span>
@@ -141,7 +167,7 @@
 				</li>
 				<li class="targets__item">
 					<img src="images/dist/t-7.svg" width="50" height="50" alt="" />
-					<span>Ремонт/строительство</span>
+					<span>Ремонт / строительство</span>
 				</li>
 				<li class="targets__item">
 					<img src="images/dist/t-8.svg" width="50" height="50" alt="" />
@@ -281,134 +307,145 @@
 	<div class="container">
 		<div class="compare__inner">
 			<h2 class="title">Особенности займа в банках и у частных инвесторов</h2>
-			<div class="compare__table">
-				<div class="compare__table_col">
-					<div class="compare__table_row">
-						<div>Сумма кредитования</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Ставка</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Доля кредита от оценочной <br />стоимости недвижимого имущества</div>
-					</div>
-					<div class="compare__table_row compare__table_row--double">
-						<div>Подтверждение <br />платежеспособности, справки</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Привлечение поручителей</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Кредитная история</div>
-					</div>
-					<div class="compare__table_row compare__table_row--double">
-						<div>Требования к заёмщикам</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Запрашиваемые документы</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Рассмотрение заявки</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Условия погашения</div>
-					</div>
-					<div class="compare__table_row">
-						<div>Аванс</div>
-					</div>
-				</div>
-				<div class="compare__table_subtable">
-					<div class="compare__table_subcol">
-						<div class="compare__table_row compare__table_row--header">
-							<div>БАНК</div>
+			<div class="compare__table_wrapper">
+				<div class="compare__table">
+					<div class="compare__table_col">
+						<div class="compare__table_row">
+							<div>Сумма кредитования</div>
 						</div>
 						<div class="compare__table_row">
-							<div>до 150 млн. руб.</div>
-						</div>
-						<div class="compare__table_row">
-							<div>от 9%</div>
-						</div>
-						<div class="compare__table_row">
-							<div>до 70%</div>
+							<div>Ставка</div>
 						</div>
 						<div class="compare__table_row compare__table_row--double">
-							<div>необходимы</div>
-						</div>
-						<div class="compare__table_row">
-							<div>возможно</div>
-						</div>
-						<div class="compare__table_row">
-							<div>положительная</div>
+							<div>Доля кредита от оценочной <br />стоимости недвижимого имущества</div>
 						</div>
 						<div class="compare__table_row compare__table_row--double">
-							<div>
-								трудовой стаж на последнем месте <br />работы от трех месяцев, возраст 21 – 60 лет
+							<div>Подтверждение <br />платежеспособности, справки</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Привлечение поручителей</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Кредитная история</div>
+						</div>
+						<div class="compare__table_row compare__table_row--double">
+							<div>Требования к заёмщикам</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Запрашиваемые документы</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Рассмотрение заявки</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Условия погашения</div>
+						</div>
+						<div class="compare__table_row">
+							<div>Аванс</div>
+						</div>
+					</div>
+					<div class="compare__table_subtable-wrapper">
+						<div class="compare__table_subtable">
+							<div class="compare__table_subcol">
+								<div class="compare__table_row compare__table_row--header">
+									<div>БАНК</div>
+								</div>
+								<div class="compare__table_row">
+									<div>до 150 млн. руб.</div>
+								</div>
+								<div class="compare__table_row">
+									<div>от 9%</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>до 70%</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>необходимы</div>
+								</div>
+								<div class="compare__table_row">
+									<div>возможно</div>
+								</div>
+								<div class="compare__table_row">
+									<div>положительная</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>
+										трудовой стаж на последнем месте <br />работы от трех месяцев, возраст 21 – 60
+										лет
+									</div>
+								</div>
+								<div class="compare__table_row">
+									<div>от 9</div>
+								</div>
+								<div class="compare__table_row">
+									<div>до двух дней</div>
+								</div>
+								<div class="compare__table_row">
+									<div>стандартные</div>
+								</div>
+								<div class="compare__table_row">
+									<div>отсутствует</div>
+								</div>
+								<div class="compare__table_row compare__table_row--button">
+									<button type="button" class="form-button" id="bank-btn">
+										Получить деньги от банка
+									</button>
+								</div>
 							</div>
-						</div>
-						<div class="compare__table_row">
-							<div>от 9</div>
-						</div>
-						<div class="compare__table_row">
-							<div>до двух дней</div>
-						</div>
-						<div class="compare__table_row">
-							<div>стандартные</div>
-						</div>
-						<div class="compare__table_row">
-							<div>отсутствует</div>
-						</div>
-						<div class="compare__table_row compare__table_row--button">
-							<button type="button" class="form-button" id="bank-btn">Получить деньги от банка</button>
-						</div>
-					</div>
-					<div class="compare__table_subcol">
-						<div class="compare__table_row compare__table_row--header">
-							<div>ЧАСТНЫЕ ИНВЕСТОРЫ</div>
-						</div>
-						<div class="compare__table_row">
-							<div>до 150 млн. руб.</div>
-						</div>
-						<div class="compare__table_row">
-							<div>от 8%</div>
-						</div>
-						<div class="compare__table_row">
-							<div>до 90%</div>
-						</div>
-						<div class="compare__table_row compare__table_row--double">
-							<div>не требуется</div>
-						</div>
-						<div class="compare__table_row">
-							<div>не требуется</div>
-						</div>
-						<div class="compare__table_row">
-							<div>любая</div>
-						</div>
-						<div class="compare__table_row compare__table_row--double">
-							<div>граждане РФ в возрасте от 18 до 75 лет</div>
-						</div>
-						<div class="compare__table_row">
-							<div>4 документа</div>
-						</div>
-						<div class="compare__table_row">
-							<div>15 мин – 1 час</div>
-						</div>
-						<div class="compare__table_row">
-							<div>индивидуальные</div>
-						</div>
-						<div class="compare__table_row">
-							<div>до 30 %</div>
-						</div>
-						<div class="compare__table_row compare__table_row--button">
-							<button type="button" class="form-button" id="invest-btn">Получить деньги от инвестора</button>
+							<div class="compare__table_subcol">
+								<div class="compare__table_row compare__table_row--header">
+									<div>ЧАСТНЫЕ ИНВЕСТОРЫ</div>
+								</div>
+								<div class="compare__table_row">
+									<div>до 150 млн. руб.</div>
+								</div>
+								<div class="compare__table_row">
+									<div>от 8%</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>до 90%</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>не требуется</div>
+								</div>
+								<div class="compare__table_row">
+									<div>не требуется</div>
+								</div>
+								<div class="compare__table_row">
+									<div>любая</div>
+								</div>
+								<div class="compare__table_row compare__table_row--double">
+									<div>граждане РФ в возрасте от 18 до 75 лет</div>
+								</div>
+								<div class="compare__table_row">
+									<div>4 документа</div>
+								</div>
+								<div class="compare__table_row">
+									<div>15 мин – 1 час</div>
+								</div>
+								<div class="compare__table_row">
+									<div>индивидуальные</div>
+								</div>
+								<div class="compare__table_row">
+									<div>до 30 %</div>
+								</div>
+								<div class="compare__table_row compare__table_row--button">
+									<button type="button" class="form-button" id="invest-btn">
+										Получить деньги от инвестора
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<div class="compare__info">
-				<img src="images/dist/compare-icon.svg" width="51" height="51" alt="">
-				<p>Заём в Москве под залог ликвидной недвижимости (жилой или коммерческой) у частного инвестора - 
-					оптимальное решение, если у вас нет времени на ожидание одобрения и сбор всех документов.</p>
+				<img src="images/dist/compare-icon.svg" width="51" height="51" alt="" />
+				<p>
+					Заём в Москве под залог ликвидной недвижимости (жилой или коммерческой) у частного инвестора -
+					оптимальное решение, если у вас нет времени на ожидание одобрения и сбор всех документов.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -749,7 +786,7 @@
 				</span>
 				<div class="default-form__fields">
 					<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
-					<input type="tel" class="form-input" required placeholder="Введите телефон">
+					<input type="tel" class="form-input" required placeholder="Введите телефон" name="phone">
 					<button type="submit" class="form-button">Заказать оценку</button>
 				</div>
 				<span class="default-form__label">
@@ -1063,7 +1100,7 @@
 				</span>
 				<div class="default-form__fields">
 					<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
-					<input type="tel" class="form-input" required placeholder="Введите телефон">
+					<input type="tel" class="form-input" required placeholder="Введите телефон" name="phone">
 					<button type="submit" class="form-button">Получить деньги</button>
 				</div>
 				<span class="default-form__label">
@@ -1347,8 +1384,8 @@
 				Закажите обратный звонок
 			</span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
 				<button type="submit" class="form-button">Заказать звонок</button>
 			</div>
 			<span class="default-form__label">
@@ -1363,8 +1400,8 @@
 				Заявка на банковское кредитование
 			</span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
 				<label class="form-input-custom calculator__form" for="">
 					<span>Нужная сумма</span>
 					<input type="text" class="form-input" name="sumBank" required>
@@ -1384,8 +1421,8 @@
 				Заявка на кредитование от инвестора
 			</span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" required placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
 				<label class="form-input-custom calculator__form" for="">
 					<span>Нужная сумма</span>
 					<input type="text" class="form-input" name="sumInvest" required>
@@ -1398,8 +1435,63 @@
 			</span>
 		</form>
 	</div>
-</section>
 
+	<div class="header__menu">
+		<!-- noindex -->
+		<a href="" class="header__logo">
+			<img src="images/dist/logo.svg" width="64" height="73" alt="Buro Finance" />
+			<span>Бюро Финанс</span>
+		</a>
+		
+		<nav class="nav">
+			<div class="nav__item nav__item--active">
+				<a href="" class="nav__item_label">Главная</a>
+			</div>
+			<div class="nav__item">
+				<span class="nav__item_label mark" aria-disabled>Кредиты под залог</span>
+				<ul class="nav__item_menu">
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+				</ul>
+			</div>
+			<div class="nav__item"><a href="" class="nav__item_label">Калькулятор</a></div>
+			<div class="nav__item">
+				<span class="nav__item_label mark" aria-disabled>Информация</span>
+				<ul class="nav__item_menu">
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item">
+						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+					</li>
+					<li class="nav__item_menu-item mark">
+						<span class="nav__item_menu-label mark">Полезная информация</span>
+						<div class="nav__item_menu-sub">
+							<a href="" class="nav__item_menu-label">Статьи</a>
+							<a href="" class="nav__item_menu-label">Новости</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="nav__item"><a href="" class="nav__item_label">Контакты</a></div>
+		</nav>
+		<!-- /noindex -->
+	</div>
+</section>
+</main>
 
 <footer class="footer">
 	<div class="container">
