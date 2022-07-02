@@ -94,3 +94,29 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1000px) {
+	.blog {
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.blog {
+		margin-top: 60px;
+
+		&__title {
+			margin-bottom: 30px;
+
+			& hr {
+				margin-left: 20px;
+			}
+		}
+
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+}
