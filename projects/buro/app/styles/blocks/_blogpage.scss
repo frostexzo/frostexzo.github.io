@@ -1,0 +1,34 @@
+.blogpage {
+	margin-top: 70px;
+
+	& .title {
+		margin-bottom: 20px;
+		font-size: 40px;
+		line-height: 1.2;
+	}
+
+	&__date {
+		color: #888;
+		font-size: 18px;
+	}
+
+	&__content {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 1.8;
+	}
+}
+
+.readmore {
+	margin-top: 50px;
+
+	& .title {
+		margin-bottom: 60px;
+		font-size: 30px;
+	}
+
+	&__inner {
+		border-top: 2px solid #E8E8E8;
+		padding-top: 50px;
+	}
+}

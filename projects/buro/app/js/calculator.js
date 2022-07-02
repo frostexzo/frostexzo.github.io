@@ -471,7 +471,7 @@ $(document).ready(function () {
 	}
 
 	//popup
-	$(".btn-popup").click(function (e) {
+	$(".form-button--dark").click(function (e) {
 		e.preventDefault();
 		openGraphic();
 		$(".layer").fadeIn(300);
@@ -496,5 +496,5 @@ $(document).ready(function () {
 	});
 
 	//mask
-	$("input[name=phone]").inputmask("+7 (999) 999-9999");
+	$("input[name=phone]").inputmask("+9 (999) 999-9999");
 });

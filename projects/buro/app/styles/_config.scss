@@ -191,23 +191,28 @@ input[type="checkbox"] {
 
 	&-button {
 		margin-top: 10px;
-		background: $yellow-gradient;
+		background-color: $yellow;
 		box-shadow: $btn-shadow;
 		color: $black;
-		font-weight: 700;
+		font-weight: 400;
 		border-radius: 18px;
 		padding: 18px 32px;
 		font-size: 18px;
-		transition: box-shadow .2s ease;
+		transition: box-shadow .2s ease, background-color .2s ease;
 
 		&:hover, &:focus {
 			box-shadow: none;
+			background-color: lighten($yellow, 10%);
 		}
 
 		&--dark {
-			background: #999999;
+			background: #999;
 			color: $white;
 			border: 1px solid $yellow;
+
+			&:hover, &:focus {
+				background-color: darken(#999, 5%);
+			}
 		}
 	}
 }

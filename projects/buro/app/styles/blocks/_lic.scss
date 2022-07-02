@@ -19,3 +19,35 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1100px) {
+	.lic {
+		&__items {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
+		&__item {
+			& img {
+				height: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.lic {
+		&__items {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.lic {
+		margin-top: 80px;
+
+		&__items {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

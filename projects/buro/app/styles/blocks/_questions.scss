@@ -53,3 +53,32 @@
 		}
 	}
 }
+
+@media screen and (max-width: 700px) {
+	.questions {
+		&__item {
+			&_header {
+				padding: 30px;
+			}
+			&_title {
+				font-size: 16px;
+			}
+		}
+	}	
+}
+
+@media screen and (max-width: 550px) {
+	.questions {
+		margin-top: 80px;
+
+		&__item {
+			&_header {
+				padding: 20px;
+			}
+			&_title {
+				font-size: 14px;
+				padding-right: 15px;
+			}
+		}
+	}	
+}

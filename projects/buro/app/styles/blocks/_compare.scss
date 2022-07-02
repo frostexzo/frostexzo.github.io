@@ -19,6 +19,11 @@
 			text-align: center;
 			display: flex;
 
+			&-wrapper {
+				width: 100%;
+				max-width: 795px;
+			}
+
 			& .compare__table_row {
 				&:not(:nth-last-child(-n + 2)) {
 					border-bottom: 0.5px solid rgba(100, 100, 100, 0.1);
@@ -56,7 +61,7 @@
 
 				& .form-button {
 					position: absolute;
-					font-weight: 600;
+					font-weight: 400;
 					top: 30px;
 					left: 50%;
 					transform: translateX(-50%);
@@ -107,6 +112,182 @@
 			font-size: 19px;
 			line-height: 1.1;
 			max-width: 960px;
+		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.compare {
+		&__table {
+			& br {
+				display: none;
+			}
+
+			&_col {
+				& .compare__table_row {
+					font-size: 14px;
+				}
+				padding-bottom: 40px;
+				min-width: 200px;
+				margin-right: 15px;
+			}
+
+			&_row {
+				height: 32px;
+				font-size: 14px;
+				padding: 5px;
+
+				&--double {
+					height: 60px;
+				}
+
+				&--button {
+					& .form-button {
+						font-size: 16px;
+						max-width: 290px;
+					}
+				}
+			}
+
+			&_subtable {
+				padding: 18px 20px;
+				padding-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.compare {
+		&__table {
+			position: relative;
+
+			&_col {
+				max-width: 200px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background-color: #fcfcfc;
+				height: 100%;
+				z-index: 1;
+				padding-bottom: 0;
+				justify-content: flex-start;
+				padding-top: 50px;
+			}
+
+			&_row {
+				font-size: 12px;
+
+				&--header {
+					margin-bottom: 0;
+				}
+
+				&--button {
+					& .form-button {
+						top: 10px;
+					}
+				}
+			}
+
+			&_subcol {
+				max-width: 320px;
+			}
+
+			&_subtable {
+				min-width: max-content;
+				padding: 18px 10px;
+				padding-bottom: 80px;
+
+				&-wrapper {
+					padding-left: 200px;
+					overflow-x: auto;
+					overflow-y: hidden;
+				}
+			}
+		}
+
+		& .container {
+			padding-right: 0;
+		}
+
+		& .title {
+			padding-right: 15px;
+		}
+
+		& .compare__info {
+			margin-right: 15px;
+		}
+	}
+	.compare__table_col .compare__table_row {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.compare {
+		&__info {
+			margin-top: 60px;
+
+			& p {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.compare {
+		margin-top: 80px;
+
+		& .title {
+			margin-bottom: 40px;
+		}
+
+		&__table {
+			&_col {
+				min-width: 130px;
+				max-width: 130px;
+				& .compare__table_row {
+					font-size: 11px;
+				}
+			}
+
+			&_subtable {
+				&-wrapper {
+					padding-left: 140px;
+				}
+			}
+
+			&_subcol {
+				max-width: 240px;
+			}
+
+			&_row {
+				&--button {
+					& .form-button {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+
+		& .compare__info {
+			flex-direction: column;
+			position: relative;
+
+			& p {
+				margin-left: 0;
+				margin-top: 20px;
+			}
+
+			& img {
+				position: absolute;
+				left: 50%;
+				border-radius: 100%;
+				top: -27px;
+				background-color: #fff;
+				transform: translateX(-50%);
+			}
 		}
 	}
 }

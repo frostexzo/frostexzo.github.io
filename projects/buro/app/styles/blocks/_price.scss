@@ -48,3 +48,51 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 1000px) {
+	.price {
+		&__info {
+			padding: 30px;
+		}
+
+		& .default-form {
+			padding: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.price {
+		padding: 40px 0;
+
+		&__inner {
+			flex-direction: column;
+		}
+
+		& .default-form {
+			max-width: none;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.price {
+		& .title {
+			font-size: 20px;
+		}
+
+		&__info {
+			padding: 30px 20px;
+		}
+
+		& .default-form {
+			padding: 30px 20px;
+
+			&__title {
+				font-size: 20px;
+				text-align: center;
+			}
+		}
+	}
+}

@@ -64,3 +64,31 @@
 		}
 	}
 }
+
+@media screen and (max-width: 1050px) {
+	.company {
+		&__items {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.company {
+		&__info {
+			&_desc {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.company {
+		margin-top: 60px;
+		
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+}

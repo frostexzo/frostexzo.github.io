@@ -63,9 +63,10 @@
 
 			& a {
 				color: $gray7;
-				transition: color .2s ease;
+				transition: color 0.2s ease;
 
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					color: $blue;
 				}
 			}
@@ -92,14 +93,15 @@
 				& strong {
 					font-weight: 600;
 					color: $black;
-					transition: color .2s ease;
+					transition: color 0.2s ease;
 				}
 			}
 
 			&-text {
-				transition: color .2s ease;
+				transition: color 0.2s ease;
 
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					color: $blue;
 
 					& strong {
@@ -114,7 +116,53 @@
 				top: 0;
 			}
 		}
+	}
+}
 
+@media screen and (max-width: 1200px) {
+	.footer {
+		&__contacts {
+			max-width: 300px;
+		}
+	}
+}
 
+@media screen and (max-width: 1000px) {
+	.footer {
+		&__inner {
+			flex-direction: column;
+		}
+
+		&__list {
+			&_wrapper {
+				margin-top: 40px;
+			}
+		}
+
+		&__contacts {
+			margin-top: 40px;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.footer {
+		&__contacts {
+			max-width: none;
+			&_button {
+				.form-button {
+					width: 100%;
+					max-width: none;
+				}
+			}
+		}
+		&__list {
+			&_wrapper {
+				max-width: none;
+			}
+		}
+		&__logo {
+			max-width: none;
+		}
 	}
 }

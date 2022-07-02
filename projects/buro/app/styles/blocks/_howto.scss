@@ -58,3 +58,27 @@
 		}
 	}
 }
+
+@media screen and (max-width: 800px) {
+	.howto {
+		&__items {
+			grid-template-columns: 1fr;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.howto {
+		margin-top: 80px;
+
+		&__items {
+			grid-gap: 30px;
+		}
+
+		&__item {
+			&_desc {
+				font-size: 14px;
+			}
+		}
+	}
+}

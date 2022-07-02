@@ -118,6 +118,11 @@ if (slider) {
 	})
 }
 
+const menu = document.querySelector(".header__menu");
+const burgerBtn = document.querySelector(".header__burger");
+const navBtn = document.querySelectorAll(".header__menu .nav__item_label.mark");
+const navSubBtn = document.querySelectorAll(".header__menu .nav__item_menu-item.mark");
+
 const popupsBg = document.querySelector(".popups__bg");
 const popupFeedback = document.getElementById("feedback");
 const popupBank = document.getElementById("bank");
@@ -127,10 +132,34 @@ const btnsFeedbackPopup = document.querySelectorAll(".footer__contacts_button bu
 const btnBankPopup = document.getElementById("bank-btn");
 const btnInvestPopup = document.getElementById("invest-btn");
 
+if (burgerBtn) {
+	burgerBtn.addEventListener("click", () => {
+		menu.classList.add("header__menu--active");
+		popupsBg.classList.add("popups__bg--active");
+	})
+}
+
+if (navBtn.length > 0) {
+	navBtn.forEach(btn => {
+		btn.addEventListener("click", () => {
+			const navItem = btn.closest(".nav__item");
+			const navMenu = navItem.querySelector(".nav__item_menu");
+			slideToggle(navMenu);
+		})
+	})
+	navSubBtn.forEach(btn => {
+		btn.addEventListener("click", () => {
+			const navMenu = btn.querySelector(".nav__item_menu-sub");
+			slideToggle(navMenu);
+		})
+	})
+}
+
 if (popupsBg) {
 	popupsBg.addEventListener("click", () => {
 		const popups = document.querySelectorAll(".popup");
 		popupsBg.classList.remove("popups__bg--active");
+		menu.classList.remove("header__menu--active");
 		for (let i = 0; i < popups.length; i++) {
 			popups[i].classList.remove("popup--active");
 		}

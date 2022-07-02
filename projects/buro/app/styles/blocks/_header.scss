@@ -1,5 +1,11 @@
 .header {
 	background-color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	box-shadow: 0 0.625rem 1.25rem rgba(224, 224, 224, 0.29);
 
 	&__inner {
 		display: flex;
@@ -12,7 +18,8 @@
 		display: flex;
 		align-items: center;
 
-		&:hover span, &:focus span {
+		&:hover span,
+		&:focus span {
 			color: $blue;
 		}
 
@@ -32,10 +39,11 @@
 		&_tel {
 			font-weight: 600;
 			color: $black;
-			font-size: 18px;
-			transition: color .2s ease;
+			font-size: 20px;
+			transition: color 0.2s ease;
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus {
 				color: $blue;
 			}
 		}
@@ -43,12 +51,18 @@
 		&_btn {
 			color: $blue;
 			border-bottom: 1px solid $blue;
-			transition: border-color .2s ease;
+			transition: border-color 0.2s ease;
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus {
 				border-color: transparent;
 			}
 		}
+	}
+
+	&__menu,
+	&__burger {
+		display: none;
 	}
 }
 
@@ -64,6 +78,20 @@
 		&--active > .nav__item_label {
 			font-weight: 600;
 			color: $blue;
+			position: relative;
+
+			&::after {
+				pointer-events: none;
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: -5px;
+				height: 2px;
+				background-color: $blue;
+				width: 100%;
+				z-index: 5;
+				opacity: 1;
+			}
 		}
 
 		&_label {
@@ -90,8 +118,27 @@
 				}
 			}
 
-			&:hover, &:focus {
+			&::after {
+				pointer-events: none;
+				position: absolute;
+				content: "";
+				left: 0;
+				bottom: -5px;
+				height: 2px;
+				background-color: $blue;
+				width: 0;
+				transition: width 0.2s ease;
+				z-index: 5;
+			}
+
+			&:hover,
+			&:focus {
 				color: $blue;
+
+				&::after {
+					opacity: 1;
+					width: 100%;
+				}
 			}
 		}
 
@@ -99,7 +146,8 @@
 			margin-right: 20px;
 		}
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			& .nav__item_menu {
 				opacity: 1;
 				visibility: visible;
@@ -115,12 +163,12 @@
 			left: 0;
 			position: absolute;
 			list-style: none;
-			padding: 25px 15px;
-			padding-top: 55px;
+			padding: 20px;
 			background-color: $white;
 			opacity: 0;
 			visibility: collapse;
 			transition: opacity 0.2s ease, visibility 0.2s ease;
+			box-shadow: 0 0.625rem 1.25rem rgba(224, 224, 224, 0.29);
 
 			&-label {
 				font-size: 18px;
@@ -146,7 +194,8 @@
 					}
 				}
 
-				&:hover, &:focus {
+				&:hover,
+				&:focus {
 					color: $blue;
 				}
 			}
@@ -155,7 +204,8 @@
 				&.mark {
 					position: relative;
 
-					&:hover, &:focus {
+					&:hover,
+					&:focus {
 						& .nav__item_menu-sub {
 							opacity: 1;
 							visibility: visible;
@@ -170,14 +220,239 @@
 				background-color: #fff;
 				padding: 15px;
 				position: absolute;
-				right: -285px;
+				right: -280px;
 				bottom: -50px;
 				min-width: 230px;
 				width: 100%;
 				opacity: 0;
 				visibility: collapse;
+				box-shadow: 0 0.625rem 1.25rem rgba(224, 224, 224, 0.29);
 				transition: opacity 0.4s ease, visibility 0.4s ease;
 			}
 		}
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.nav {
+		&__item {
+			font-size: 16px;
+
+			&_label {
+				font-size: 16px;
+			}
+
+			&_menu {
+				&-label {
+					font-size: 16px;
+				}
+
+				&-sub {
+					right: auto;
+					left: -280px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.nav {
+		display: none;
+	}
+	.header {
+		&__contacts {
+			margin-left: auto;
+			margin-right: 20px;
+		}
+
+		&__burger {
+			display: flex;
+
+			& button {
+				display: flex;
+			}
+		}
+
+		&__logo {
+			& img {
+				height: auto;
+				max-width: 50px;
+			}
+		}
+
+		&__menu {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			top: 0;
+			left: 0;
+			background-color: $white;
+			width: 40%;
+			height: 100%;
+			padding: 15px;
+			z-index: 500;
+			opacity: 0;
+			visibility: collapse;
+			transform: translateX(-100%);
+			transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+			box-shadow: 0 0.625rem 1.25rem rgba(224, 224, 224, 0.29);
+
+			&--active {
+				opacity: 1;
+				visibility: visible;
+				transform: translateX(0);
+			}
+
+			& .header__logo {
+				margin-bottom: 40px;
+			}
+
+			& .nav {
+				flex-direction: column;
+				display: flex;
+				align-items: flex-start;
+				width: 100%;
+
+				&__item {
+					font-size: 20px;
+					margin-right: 0;
+
+					&_label {
+						font-size: 20px;
+					}
+
+					&:not(:last-child) {
+						margin-bottom: 15px;
+					}
+
+					&_menu {
+						display: none;
+						top: auto;
+						left: auto;
+						position: initial;
+						padding: 15px;
+						min-width: auto;
+
+						&-sub {
+							display: none;
+							top: auto;
+							left: auto;
+							right: auto;
+							bottom: auto;
+							position: initial;
+							padding: 15px;
+							min-width: auto;
+
+							& .nav__item_menu-label {
+								font-size: 16px;
+
+								&:not(:last-child) {
+									margin-bottom: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.header__menu .nav__item .nav__item_menu,
+	.header__menu .nav__item .nav__item_menu {
+		opacity: 1;
+		visibility: visible;
+	}
+	.nav__item_menu-item.mark .nav__item_menu-sub,
+	.nav__item_menu-item.mark .nav__item_menu-sub {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.header {
+		&__menu {
+			width: 260px;
+
+			& .nav {
+				&__item {
+					&:not(:last-child) {
+						margin-bottom: 5px;
+					}
+
+					&_label {
+						font-size: 16px;
+					}
+
+					&_menu {
+						padding: 10px;
+
+						&-sub {
+							padding: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.header {
+		&__logo {
+			& span {
+				font-size: 14px;
+			}
+
+			& img {
+				max-width: 40px;
+			}
+		}
+
+		&__contacts {
+			margin-right: 10px;
+			&_tel {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 359px) {
+	.header {
+		&__logo {
+			& span {
+				display: none;
+			}
+		}
+
+		&__contacts {
+			margin-right: 15px;
+			&_tel {
+				font-size: 18px;
+			}
+		}
+
+		&__menu {
+			& .header__logo {
+				& span {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+main {
+	padding-top: 103px;
+}
+@media screen and (max-width: 1050px) {
+	main {
+		padding-top: 87px;
+	}
+}
+@media screen and (max-width: 550px) {
+	main {
+		padding-top: 75px;
 	}
 }

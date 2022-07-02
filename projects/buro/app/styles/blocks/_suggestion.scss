@@ -26,14 +26,15 @@
 		&_text {
 			display: block;
 			font-size: 18px;
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 		}
 
 		&_subtext {
-			margin-top: 20px;
+			margin-top: 15px;
 			display: block;
-			font-size: 14px;
+			font-size: 15px;
 			max-width: 580px;
+			opacity: .7;
 		}
 	}
 
@@ -53,7 +54,7 @@
 
 		& .form-button {
 			font-size: 18px;
-			font-weight: 600;
+			font-weight: 400;
 		}
 	}
 
@@ -79,6 +80,83 @@
 			font-weight: 600;
 			max-width: 170px;
 			line-height: 1.3;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.suggestion {
+		&__spec {
+			display: none;
+		}
+
+		&__inner {
+			justify-content: center;
+		}
+
+		&__info {
+			max-width: 800px;
+			width: 100%;
+			text-align: center;
+
+			&_subtext {
+				text-align: left;
+			}
+		}
+
+		&__form {
+			& * {
+				max-width: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.suggestion {
+		&__inner {
+			padding: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.suggestion {
+		&__form {
+			flex-direction: column;
+
+			& .form-input {
+				margin-right: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.suggestion {
+		&__inner {
+			padding: 30px 20px;
+			border-radius: 12px;
+		}
+
+		& .title {
+			font-size: 20px;
+		}
+
+		&__form {
+			& .form-button {
+				font-size: 16px;
+			}
+		}
+
+		&__info {
+			&_text {
+				font-size: 14px;
+			}
+			&_subtext {
+				font-size: 12px;
+			}
 		}
 	}
 }
