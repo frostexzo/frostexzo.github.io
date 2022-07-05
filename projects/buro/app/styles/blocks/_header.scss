@@ -283,7 +283,6 @@
 
 		&__menu {
 			display: flex;
-			flex-direction: column;
 			position: fixed;
 			top: 0;
 			left: 0;
@@ -302,6 +301,27 @@
 				opacity: 1;
 				visibility: visible;
 				transform: translateX(0);
+			}
+
+			&_inner {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				height: inherit;
+				width: 100%;
+			}
+
+			&_close {
+				position: absolute;
+				right: -5px;
+				top: -10px;
+			}
+
+			& .header__contacts {
+				margin-left: 0;
+				margin-right: 0;
+				align-items: flex-start;
+				margin-top: 20px;
 			}
 
 			& .header__logo {

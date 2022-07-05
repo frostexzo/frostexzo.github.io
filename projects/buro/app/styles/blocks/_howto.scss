@@ -82,3 +82,11 @@
 		}
 	}
 }
+
+@media screen and (max-width: 359px) {
+	.howto {
+		&__subtext {
+			font-size: 14px;
+		}
+	}
+}

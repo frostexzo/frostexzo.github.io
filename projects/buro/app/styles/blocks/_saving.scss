@@ -88,3 +88,13 @@
 		}
 	}
 } 
+
+@media screen and (max-width: 359px) {
+	.saving {
+		&__list {
+			&_item {
+				font-size: 14px;
+			}
+		}
+	}
+}

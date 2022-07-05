@@ -185,131 +185,144 @@
 
 	<div id="feedback" class="popup">
 		<form action="" class="default-form">
-			<span class="default-form__title">
-				Закажите обратный звонок
-			</span>
+			<span class="default-form__title"> Закажите обратный звонок </span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться" />
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон" />
 				<button type="submit" class="form-button">Заказать звонок</button>
 			</div>
 			<span class="default-form__label">
-				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				Нажимая кнопку «Заказать звонок», я даю свое полное согласие на обработку моих персональных данных и соглашаюсь с <a href="" class="privacy-link">Пользовательским соглашением</a>.
 			</span>
 		</form>
 	</div>
 
 	<div id="bank" class="popup">
 		<form action="" class="default-form">
-			<span class="default-form__title">
-				Заявка на банковское кредитование
-			</span>
+			<span class="default-form__title"> Заявка на банковское кредитование </span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться" />
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон" />
 				<label class="form-input-custom calculator__form" for="">
 					<span>Нужная сумма</span>
-					<input type="text" class="form-input" name="sumBank" required>
+					<input type="text" class="form-input" name="sumBank" required />
 					<div id="sumBank" class="term-slider"></div>
 				</label>
 				<button type="submit" class="form-button">Получить деньги от банка</button>
 			</div>
 			<span class="default-form__label">
-				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				Нажимая кнопку «Получить деньги от банка», я даю свое полное согласие на обработку моих персональных данных и соглашаюсь с <a href="" class="privacy-link">Пользовательским соглашением</a>.
 			</span>
 		</form>
 	</div>
 
 	<div id="investor" class="popup">
 		<form action="" class="default-form">
-			<span class="default-form__title">
-				Заявка на кредитование от инвестора
-			</span>
+			<span class="default-form__title"> Заявка на кредитование от инвестора </span>
 			<div class="default-form__fields">
-				<input type="text" class="form-input" placeholder="Как к Вам обращаться">
-				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон">
+				<input type="text" class="form-input" placeholder="Как к Вам обращаться" />
+				<input type="tel" class="form-input" name="phone" required placeholder="Введите телефон" />
 				<label class="form-input-custom calculator__form" for="">
 					<span>Нужная сумма</span>
-					<input type="text" class="form-input" name="sumInvest" required>
+					<input type="text" class="form-input" name="sumInvest" required />
 					<div id="sumInvest" class="term-slider"></div>
 				</label>
 				<button type="submit" class="form-button">Получить деньги от инвестора</button>
 			</div>
 			<span class="default-form__label">
-				Нажимая кнопку «Получить деньги», я даю свое полное согласие на обработку моих персональных данных.
+				Нажимая кнопку «Получить деньги от инвестора», я даю свое полное согласие на обработку моих персональных данных и соглашаюсь с <a href="" class="privacy-link">Пользовательским соглашением</a>.
 			</span>
 		</form>
 	</div>
 
 	<div class="header__menu">
 		<!-- noindex -->
-		<a href="" class="header__logo">
-			<img src="images/dist/logo.svg" width="64" height="73" alt="Buro Finance" />
-			<span>Бюро Финанс</span>
-		</a>
-		
-		<nav class="nav">
-			<div class="nav__item nav__item--active">
-				<a href="" class="nav__item_label">Главная</a>
+		<div class="header__menu_inner">
+			<a href="" class="header__logo">
+				<img src="images/dist/logo.svg" width="64" height="73" alt="Buro Finance" />
+				<span>Бюро Финанс</span>
+			</a>
+
+			<button type="button" class="header__menu_close">
+				<img src="images/dist/close.svg" width="30" height="30" alt="Закрыть">
+			</button>
+
+			<nav class="nav">
+				<div class="nav__item nav__item--active">
+					<a href="" class="nav__item_label">Главная</a>
+				</div>
+				<div class="nav__item">
+					<span class="nav__item_label mark" aria-disabled>Кредиты под залог</span>
+					<ul class="nav__item_menu">
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+					</ul>
+				</div>
+				<div class="nav__item"><a href="" class="nav__item_label">Калькулятор</a></div>
+				<div class="nav__item">
+					<span class="nav__item_label mark" aria-disabled>Информация</span>
+					<ul class="nav__item_menu">
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item">
+							<a href="" class="nav__item_menu-label">Кредиты под залог</a>
+						</li>
+						<li class="nav__item_menu-item mark">
+							<span class="nav__item_menu-label mark">Полезная информация</span>
+							<div class="nav__item_menu-sub">
+								<a href="" class="nav__item_menu-label">Статьи</a>
+								<a href="" class="nav__item_menu-label">Новости</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="nav__item"><a href="" class="nav__item_label">Контакты</a></div>
+			</nav>
+
+			<div class="header__contacts">
+				<a href="tel:88005551368" class="header__contacts_tel">8-800-555-13-68</a>
+				<button type="button" class="header__contacts_btn">Заказать звонок</button>
 			</div>
-			<div class="nav__item">
-				<span class="nav__item_label mark" aria-disabled>Кредиты под залог</span>
-				<ul class="nav__item_menu">
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-				</ul>
-			</div>
-			<div class="nav__item"><a href="" class="nav__item_label">Калькулятор</a></div>
-			<div class="nav__item">
-				<span class="nav__item_label mark" aria-disabled>Информация</span>
-				<ul class="nav__item_menu">
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item">
-						<a href="" class="nav__item_menu-label">Кредиты под залог</a>
-					</li>
-					<li class="nav__item_menu-item mark">
-						<span class="nav__item_menu-label mark">Полезная информация</span>
-						<div class="nav__item_menu-sub">
-							<a href="" class="nav__item_menu-label">Статьи</a>
-							<a href="" class="nav__item_menu-label">Новости</a>
-						</div>
-					</li>
-				</ul>
-			</div>
-			<div class="nav__item"><a href="" class="nav__item_label">Контакты</a></div>
-		</nav>
+		</div>
 		<!-- /noindex -->
 	</div>
 </section>
+
 </main>
 
 <footer class="footer">
 	<div class="container">
 		<div class="footer__inner">
-			<div class="footer__logo">
-				<a href="">
-					<img src="images/dist/logo.svg" width="105" height="120" alt="Бюро Финанс">
-				</a>
-				<div class="footer__logo_info">
-					<span class="footer__logo_name">Бюро Финанс</span>
-					<span class="footer__logo_slogan">
-						Сервис подбора выгодного кредита в Москве
-					</span>
+			<div class="footer__logo_wrapper">
+				<div class="footer__logo">
+					<a href="">
+						<img src="images/dist/logo.svg" width="105" height="120" alt="Бюро Финанс">
+					</a>
+					<div class="footer__logo_info">
+						<span class="footer__logo_name">Бюро Финанс</span>
+						<span class="footer__logo_slogan">
+							Сервис подбора выгодного кредита в Москве
+						</span>
+					</div>
+				</div>
+
+				<div class="footer__logo_copyright">
+					© 2022 BuroFinance.ru<br>
+					Все авторские права защищены
 				</div>
 			</div>
 
@@ -331,11 +344,11 @@
 				<ul class="footer__contacts_list">
 					<li class="footer__contacts_list-item">
 						<img src="images/dist/phone-icon.svg" class="footer__contacts_list-img" alt="+7 (499) 322-99-74">
-						<a href="" class="footer__contacts_list-text"><strong>+7 (499) 322-99-74</strong></a>
+						<a href="tel:+7 (499) 322-99-74" class="footer__contacts_list-text"><strong>+7 (499) 322-99-74</strong></a>
 					</li>
 					<li class="footer__contacts_list-item">
 						<img src="images/dist/mail-icon.svg" class="footer__contacts_list-img" alt="Burofinanse@yandex.ru">
-						<a href="" class="footer__contacts_list-text">Burofinanse@yandex.ru</a>
+						<a href="mailto:Burofinanse@yandex.ru" class="footer__contacts_list-text">Burofinanse@yandex.ru</a>
 					</li>
 					<li class="footer__contacts_list-item">
 						<img src="images/dist/loc-icon.svg" class="footer__contacts_list-img" alt="г. Москва, ул. Садовая-сухаревская дом 2/34 с1">
@@ -348,9 +361,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="footer__copyright">
-		Copyright
 	</div>
 </footer>
 

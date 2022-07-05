@@ -428,3 +428,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 359px) {
+	.desc {
+		&__content {
+			&_text {
+				font-size: 14px;
+			}
+		}
+	}
+}

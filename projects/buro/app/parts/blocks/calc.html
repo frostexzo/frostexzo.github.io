@@ -58,7 +58,7 @@
 					</div>
 					<div class="calculator__block2__bottom">
 						<input type="text" placeholder="Как к Вам обращаться" name="name" class="form-input" />
-						<input type="text" placeholder="Введите телефон" required name="phone" class="form-input" />
+						<input type="tel" placeholder="Введите телефон" required name="phone" class="form-input" />
 						<button class="form-button" type="submit">Получить кредит</button>
 						<button type="button" class="form-button form-button--dark">График платежей</button>
 					</div>
@@ -83,7 +83,7 @@
 							<div class="item">
 								<div class="title">Сумма кредита</div>
 								<div class="text">
-									<span id="sum1"></span> <span class="cur desktop">руб</span
+									<span id="sum1"></span> <span class="cur desktop">₽</span
 									><span class="cur mobile">₽</span>
 								</div>
 							</div>
@@ -96,6 +96,7 @@
 								<div class="text"><span id="stake1"></span> <span class="cur">% годовых</span></div>
 							</div>
 						</div>
+						<div class="table__wrapper">
 						<table class="table">
 							<thead>
 								<tr>
@@ -108,6 +109,7 @@
 							</thead>
 							<tbody></tbody>
 						</table>
+					</div>
 					</div>
 				</div>
 			</form>

@@ -61,7 +61,7 @@
 
 				& .form-button {
 					position: absolute;
-					font-weight: 400;
+					font-weight: 600;
 					top: 30px;
 					left: 50%;
 					transform: translateX(-50%);
@@ -164,13 +164,6 @@
 
 			&_col {
 				max-width: 200px;
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-color: #fcfcfc;
-				height: 100%;
-				z-index: 1;
-				padding-bottom: 0;
 				justify-content: flex-start;
 				padding-top: 50px;
 			}
@@ -189,20 +182,19 @@
 				}
 			}
 
+			&_wrapper {
+				overflow-x: auto;
+				overflow-y: hidden;
+			}
+			min-width: max-content;
+
 			&_subcol {
 				max-width: 320px;
 			}
 
 			&_subtable {
-				min-width: max-content;
 				padding: 18px 10px;
 				padding-bottom: 80px;
-
-				&-wrapper {
-					padding-left: 200px;
-					overflow-x: auto;
-					overflow-y: hidden;
-				}
 			}
 		}
 
@@ -216,6 +208,7 @@
 
 		& .compare__info {
 			margin-right: 15px;
+			margin-top: 50px;
 		}
 	}
 	.compare__table_col .compare__table_row {
@@ -249,12 +242,6 @@
 				max-width: 130px;
 				& .compare__table_row {
 					font-size: 11px;
-				}
-			}
-
-			&_subtable {
-				&-wrapper {
-					padding-left: 140px;
 				}
 			}
 

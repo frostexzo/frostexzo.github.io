@@ -54,7 +54,7 @@
 
 		& .form-button {
 			font-size: 18px;
-			font-weight: 400;
+			font-weight: 600;
 		}
 	}
 
@@ -90,18 +90,9 @@
 			display: none;
 		}
 
-		&__inner {
-			justify-content: center;
-		}
-
 		&__info {
 			max-width: 800px;
 			width: 100%;
-			text-align: center;
-
-			&_subtext {
-				text-align: left;
-			}
 		}
 
 		&__form {

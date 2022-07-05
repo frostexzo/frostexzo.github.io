@@ -74,3 +74,19 @@
 		}
 	}
 }
+
+
+@media screen and (max-width: 359px) {
+	.popup .default-form {
+		padding: 15px 10px;
+
+		&__title {
+			font-size: 16px;
+		}
+
+		& .form-button {
+			font-size: 14px;
+			padding: 20px 10px;
+		}
+	}
+}

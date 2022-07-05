@@ -131,3 +131,13 @@
 		}
 	}
 }
+
+@media screen and (max-width: 359px) {
+	.targets {
+		&__item {
+			& span {
+				font-size: 12px;
+			}
+		}
+	}
+}

@@ -164,10 +164,18 @@ class CalculatorInputs {
 					max: this.slidersData.value[slider.name].max,
 				},
 			});
-			sliderInput.inputmask("decimal", {
-				min: this.slidersData.value[slider.name].min,
-				max: this.slidersData.value[slider.name].max,
-			});
+			if (sliderInput.attr("name").includes("sum")) {
+				sliderInput.inputmask("9 999 999", {
+					min: this.slidersData.value[slider.name].min,
+					max: this.slidersData.value[slider.name].max,
+				});
+			} else {
+				sliderInput.inputmask("decimal", {
+					min: this.slidersData.value[slider.name].min,
+					max: this.slidersData.value[slider.name].max,
+				});
+			}
+
 			sliderInput.on("change", function () {
 				updatedBy();
 				sliderEl.noUiSlider.set(+$(this).val());
@@ -406,7 +414,7 @@ $(document).ready(function () {
 		tr += "<td>0</td>";
 		tr += "<td>0</td>";
 		tr +=
-			"<td>" + new Intl.NumberFormat("ru-RU").format(moneyFull, 2) + ' руб. <span style="width:30%"></span></td>';
+			"<td>" + new Intl.NumberFormat("ru-RU").format(moneyFull, 2) + '₽. <span style="width:30%"></span></td>';
 		tr += "</tr>";
 		$(".table tbody").append(tr);
 		date = dateAdd(date, {
@@ -425,20 +433,20 @@ $(document).ready(function () {
 			tr +=
 				"<td>" +
 				new Intl.NumberFormat("ru-RU").format(row[3], 2) +
-				' руб. <span style="width:' +
+				' ₽. <span style="width:' +
 				w2 +
 				'%"></span></td>';
 			tr +=
 				"<td>" +
 				new Intl.NumberFormat("ru-RU").format(row[2], 2) +
-				' руб. <span style="width:' +
+				' ₽. <span style="width:' +
 				w1 +
 				'%"></span></td>';
-			tr += "<td>" + new Intl.NumberFormat("ru-RU").format(row[1], 2) + " руб.</td>";
+			tr += "<td>" + new Intl.NumberFormat("ru-RU").format(row[1], 2) + " ₽.</td>";
 			tr +=
 				"<td>" +
 				new Intl.NumberFormat("ru-RU").format(row[4], 2) +
-				' руб. <span style="width:' +
+				' ₽. <span style="width:' +
 				w3 +
 				'%"></span></td>';
 			tr += "</tr>";
