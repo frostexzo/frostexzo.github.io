@@ -95,6 +95,27 @@
 	}
 }
 
+.blog__pagination {
+	margin-top: 75px;
+	display: flex;
+	justify-content: center;
+}
+
+.blog__pagination .pages {
+	display: none;
+}
+
+.blog__pagination .wp-pagenavi a, .blog__pagination .wp-pagenavi span {
+	border: none;
+	color: #333;
+	letter-spacing: 0.02em;
+	font-size: 24px;
+}
+
+.blog__pagination .current {
+	color: #F1A40F !important;
+}
+
 @media screen and (max-width: 1000px) {
 	.blog {
 		&__items {
@@ -117,6 +138,10 @@
 
 		&__items {
 			grid-template-columns: 1fr;
+		}
+
+		&__pagination {
+			margin-top: 35px;
 		}
 	}
 }

@@ -26,8 +26,16 @@
 
 	&__label {
 		color: rgba(255, 255, 255, 0.7);
-		font-size: 12px;
+		font-size: 13px;
 		line-height: 1.4;
 		display: block;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.default-form {
+		&__label {
+			font-size: 11px !important;
+		}
 	}
 }

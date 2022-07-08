@@ -122,6 +122,22 @@ if (slider) {
 	});
 }
 
+const partners = document.querySelector(".partners__container");
+if (partners) {
+	new Swiper(partners, {
+		spaceBetween: 25,
+		slidesPerView: 5,
+		slidesPerSlide: 3,
+		slidesPerColumnFill: "row",
+		slidesPerColumn: 2,
+		loop: true,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+		},
+	});
+}
+
 const menu = document.querySelector(".header__menu");
 const menuCloseBtn = document.querySelector(".header__menu_close");
 const burgerBtn = document.querySelector(".header__burger");

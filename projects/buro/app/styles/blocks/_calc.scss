@@ -184,6 +184,7 @@
 .calculator__block2__text {
 	font-size: 10px;
 	line-height: 1.6;
+	opacity: .8;
 }
 
 .layer {
@@ -392,7 +393,7 @@
 		margin-top: 80px;
 
 		&__title {
-			font-size: 16px;
+			font-size: 14px;
 		}
 	}
 	.calculator__block2 {
@@ -400,6 +401,9 @@
 	}
 	.calculator__block2__top .text {
 		font-size: 20px;
+	}
+	.calculator__block2__text {
+		font-size: 11px;
 	}
 }
 
