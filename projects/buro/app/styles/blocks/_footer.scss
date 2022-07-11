@@ -140,6 +140,18 @@
 
 @media screen and (max-width: 1000px) {
 	.footer {
+		&__logo {
+			max-width: 250px;
+
+			& img {
+				max-width: 70px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.footer {
 		&__inner {
 			flex-wrap: wrap;
 		}
@@ -147,7 +159,7 @@
 		&__list {
 			&_wrapper {
 				margin-right: auto;
-				margin-left: 30px;
+				margin-left: 100px;
 			}
 		}
 

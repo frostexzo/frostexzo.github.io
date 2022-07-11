@@ -38,6 +38,18 @@
 		border-radius: 15px;
 		display: flex;
 
+		&:nth-child(2n+1) {
+			& .examples__item_img {
+				background-color: #e8f7fe;
+			}
+		}
+
+		&:nth-child(3n+1) {
+			& .examples__item_img {
+				background-color: #fceaea;
+			}
+		}
+
 		&_img {
 			max-width: 370px;
 			width: 100%;

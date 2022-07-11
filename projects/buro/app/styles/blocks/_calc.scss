@@ -407,6 +407,12 @@
 	}
 }
 
+@media screen and (max-width: 420px) {
+	.calculator__input .select2-selection__rendered {
+		max-width: 250px;
+	}
+}
+
 @media screen and (max-width: 359px) {
 	.calculator__block2__top .text {
 		font-size: 16px;

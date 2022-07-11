@@ -157,7 +157,7 @@
 		&_menu {
 			display: flex;
 			flex-direction: column;
-			min-width: 300px;
+			min-width: 330px;
 			width: 100%;
 			top: 25px;
 			left: 0;
@@ -176,6 +176,7 @@
 				transition: color 0.2s ease;
 				cursor: pointer;
 				position: relative;
+				line-height: 1.3;
 
 				&.mark {
 					padding-right: 15px;
@@ -201,6 +202,10 @@
 			}
 
 			&-item {
+				&:not(:last-child) {
+					margin-bottom: 5px;
+				}
+
 				&.mark {
 					position: relative;
 
@@ -220,7 +225,7 @@
 				background-color: #fff;
 				padding: 15px;
 				position: absolute;
-				right: -280px;
+				right: -310px;
 				bottom: -50px;
 				min-width: 230px;
 				width: 100%;
@@ -249,7 +254,7 @@
 
 				&-sub {
 					right: auto;
-					left: -280px;
+					left: -310px;
 				}
 			}
 		}
@@ -282,12 +287,12 @@
 		}
 
 		&__menu {
+			width: 350px;
 			display: flex;
 			position: fixed;
 			top: 0;
 			left: 0;
 			background-color: $white;
-			width: 40%;
 			height: 100%;
 			padding: 15px;
 			z-index: 500;
@@ -397,7 +402,6 @@
 @media screen and (max-width: 680px) {
 	.header {
 		&__menu {
-			width: 260px;
 
 			& .nav {
 				&__item {
@@ -432,6 +436,10 @@
 			& img {
 				max-width: 40px;
 			}
+		}
+
+		&__menu {
+			width: 100%;
 		}
 
 		&__contacts {

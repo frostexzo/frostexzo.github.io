@@ -1,12 +1,12 @@
-$green: #8CC63F;
+$green: #8cc63f;
 $white: #fff;
 $black: #000;
 $gray6: rgba(0, 0, 0, 0.6);
 $gray7: rgba(0, 0, 0, 0.7);
-$yellow-gradient: linear-gradient(180deg, #2FDC7B 0%, #F7D249 0.01%, #E7BB19 88.2%, #EEC54A 100%);
-$yellow: #EFC731;
+$yellow-gradient: linear-gradient(180deg, #2fdc7b 0%, #f7d249 0.01%, #e7bb19 88.2%, #eec54a 100%);
+$yellow: #efc731;
 $btn-shadow: 0px 10px 20px rgba(247, 210, 73, 0.29);
-$blue: #5E7AAA;
+$blue: #5e7aaa;
 
 @mixin font($fname, $fstyle, $fweight, $furl) {
 	@font-face {
@@ -63,7 +63,7 @@ html {
 
 body {
 	font-family: "Open Sans", sans-serif;
-	background-color: #FCFCFC;
+	background-color: #fcfcfc;
 }
 
 img,
@@ -84,7 +84,6 @@ button {
 	cursor: pointer;
 }
 
-
 input[type="radio"],
 input[type="checkbox"] {
 	appearance: none;
@@ -99,7 +98,7 @@ input[type="checkbox"] {
 	transition: box-shadow 0.1s ease, background-color 0.1s ease;
 
 	&:hover {
-		box-shadow: 0 0 0 2px #000
+		box-shadow: 0 0 0 2px #000;
 	}
 
 	&:checked {
@@ -182,7 +181,7 @@ input[type="checkbox"] {
 				position: absolute;
 				top: 10px;
 				left: 20px;
-				color: #4F4F4F;
+				color: #4f4f4f;
 				font-size: 12px;
 				font-family: "Roboto", sans-serif;
 			}
@@ -198,9 +197,10 @@ input[type="checkbox"] {
 		border-radius: 18px;
 		padding: 18px 32px;
 		font-size: 18px;
-		transition: box-shadow .2s ease, background-color .2s ease;
+		transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
-		&:hover, &:focus {
+		&:hover,
+		&:focus {
 			box-shadow: none;
 			background-color: lighten($yellow, 10%);
 		}
@@ -210,7 +210,8 @@ input[type="checkbox"] {
 			color: $white;
 			border: 1px solid $yellow;
 
-			&:hover, &:focus {
+			&:hover,
+			&:focus {
 				background-color: darken(#999, 5%);
 			}
 		}
@@ -235,6 +236,15 @@ input[type="checkbox"] {
 	}
 }
 
-.singlepage ol, .singlepage ul {
-		list-style: inside;
+.singlepage ol,
+.singlepage ul {
+	list-style: inside;
+}
+
+.header__menu {
+	overflow-y: auto;
+}
+
+.footer, .questions, .lic, .partners {
+	content-visibility: auto;
 }
