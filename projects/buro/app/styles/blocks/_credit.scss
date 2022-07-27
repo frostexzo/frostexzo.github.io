@@ -1,0 +1,192 @@
+.credit {
+	margin-top: 95px;
+
+	& .title {
+		margin-bottom: 20px;
+	}
+
+	&__info {
+		position: relative;
+		z-index: 2;
+
+		&_wrapper {
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+		}
+
+		&_subtitle {
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 1.3;
+			color: #656565;
+			max-width: 500px;
+			margin-bottom: 30px;
+		}
+
+		&_text {
+			max-width: 570px;
+			line-height: 1.3;
+			color: #656565;
+			display: block;
+		}
+
+		&_img {
+			max-width: 500px;
+			width: 100%;
+			position: absolute;
+			top: -125px;
+			right: 0;
+			z-index: 1;
+
+			& img {
+				width: 100%;
+			}
+		}
+	}
+
+	&__cancels {
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 30px;
+		margin-top: 35px;
+
+		&_item {
+			background-color: #f2f6f9;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+			border-radius: 20px;
+			padding: 36px 40px;
+			display: flex;
+			align-items: center;
+
+			& img {
+				border-radius: 100%;
+				margin-right: 20px;
+			}
+
+			& span {
+				color: #656565;
+				line-height: 1.25;
+			}
+		}
+	}
+
+	& .targets__info {
+		margin-top: 70px;
+	}
+
+	& .compare__info {
+		margin-top: 0;
+		align-items: flex-start;
+		padding: 15px 20px;
+		padding-right: 50px;
+		max-width: 570px;
+		margin-left: 50px;
+
+		& p {
+			font-size: 16px;
+			line-height: 1.3;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.credit {
+		&__info {
+			&_img {
+				max-width: 55%;
+			}
+		}
+
+		&__cancels {
+			grid-gap: 20px;
+
+			&_item {
+				padding: 20px;
+
+				& span {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.credit {
+		& .compare__info {
+			margin-left: 0;
+			max-width: none;
+			margin-top: 30px;
+		}
+
+		&__cancels {
+			grid-template-columns: 1fr 1fr;
+		}
+
+		&__info {
+			max-width: 60%;
+
+			&_img {
+				bottom: -100px;
+				top: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.credit {
+		&__info {
+			&_img {
+				bottom: -50px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.credit {
+		margin-top: 60px;
+
+		&__info {
+			max-width: none;
+
+			&_subtitle {
+				font-size: 16px;
+			}
+
+			&_img {
+				display: none;
+			}
+		}
+
+		&__cancels {
+			grid-template-columns: 1fr;
+
+			&_item span {
+				font-size: 16px;
+			}
+		}
+
+		& .targets__info {
+			margin-top: 40px;
+		}
+
+		& .compare__info {
+			padding-right: 20px;
+
+			& p {
+				font-size: 14px;
+				margin-left: 15px;
+			}
+
+			& img {
+				width: 32px;
+				height: 32px;
+			}
+		}
+	}
+}

@@ -127,14 +127,35 @@ if (partners) {
 	new Swiper(partners, {
 		spaceBetween: 25,
 		slidesPerView: 5,
-		slidesPerSlide: 3,
+		slidesPerGroup: 5,
 		slidesPerColumnFill: "row",
 		slidesPerColumn: 2,
-		loop: true,
 		pagination: {
-			el: ".swiper-pagination",
+			el: ".partners-pagination",
 			clickable: true,
 		},
+      		breakpoints: {
+			320: {
+				slidesPerView: 2,
+              	slidesPerGroup: 2,
+                spaceBetween: 10,
+			},
+			550: {
+				slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 15,
+			},
+			768: {
+				slidesPerView: 4,
+                slidesPerGroup: 4,
+                spaceBetween: 20,
+			},
+			900: {
+				slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 25,
+			}
+		}
 	});
 }
 
