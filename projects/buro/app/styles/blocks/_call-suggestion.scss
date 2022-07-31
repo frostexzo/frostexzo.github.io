@@ -108,5 +108,9 @@
 		& .suggestion__info_text {
 			max-width: none;
 		}
+
+		&__spec {
+			display: none;
+		}
 	}
 }
